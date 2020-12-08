@@ -3005,6 +3005,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   methods: {}
 });
@@ -47084,7 +47101,13 @@ var render = function() {
                 _vm._v(" "),
                 _vm._m(4),
                 _vm._v(" "),
-                _vm._m(5)
+                _vm._m(5),
+                _vm._v(" "),
+                _vm._m(6),
+                _vm._v(" "),
+                _vm._m(7),
+                _vm._v(" "),
+                _vm._m(8)
               ]
             )
           ])
@@ -47229,6 +47252,42 @@ var staticRenderFns = [
             _c("p", [_vm._v("Organization")])
           ])
         ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nav-item" }, [
+      _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+        _c("i", { staticClass: "far fa-address-card nav-icon" }),
+        _vm._v(" "),
+        _c("p", [_vm._v("Inset Module")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nav-item" }, [
+      _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+        _c("i", { staticClass: "fa fa-book nav-icon" }),
+        _vm._v(" "),
+        _c("p", [_vm._v("Result Processing")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nav-item" }, [
+      _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+        _c("i", { staticClass: "fa fa-mobile-alt nav-icon" }),
+        _vm._v(" "),
+        _c("p", [_vm._v("MODA")])
       ])
     ])
   }
@@ -49290,12 +49349,10 @@ var staticRenderFns = [
     return _c("div", [
       _c("div", { staticClass: "content-header" }, [
         _c("div", { staticClass: "container-fluid" }, [
-          _c("div", { staticClass: "row mb-2" }, [
+          _c("div", { staticClass: "row" }, [
             _c("div", { staticClass: "col-sm-6" }, [
-              _c("h1", { staticClass: "m-0 text-dark" }, [
-                _c("span", { staticClass: "nav-icon fas fa-tachometer-alt" }),
-                _vm._v(" Dashboard")
-              ])
+              _c("span", { staticClass: "nav-icon fas fa-tachometer-alt" }),
+              _vm._v(" Dashboard\n            ")
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "col-sm-6" }, [

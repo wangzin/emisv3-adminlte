@@ -88,8 +88,25 @@
                                     <p>Organization</p>
                                     </a>
                                 </li>
-                                
                             </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                            <i class="far fa-address-card nav-icon"></i>
+                            <p>Inset Module</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                            <i class="fa fa-book nav-icon"></i>
+                            <p>Result Processing</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                            <i class="fa fa-mobile-alt nav-icon"></i>
+                            <p>MODA</p>
+                            </a>
                         </li>
                     </ul>
                 </nav>
