@@ -6,7 +6,7 @@
                     <ol class="breadcrumb"> 
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item">Master Management</li>
-                        <li class="breadcrumb-item active">Dashboard</li>
+                        <li class="breadcrumb-item active">Dzongkhag</li>
                     </ol>
                 </div>
                 <div class="row"> 

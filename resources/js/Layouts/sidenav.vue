@@ -25,16 +25,16 @@
                                     </router-link>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                    <i class="fa fa-angle-double-right nav-icon"></i>
-                                    <p>Gewog Master</p>
-                                    </a>
+                                    <router-link to="/gewogmasters"   class="nav-link" data-toggle="awesome_tooltip" title="Organization">
+                                        <i class="fa fa-angle-double-right nav-icon"></i>
+                                        <p>Gewog Master</p>
+                                    </router-link>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                    <i class="fa fa-angle-double-right nav-icon"></i>
-                                    <p>Village Master</p>
-                                    </a>
+                                <li class="nav-item"> 
+                                    <router-link to="/villagemaster"   class="nav-link" data-toggle="awesome_tooltip" title="Organization">
+                                        <i class="fa fa-angle-double-right nav-icon"></i>
+                                        <p>Village Master</p>
+                                    </router-link>
                                 </li>
                             </ul>
                         </li>
@@ -77,10 +77,10 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                    <i class="fa fa-angle-double-right nav-icon"></i>
-                                    <p>Org. Masters</p>
-                                    </a>
+                                    <router-link to="/orgmastermanagement"   class="nav-link" data-toggle="awesome_tooltip" title="Organization">
+                                        <i class="fa fa-angle-double-right nav-icon"></i>
+                                        <p>Organization Masters</p>
+                                    </router-link>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
