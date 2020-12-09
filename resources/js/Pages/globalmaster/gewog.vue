@@ -17,7 +17,7 @@
                                 <button class="btn btn-success btn-sm fa-pull-right" type="button" @click="showmodal()"><span class="fa fa-plus"> Add New Gewog</span></button>
                             </div>
                             <div class="card-body">
-                                <table id="dynamic-table" class="table table-striped table-bordered table-hover">
+                                <table id="dynamic-table" class="table table-bordered table-hover">
                                     <thead>
                                         <tr>
                                             <th >No.</th>
@@ -254,22 +254,14 @@ export default {
 		},
     },
     mounted() {
+        $("#dynamic-table").DataTable({
+            "responsive": true,
+            "autoWidth": true,
+            
+        }); 
+        $('.dataTables_filter').addClass('fa-pull-right');
+        $('#dynamic-table_paginate').addClass('fa-pull-right');
         
-        jQuery(function($) {
-			var myTable = $('#dynamic-table')
-			.DataTable( {
-				bAutoWidth: false,
-				"aoColumns": [
-					{ "bSortable": false },
-					null, null,null, null,
-					{ "bSortable": false }
-				],
-				"aaSorting": [], 
-				select: {
-					style: 'multi'
-				}
-			} );
-		} );	
     },
     
 }
