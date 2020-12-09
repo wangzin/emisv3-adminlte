@@ -46,12 +46,12 @@
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
-                            <ul class="nav nav-treeview">
+                            <ul class="nav nav-treeview">                                
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                    <i class="fa fa-angle-double-right nav-icon"></i>
-                                    <p>Role & Privileges</p>
-                                    </a>
+                                    <router-link to="/rolesAndPriviledges"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
+                                        <i class="fa fa-angle-double-right nav-icon"></i>
+                                        <p>Role & Privileges</p>
+                                    </router-link>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
@@ -60,10 +60,10 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                    <i class="fa fa-angle-double-right nav-icon"></i>
-                                    <p>Workflow management</p>
-                                    </a>
+                                    <router-link to="/workFlow"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
+                                        <i class="fa fa-angle-double-right nav-icon"></i>
+                                        <p>workflow management</p>
+                                    </router-link>
                                 </li>
                             </ul>
                         </li>

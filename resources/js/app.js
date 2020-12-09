@@ -19,6 +19,7 @@ let routes = [
     { path: '/dzongmasters', name: 'Dzongkhag Master', component: require('./Pages/globalmaster/dzongmasters.vue').default },
     { path: '/gewogmasters', name: 'Gewog Master', component: require('./Pages/globalmaster/gewog.vue').default },
     { path: '/villagemaster', name: 'Village Master', component: require('./Pages/globalmaster/village.vue').default },
+   
     { path: '/orgmastermanagement', name: 'Organization Master Management',
     component: require('./Pages/organization/masters/orgmasterindex.vue').default,
         children: [
@@ -30,6 +31,10 @@ let routes = [
             // { path: '/roadtype', name: 'Roadtype Master', component: require('./Pages/organization/masters/roadtype.vue').default },
         ]    
     }, 
+    //administration route
+    { path: '/rolesAndPriviledges', name: 'Roles', component: require('./Pages/administration/rolesAndPriviledges.vue').default },
+    { path: '/workFlow', name: 'workFlow', component: require('./Pages/administration/workflow.vue').default },
+
 ]
 const router = new VueRouter({
     routes // short for `routes: routes`
