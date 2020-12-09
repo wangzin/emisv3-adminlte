@@ -107,7 +107,7 @@
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                             <i class="fa fa-mobile-alt nav-icon"></i>
-                            <p>MODA</p>
+                            <p>MDCA</p>
                             </a>
                         </li>
                     </ul>

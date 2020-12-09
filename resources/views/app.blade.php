@@ -66,6 +66,7 @@
         <!-- AdminLTE for demo purposes -->
         <script src="admin3/plugins/chart.js/Chart.min.js"></script>
         <script src="admin3/dist/js/demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
         <!-- Bootstrap 4 -->
 
     </head>
