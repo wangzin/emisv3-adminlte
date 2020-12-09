@@ -67,7 +67,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item has-treeview">
+                        <li class="nav-item has-treeview" id="organizationlink">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-home"></i>
                                 <p>
@@ -76,10 +76,12 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
-                                <li class="nav-item">
+                                <li class="nav-item" id="roganizationmaster">
                                     <router-link to="/orgmastermanagement"   class="nav-link" data-toggle="awesome_tooltip" title="Organization">
-                                        <i class="fa fa-angle-double-right nav-icon"></i>
-                                        <p>Organization Masters</p>
+                                        <p id="roganizationmasterpara">
+                                            <i class="fa fa-angle-double-right nav-icon"></i>
+                                            Organization Masters
+                                        </p>
                                     </router-link>
                                 </li>
                                 <li class="nav-item">
