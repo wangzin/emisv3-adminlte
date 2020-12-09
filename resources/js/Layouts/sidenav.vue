@@ -38,7 +38,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item has-treeview">
+                        <li class="nav-item has-treeview" id="administrationlink">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-edit"></i>
                                 <p>
@@ -47,19 +47,19 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">                                
-                                <li class="nav-item">
+                                <li class="nav-item" id="rolepriv" @click="setclass('administrationlink','rolepriv')">
                                     <router-link to="/rolesAndPriviledges"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
                                         <i class="fa fa-angle-double-right nav-icon"></i>
                                         <p>Role & Privileges</p>
                                     </router-link>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                    <i class="fa fa-angle-double-right nav-icon"></i>
-                                    <p>User Registration</p>
-                                    </a>
+                                <li class="nav-item" id="usermanagement" @click="setclass('administrationlink','usermanagement')">
+                                    <router-link to="/administrationmaster"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
+                                        <i class="fa fa-angle-double-right nav-icon"></i>
+                                        <p>user management</p>
+                                    </router-link>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item" id="workflowmanagement" @click="setclass('administrationlink','workflowmanagement')">
                                     <router-link to="/workFlow"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
                                         <i class="fa fa-angle-double-right nav-icon"></i>
                                         <p>workflow management</p>
@@ -128,7 +128,14 @@ export default {
             $('#globaldzongkhag').removeClass('navbar-cyan active');
             $('#globalgewog').removeClass('navbar-cyan active');
             $('#villageglobal').removeClass('navbar-cyan active');
-            
+
+            //administration
+            $('#administrationlink').removeClass('menu-open');
+            $('#administrationlink'+'>ul').hide();
+            $('#rolepriv').removeClass('navbar-cyan active');
+            $('#usermanagement').removeClass('navbar-cyan active');
+            $('#workflowmanagement').removeClass('navbar-cyan active');
+              
             //organizations
             $('#organizationlink').removeClass('menu-open');
             $('#organizationlink'+'>ul').hide();
