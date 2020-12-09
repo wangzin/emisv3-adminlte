@@ -54,10 +54,10 @@
                                     </router-link>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                    <i class="fa fa-angle-double-right nav-icon"></i>
-                                    <p>User Registration</p>
-                                    </a>
+                                    <router-link to="/administrationmaster"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
+                                        <i class="fa fa-angle-double-right nav-icon"></i>
+                                        <p>user management</p>
+                                    </router-link>
                                 </li>
                                 <li class="nav-item">
                                     <router-link to="/workFlow"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">

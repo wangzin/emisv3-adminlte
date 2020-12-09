@@ -19,7 +19,7 @@ let routes = [
     { path: '/dzongmasters', name: 'Dzongkhag Master', component: require('./Pages/globalmaster/dzongmasters.vue').default },
     { path: '/gewogmasters', name: 'Gewog Master', component: require('./Pages/globalmaster/gewog.vue').default },
     { path: '/villagemaster', name: 'Village Master', component: require('./Pages/globalmaster/village.vue').default },
-   
+
     { path: '/orgmastermanagement', name: 'Organization Master Management',
     component: require('./Pages/organization/masters/orgmasterindex.vue').default,
         children: [
@@ -34,7 +34,15 @@ let routes = [
     //administration route
     { path: '/rolesAndPriviledges', name: 'Roles', component: require('./Pages/administration/rolesAndPriviledges.vue').default },
     { path: '/workFlow', name: 'workFlow', component: require('./Pages/administration/workflow.vue').default },
+    { path: '/administrationmaster', name: 'Administration Master',
+    component: require('./Pages/administration/usermanagement/usermanagementindex.vue').default,
+        children: [
+            { path: '/', component: require('./Pages/administration/usermanagement/usermanagementdata.vue').default },
+            { path: '/staffUser', name: 'Staff', component: require('./Pages/administration/usermanagement/staffUser.vue').default },
+            { path: '/externalUser', name: 'External', component: require('./Pages/administration/usermanagement/externalUser.vue').default },
 
+        ]    
+    }, 
 ]
 const router = new VueRouter({
     routes // short for `routes: routes`
