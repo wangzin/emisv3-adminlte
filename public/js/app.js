@@ -4325,7 +4325,86 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  methods: {
+    save: function save() {
+      alert("Data save successfully.");
+      $(".editable_fields").val("");
+    },
+    reset: function reset() {
+      $(".editable_fields").val("");
+    }
+  }
+});
 
 /***/ }),
 
@@ -4339,7 +4418,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Jetstream_Input_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../Jetstream/Input.vue */ "./resources/js/Jetstream/Input.vue");
-//
 //
 //
 //
@@ -4440,6 +4518,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     save: function save() {
       alert("Data save successfully.");
+      $(".editable_fields").val("");
     },
     reset: function reset() {
       $(".editable_fields").val("");
@@ -4462,6 +4541,48 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -4475,6 +4596,14 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -4546,6 +4675,56 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -51086,64 +51265,18 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/administration/usermanagement/staffUser.vue?vue&type=template&id=242d47e2&":
-/*!*************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/administration/usermanagement/staffUser.vue?vue&type=template&id=242d47e2& ***!
-  \*************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
   return _c("div", [
     _c("div", { staticClass: "card" }, [
       _vm._m(0),
       _vm._v(" "),
       _c("form", [
-        _c("div", { staticClass: "card-body" }, [
-          _c("div", { staticClass: "form-group row" }, [
-            _c("div", { staticClass: "col-md-6" }, [
-              _c("label", [_vm._v("Employee ID:")]),
-              _vm._v(" "),
-              _c("input", {
-                staticClass: "form-control editable_fields",
-                attrs: { type: "text", id: "employeeID" },
-                on: {
-                  change: function($event) {
-                    return _vm.employeeDetails()
-                  }
-                }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _vm._m(1),
-          _vm._v(" "),
-          _vm._m(2),
-          _vm._v(" "),
-          _vm._m(3)
-        ]),
+        _vm._m(1),
         _vm._v(" "),
         _c("div", { staticClass: "clearfix form-actions" }, [
           _c("div", { staticClass: "col-md-9 col-md-offset-12" }, [
             _c("input", {
               staticClass: "btn btn-primary",
-              attrs: { type: "button", value: "Reset", id: "reset" },
+              attrs: { type: "button", value: "cancel", id: "reset" },
               on: {
                 click: function($event) {
                   return _vm.reset()
@@ -51174,7 +51307,202 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header" }, [
-      _c("h3", { staticClass: "card-title" }, [_vm._v("Staff User")])
+      _c("h3", { staticClass: "card-title" }, [
+        _vm._v("Adding New External User")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-body" }, [
+      _c("div", { staticClass: "form-group row" }, [
+        _c("div", { staticClass: "col-md-6" }, [
+          _c("label", [_vm._v("Name:")]),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "form-control editable_fields",
+            attrs: { type: "text", id: "name" }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-6" }, [
+          _c("label", [_vm._v("Email:")]),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "form-control editable_fields",
+            attrs: { type: "text", id: "email" }
+          })
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "form-group row" }, [
+        _c("div", { staticClass: "col-md-6" }, [
+          _c("label", [_vm._v("Description:")]),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "form-control editable_fields",
+            attrs: { type: "text", id: "description" }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-6" }, [
+          _c("label", [_vm._v("Role:")]),
+          _vm._v(" "),
+          _c(
+            "select",
+            {
+              staticClass: "form-control editable_fields",
+              attrs: { name: "role", id: "roles" }
+            },
+            [
+              _c("option", { attrs: { value: "" } }, [
+                _vm._v("--- Please Select ---")
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "admin" } }, [_vm._v("Admin")]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "teacher" } }, [
+                _vm._v("Teacher")
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "deo" } }, [_vm._v("DEO")]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "director" } }, [
+                _vm._v("Director")
+              ])
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "form-group row" }, [
+        _c("div", { staticClass: "col-md-6" }, [
+          _c("label", [_vm._v("Status:")]),
+          _vm._v(" "),
+          _c("div", [
+            _c("label", { staticClass: "line-height-1 blue" }, [
+              _c("input", {
+                staticClass: "editable_fields",
+                attrs: {
+                  name: "schoolcategory",
+                  value: "Active",
+                  type: "radio"
+                }
+              }),
+              _vm._v(" "),
+              _c("span", { staticClass: "lbl" }, [_vm._v("Active")])
+            ]),
+            _vm._v(
+              "\n                                   \n                                "
+            ),
+            _c("label", { staticClass: "line-height-1 blue" }, [
+              _c("input", {
+                staticClass: "editable_fields",
+                attrs: {
+                  name: "schoolcategory",
+                  value: "Inactive",
+                  type: "radio"
+                }
+              }),
+              _vm._v(" "),
+              _c("span", { staticClass: "lbl" }, [_vm._v(" Inactive")])
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/administration/usermanagement/staffUser.vue?vue&type=template&id=242d47e2&":
+/*!*************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/administration/usermanagement/staffUser.vue?vue&type=template&id=242d47e2& ***!
+  \*************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "card" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("form", [
+        _c("div", { staticClass: "card-body" }, [
+          _c("div", { staticClass: "form-group row" }, [
+            _c("label", { staticClass: "col-md-2" }, [_vm._v("Employee ID:")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-6" }, [
+              _c("input", {
+                staticClass: "form-control editable_fields",
+                attrs: { type: "text", id: "employeeID" },
+                on: {
+                  change: function($event) {
+                    return _vm.employeeDetails()
+                  }
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _vm._m(1),
+          _vm._v(" "),
+          _vm._m(2),
+          _vm._v(" "),
+          _vm._m(3)
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-9" }, [
+            _c("input", {
+              staticClass: "btn btn-primary",
+              attrs: { type: "button", value: "cancel", id: "reset" },
+              on: {
+                click: function($event) {
+                  return _vm.reset()
+                }
+              }
+            }),
+            _vm._v(
+              "\n                                                 \n                    "
+            ),
+            _c("input", {
+              staticClass: "btn btn-primary",
+              attrs: { type: "button", value: "Submit", id: "submit" },
+              on: {
+                click: function($event) {
+                  return _vm.save()
+                }
+              }
+            })
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header" }, [
+      _c("h3", { staticClass: "card-title" }, [
+        _vm._v("Adding New Staff/Internal User")
+      ])
     ])
   },
   function() {
@@ -51262,7 +51590,12 @@ var staticRenderFns = [
           _c("label", { staticClass: "line-height-1 blue" }, [
             _c("input", {
               staticClass: "editable_fields",
-              attrs: { name: "schoolcategory", value: "Active", type: "radio" }
+              attrs: {
+                name: "schoolcategory",
+                value: "Active",
+                type: "radio",
+                checked: ""
+              }
             }),
             _vm._v(" "),
             _c("span", { staticClass: "lbl" }, [_vm._v("Active")])
@@ -51308,9 +51641,77 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("div", { staticClass: "card" }, [
+        _c("div", { staticClass: "card-header" }, [
+          _c("h3", { staticClass: "card-title" }, [_vm._v("User Lists")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-body" }, [
+          _c(
+            "table",
+            {
+              staticClass: "table table-bordered table-striped",
+              attrs: { id: "dynamic-table" }
+            },
+            [
+              _c("thead", [
+                _c("tr", [
+                  _c("th", [_vm._v("Name")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Email")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Organization Unit")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Role")])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tbody", [
+                _c("tr", { attrs: { id: "record1" } }, [
+                  _c("td", [_vm._v("Ugyen")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("ugyen@gmaill.com")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("Yangchenphug HSS")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("Teacher")])
+                ]),
+                _vm._v(" "),
+                _c("tr", { attrs: { id: "record2" } }, [
+                  _c("td", [_vm._v("Pema Dorji")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("pema@gmaill.com")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("Motithang HSS")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("Teacher")])
+                ]),
+                _vm._v(" "),
+                _c("tr", { attrs: { id: "record3" } }, [
+                  _c("td", [_vm._v("Karma Phuntsho")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("karma@gmaill.com")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("MOE")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("IT personnel")])
+                ])
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -51453,6 +51854,36 @@ var render = function() {
                     )
                   ],
                   1
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "dropdown-divider" }),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    attrs: { href: "#" },
+                    on: {
+                      click: function($event) {
+                        return _vm.manageclasses("User Lists")
+                      }
+                    }
+                  },
+                  [
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "dropdown-item",
+                        attrs: { to: "/userList" }
+                      },
+                      [
+                        _c("i", { staticClass: "menu-icon fa fa-caret-right" }),
+                        _vm._v(
+                          "\n                                User Lists\n                            "
+                        )
+                      ]
+                    )
+                  ],
+                  1
                 )
               ])
             ])
@@ -51561,9 +51992,115 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("h1", [_vm._v("Work Flow")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("div", { staticClass: "card" }, [
+        _c("div", { staticClass: "card-header" }, [
+          _c("h3", { staticClass: "card-title" }, [_vm._v("Work Flow")])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("form", [
+        _c("div", { staticClass: "card-body" }, [
+          _c("div", { staticClass: "form-group row" }, [
+            _c("label", { staticClass: "col-md-1" }, [_vm._v("Process:")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-6" }, [
+              _c(
+                "select",
+                {
+                  staticClass: "form-control editable_fields",
+                  attrs: { name: "role", id: "roles" }
+                },
+                [
+                  _c("option", { attrs: { value: "" } }, [
+                    _vm._v("--- Please Select ---")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "1" } }, [
+                    _vm._v("Admission")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "2" } }, [
+                    _vm._v("New School Opening")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "3" } }, [
+                    _vm._v("Approval Process")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "4" } }, [_vm._v("Result")])
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c(
+            "table",
+            {
+              staticClass: "table table-bordered table-striped",
+              attrs: { id: "dynamic-table" }
+            },
+            [
+              _c("thead", [
+                _c("tr", [
+                  _c("th", [_vm._v("Authority Type")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Role")]),
+                  _vm._v(" "),
+                  _c("th")
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tbody", [
+                _c("tr", { attrs: { id: "record1" } }, [
+                  _c("td", [
+                    _c("span", [
+                      _c(
+                        "select",
+                        {
+                          staticClass: "form-control editable_fields",
+                          attrs: { name: "role", id: "roles" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "verifier" } }, [
+                            _vm._v("Verifier")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "approver" } }, [
+                            _vm._v("Approver")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "director" } }, [
+                            _vm._v("Director")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("ugyen@gmaill.com")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("Yangchenphug HSS")])
+                ])
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -75256,6 +75793,10 @@ var routes = [{
     path: '/externalUser',
     name: 'External',
     component: __webpack_require__(/*! ./Pages/administration/usermanagement/externalUser.vue */ "./resources/js/Pages/administration/usermanagement/externalUser.vue")["default"]
+  }, {
+    path: '/userList',
+    name: 'User List',
+    component: __webpack_require__(/*! ./Pages/administration/usermanagement/userList.vue */ "./resources/js/Pages/administration/usermanagement/userList.vue")["default"]
   }]
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_4__["default"]({
@@ -75320,8 +75861,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\office\EMIS Enhancement\emisv3-adminlte\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\office\EMIS Enhancement\emisv3-adminlte\resources\css\app.css */"./resources/css/app.css");
+__webpack_require__(/*! D:\development\emisv3-adminlte\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\development\emisv3-adminlte\resources\css\app.css */"./resources/css/app.css");
 
 
 /***/ })

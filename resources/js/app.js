@@ -41,6 +41,7 @@ let routes = [
             { path: '/', component: require('./Pages/administration/usermanagement/usermanagementdata.vue').default },
             { path: '/staffUser', name: 'Staff', component: require('./Pages/administration/usermanagement/staffUser.vue').default },
             { path: '/externalUser', name: 'External', component: require('./Pages/administration/usermanagement/externalUser.vue').default },
+            { path: '/userList', name: 'User List', component: require('./Pages/administration/usermanagement/userList.vue').default },
 
         ]    
     }, 

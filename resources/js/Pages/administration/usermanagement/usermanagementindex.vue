@@ -29,6 +29,14 @@
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     External User
                                 </router-link>
+                            </a>  
+
+                            <div class="dropdown-divider"></div>
+                            <a href="#" @click="manageclasses('User Lists')">
+                                <router-link to="/userList" class="dropdown-item">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    User Lists
+                                </router-link>
                             </a>                         
                             
                         </div>
