@@ -3135,8 +3135,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  methods: {}
+  methods: {
+    setclass: function setclass(mainmenu, submenu) {
+      //global masters
+      $('#globalsetup').removeClass('menu-open');
+      $('#globalsetup' + '>ul').hide();
+      $('#globaldzongkhag').removeClass('navbar-cyan active');
+      $('#globalgewog').removeClass('navbar-cyan active');
+      $('#villageglobal').removeClass('navbar-cyan active'); //organizations
+
+      $('#organizationlink').removeClass('menu-open');
+      $('#organizationlink' + '>ul').hide();
+      $('#roganizationmaster').removeClass('navbar-cyan active');
+      $('#organizationlinksub').removeClass('navbar-cyan active');
+      $('#' + mainmenu).addClass('menu-open');
+      $('#' + mainmenu + '>ul').show();
+      $('#' + submenu).addClass('navbar-cyan active');
+      $('#' + submenu + ">p").addClass('text-white');
+    }
+  }
 });
 
 /***/ }),
@@ -4709,20 +4729,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {},
   data: function data() {
@@ -5090,6 +5096,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 if ('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
@@ -5129,20 +5155,12 @@ if ('ontouchstart' in document.documentElement) document.write("<script src='ass
     }
   },
   mounted: function mounted() {
-    jQuery(function ($) {
-      var myTable = $('#dynamic-table').DataTable({
-        bAutoWidth: false,
-        "aoColumns": [{
-          "bSortable": false
-        }, null, null, null, {
-          "bSortable": false
-        }],
-        "aaSorting": [],
-        select: {
-          style: 'multi'
-        }
-      });
+    $("#dynamic-table").DataTable({
+      "responsive": true,
+      "autoWidth": true
     });
+    $('.dataTables_filter').addClass('fa-pull-right');
+    $('#dynamic-table_paginate').addClass('fa-pull-right');
   }
 });
 
@@ -5415,20 +5433,12 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
-    jQuery(function ($) {
-      var myTable = $('#dynamic-table').DataTable({
-        bAutoWidth: false,
-        "aoColumns": [{
-          "bSortable": false
-        }, null, null, null, null, {
-          "bSortable": false
-        }],
-        "aaSorting": [],
-        select: {
-          style: 'multi'
-        }
-      });
+    $("#dynamic-table").DataTable({
+      "responsive": true,
+      "autoWidth": true
     });
+    $('.dataTables_filter').addClass('fa-pull-right');
+    $('#dynamic-table_paginate').addClass('fa-pull-right');
   }
 });
 
@@ -5722,20 +5732,12 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
-    jQuery(function ($) {
-      var myTable = $('#dynamic-table').DataTable({
-        bAutoWidth: false,
-        "aoColumns": [{
-          "bSortable": false
-        }, null, null, null, null, {
-          "bSortable": false
-        }],
-        "aaSorting": [],
-        select: {
-          style: 'multi'
-        }
-      });
+    $("#dynamic-table").DataTable({
+      "responsive": true,
+      "autoWidth": true
     });
+    $('.dataTables_filter').addClass('fa-pull-right');
+    $('#dynamic-table_paginate').addClass('fa-pull-right');
   }
 });
 
@@ -48332,7 +48334,8 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("li", { staticClass: "nav-item d-none d-sm-inline-block" }, [
         _c("a", { staticClass: "nav-link", attrs: { href: "/userlogin" } }, [
-          _vm._v("Home")
+          _c("span", { staticClass: "nav-icon fas fa-tachometer-alt" }),
+          _vm._v(" Dashboard")
         ])
       ])
     ])
@@ -48492,89 +48495,126 @@ var render = function() {
                 }
               },
               [
-                _c("li", { staticClass: "nav-item has-treeview" }, [
-                  _vm._m(1),
-                  _vm._v(" "),
-                  _c("ul", { staticClass: "nav nav-treeview" }, [
-                    _c(
-                      "li",
-                      { staticClass: "nav-item" },
-                      [
-                        _c(
-                          "router-link",
-                          {
-                            staticClass: "nav-link",
-                            attrs: {
-                              to: "/dzongmasters",
-                              "data-toggle": "awesome_tooltip",
-                              title: "Organization"
-                            }
-                          },
-                          [
-                            _c("i", {
-                              staticClass: "fa fa-angle-double-right nav-icon"
-                            }),
-                            _vm._v(" "),
-                            _c("p", [_vm._v("Dzongkhag Master")])
-                          ]
-                        )
-                      ],
-                      1
-                    ),
+                _c(
+                  "li",
+                  {
+                    staticClass: "nav-item has-treeview",
+                    attrs: { id: "globalsetup" }
+                  },
+                  [
+                    _vm._m(1),
                     _vm._v(" "),
-                    _c(
-                      "li",
-                      { staticClass: "nav-item" },
-                      [
-                        _c(
-                          "router-link",
-                          {
-                            staticClass: "nav-link",
-                            attrs: {
-                              to: "/gewogmasters",
-                              "data-toggle": "awesome_tooltip",
-                              title: "Organization"
+                    _c("ul", { staticClass: "nav nav-treeview" }, [
+                      _c(
+                        "li",
+                        {
+                          staticClass: "nav-item",
+                          attrs: { id: "globaldzongkhag" },
+                          on: {
+                            click: function($event) {
+                              return _vm.setclass(
+                                "globalsetup",
+                                "globaldzongkhag"
+                              )
                             }
-                          },
-                          [
-                            _c("i", {
-                              staticClass: "fa fa-angle-double-right nav-icon"
-                            }),
-                            _vm._v(" "),
-                            _c("p", [_vm._v("Gewog Master")])
-                          ]
-                        )
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "li",
-                      { staticClass: "nav-item" },
-                      [
-                        _c(
-                          "router-link",
-                          {
-                            staticClass: "nav-link",
-                            attrs: {
-                              to: "/villagemaster",
-                              "data-toggle": "awesome_tooltip",
-                              title: "Organization"
+                          }
+                        },
+                        [
+                          _c(
+                            "router-link",
+                            {
+                              staticClass: "nav-link",
+                              attrs: {
+                                to: "/dzongmasters",
+                                "data-toggle": "awesome_tooltip",
+                                title: "Organization"
+                              }
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "fa fa-angle-double-right nav-icon"
+                              }),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Dzongkhag Master")])
+                            ]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        {
+                          staticClass: "nav-item",
+                          attrs: { id: "globalgewog" },
+                          on: {
+                            click: function($event) {
+                              return _vm.setclass("globalsetup", "globalgewog")
                             }
-                          },
-                          [
-                            _c("i", {
-                              staticClass: "fa fa-angle-double-right nav-icon"
-                            }),
-                            _vm._v(" "),
-                            _c("p", [_vm._v("Village Master")])
-                          ]
-                        )
-                      ],
-                      1
-                    )
-                  ])
-                ]),
+                          }
+                        },
+                        [
+                          _c(
+                            "router-link",
+                            {
+                              staticClass: "nav-link",
+                              attrs: {
+                                to: "/gewogmasters",
+                                "data-toggle": "awesome_tooltip",
+                                title: "Organization"
+                              }
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "fa fa-angle-double-right nav-icon"
+                              }),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Gewog Master")])
+                            ]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        {
+                          staticClass: "nav-item",
+                          attrs: { id: "villageglobal" },
+                          on: {
+                            click: function($event) {
+                              return _vm.setclass(
+                                "globalsetup",
+                                "villageglobal"
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c(
+                            "router-link",
+                            {
+                              staticClass: "nav-link",
+                              attrs: {
+                                to: "/villagemaster",
+                                "data-toggle": "awesome_tooltip",
+                                title: "Organization"
+                              }
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "fa fa-angle-double-right nav-icon"
+                              }),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Village Master")])
+                            ]
+                          )
+                        ],
+                        1
+                      )
+                    ])
+                  ]
+                ),
                 _vm._v(" "),
                 _c("li", { staticClass: "nav-item has-treeview" }, [
                   _vm._m(2),
@@ -48650,49 +48690,84 @@ var render = function() {
                         "li",
                         {
                           staticClass: "nav-item",
-                          attrs: { id: "roganizationmaster" }
+                          attrs: { id: "roganizationmaster" },
+                          on: {
+                            click: function($event) {
+                              return _vm.setclass(
+                                "organizationlink",
+                                "roganizationmaster"
+                              )
+                            }
+                          }
                         },
                         [
                           _c(
                             "router-link",
                             {
                               staticClass: "nav-link",
-                              attrs: {
-                                to: "/orgmastermanagement",
-                                "data-toggle": "awesome_tooltip",
-                                title: "Organization"
-                              }
+                              attrs: { to: "/orgmastermanagement" }
                             },
                             [
-                              _c(
-                                "p",
-                                { attrs: { id: "roganizationmasterpara" } },
-                                [
-                                  _c("i", {
-                                    staticClass:
-                                      "fa fa-angle-double-right nav-icon"
-                                  }),
-                                  _vm._v(
-                                    "\n                                        Organization Masters\n                                    "
-                                  )
-                                ]
-                              )
+                              _c("p", [
+                                _c("i", {
+                                  staticClass:
+                                    "fa fa-angle-double-right nav-icon"
+                                }),
+                                _vm._v(
+                                  "\n                                        Organization Masters\n                                    "
+                                )
+                              ])
                             ]
                           )
                         ],
                         1
                       ),
                       _vm._v(" "),
-                      _vm._m(5)
+                      _c(
+                        "li",
+                        {
+                          staticClass: "nav-item",
+                          attrs: { id: "organizationlinksub" },
+                          on: {
+                            click: function($event) {
+                              return _vm.setclass(
+                                "organizationlink",
+                                "organizationlinksub"
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c(
+                            "router-link",
+                            {
+                              staticClass: "nav-link",
+                              attrs: { to: "/orgmastermanagement" }
+                            },
+                            [
+                              _c("p", [
+                                _c("i", {
+                                  staticClass:
+                                    "fa fa-angle-double-right nav-icon"
+                                }),
+                                _vm._v(
+                                  "\n                                        Organization\n                                    "
+                                )
+                              ])
+                            ]
+                          )
+                        ],
+                        1
+                      )
                     ])
                   ]
                 ),
                 _vm._v(" "),
+                _vm._m(5),
+                _vm._v(" "),
                 _vm._m(6),
                 _vm._v(" "),
-                _vm._m(7),
-                _vm._v(" "),
-                _vm._m(8)
+                _vm._m(7)
               ]
             )
           ])
@@ -48777,18 +48852,6 @@ var staticRenderFns = [
           "\n                                Organization\n                                "
         ),
         _c("i", { staticClass: "fas fa-angle-left right" })
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "nav-item" }, [
-      _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-        _c("i", { staticClass: "fa fa-angle-double-right nav-icon" }),
-        _vm._v(" "),
-        _c("p", [_vm._v("Organization")])
       ])
     ])
   },
@@ -51173,16 +51236,16 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm._m(0),
+    _c("br"),
     _vm._v(" "),
     _c("section", { staticClass: "content" }, [
       _c("div", { staticClass: "container-fluid" }, [
         _c("div", { staticClass: "row" }, [
           _c("div", { staticClass: "col-lg-3 col-6" }, [
             _c("div", { staticClass: "small-box bg-info" }, [
-              _vm._m(1),
+              _vm._m(0),
               _vm._v(" "),
-              _vm._m(2),
+              _vm._m(1),
               _vm._v(" "),
               _c(
                 "a",
@@ -51205,9 +51268,9 @@ var render = function() {
           _vm._v(" "),
           _c("div", { staticClass: "col-lg-3 col-6" }, [
             _c("div", { staticClass: "small-box bg-success" }, [
-              _vm._m(3),
+              _vm._m(2),
               _vm._v(" "),
-              _vm._m(4),
+              _vm._m(3),
               _vm._v(" "),
               _c(
                 "a",
@@ -51230,9 +51293,9 @@ var render = function() {
           _vm._v(" "),
           _c("div", { staticClass: "col-lg-3 col-6" }, [
             _c("div", { staticClass: "small-box bg-warning" }, [
-              _vm._m(5),
+              _vm._m(4),
               _vm._v(" "),
-              _vm._m(6),
+              _vm._m(5),
               _vm._v(" "),
               _c(
                 "a",
@@ -51255,9 +51318,9 @@ var render = function() {
           _vm._v(" "),
           _c("div", { staticClass: "col-lg-3 col-6" }, [
             _c("div", { staticClass: "small-box bg-danger" }, [
-              _vm._m(7),
+              _vm._m(6),
               _vm._v(" "),
-              _vm._m(8),
+              _vm._m(7),
               _vm._v(" "),
               _c(
                 "a",
@@ -51279,41 +51342,14 @@ var render = function() {
           ])
         ]),
         _vm._v(" "),
-        _vm._m(9)
+        _vm._m(8)
       ])
     ]),
     _vm._v(" "),
-    _vm._m(10)
+    _vm._m(9)
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "content-header" }, [
-      _c("div", { staticClass: "container-fluid" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-sm-6" }, [
-            _c("span", { staticClass: "nav-icon fas fa-tachometer-alt" }),
-            _vm._v(" Dashboard\n                ")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-sm-6" }, [
-            _c("ol", { staticClass: "breadcrumb float-sm-right" }, [
-              _c("li", { staticClass: "breadcrumb-item" }, [
-                _c("a", { attrs: { href: "#" } }, [_vm._v("Home")])
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "breadcrumb-item active" }, [
-                _vm._v("Dashboard")
-              ])
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -52040,24 +52076,26 @@ var render = function() {
                         _c("td", [_vm._v("2019-10-12")]),
                         _vm._v(" "),
                         _c("td", [
-                          _vm._m(3),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-xs",
-                              attrs: { type: "button" },
-                              on: {
-                                click: function($event) {
-                                  return _vm.showdelete("1")
+                          _c("span", [
+                            _vm._m(3),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-xs",
+                                attrs: { type: "button" },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.showdelete("1")
+                                  }
                                 }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "fa fa-trash" }),
-                              _vm._v(" Delete")
-                            ]
-                          )
+                              },
+                              [
+                                _c("i", { staticClass: "fa fa-trash" }),
+                                _vm._v(" Delete")
+                              ]
+                            )
+                          ])
                         ])
                       ]),
                       _vm._v(" "),
@@ -52071,23 +52109,25 @@ var render = function() {
                         _c("td", {}, [_vm._v("2019-10-12")]),
                         _vm._v(" "),
                         _c("td", {}, [
-                          _vm._m(5),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-xs",
-                              on: {
-                                click: function($event) {
-                                  return _vm.showdelete("2")
+                          _c("span", [
+                            _vm._m(5),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-xs",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.showdelete("2")
+                                  }
                                 }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "fa fa-trash" }),
-                              _vm._v(" Delete")
-                            ]
-                          )
+                              },
+                              [
+                                _c("i", { staticClass: "fa fa-trash" }),
+                                _vm._v(" Delete")
+                              ]
+                            )
+                          ])
                         ])
                       ]),
                       _vm._v(" "),
@@ -52101,23 +52141,25 @@ var render = function() {
                         _c("td", {}, [_vm._v("2019-10-12")]),
                         _vm._v(" "),
                         _c("td", {}, [
-                          _vm._m(7),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-xs",
-                              on: {
-                                click: function($event) {
-                                  return _vm.showdelete("3")
+                          _c("span", [
+                            _vm._m(7),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-xs",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.showdelete("3")
+                                  }
                                 }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "fa fa-trash" }),
-                              _vm._v(" Delete")
-                            ]
-                          )
+                              },
+                              [
+                                _c("i", { staticClass: "fa fa-trash" }),
+                                _vm._v(" Delete")
+                              ]
+                            )
+                          ])
                         ])
                       ]),
                       _vm._v(" "),
@@ -52131,23 +52173,25 @@ var render = function() {
                         _c("td", {}, [_vm._v("2019-10-12")]),
                         _vm._v(" "),
                         _c("td", {}, [
-                          _vm._m(9),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-xs",
-                              on: {
-                                click: function($event) {
-                                  return _vm.showdelete("4")
+                          _c("span", [
+                            _vm._m(9),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-xs",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.showdelete("4")
+                                  }
                                 }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "fa fa-trash" }),
-                              _vm._v(" Delete")
-                            ]
-                          )
+                              },
+                              [
+                                _c("i", { staticClass: "fa fa-trash" }),
+                                _vm._v(" Delete")
+                              ]
+                            )
+                          ])
                         ])
                       ]),
                       _vm._v(" "),
@@ -52161,23 +52205,25 @@ var render = function() {
                         _c("td", {}, [_vm._v("2019-10-12")]),
                         _vm._v(" "),
                         _c("td", {}, [
-                          _vm._m(11),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-xs",
-                              on: {
-                                click: function($event) {
-                                  return _vm.showdelete("5")
+                          _c("span", [
+                            _vm._m(11),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-xs",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.showdelete("5")
+                                  }
                                 }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "fa fa-trash" }),
-                              _vm._v(" Delete")
-                            ]
-                          )
+                              },
+                              [
+                                _c("i", { staticClass: "fa fa-trash" }),
+                                _vm._v(" Delete")
+                              ]
+                            )
+                          ])
                         ])
                       ]),
                       _vm._v(" "),
@@ -52191,23 +52237,25 @@ var render = function() {
                         _c("td", {}, [_vm._v("2019-10-12")]),
                         _vm._v(" "),
                         _c("td", {}, [
-                          _vm._m(13),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-xs",
-                              on: {
-                                click: function($event) {
-                                  return _vm.showdelete("6")
+                          _c("span", [
+                            _vm._m(13),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-xs",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.showdelete("6")
+                                  }
                                 }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "fa fa-trash" }),
-                              _vm._v(" Delete")
-                            ]
-                          )
+                              },
+                              [
+                                _c("i", { staticClass: "fa fa-trash" }),
+                                _vm._v(" Delete")
+                              ]
+                            )
+                          ])
                         ])
                       ]),
                       _vm._v(" "),
@@ -52221,23 +52269,25 @@ var render = function() {
                         _c("td", {}, [_vm._v("2019-10-12")]),
                         _vm._v(" "),
                         _c("td", {}, [
-                          _vm._m(15),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-xs",
-                              on: {
-                                click: function($event) {
-                                  return _vm.showdelete("7")
+                          _c("span", [
+                            _vm._m(15),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-xs",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.showdelete("7")
+                                  }
                                 }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "fa fa-trash" }),
-                              _vm._v(" Delete")
-                            ]
-                          )
+                              },
+                              [
+                                _c("i", { staticClass: "fa fa-trash" }),
+                                _vm._v(" Delete")
+                              ]
+                            )
+                          ])
                         ])
                       ]),
                       _vm._v(" "),
@@ -52250,24 +52300,26 @@ var render = function() {
                         _vm._v(" "),
                         _c("td", {}, [_vm._v("2019-10-12")]),
                         _vm._v(" "),
-                        _c("td", {}, [
-                          _vm._m(17),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-xs",
-                              on: {
-                                click: function($event) {
-                                  return _vm.showdelete("8")
+                        _c("td", [
+                          _c("span", [
+                            _vm._m(17),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-xs",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.showdelete("8")
+                                  }
                                 }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "fa fa-trash" }),
-                              _vm._v(" Delete")
-                            ]
-                          )
+                              },
+                              [
+                                _c("i", { staticClass: "fa fa-trash" }),
+                                _vm._v(" Delete")
+                              ]
+                            )
+                          ])
                         ])
                       ]),
                       _vm._v(" "),
@@ -52281,23 +52333,25 @@ var render = function() {
                         _c("td", {}, [_vm._v("2019-10-12")]),
                         _vm._v(" "),
                         _c("td", {}, [
-                          _vm._m(19),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-xs",
-                              on: {
-                                click: function($event) {
-                                  return _vm.showdelete("9")
+                          _c("span", [
+                            _vm._m(19),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-xs",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.showdelete("9")
+                                  }
                                 }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "fa fa-trash" }),
-                              _vm._v(" Delete")
-                            ]
-                          )
+                              },
+                              [
+                                _c("i", { staticClass: "fa fa-trash" }),
+                                _vm._v(" Delete")
+                              ]
+                            )
+                          ])
                         ])
                       ]),
                       _vm._v(" "),
@@ -52311,23 +52365,25 @@ var render = function() {
                         _c("td", {}, [_vm._v("2019-10-12")]),
                         _vm._v(" "),
                         _c("td", {}, [
-                          _vm._m(21),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-xs",
-                              on: {
-                                click: function($event) {
-                                  return _vm.showdelete("10")
+                          _c("span", [
+                            _vm._m(21),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-xs",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.showdelete("10")
+                                  }
                                 }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "fa fa-trash" }),
-                              _vm._v(" Delete")
-                            ]
-                          )
+                              },
+                              [
+                                _c("i", { staticClass: "fa fa-trash" }),
+                                _vm._v(" Delete")
+                              ]
+                            )
+                          ])
                         ])
                       ])
                     ])
@@ -52814,8 +52870,7 @@ var render = function() {
                 _c(
                   "table",
                   {
-                    staticClass:
-                      "table table-striped table-bordered table-hover",
+                    staticClass: "table table-bordered table-hover",
                     attrs: { id: "dynamic-table" }
                   },
                   [

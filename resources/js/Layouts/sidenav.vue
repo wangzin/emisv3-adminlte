@@ -9,7 +9,7 @@
             <div class="sidebar">
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent" data-widget="treeview" role="menu" data-accordion="false">
-                        <li class="nav-item has-treeview">
+                        <li class="nav-item has-treeview" id="globalsetup">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-database"></i>
                                 <p>
@@ -18,19 +18,19 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
-                                <li class="nav-item">
+                                <li class="nav-item" id="globaldzongkhag" @click="setclass('globalsetup','globaldzongkhag')">
                                     <router-link to="/dzongmasters"   class="nav-link" data-toggle="awesome_tooltip" title="Organization">
                                         <i class="fa fa-angle-double-right nav-icon"></i>
                                         <p>Dzongkhag Master</p>
                                     </router-link>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item"  id="globalgewog" @click="setclass('globalsetup','globalgewog')">
                                     <router-link to="/gewogmasters"   class="nav-link" data-toggle="awesome_tooltip" title="Organization">
                                         <i class="fa fa-angle-double-right nav-icon"></i>
                                         <p>Gewog Master</p>
                                     </router-link>
                                 </li>
-                                <li class="nav-item"> 
+                                <li class="nav-item" id="villageglobal" @click="setclass('globalsetup','villageglobal')"> 
                                     <router-link to="/villagemaster"   class="nav-link" data-toggle="awesome_tooltip" title="Organization">
                                         <i class="fa fa-angle-double-right nav-icon"></i>
                                         <p>Village Master</p>
@@ -76,19 +76,21 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
-                                <li class="nav-item" id="roganizationmaster">
-                                    <router-link to="/orgmastermanagement"   class="nav-link" data-toggle="awesome_tooltip" title="Organization">
-                                        <p id="roganizationmasterpara">
+                                <li class="nav-item" id="roganizationmaster" @click="setclass('organizationlink','roganizationmaster')">
+                                    <router-link to="/orgmastermanagement" class="nav-link">
+                                        <p>
                                             <i class="fa fa-angle-double-right nav-icon"></i>
                                             Organization Masters
                                         </p>
                                     </router-link>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                    <i class="fa fa-angle-double-right nav-icon"></i>
-                                    <p>Organization</p>
-                                    </a>
+                                <li class="nav-item" id="organizationlinksub" @click="setclass('organizationlink','organizationlinksub')">
+                                    <router-link to="/orgmastermanagement" class="nav-link">
+                                        <p>
+                                            <i class="fa fa-angle-double-right nav-icon"></i>
+                                            Organization
+                                        </p>
+                                    </router-link>
                                 </li>
                             </ul>
                         </li>
@@ -119,6 +121,25 @@
 <script>
 export default {
     methods: {
+        setclass(mainmenu,submenu){
+            //global masters
+            $('#globalsetup').removeClass('menu-open');
+            $('#globalsetup'+'>ul').hide();
+            $('#globaldzongkhag').removeClass('navbar-cyan active');
+            $('#globalgewog').removeClass('navbar-cyan active');
+            $('#villageglobal').removeClass('navbar-cyan active');
+            
+            //organizations
+            $('#organizationlink').removeClass('menu-open');
+            $('#organizationlink'+'>ul').hide();
+            $('#roganizationmaster').removeClass('navbar-cyan active');
+            $('#organizationlinksub').removeClass('navbar-cyan active');
+
+            $('#'+mainmenu).addClass('menu-open');
+            $('#'+mainmenu+'>ul').show();
+            $('#'+submenu).addClass('navbar-cyan active');
+            $('#'+submenu+ ">p").addClass('text-white');
+        },
     },
     
 }

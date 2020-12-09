@@ -57,6 +57,10 @@
         <script src="admin3/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
         <!-- Summernote -->
         <script src="admin3/plugins/summernote/summernote-bs4.min.js"></script>
+        <script src="admin3/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="admin3/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <script src="admin3/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="admin3/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
         <!-- overlayScrollbars -->
         <script src="admin3/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
         <!-- AdminLTE App -->

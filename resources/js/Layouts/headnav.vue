@@ -6,7 +6,7 @@
 					<a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
 				</li>
 				<li class="nav-item d-none d-sm-inline-block">
-					<a href="/userlogin" class="nav-link">Home</a>
+					<a href="/userlogin" class="nav-link"><span class="nav-icon fas fa-tachometer-alt"></span> Dashboard</a>
 				</li>
 			</ul>
 			<form class="form-inline ml-3">
