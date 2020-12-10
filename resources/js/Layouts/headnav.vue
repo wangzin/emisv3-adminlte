@@ -6,7 +6,7 @@
 					<a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
 				</li>
 				<li class="nav-item d-none d-sm-inline-block">
-					<a href="/userlogin" class="nav-link">Home</a>
+					<a href="/userlogin" class="nav-link"><span class="nav-icon fas fa-tachometer-alt"></span> Dashboard</a>
 				</li>
 			</ul>
 			<form class="form-inline ml-3">
@@ -23,24 +23,17 @@
 				<li class="nav-item dropdown">
 					<a class="nav-link" data-toggle="dropdown" href="#">
 						<i class="far fa-bell"></i>
-						<span class="badge badge-warning navbar-badge">15</span>
+						<span class="badge badge-warning navbar-badge">7</span>
 					</a>
 					<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-						<span class="dropdown-item dropdown-header">15 Notifications</span>
+						<span class="dropdown-item dropdown-header">7 Notifications</span>
 						<div class="dropdown-divider"></div>
 						<a href="#" class="dropdown-item">
 							<i class="fas fa-envelope mr-2"></i> 4 new messages
-							<span class="float-right text-muted text-sm">3 mins</span>
-						</a>
-						<div class="dropdown-divider"></div>
-						<a href="#" class="dropdown-item">
-							<i class="fas fa-users mr-2"></i> 8 friend requests
-							<span class="float-right text-muted text-sm">12 hours</span>
 						</a>
 						<div class="dropdown-divider"></div>
 						<a href="#" class="dropdown-item">
 							<i class="fas fa-file mr-2"></i> 3 new reports
-							<span class="float-right text-muted text-sm">2 days</span>
 						</a>
 						<div class="dropdown-divider"></div>
 						<a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
@@ -60,15 +53,21 @@
 					</a>
 					<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
 						<div class="dropdown-divider"></div>
-						<a href="#" class="dropdown-item">
-							<i class="fas fa-user mr-2"></i> Update Profile
-						</a>
+						<router-link to="/profile"   class="dropdown-item">
+							<p id="">
+								<i class="fas fa-user mr-2"></i>
+								Profile
+							</p>
+						</router-link>
 						<div class="dropdown-divider"></div>
-						<a href="#" class="dropdown-item">
-							<i class="fas fa-random mr-2"></i> Setting
-						</a>
+						<router-link to="/settings"   class="dropdown-item">
+							<p>
+								<i class="fas fa-random mr-2"></i>
+								Setting
+							</p>
+						</router-link>
 						<div class="dropdown-divider"></div>
-						<a href="/" class="dropdown-item dropdown-footer">
+						<a href="#" @click="logout()" class="dropdown-item">
 							<i class="fa fa-sign-out-alt"></i>Sign out
 						</a>
 					</div>
@@ -77,4 +76,28 @@
 		</nav>
     </div>
 </template>
+<script>
+    export default {
+        methods: {
+            logout(){
+				Swal.fire({
+					title: 'Are you sure you wish to signout?',
+					icon: 'warning',
+					showCancelButton: true,
+					confirmButtonColor: '#3085d6',
+					cancelButtonColor: '#d33',
+					confirmButtonText: 'Yes!',
+					}).then((result) => {
+					if (result.isConfirmed) {
+						axios.post(route('logout').url()).then(response => {
+							window.location = '/';
+						})
+					}
+				})
+            },
+        },
+        mounted() {
+        },
+    }
+</script>
 

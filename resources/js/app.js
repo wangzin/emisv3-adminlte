@@ -16,20 +16,38 @@ Vue.use(InertiaForm);
 Vue.use(PortalVue);
 let routes = [
     { path: '/', name: 'Dashboard', component: require('./Pages/dashboard_data.vue').default },
+    { path: '/profile', name: 'Level Master', component: require('./Pages/common/profile.vue').default },
     { path: '/dzongmasters', name: 'Dzongkhag Master', component: require('./Pages/globalmaster/dzongmasters.vue').default },
     { path: '/gewogmasters', name: 'Gewog Master', component: require('./Pages/globalmaster/gewog.vue').default },
     { path: '/villagemaster', name: 'Village Master', component: require('./Pages/globalmaster/village.vue').default },
+<<<<<<< HEAD
     { path: '/StudentIndex', name: 'Student Index', component: require('./Pages/Students/regstd.vue').default },
     { path: '/regularstd', name: 'Regular Student', component: require('./Pages/Students/regstd.vue').default },
+=======
+
+>>>>>>> 191fd29456432ef7ca1c630786f8db43531c8fbd
     { path: '/orgmastermanagement', name: 'Organization Master Management',
     component: require('./Pages/organization/masters/orgmasterindex.vue').default,
         children: [
-            { path: '', component: require('./Pages/organization/masters/orgmasterdata.vue').default },
-            // { path: '/orgmasterlevel', name: 'Level Master', component: require('./Pages/organization/masters/masterlevel.vue').default },
-            // { path: '/orglocationmaster', name: 'Location Master', component: require('./Pages/organization/masters/locationmaster.vue').default },
+            { path: '/', component: require('./Pages/organization/masters/orgmasterdata.vue').default },
+            { path: '/orgmasterlevel', name: 'Level Master', component: require('./Pages/organization/masters/masterlevel.vue').default },
+            { path: '/orglocationmaster', name: 'Location Master', component: require('./Pages/organization/masters/locationmaster.vue').default },
             // { path: '/orgstatus', name: 'Status Master', component: require('./Pages/organization/masters/orgstatus.vue').default },
             // { path: '/climatetype', name: 'Climate Master', component: require('./Pages/organization/masters/climatetype.vue').default },
             // { path: '/roadtype', name: 'Roadtype Master', component: require('./Pages/organization/masters/roadtype.vue').default },
+        ]    
+    }, 
+    //administration route 
+    { path: '/rolesAndPriviledges', name: 'Roles', component: require('./Pages/administration/rolesAndPriviledges.vue').default },
+    { path: '/workFlow', name: 'workFlow', component: require('./Pages/administration/workflow.vue').default },
+    { path: '/administrationmaster', name: 'Administration Master',
+    component: require('./Pages/administration/usermanagement/usermanagementindex.vue').default,
+        children: [
+            { path: '/', component: require('./Pages/administration/usermanagement/usermanagementdata.vue').default },
+            { path: '/staffUser', name: 'Staff', component: require('./Pages/administration/usermanagement/staffUser.vue').default },
+            { path: '/externalUser', name: 'External', component: require('./Pages/administration/usermanagement/externalUser.vue').default },
+            { path: '/userList', name: 'User List', component: require('./Pages/administration/usermanagement/userList.vue').default },
+
         ]    
     }, 
 ]
@@ -48,5 +66,4 @@ new Vue({
             },
         }),
         router
-
 }).$mount(app);

@@ -275,22 +275,12 @@ export default {
 		},
     },
     mounted() {
-        
-        jQuery(function($) {
-			var myTable = $('#dynamic-table')
-			.DataTable( {
-				bAutoWidth: false,
-				"aoColumns": [
-					{ "bSortable": false },
-					null, null,null, null,
-					{ "bSortable": false }
-				],
-				"aaSorting": [], 
-				select: {
-					style: 'multi'
-				}
-			} );
-		} );	
+        $("#dynamic-table").DataTable({
+            "responsive": true,
+            "autoWidth": true,
+        }); 
+        $('.dataTables_filter').addClass('fa-pull-right');
+        $('#dynamic-table_paginate').addClass('fa-pull-right');	
     },
     
 }

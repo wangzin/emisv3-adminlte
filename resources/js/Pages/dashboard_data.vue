@@ -1,20 +1,6 @@
 <template>
     <div>
-        <div class="content-header">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <span class="nav-icon fas fa-tachometer-alt"></span> Dashboard
-                    </div>
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <br>
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
@@ -27,7 +13,7 @@
                         <div class="icon">
                             <i class="ion ion-home"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="#" @click="showOrgDetails('bg-info')" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-6">
@@ -39,7 +25,7 @@
                         <div class="icon">
                             <i class="ion ion-ios-contact"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="#" @click="showOrgDetails('bg-success')" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-6">
@@ -51,7 +37,7 @@
                         <div class="icon">
                             <i class="ion ion-ios-people"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="#" @click="showOrgDetails('bg-warning')"  class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-6">
@@ -63,7 +49,7 @@
                         <div class="icon">
                             <i class="ion ion-person-add"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="#" @click="showOrgDetails('bg-danger')" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -136,6 +122,199 @@
                 </div>
             </div>
         </section>
+        <div class="modal fade" id="dashboardmodal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content" id="mcontent">
+                    <div class="modal-header">
+                        <h4 class="modal-title"><i class="ion-android-alert pr-1.5"></i>Information</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-bordered" id="bg-info" style="display:none">
+                            <thead>                  
+                                <tr>
+                                    <th style="width: 10px">#</th>
+                                    <th>Organization Name</th>
+                                    <th>Category</th>
+                                    <th>Status</th>
+                                    <th>Dzongkhag</th>
+                                    <th>Gewog</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1.</td>
+                                    <td>Jakar HSS</td>
+                                    <td> <span class="badge bg-warning">Public Schools</span> </td>
+                                    <td><span class="badge bg-success">Opened</span></td>
+                                    <td>Bumthang</td>
+                                    <td>Chokhor</td>
+                                </tr>
+                                <tr>
+                                    <td>2.</td>
+                                    <td>Chhumey Central School</td>
+                                    <td> <span class="badge bg-warning">Public Schools</span> </td>
+                                    <td><span class="badge bg-success">Opened</span></td>
+                                    <td>Bumthang</td>
+                                    <td>Chumey</td>
+                                </tr>
+                                <tr>
+                                    <td>3.</td>
+                                    <td>Ura Central School</td>
+                                    <td> <span class="badge bg-warning">Public Schools</span> </td>
+                                    <td><span class="badge bg-success">Opened</span></td>
+                                    <td>Bumthang</td>
+                                    <td>Ura</td>
+                                </tr>
+                                <tr>
+                                    <td>4.</td>
+                                    <td>Tang Central School</td>
+                                    <td> <span class="badge bg-warning">Public Schools</span> </td>
+                                    <td><span class="badge bg-success">Opened</span></td>
+                                    <td>Bumthang</td>
+                                    <td>Tang</td>
+                                </tr>
+                                <tr>
+                                    <td>5.</td>
+                                    <td>Shingkhar PS</td>
+                                    <td> <span class="badge bg-warning">Public Schools</span> </td>
+                                    <td><span class="badge bg-danger">Closed</span></td>
+                                    <td>Bumthang</td>
+                                    <td>Ura</td>
+                                </tr>
+                                <tr>
+                                    <td>6.</td>
+                                    <td>Yonten Kuenjung Academy HSS</td>
+                                    <td> <span class="badge bg-primary">Private Schools</span> </td>
+                                    <td><span class="badge bg-success">Opened</span></td>
+                                    <td>Chukha</td>
+                                    <td>Phuntsholing Thromde</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-bordered" id="bg-success" style="display:none">
+                            <thead>                  
+                                <tr>
+                                    <th style="width: 10px">#</th>
+                                    <th>School Name</th>
+                                    <th>Total</th>
+                                    <th>Total Male Teacher</th>
+                                    <th>Total Female Teacher</th>
+                                    <th>Total Supporting Staff</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1.</td>
+                                    <td>Jakar HSS</td>
+                                    <td> 43 </td>
+                                    <td>30</td>
+                                    <td>10</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>2.</td>
+                                    <td>Chhumey Central School</td>
+                                    <td> 27 </td>
+                                    <td>15</td>
+                                    <td>10</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>3.</td>
+                                    <td>Ura Central School</td>
+                                    <td>19</td>
+                                    <td>7</td>
+                                    <td>10</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>4.</td>
+                                    <td>Tang Central School</td>
+                                    <td> 21 </td>
+                                    <td>17</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>5.</td>
+                                    <td>Shingkhar PS</td>
+                                    <td>0 </td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>6.</td>
+                                    <td>Yonten Kuenjung Academy HSS</td>
+                                    <td>13</td>
+                                    <td>6</td>
+                                    <td>6</td>
+                                    <td>1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-bordered" id="bg-warning" style="display:none">
+                            <thead>                  
+                                <tr>
+                                    <th style="width: 10px">#</th>
+                                    <th>School Name</th>
+                                    <th>Total Students</th>
+                                    <th>Total Male Student</th>
+                                    <th>Total Female Student</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1.</td>
+                                    <td>Jakar HSS</td>
+                                    <td> 312 </td>
+                                    <td>250</td>
+                                    <td>62</td>
+                                </tr>
+                                <tr>
+                                    <td>2.</td>
+                                    <td>Chhumey Central School</td>
+                                    <td> 590 </td>
+                                    <td>300</td>
+                                    <td>290</td>
+                                </tr>
+                                <tr>
+                                    <td>3.</td>
+                                    <td>Ura Central School</td>
+                                    <td>340</td>
+                                    <td>200</td>
+                                    <td>140</td>
+                                </tr>
+                                <tr>
+                                    <td>4.</td>
+                                    <td>Tang Central School</td>
+                                    <td> 238</td>
+                                    <td>100</td>
+                                    <td>138</td>
+                                </tr>
+                                <tr>
+                                    <td>5.</td>
+                                    <td>Shingkhar PS</td>
+                                    <td>0 </td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>6.</td>
+                                    <td>Yonten Kuenjung Academy HSS</td>
+                                    <td>645</td>
+                                    <td>395</td>
+                                    <td>250</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -149,14 +328,17 @@
             }
         },
         methods: {
-            switchToTeam(team) {
-                this.$inertia.put(route('current-team.update'), {
-                    'team_id': team.id
-                }, {
-                    preserveState: false
-                })
+            showOrgDetails(type) {
+                $('#bg-info').hide();
+                $('#bg-success').hide();
+                $('#bg-warning').hide();
+                $('#bg-danger').hide();
+                $('#'+type).show();
+                $('#mcontent').removeClass('bg-info bg-success bg-warning bg-danger');
+                $('#mcontent').addClass(type);
+                $('#dashboardmodal').modal('show');
             },
-            logout() {
+            logout(){
                 axios.post(route('logout').url()).then(response => {
                     window.location = '/';
                 })

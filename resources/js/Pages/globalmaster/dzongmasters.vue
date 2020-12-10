@@ -34,8 +34,10 @@
                                         <td><span class="label label-success label-sm">Active</span></td>
                                         <td>2019-10-12</td>
                                         <td>
+                                            <span>
                                             <button class="btn btn-primary btn-xs" type="button"><i class="fa fa-edit"></i> Edit</button>
                                             <button class="btn btn-danger btn-xs" @click="showdelete('1')" type="button"><i class="fa fa-trash"></i> Delete</button>
+                                            </span>
                                         </td>
                                     </tr>
                                     <tr id="record2">
@@ -44,8 +46,10 @@
                                         <td class=""><span class="label label-danger label-sm">In Active</span></td>
                                         <td class="">2019-10-12</td>
                                         <td class="">
+                                            <span>
                                             <button class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</button>
                                             <button class="btn btn-danger btn-xs" @click="showdelete('2')"><i class="fa fa-trash"></i> Delete</button>
+                                            </span>
                                         </td>
                                     </tr>
                                     <tr id="record3"> 
@@ -54,8 +58,10 @@
                                         <td class=""><span class="label label-success label-sm">Active</span></td>
                                         <td class="">2019-10-12</td>
                                         <td class="">
+                                            <span>
                                             <button class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</button>
                                             <button class="btn btn-danger btn-xs" @click="showdelete('3')"><i class="fa fa-trash"></i> Delete</button>
+                                            </span>
                                         </td>
                                     </tr>
                                     <tr id="record4"> 
@@ -64,8 +70,10 @@
                                         <td class=""><span class="label label-success label-sm">Active</span></td>
                                         <td class="">2019-10-12</td>
                                         <td class="">
+                                            <span>
                                             <button class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</button>
                                             <button class="btn btn-danger btn-xs" @click="showdelete('4')"><i class="fa fa-trash"></i> Delete</button>
+                                            </span>
                                         </td>
                                     </tr>
                                     <tr id="record5"> 
@@ -74,8 +82,10 @@
                                         <td class=""><span class="label label-success label-sm">Active</span></td>
                                         <td class="">2019-10-12</td>
                                         <td class="">
+                                            <span>
                                             <button class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</button>
                                             <button class="btn btn-danger btn-xs" @click="showdelete('5')"><i class="fa fa-trash"></i> Delete</button>
+                                            </span>
                                         </td>
                                     </tr>
                                     <tr id="record6"> 
@@ -84,8 +94,10 @@
                                         <td class=""><span class="label label-success label-sm">Active</span></td>
                                         <td class="">2019-10-12</td>
                                         <td class="">
+                                            <span>
                                             <button class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</button>
                                             <button class="btn btn-danger btn-xs" @click="showdelete('6')"><i class="fa fa-trash"></i> Delete</button>
+                                            </span>
                                         </td>
                                     </tr>
                                     <tr id="record7"> 
@@ -94,8 +106,10 @@
                                         <td class=""><span class="label label-success label-sm">Active</span></td>
                                         <td class="">2019-10-12</td>
                                         <td class="">
+                                            <span>
                                             <button class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</button>
                                             <button class="btn btn-danger btn-xs" @click="showdelete('7')"><i class="fa fa-trash"></i> Delete</button>
+                                            </span>
                                         </td>
                                     </tr>
                                     <tr id="record8"> 
@@ -103,9 +117,11 @@
                                         <td class="">Tsherang</td>
                                         <td class=""><span class="label label-success label-sm">Active</span></td>
                                         <td class="">2019-10-12</td>
-                                        <td class="">
-                                            <button class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</button>
-                                            <button class="btn btn-danger btn-xs" @click="showdelete('8')"><i class="fa fa-trash"></i> Delete</button>
+                                        <td>
+                                            <span>
+                                                <button class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</button>
+                                                <button class="btn btn-danger btn-xs" @click="showdelete('8')"><i class="fa fa-trash"></i> Delete</button>
+                                            </span>
                                         </td>
                                     </tr>
                                     <tr id="record9"> 
@@ -114,8 +130,10 @@
                                         <td class=""><span class="label label-success label-sm">Active</span></td>
                                         <td class="">2019-10-12</td>
                                         <td class="">
+                                            <span>
                                             <button class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</button>
                                             <button class="btn btn-danger btn-xs" @click="showdelete('9')"><i class="fa fa-trash"></i> Delete</button>
+                                            </span>
                                         </td>
                                     </tr>
                                     <tr id="record10"> 
@@ -124,8 +142,10 @@
                                         <td class=""><span class="label label-success label-sm">Active</span></td>
                                         <td class="">2019-10-12</td>
                                         <td class="">
+                                            <span>
                                             <button class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</button>
                                             <button class="btn btn-danger btn-xs" @click="showdelete('10')"><i class="fa fa-trash"></i> Delete</button>
+                                            </span>
                                         </td>
                                     </tr>
                                     </tbody>
@@ -232,21 +252,12 @@ export default {
 		},
     },
     mounted() {
-        jQuery(function($) {
-			var myTable = $('#dynamic-table')
-			.DataTable( {
-				bAutoWidth: false,
-				"aoColumns": [
-					{ "bSortable": false },
-					null, null,null, 
-					{ "bSortable": false }
-				],
-				"aaSorting": [], 
-				select: {
-					style: 'multi'
-				} 
-			});
-		} );	
+        $("#dynamic-table").DataTable({
+            "responsive": true,
+            "autoWidth": true,
+        }); 
+        $('.dataTables_filter').addClass('fa-pull-right');
+        $('#dynamic-table_paginate').addClass('fa-pull-right');
     },
     
 }
