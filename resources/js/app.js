@@ -20,12 +20,8 @@ let routes = [
     { path: '/dzongmasters', name: 'Dzongkhag Master', component: require('./Pages/globalmaster/dzongmasters.vue').default },
     { path: '/gewogmasters', name: 'Gewog Master', component: require('./Pages/globalmaster/gewog.vue').default },
     { path: '/villagemaster', name: 'Village Master', component: require('./Pages/globalmaster/village.vue').default },
-<<<<<<< HEAD
     { path: '/StudentIndex', name: 'Student Index', component: require('./Pages/Students/regstd.vue').default },
     { path: '/regularstd', name: 'Regular Student', component: require('./Pages/Students/regstd.vue').default },
-=======
-
->>>>>>> 191fd29456432ef7ca1c630786f8db43531c8fbd
     { path: '/orgmastermanagement', name: 'Organization Master Management',
     component: require('./Pages/organization/masters/orgmasterindex.vue').default,
         children: [
