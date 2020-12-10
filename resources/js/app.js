@@ -27,9 +27,13 @@ let routes = [
             { path: '/', component: require('./Pages/organization/masters/orgmasterdata.vue').default },
             { path: '/orgmasterlevel', name: 'Level Master', component: require('./Pages/organization/masters/masterlevel.vue').default },
             { path: '/orglocationmaster', name: 'Location Master', component: require('./Pages/organization/masters/locationmaster.vue').default },
-            // { path: '/orgstatus', name: 'Status Master', component: require('./Pages/organization/masters/orgstatus.vue').default },
-            // { path: '/climatetype', name: 'Climate Master', component: require('./Pages/organization/masters/climatetype.vue').default },
-            // { path: '/roadtype', name: 'Roadtype Master', component: require('./Pages/organization/masters/roadtype.vue').default },
+        ]    
+    }, 
+    { path: '/orgmanagement', name: 'Organization Management',
+    component: require('./Pages/organization/transactions/organizationindex.vue').default,
+        children: [
+            { path: '/', component: require('./Pages/organization/transactions/existingorg.vue').default },
+            { path: '/neworganization', component: require('./Pages/organization/transactions/neworganization.vue').default },
         ]    
     }, 
     //administration route 
@@ -61,3 +65,4 @@ new Vue({
         }),
         router
 }).$mount(app);
+

@@ -85,7 +85,7 @@
                                     </router-link>
                                 </li>
                                 <li class="nav-item" id="organizationlinksub" @click="setclass('organizationlink','organizationlinksub')">
-                                    <router-link to="/orgmastermanagement" class="nav-link">
+                                    <router-link to="/orgmanagement" class="nav-link">
                                         <p>
                                             <i class="fa fa-angle-double-right nav-icon"></i>
                                             Organization
@@ -145,7 +145,7 @@ export default {
             $('#'+mainmenu).addClass('menu-open');
             $('#'+mainmenu+'>ul').show();
             $('#'+submenu).addClass('navbar-cyan active');
-            $('#'+submenu+ ">p").addClass('text-white');
+            $('#'+submenu+ ">a").addClass('text-white');
         },
     },
     
