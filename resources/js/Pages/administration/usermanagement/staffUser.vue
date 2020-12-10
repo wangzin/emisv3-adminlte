@@ -66,17 +66,18 @@
                     </div>          
                 </div>
            
-                <div class="row">
+                 
+            </form>
+
+        </div>
+        <div class="row">
                     <div class="col-md-9">
                         <input type="button" class="btn btn-primary" value="cancel" id="reset" @click="reset()"/>
                                                 &nbsp; &nbsp; &nbsp;
                         <input type="button" class="btn btn-primary" value="Submit" id="submit" @click="save()"/>
                            
                     </div>
-                </div>  
-            </form>
-
-        </div>
+                </div> 
     </div>
     
 </template>

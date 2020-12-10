@@ -57,16 +57,17 @@
                     </div>          
                 </div>
            
-                <div class="clearfix form-actions">
-                    <div class="col-md-9 col-md-offset-12">
-                        <input type="button" class="btn btn-primary" value="cancel" id="reset" @click="reset()"/>
-                                                &nbsp; &nbsp; &nbsp;
-                        <input type="button" class="btn btn-primary" value="Submit" id="submit" @click="save()"/>
-                           
-                    </div>
-                </div>  
+                 
             </form>
         </div>
+        <div class="row">
+            <div class="col-md-9 col-md-offset-8">
+                <input type="button" class="btn btn-primary" value="cancel" id="reset" @click="reset()"/>
+                        &nbsp; &nbsp; &nbsp;
+                <input type="button" class="btn btn-primary" value="Submit" id="submit" @click="save()"/>
+                           
+            </div>
+        </div> 
     </div>
     
 </template>
