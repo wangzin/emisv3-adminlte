@@ -32,6 +32,11 @@ let routes = [
             // { path: '/roadtype', name: 'Roadtype Master', component: require('./Pages/organization/masters/roadtype.vue').default },
         ]    
     }, 
+
+    // Inset Route
+    { path: '/createTraining', name: 'Create', component: require('./Pages/Inset/createTraining.vue').default },
+
+
     //administration route 
     { path: '/rolesAndPriviledges', name: 'Roles', component: require('./Pages/administration/rolesAndPriviledges.vue').default },
     { path: '/workFlow', name: 'workFlow', component: require('./Pages/administration/workflow.vue').default },
