@@ -20,7 +20,8 @@ let routes = [
     { path: '/dzongmasters', name: 'Dzongkhag Master', component: require('./Pages/globalmaster/dzongmasters.vue').default },
     { path: '/gewogmasters', name: 'Gewog Master', component: require('./Pages/globalmaster/gewog.vue').default },
     { path: '/villagemaster', name: 'Village Master', component: require('./Pages/globalmaster/village.vue').default },
-
+    { path: '/StudentIndex', name: 'Student Index', component: require('./Pages/Students/regstd.vue').default },
+    { path: '/regularstd', name: 'Regular Student', component: require('./Pages/Students/regstd.vue').default },
     { path: '/orgmastermanagement', name: 'Organization Master Management',
     component: require('./Pages/organization/masters/orgmasterindex.vue').default,
         children: [
@@ -45,6 +46,7 @@ let routes = [
             { path: '/', component: require('./Pages/administration/usermanagement/usermanagementdata.vue').default },
             { path: '/staffUser', name: 'Staff', component: require('./Pages/administration/usermanagement/staffUser.vue').default },
             { path: '/externalUser', name: 'External', component: require('./Pages/administration/usermanagement/externalUser.vue').default },
+            { path: '/userList', name: 'User List', component: require('./Pages/administration/usermanagement/userList.vue').default },
 
         ]    
     }, 
