@@ -85,7 +85,7 @@
                                     </router-link>
                                 </li>
                                 <li class="nav-item" id="organizationlinksub" @click="setclass('organizationlink','organizationlinksub')">
-                                    <router-link to="/orgmastermanagement" class="nav-link">
+                                    <router-link to="/orgmanagement" class="nav-link">
                                         <p>
                                             <i class="fa fa-angle-double-right nav-icon"></i>
                                             Organization
@@ -94,6 +94,38 @@
                                 </li>
                             </ul>
                         </li>
+
+                         <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-graduation-cap"></i>
+                                <p> 
+                                    Students
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <router-link to="regularstd" class="nav-link" data-toggle="awesome_tooltip" title="Regular Student">
+                                        <i class="fa fa-angle-double-right nav-icon"></i>
+                                        <p>Regular Student</p>
+                                    </router-link>
+                                </li>
+                               
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                    <i class="fa fa-angle-double-right nav-icon"></i>
+                                    <p>ECCD Students</p>
+                                    </a>
+                                </li>
+                                 <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                    <i class="fa fa-angle-double-right nav-icon"></i>
+                                    <p>CE Students</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                             <i class="far fa-address-card nav-icon"></i>
@@ -145,7 +177,7 @@ export default {
             $('#'+mainmenu).addClass('menu-open');
             $('#'+mainmenu+'>ul').show();
             $('#'+submenu).addClass('navbar-cyan active');
-            $('#'+submenu+ ">p").addClass('text-white');
+            $('#'+submenu+ ">a").addClass('text-white');
         },
     },
     
