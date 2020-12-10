@@ -27,6 +27,11 @@
         <!-- summernote -->
         <link rel="stylesheet" href="admin3/plugins/summernote/summernote-bs4.css">
         <!-- Google Font: Source Sans Pro -->
+        <link rel="stylesheet" href="admin3/plugins/select2/css/select2.min.css">
+        <link rel="stylesheet" href="admin3/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+        <link rel="stylesheet" href="admin3/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
+        <link rel="stylesheet" href="admin3/custom.min.css">
+        
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
         <!-- jQuery UI 1.11.4 -->
         <script src="admin3/plugins/jquery/jquery.min.js"></script>
@@ -39,8 +44,12 @@
         <script>
         $.widget.bridge('uibutton', $.ui.button)
         </script>
+        
         <!-- Bootstrap 4 -->
         <script src="admin3/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="admin3/plugins/select2/js/select2.full.min.js"></script>
+        <script src="admin3/plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+        <script src="admin3/plugins/inputmask/min/jquery.inputmask.bundle.min.js"></script>
         <!-- ChartJS -->
         <script src="admin3/plugins/chart.js/Chart.min.js"></script>
         <!-- Sparkline -->
@@ -71,6 +80,7 @@
         <script src="admin3/plugins/chart.js/Chart.min.js"></script>
         <script src="admin3/dist/js/demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="admin3/jquery.smartWizard.js"></script>
         <!-- Bootstrap 4 -->
 
     </head>

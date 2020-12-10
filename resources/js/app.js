@@ -20,16 +20,21 @@ let routes = [
     { path: '/dzongmasters', name: 'Dzongkhag Master', component: require('./Pages/globalmaster/dzongmasters.vue').default },
     { path: '/gewogmasters', name: 'Gewog Master', component: require('./Pages/globalmaster/gewog.vue').default },
     { path: '/villagemaster', name: 'Village Master', component: require('./Pages/globalmaster/village.vue').default },
-
+    { path: '/StudentIndex', name: 'Student Index', component: require('./Pages/Students/regstd.vue').default },
+    { path: '/regularstd', name: 'Regular Student', component: require('./Pages/Students/regstd.vue').default },
     { path: '/orgmastermanagement', name: 'Organization Master Management',
     component: require('./Pages/organization/masters/orgmasterindex.vue').default,
         children: [
             { path: '/', component: require('./Pages/organization/masters/orgmasterdata.vue').default },
             { path: '/orgmasterlevel', name: 'Level Master', component: require('./Pages/organization/masters/masterlevel.vue').default },
             { path: '/orglocationmaster', name: 'Location Master', component: require('./Pages/organization/masters/locationmaster.vue').default },
-            // { path: '/orgstatus', name: 'Status Master', component: require('./Pages/organization/masters/orgstatus.vue').default },
-            // { path: '/climatetype', name: 'Climate Master', component: require('./Pages/organization/masters/climatetype.vue').default },
-            // { path: '/roadtype', name: 'Roadtype Master', component: require('./Pages/organization/masters/roadtype.vue').default },
+        ]    
+    }, 
+    { path: '/orgmanagement', name: 'Organization Management',
+    component: require('./Pages/organization/transactions/organizationindex.vue').default,
+        children: [
+            { path: '/', component: require('./Pages/organization/transactions/existingorg.vue').default },
+            { path: '/neworganization', component: require('./Pages/organization/transactions/neworganization.vue').default },
         ]    
     }, 
 
@@ -67,3 +72,4 @@ new Vue({
         }),
         router
 }).$mount(app);
+
