@@ -93,6 +93,16 @@ export default {
     },
 
     methods:{
+        save: function(){
+            alert("Data save successfully.");
+            window.location.reload();
+
+        },
+
+        reset: function(){
+            window.location.reload();
+        },
+
         addMore: function(){
             this.users.push({authority:'',role:''})
         },

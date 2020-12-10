@@ -4328,13 +4328,131 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Jetstream_Input_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Jetstream/Input.vue */ "./resources/js/Jetstream/Input.vue");
+/* harmony import */ var _Jetstream_Label_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Jetstream/Label.vue */ "./resources/js/Jetstream/Label.vue");
 //
 //
 //
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    Input: _Jetstream_Input_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Label: _Jetstream_Label_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  }
+});
 
 /***/ }),
 
@@ -4795,6 +4913,13 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
+    save: function save() {
+      alert("Data save successfully.");
+      window.location.reload();
+    },
+    reset: function reset() {
+      window.location.reload();
+    },
     addMore: function addMore() {
       this.users.push({
         authority: '',
@@ -51400,9 +51525,250 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _vm._m(1),
+    _vm._v(" "),
+    _c("div", { staticClass: "row " }, [
+      _c("div", { staticClass: "col-md-1 text-right" }, [
+        _c("input", {
+          staticClass: "btn btn-primary",
+          attrs: { type: "button", value: "cancel", id: "reset" },
+          on: {
+            click: function($event) {
+              return _vm.reset()
+            }
+          }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-1 text-right" }, [
+        _c("input", {
+          staticClass: "btn btn-primary",
+          attrs: { type: "button", value: "Submit", id: "submit" },
+          on: {
+            click: function($event) {
+              return _vm.save()
+            }
+          }
+        })
+      ])
+    ])
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card" }, [
+      _c("div", { staticClass: "card-header" }, [
+        _c("h3", { staticClass: "card-title" }, [
+          _vm._v("Roles and Priviledges")
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("form", [
+      _c("div", { staticClass: "card-body" }, [
+        _c("div", { staticClass: "form-group row" }, [
+          _c("div", { staticClass: "col-md-4" }, [
+            _c("label", { staticClass: "col-md-2" }, [_vm._v("Name:")]),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", id: "name" }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-4" }, [
+            _c("label", { staticClass: "col-md-2" }, [_vm._v("Description:")]),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", id: "description" }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-4" }, [
+            _c("label", { staticClass: "col-md-4" }, [_vm._v("Managed by:")]),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                staticClass: "form-control editable_fields",
+                attrs: { name: "role", id: "roles" }
+              },
+              [
+                _c("option", { attrs: { value: "" } }, [
+                  _vm._v("--- Please Select ---")
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "admin" } }, [_vm._v("Admin")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "teacher" } }, [
+                  _vm._v("Teacher")
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "deo" } }, [_vm._v("DEO")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "director" } }, [
+                  _vm._v("Director")
+                ])
+              ]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("fieldset", [
+          _c("legend", [_vm._v("Filter By")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group row" }, [
+            _c("div", { staticClass: "col-md-4" }, [
+              _c("label", { staticClass: "col-md-2" }, [_vm._v("Module:")]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  staticClass: "form-control editable_fields",
+                  attrs: { name: "role", id: "roles" }
+                },
+                [
+                  _c("option", { attrs: { value: "" } }, [
+                    _vm._v("--- Please Select ---")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "1" } }, [_vm._v("ALL")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "2" } }, [
+                    _vm._v("Organization")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "3" } }, [_vm._v("Student")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "4" } }, [_vm._v("Staff")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "5" } }, [
+                    _vm._v("Admission")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "5" } }, [
+                    _vm._v("Result Processing")
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-4" }, [
+              _c("label", { staticClass: "col-md-2" }, [_vm._v("Service:")]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  staticClass: "form-control editable_fields",
+                  attrs: { name: "role", id: "roles" }
+                },
+                [
+                  _c("option", { attrs: { value: "" } }, [
+                    _vm._v("--- Please Select ---")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "1" } }, [_vm._v("ALL")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "2" } }, [
+                    _vm._v("Student Registration")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "3" } }, [
+                    _vm._v("Administration process")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "4" } }, [
+                    _vm._v("Staff Registration")
+                  ])
+                ]
+              )
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c(
+          "table",
+          {
+            staticClass: "table table-bordered table-striped",
+            attrs: { id: "rolesAndPriviledges" }
+          },
+          [
+            _c("thead", [
+              _c("tr", [
+                _c("th", [_vm._v("Screen/Pages")]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Individual")]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Organization")]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Dzongkhag")]),
+                _vm._v(" "),
+                _c("th", [_vm._v("National")])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tbody", [
+              _c("tr", { attrs: { id: "record1" } }, [
+                _c("td", [_vm._v("Admission Process")]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("input", { attrs: { type: "radio", id: "individual" } }),
+                  _c("label", { attrs: { for: "individual" } })
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("input", { attrs: { type: "radio", id: "organization" } }),
+                  _c("label", { attrs: { for: "organization" } })
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("input", { attrs: { type: "radio", id: "dzongkhag" } }),
+                  _c("label", { attrs: { for: "dzongkhag" } })
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("input", { attrs: { type: "radio", id: "national" } }),
+                  _c("label", { attrs: { for: "national" } })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", { attrs: { id: "record2" } }, [
+                _c("td", [_vm._v("Student Registration")]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("input", { attrs: { type: "radio", id: "individual" } })
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("input", { attrs: { type: "radio", id: "organization" } })
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("input", { attrs: { type: "radio", id: "dzongkhag" } })
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("input", { attrs: { type: "radio", id: "national" } })
+                ])
+              ])
+            ])
+          ]
+        )
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
