@@ -2,7 +2,7 @@
     <div>
         <div class="card">
         <div class="card-header">
-                <h3 class="card-title">Adding New External User</h3>
+                <h3 class="card-title">Adding External User</h3>
         </div>
 
          <form>
@@ -62,7 +62,7 @@
         </div>
         <div class="row">
             <div class="col-md-9 col-md-offset-8">
-                <input type="button" class="btn btn-primary" value="cancel" id="reset" @click="reset()"/>
+                <input type="button" class="btn btn-primary" value="cancel" id="reset" style="margin-left: 400px;" @click="reset()"/>
                         &nbsp; &nbsp; &nbsp;
                 <input type="button" class="btn btn-primary" value="Submit" id="submit" @click="save()"/>
                            

@@ -67,15 +67,14 @@
             </div>
             
         </form>
-                <div class="row">
-                    <div class="col-md-1 text-right">
-                        <input type="button" class="btn btn-primary" value="cancel" id="reset" @click="reset()"/>
-                    </div>
-                               
-                    <div class="col-md-1 text-right">
-                        <input type="button" class="btn btn-primary" value="Submit" id="submit" @click="save()"/>                                                  
-                    </div>
+            <div class="row">
+                <div class="col-md-9 col-md-offset-8">
+                    <input type="button" class="btn btn-primary" value="cancel" id="reset" style="margin-left: 400px;" @click="reset()"/>
+                            &nbsp; &nbsp; &nbsp;
+                    <input type="button" class="btn btn-primary" value="Submit" id="submit" @click="save()"/>
+                            
                 </div>
+            </div> 
        
     </div>
 </template>

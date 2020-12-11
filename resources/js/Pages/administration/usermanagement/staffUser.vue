@@ -16,24 +16,24 @@
                     <div class="form-group row">
                         <div class="col-md-6">
                             <label>Name:</label>
-                            <input type="text" class="form-control editable_fields" id="name">
+                            <input type="text" class="form-control editable_fields" id="name" readonly>
                         </div>
 
                         <div class="col-md-6">
                             <label>Email:</label>
-                            <input type="text" class="form-control editable_fields" id="email">      
+                            <input type="text" class="form-control editable_fields" id="email" readonly>      
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <div class="col-md-6">
                             <label>Position Title:</label>
-                            <input type="text" class="form-control editable_fields" id="positionTitle">
+                            <input type="text" class="form-control editable_fields" id="positionTitle" readonly>
                         </div>
 
                         <div class="col-md-6">
                             <label>Organization Unit:</label>
-                            <input type="text" class="form-control editable_fields" id="organizationUnit">      
+                            <input type="text" class="form-control editable_fields" id="organizationUnit" readonly>      
                         </div>
                     </div>  
 
@@ -72,7 +72,7 @@
         </div>
         <div class="row">
                     <div class="col-md-9">
-                        <input type="button" class="btn btn-primary" value="cancel" id="reset" @click="reset()"/>
+                        <input type="button" style="margin-left: 400px;" class="btn btn-primary" value="cancel" id="reset" @click="reset()"/>
                                                 &nbsp; &nbsp; &nbsp;
                         <input type="button" class="btn btn-primary" value="Submit" id="submit" @click="save()"/>
                            
