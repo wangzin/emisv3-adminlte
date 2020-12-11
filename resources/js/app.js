@@ -37,6 +37,11 @@ let routes = [
             { path: '/neworganization', component: require('./Pages/organization/transactions/neworganization.vue').default },
         ]    
     }, 
+
+    // Inset Route
+    { path: '/createTraining', name: 'Create', component: require('./Pages/Inset/createTraining.vue').default },
+
+
     //administration route 
     { path: '/rolesAndPriviledges', name: 'Roles', component: require('./Pages/administration/rolesAndPriviledges.vue').default },
     { path: '/workFlow', name: 'workFlow', component: require('./Pages/administration/workflow.vue').default },
@@ -47,6 +52,18 @@ let routes = [
             { path: '/staffUser', name: 'Staff', component: require('./Pages/administration/usermanagement/staffUser.vue').default },
             { path: '/externalUser', name: 'External', component: require('./Pages/administration/usermanagement/externalUser.vue').default },
             { path: '/userList', name: 'User List', component: require('./Pages/administration/usermanagement/userList.vue').default },
+
+        ]    
+    }, 
+
+    // staff route
+    { path: '/staffMaster', name: 'Staff Master',
+    component: require('./Pages/staff/masters/staffMasterIndex.vue').default,
+        children: [
+            { path: '/', component: require('./Pages/staff/masters/staffMasterData.vue').default },
+            //{ path: '/staffUser', name: 'Staff', component: require('./Pages/administration/usermanagement/staffUser.vue').default },
+            //{ path: '/externalUser', name: 'External', component: require('./Pages/administration/usermanagement/externalUser.vue').default },
+            //{ path: '/userList', name: 'User List', component: require('./Pages/administration/usermanagement/userList.vue').default },
 
         ]    
     }, 
