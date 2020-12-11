@@ -55,6 +55,18 @@ let routes = [
 
         ]    
     }, 
+
+    // staff route
+    { path: '/staffMaster', name: 'Staff Master',
+    component: require('./Pages/staff/masters/staffMasterIndex.vue').default,
+        children: [
+            { path: '/', component: require('./Pages/staff/masters/staffMasterData.vue').default },
+            //{ path: '/staffUser', name: 'Staff', component: require('./Pages/administration/usermanagement/staffUser.vue').default },
+            //{ path: '/externalUser', name: 'External', component: require('./Pages/administration/usermanagement/externalUser.vue').default },
+            //{ path: '/userList', name: 'User List', component: require('./Pages/administration/usermanagement/userList.vue').default },
+
+        ]    
+    }, 
 ]
 const router = new VueRouter({
     routes // short for `routes: routes`
