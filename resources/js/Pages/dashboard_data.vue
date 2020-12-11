@@ -4,7 +4,7 @@
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-3 col-6">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <div class="small-box bg-info">
                         <div class="inner">
                             <h3>609</h3>
@@ -16,7 +16,7 @@
                         <a href="#" @click="showOrgDetails('bg-info')" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-6">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <div class="small-box bg-success">
                         <div class="inner">
                             <h3>10106</h3>
@@ -28,7 +28,7 @@
                         <a href="#" @click="showOrgDetails('bg-success')" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-6">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <div class="small-box bg-warning">
                         <div class="inner">
                             <h3>170725</h3>
@@ -40,7 +40,7 @@
                         <a href="#" @click="showOrgDetails('bg-warning')"  class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-6">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <div class="small-box bg-danger">
                         <div class="inner">
                             <h3>65</h3>
@@ -132,7 +132,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <table class="table table-bordered" id="bg-info" style="display:none">
+                        <table class="table table-bordered" id="bg-info" style="display:none;overflow-x: auto;">
                             <thead>                  
                                 <tr>
                                     <th style="width: 10px">#</th>
