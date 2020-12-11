@@ -28,11 +28,20 @@ let routes = [
             { path: '/', component: require('./Pages/organization/masters/orgmasterdata.vue').default },
             { path: '/orgmasterlevel', name: 'Level Master', component: require('./Pages/organization/masters/masterlevel.vue').default },
             { path: '/orglocationmaster', name: 'Location Master', component: require('./Pages/organization/masters/locationmaster.vue').default },
-            // { path: '/orgstatus', name: 'Status Master', component: require('./Pages/organization/masters/orgstatus.vue').default },
-            // { path: '/climatetype', name: 'Climate Master', component: require('./Pages/organization/masters/climatetype.vue').default },
-            // { path: '/roadtype', name: 'Roadtype Master', component: require('./Pages/organization/masters/roadtype.vue').default },
         ]    
     }, 
+    { path: '/orgmanagement', name: 'Organization Management',
+    component: require('./Pages/organization/transactions/organizationindex.vue').default,
+        children: [
+            { path: '/', component: require('./Pages/organization/transactions/existingorg.vue').default },
+            { path: '/neworganization', component: require('./Pages/organization/transactions/neworganization.vue').default },
+        ]    
+    }, 
+
+    // Inset Route
+    { path: '/createTraining', name: 'Create', component: require('./Pages/Inset/createTraining.vue').default },
+
+
     //administration route 
     { path: '/rolesAndPriviledges', name: 'Roles', component: require('./Pages/administration/rolesAndPriviledges.vue').default },
     { path: '/workFlow', name: 'workFlow', component: require('./Pages/administration/workflow.vue').default },
@@ -43,6 +52,18 @@ let routes = [
             { path: '/staffUser', name: 'Staff', component: require('./Pages/administration/usermanagement/staffUser.vue').default },
             { path: '/externalUser', name: 'External', component: require('./Pages/administration/usermanagement/externalUser.vue').default },
             { path: '/userList', name: 'User List', component: require('./Pages/administration/usermanagement/userList.vue').default },
+
+        ]    
+    }, 
+
+    // staff route
+    { path: '/staffMaster', name: 'Staff Master',
+    component: require('./Pages/staff/masters/staffMasterIndex.vue').default,
+        children: [
+            { path: '/', component: require('./Pages/staff/masters/staffMasterData.vue').default },
+            //{ path: '/staffUser', name: 'Staff', component: require('./Pages/administration/usermanagement/staffUser.vue').default },
+            //{ path: '/externalUser', name: 'External', component: require('./Pages/administration/usermanagement/externalUser.vue').default },
+            //{ path: '/userList', name: 'User List', component: require('./Pages/administration/usermanagement/userList.vue').default },
 
         ]    
     }, 
@@ -63,3 +84,4 @@ new Vue({
         }),
         router
 }).$mount(app);
+

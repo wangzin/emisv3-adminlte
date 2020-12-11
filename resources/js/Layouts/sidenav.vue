@@ -9,6 +9,8 @@
             <div class="sidebar">
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent" data-widget="treeview" role="menu" data-accordion="false">
+                        
+                        <!-- global master side menu -->
                         <li class="nav-item has-treeview" id="globalsetup">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-database"></i>
@@ -38,6 +40,8 @@
                                 </li>
                             </ul>
                         </li>
+
+                        <!-- administration side menu -->
                         <li class="nav-item has-treeview" id="administrationlink">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-edit"></i>
@@ -67,6 +71,8 @@
                                 </li>
                             </ul>
                         </li>
+
+                        <!-- organization side menu -->
                         <li class="nav-item has-treeview" id="organizationlink">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-home"></i>
@@ -85,7 +91,7 @@
                                     </router-link>
                                 </li>
                                 <li class="nav-item" id="organizationlinksub" @click="setclass('organizationlink','organizationlinksub')">
-                                    <router-link to="/orgmastermanagement" class="nav-link">
+                                    <router-link to="/orgmanagement" class="nav-link">
                                         <p>
                                             <i class="fa fa-angle-double-right nav-icon"></i>
                                             Organization
@@ -95,6 +101,36 @@
                             </ul>
                         </li>
 
+                        <!-- staff side menu  -->
+                        <li class="nav-item has-treeview" id="stafflink">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-user"></i>
+                                <p>
+                                    Staff
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item" id="staffMaster" @click="setclass('stafflink','staffMaster')">
+                                    <router-link to="/staffMaster" class="nav-link">
+                                        <p>
+                                            <i class="fa fa-angle-double-right nav-icon"></i>
+                                            Staff Masters
+                                        </p>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item" id="stafflinksub" @click="setclass('stafflink','stafflinksub')">
+                                    <router-link to="/" class="nav-link">
+                                        <p>
+                                            <i class="fa fa-angle-double-right nav-icon"></i>
+                                            Staff
+                                        </p>
+                                    </router-link>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- student side menu -->
                          <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-graduation-cap"></i>
@@ -126,18 +162,43 @@
                             </ul>
                         </li>
                         
+                        <!-- Inset side menu -->
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                             <i class="far fa-address-card nav-icon"></i>
                             <p>Inset Module</p>
                             </a>
+                                <ul class="nav nav-treeview">                                
+                                <li class="nav-item" id="rolepriv" @click="setclass('','')">
+                                    <router-link to="/createTraining"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
+                                        <i class="fa fa-angle-double-right nav-icon"></i>
+                                        <p>Create Training</p>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item" id="usermanagement" @click="setclass('','')">
+                                    <router-link to="/applyTraining"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
+                                        <i class="fa fa-angle-double-right nav-icon"></i>
+                                        <p>Apply for Training</p>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item" id="verifyParticipants" @click="setclass('','')">
+                                    <router-link to="/verifyParticipants"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
+                                        <i class="fa fa-angle-double-right nav-icon"></i>
+                                        <p>Verify Participants</p>
+                                    </router-link>
+                                </li>
+                            </ul>
                         </li>
+
+                        <!-- result processing side menu -->
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                             <i class="fa fa-book nav-icon"></i>
                             <p>Result Processing</p>
                             </a>
                         </li>
+
+                        <!-- MDCA side menu -->
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                             <i class="fa fa-mobile-alt nav-icon"></i>
@@ -174,10 +235,16 @@ export default {
             $('#roganizationmaster').removeClass('navbar-cyan active');
             $('#organizationlinksub').removeClass('navbar-cyan active');
 
+            //staff
+            $('#stafflink').removeClass('menu-open');
+            $('#stafflink'+'>ul').hide();
+            $('#staffMaster').removeClass('navbar-cyan active');
+            $('#stafflinksub').removeClass('navbar-cyan active');
+
             $('#'+mainmenu).addClass('menu-open');
             $('#'+mainmenu+'>ul').show();
             $('#'+submenu).addClass('navbar-cyan active');
-            $('#'+submenu+ ">p").addClass('text-white');
+            $('#'+submenu+ ">a").addClass('text-white');
         },
     },
     
