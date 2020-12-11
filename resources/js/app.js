@@ -37,6 +37,11 @@ let routes = [
             { path: '/neworganization', component: require('./Pages/organization/transactions/neworganization.vue').default },
         ]    
     }, 
+
+    // Inset Route
+    { path: '/createTraining', name: 'Create', component: require('./Pages/Inset/createTraining.vue').default },
+
+
     //administration route 
     { path: '/rolesAndPriviledges', name: 'Roles', component: require('./Pages/administration/rolesAndPriviledges.vue').default },
     { path: '/workFlow', name: 'workFlow', component: require('./Pages/administration/workflow.vue').default },

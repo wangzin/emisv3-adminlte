@@ -3169,6 +3169,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   methods: {
     setclass: function setclass(mainmenu, submenu) {
@@ -50088,7 +50108,113 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _vm._m(7),
+                _c("li", { staticClass: "nav-item" }, [
+                  _vm._m(7),
+                  _vm._v(" "),
+                  _c("ul", { staticClass: "nav nav-treeview" }, [
+                    _c(
+                      "li",
+                      {
+                        staticClass: "nav-item",
+                        attrs: { id: "rolepriv" },
+                        on: {
+                          click: function($event) {
+                            return _vm.setclass("", "")
+                          }
+                        }
+                      },
+                      [
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "nav-link",
+                            attrs: {
+                              to: "/createTraining",
+                              "data-toggle": "awesome_tooltip",
+                              title: "Administration"
+                            }
+                          },
+                          [
+                            _c("i", {
+                              staticClass: "fa fa-angle-double-right nav-icon"
+                            }),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Create Training")])
+                          ]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "li",
+                      {
+                        staticClass: "nav-item",
+                        attrs: { id: "usermanagement" },
+                        on: {
+                          click: function($event) {
+                            return _vm.setclass("", "")
+                          }
+                        }
+                      },
+                      [
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "nav-link",
+                            attrs: {
+                              to: "/applyTraining",
+                              "data-toggle": "awesome_tooltip",
+                              title: "Administration"
+                            }
+                          },
+                          [
+                            _c("i", {
+                              staticClass: "fa fa-angle-double-right nav-icon"
+                            }),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Apply for Training")])
+                          ]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "li",
+                      {
+                        staticClass: "nav-item",
+                        attrs: { id: "verifyParticipants" },
+                        on: {
+                          click: function($event) {
+                            return _vm.setclass("", "")
+                          }
+                        }
+                      },
+                      [
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "nav-link",
+                            attrs: {
+                              to: "/verifyParticipants",
+                              "data-toggle": "awesome_tooltip",
+                              title: "Administration"
+                            }
+                          },
+                          [
+                            _c("i", {
+                              staticClass: "fa fa-angle-double-right nav-icon"
+                            }),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Verify Participants")])
+                          ]
+                        )
+                      ],
+                      1
+                    )
+                  ])
+                ]),
                 _vm._v(" "),
                 _vm._m(8),
                 _vm._v(" "),
@@ -50211,12 +50337,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "nav-item" }, [
-      _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-        _c("i", { staticClass: "far fa-address-card nav-icon" }),
-        _vm._v(" "),
-        _c("p", [_vm._v("Inset Module")])
-      ])
+    return _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+      _c("i", { staticClass: "far fa-address-card nav-icon" }),
+      _vm._v(" "),
+      _c("p", [_vm._v("Inset Module")])
     ])
   },
   function() {
@@ -50994,6 +51118,110 @@ var render = function() {
   )
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Inset/createTraining.vue?vue&type=template&id=c98e535e&":
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Inset/createTraining.vue?vue&type=template&id=c98e535e& ***!
+  \******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-9 col-md-offset-8" }, [
+        _c("input", {
+          staticClass: "btn btn-primary",
+          attrs: { type: "button", value: "Cancel", id: "reset" },
+          on: {
+            click: function($event) {
+              return _vm.reset()
+            }
+          }
+        }),
+        _vm._v("\n                         \n            "),
+        _c("input", {
+          staticClass: "btn btn-primary",
+          attrs: { type: "button", value: "Submit", id: "submit" },
+          on: {
+            click: function($event) {
+              return _vm.save()
+            }
+          }
+        })
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card" }, [
+      _c("div", { staticClass: "card-header" }, [
+        _c("h2", { staticClass: "card-title" }, [_vm._v("Create Training")])
+      ]),
+      _vm._v(" "),
+      _c("form", [
+        _c("div", { staticClass: "card-body" }, [
+          _c("div", { staticClass: "form-group row" }, [
+            _c("div", { staticClass: "col-md-6" }, [
+              _c("label", [_vm._v("Name of the training:")]),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "form-control editable_fields",
+                attrs: { type: "text", id: "trainingName" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-6" }, [
+              _c("label", { attrs: { for: "date" } }, [_vm._v("Date:")]),
+              _vm._v(" "),
+              _c("input", { attrs: { type: "date", id: "date", name: "date" } })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group row" }, [
+            _c("div", { staticClass: "col-md-6" }, [
+              _c("label", [_vm._v("Number of participants:")]),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "form-control editable_fields",
+                attrs: { type: "text", id: "participants" }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group row" }, [
+            _c("div", { staticClass: "col-md-6" }, [
+              _c("label", [_vm._v("Place or venue:")]),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "form-control editable_fields",
+                attrs: { type: "text", id: "venue" }
+              })
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -77258,6 +77486,8 @@ var map = {
 	"./API/Index.vue": "./resources/js/Pages/API/Index.vue",
 	"./Dashboard": "./resources/js/Pages/Dashboard.vue",
 	"./Dashboard.vue": "./resources/js/Pages/Dashboard.vue",
+	"./Inset/createTraining": "./resources/js/Pages/Inset/createTraining.vue",
+	"./Inset/createTraining.vue": "./resources/js/Pages/Inset/createTraining.vue",
 	"./Profile/DeleteUserForm": "./resources/js/Pages/Profile/DeleteUserForm.vue",
 	"./Profile/DeleteUserForm.vue": "./resources/js/Pages/Profile/DeleteUserForm.vue",
 	"./Profile/LogoutOtherBrowserSessionsForm": "./resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue",
@@ -77542,6 +77772,59 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_template_id_097ba13b___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_template_id_097ba13b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Inset/createTraining.vue":
+/*!*****************************************************!*\
+  !*** ./resources/js/Pages/Inset/createTraining.vue ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _createTraining_vue_vue_type_template_id_c98e535e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createTraining.vue?vue&type=template&id=c98e535e& */ "./resources/js/Pages/Inset/createTraining.vue?vue&type=template&id=c98e535e&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _createTraining_vue_vue_type_template_id_c98e535e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _createTraining_vue_vue_type_template_id_c98e535e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Inset/createTraining.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Inset/createTraining.vue?vue&type=template&id=c98e535e&":
+/*!************************************************************************************!*\
+  !*** ./resources/js/Pages/Inset/createTraining.vue?vue&type=template&id=c98e535e& ***!
+  \************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_createTraining_vue_vue_type_template_id_c98e535e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./createTraining.vue?vue&type=template&id=c98e535e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Inset/createTraining.vue?vue&type=template&id=c98e535e&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_createTraining_vue_vue_type_template_id_c98e535e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_createTraining_vue_vue_type_template_id_c98e535e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -79517,6 +79800,11 @@ var routes = [{
     path: '/neworganization',
     component: __webpack_require__(/*! ./Pages/organization/transactions/neworganization.vue */ "./resources/js/Pages/organization/transactions/neworganization.vue")["default"]
   }]
+}, // Inset Route
+{
+  path: '/createTraining',
+  name: 'Create',
+  component: __webpack_require__(/*! ./Pages/Inset/createTraining.vue */ "./resources/js/Pages/Inset/createTraining.vue")["default"]
 }, //administration route 
 {
   path: '/rolesAndPriviledges',
