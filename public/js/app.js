@@ -7055,179 +7055,512 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Jetstream_Button_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../Jetstream/Button.vue */ "./resources/js/Jetstream/Button.vue");
-/* harmony import */ var _Jetstream_Input_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../Jetstream/Input.vue */ "./resources/js/Jetstream/Input.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    Input: _Jetstream_Input_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    Button: _Jetstream_Button_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
-  },
+  components: {},
   data: function data() {
-    return {
+    var _ref;
+
+    return _ref = {
       organizationtype: "",
       schoollevel: "",
       schoolname: "",
@@ -7237,10 +7570,99 @@ __webpack_require__.r(__webpack_exports__);
       rcsccode: "",
       mofcode: "",
       establishmentyear: "",
-      count: 5
-    };
+      locationdzongkhag: "",
+      locationgewog: "",
+      locationvillage: "",
+      thrmno: "",
+      altitute: "",
+      latitute: "",
+      longitute: "",
+      climatetype: ""
+    }, _defineProperty(_ref, "locationvillage", ""), _defineProperty(_ref, "distancefromroaddays", ""), _defineProperty(_ref, "distancefromroadkm", ""), _defineProperty(_ref, "distancefromroadhrs", ""), _defineProperty(_ref, "compoundarea", ""), _defineProperty(_ref, "playgroundmeasure", ""), _defineProperty(_ref, "playgrounddescription", ""), _defineProperty(_ref, "agrriculturearea", ""), _defineProperty(_ref, "usedagriculture", ""), _defineProperty(_ref, "tabstandNo", ""), _defineProperty(_ref, "waterproblem", ""), _defineProperty(_ref, "electricremarks", ""), _defineProperty(_ref, "wayofdatacollection", ""), _defineProperty(_ref, "count", 5), _ref;
   },
-  methods: {},
+  methods: {
+    previoustab: function previoustab(preclass, presentclass) {
+      $('.basic-tabs>a').removeClass('active');
+      $('#basic-tabs').removeClass('active show');
+      $('.location-tab >a').removeClass('active');
+      $('#location-tab').removeClass('active show');
+      $('.schooldetails-tab >a').removeClass('active');
+      $('#schooldetails-tab').removeClass('active show');
+      $('.contactdetails-tab >a').removeClass('active');
+      $('#contactdetails-tab').removeClass('active show');
+      $('.' + preclass + '> a').addClass('active');
+      $('#' + preclass).addClass('active show');
+    },
+    shownexttab: function shownexttab(presentclass, nextclass) {
+      $('.basic-tabs>a').removeClass('active');
+      $('#basic-tabs').removeClass('active show');
+      $('.location-tab >a').removeClass('active');
+      $('#location-tab').removeClass('active show');
+      $('.schooldetails-tab >a').removeClass('active');
+      $('#schooldetails-tab').removeClass('active show');
+      $('.contactdetails-tab >a').removeClass('active');
+      $('#contactdetails-tab').removeClass('active show');
+
+      if (this.validatedforms(presentclass)) {
+        $('.' + nextclass + '> a').addClass('active');
+        $('#' + nextclass).addClass('active show');
+        $('.' + nextclass + '> a').removeClass('disabled');
+      } else {
+        $('.' + presentclass + '> a').addClass('active');
+        $('#' + presentclass).addClass('active show');
+        $('.' + nextclass + '-head').removeClass('active');
+        $('.basic-tabs> a').addClass('active');
+      }
+    },
+    submitfinalform: function submitfinalform() {
+      var _this = this;
+
+      Swal.fire({
+        title: 'Are you sure you wish to submit the entire information mention in the form?',
+        text: "You won't be able to revert this back once you submit!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes!'
+      }).then(function (result) {
+        if (result.isConfirmed) {
+          Swal.fire('Submitted!', 'Your Applicaiton details has been submitted.', 'success', _this.$router.push('/orgmanagement'));
+        }
+      });
+    },
+    validatedforms: function validatedforms(presentclass) {
+      var returntype = true;
+
+      if (presentclass == "basic-tabs") {
+        if ($('#organizationtype').val() == "") {
+          $('#organizationtype').addClass('is-invalid');
+          $('#organizatioid_err').html('Please select organization type');
+          returntype = false;
+        }
+
+        if ($('#schoolname').val() == "") {
+          $('#schoolname').addClass('is-invalid');
+          $('#schoolname_err').html('Please mention the name of the school');
+          returntype = false;
+        }
+
+        if ($('#agencycode').val() == "") {
+          $('#agencycode').addClass('is-invalid');
+          $('#agencycode_err').html('Please mention agency code');
+          returntype = false;
+        }
+      }
+
+      return returntype;
+    },
+    removeerror: function removeerror(fieldid, errid) {
+      if ($('#' + fieldid).val() != "") {
+        $('#' + fieldid).removeClass('is-invalid');
+        $('#' + errid).html('');
+      }
+    }
+  },
   mounted: function mounted() {
     $('#cardheader').html('New Organization Form');
     $('#addneworg').hide();
@@ -7248,8 +7670,10 @@ __webpack_require__.r(__webpack_exports__);
     $('.select2bs4').select2({
       theme: 'bootstrap4'
     });
-    $('#organizatioid').change(function () {
-      if ($('#organizatioid').val() == "School") {
+    $('.select2-selection__rendered').addClass('font-weight-bolder');
+    $('#organizationtype').change(function () {
+      //this.removeerror('organizationtype','organizatioid_err');
+      if ($('#organizationtype').val() == "School") {
         $('#schoolcat').show();
       } else {
         $('#schoolcat').hide();
@@ -54263,7 +54687,7 @@ var render = function() {
     _c("section", { staticClass: "content" }, [
       _c("div", { staticClass: "container-fluid" }, [
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-lg-3 col-6" }, [
+          _c("div", { staticClass: "col-lg-3 col-md-3 col-sm-6 col-xs-12" }, [
             _c("div", { staticClass: "small-box bg-info" }, [
               _vm._m(0),
               _vm._v(" "),
@@ -54288,7 +54712,7 @@ var render = function() {
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-3 col-6" }, [
+          _c("div", { staticClass: "col-lg-3 col-md-3 col-sm-6 col-xs-12" }, [
             _c("div", { staticClass: "small-box bg-success" }, [
               _vm._m(2),
               _vm._v(" "),
@@ -54313,7 +54737,7 @@ var render = function() {
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-3 col-6" }, [
+          _c("div", { staticClass: "col-lg-3 col-md-3 col-sm-6 col-xs-12" }, [
             _c("div", { staticClass: "small-box bg-warning" }, [
               _vm._m(4),
               _vm._v(" "),
@@ -54338,7 +54762,7 @@ var render = function() {
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-3 col-6" }, [
+          _c("div", { staticClass: "col-lg-3 col-md-3 col-sm-6 col-xs-12" }, [
             _c("div", { staticClass: "small-box bg-danger" }, [
               _vm._m(6),
               _vm._v(" "),
@@ -54645,7 +55069,7 @@ var staticRenderFns = [
                   "table",
                   {
                     staticClass: "table table-bordered",
-                    staticStyle: { display: "none" },
+                    staticStyle: { display: "none", "overflow-x": "auto" },
                     attrs: { id: "bg-info" }
                   },
                   [
@@ -59067,7 +59491,121 @@ var render = function() {
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-12" }, [
         _c("div", { staticClass: "card card-primary card-outline-tabs" }, [
-          _vm._m(0),
+          _c("div", { staticClass: "card-header p-0 border-bottom-0" }, [
+            _c("ul", { staticClass: "nav nav-tabs" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("li", { staticClass: "nav-item location-tab" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link disabled",
+                    attrs: {
+                      href: "#",
+                      id: "location-tab-head",
+                      "data-toggle": "pill",
+                      role: "tab",
+                      "aria-controls": "custom-tabs-four-profile",
+                      "aria-selected": "false"
+                    },
+                    on: {
+                      click: function($event) {
+                        return _vm.shownexttab("basic-tabs", "location-tab")
+                      }
+                    }
+                  },
+                  [
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "step_no img-bordered pr-2 pl-2 pb-1 pt-1 bg-cool-gray-600 text-white"
+                      },
+                      [_vm._v("2")]
+                    ),
+                    _vm._v(" "),
+                    _c("label", [_vm._v("Location Details")]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "fa fa-angle-double-right" })
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "nav-item schooldetails-tab" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link disabled",
+                    attrs: {
+                      id: "schooldetails-tab-head",
+                      "data-toggle": "pill",
+                      role: "tab",
+                      "aria-controls": "custom-tabs-four-messages",
+                      "aria-selected": "false"
+                    },
+                    on: {
+                      click: function($event) {
+                        return _vm.shownexttab(
+                          "location-tab",
+                          "schooldetails-tab"
+                        )
+                      }
+                    }
+                  },
+                  [
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "step_no img-bordered pr-2 pl-2 pb-1 pt-1 bg-cool-gray-600 text-white"
+                      },
+                      [_vm._v("3")]
+                    ),
+                    _vm._v(" "),
+                    _c("label", [_vm._v("School/organization Details")]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "fa fa-angle-double-right" })
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "nav-item contactdetails-tab" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link disabled",
+                    attrs: {
+                      id: "contactdetails-tab-head",
+                      "data-toggle": "pill",
+                      role: "tab",
+                      "aria-controls": "custom-tabs-four-settings",
+                      "aria-selected": "false"
+                    },
+                    on: {
+                      click: function($event) {
+                        return _vm.shownexttab(
+                          "schooldetails-tab",
+                          "contactdetails-tab"
+                        )
+                      }
+                    }
+                  },
+                  [
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "step_no img-bordered pr-2 pl-2 pb-1 pt-1 bg-cool-gray-600 text-white"
+                      },
+                      [_vm._v("4")]
+                    ),
+                    _vm._v(" "),
+                    _c("label", [_vm._v("Contact Details")])
+                  ]
+                )
+              ])
+            ])
+          ]),
           _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
             _c("div", { staticClass: "tab-content" }, [
@@ -59082,70 +59620,491 @@ var render = function() {
                   }
                 },
                 [
-                  _c("div", { staticClass: "row form-group" }, [
-                    _c("div", { staticClass: "col-6" }, [
-                      _c("label", [_vm._v("Organization Type")]),
+                  _vm._m(1),
+                  _vm._v(" "),
+                  _c("div", { attrs: { id: "schoolsections" } }, [
+                    _c("div", { staticClass: "row form-group" }, [
+                      _c(
+                        "div",
+                        { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
+                        [
+                          _vm._m(2),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.schoolname,
+                                expression: "schoolname"
+                              }
+                            ],
+                            staticClass: "form-control font-weight-bolder",
+                            staticStyle: { width: "100%" },
+                            attrs: { type: "text", id: "schoolname" },
+                            domProps: { value: _vm.schoolname },
+                            on: {
+                              change: function($event) {
+                                return _vm.removeerror(
+                                  "schoolname",
+                                  "schoolname_err"
+                                )
+                              },
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.schoolname = $event.target.value
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("span", {
+                            staticClass: "text-danger",
+                            attrs: { id: "schoolname_err" }
+                          })
+                        ]
+                      ),
                       _vm._v(" "),
                       _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.organizationtype,
-                              expression: "organizationtype"
-                            }
-                          ],
-                          staticClass: "select2bs4",
-                          staticStyle: { width: "100%" },
-                          attrs: { id: "organizatioid" },
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.organizationtype = $event.target.multiple
-                                ? $$selectedVal
-                                : $$selectedVal[0]
-                            }
-                          }
-                        },
+                        "div",
+                        { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
                         [
-                          _c("option", { attrs: { value: "" } }, [
-                            _vm._v("Select")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", { attrs: { value: "School" } }, [
-                            _vm._v("School")
+                          _c("label", { staticClass: "font-weight-normal" }, [
+                            _vm._v("School Level")
                           ]),
                           _vm._v(" "),
                           _c(
-                            "option",
-                            { attrs: { value: "Dzongkhag Administration" } },
-                            [_vm._v("Dzongkhag Administration")]
-                          ),
-                          _vm._v(" "),
-                          _c("option", { attrs: { value: "Ministry" } }, [
-                            _vm._v("Ministry")
-                          ])
+                            "select",
+                            {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.schoollevel,
+                                  expression: "schoollevel"
+                                }
+                              ],
+                              staticClass: "select2bs4",
+                              staticStyle: { width: "100%" },
+                              attrs: { id: "schoollevel" },
+                              on: {
+                                change: function($event) {
+                                  var $$selectedVal = Array.prototype.filter
+                                    .call($event.target.options, function(o) {
+                                      return o.selected
+                                    })
+                                    .map(function(o) {
+                                      var val =
+                                        "_value" in o ? o._value : o.value
+                                      return val
+                                    })
+                                  _vm.schoollevel = $event.target.multiple
+                                    ? $$selectedVal
+                                    : $$selectedVal[0]
+                                }
+                              }
+                            },
+                            [
+                              _c(
+                                "option",
+                                {
+                                  attrs: {
+                                    value: "",
+                                    label: "- Please Select -"
+                                  }
+                                },
+                                [_vm._v("- Please Select -")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                {
+                                  attrs: {
+                                    value: "1",
+                                    label: "Community Primary School [01]"
+                                  }
+                                },
+                                [_vm._v("Community Primary School [01]")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                {
+                                  attrs: {
+                                    value: "2",
+                                    label: "Primary School [02]"
+                                  }
+                                },
+                                [_vm._v("Primary School [02]")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                {
+                                  attrs: {
+                                    value: "3",
+                                    label: "Lower Secondary School [03]"
+                                  }
+                                },
+                                [_vm._v("Lower Secondary School [03]")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                {
+                                  attrs: {
+                                    value: "4",
+                                    label: "Middle Secondary School [04]"
+                                  }
+                                },
+                                [_vm._v("Middle Secondary School [04]")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                {
+                                  attrs: {
+                                    value: "5",
+                                    label: "Higher Secondary School [05]"
+                                  }
+                                },
+                                [_vm._v("Higher Secondary School [05]")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                {
+                                  attrs: {
+                                    value: "7",
+                                    label: "Special Institute [06]"
+                                  }
+                                },
+                                [_vm._v("Special Institute [06]")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                {
+                                  attrs: {
+                                    value: "8",
+                                    label: "Extended Classroom [07]"
+                                  }
+                                },
+                                [_vm._v("Extended Classroom [07]")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                {
+                                  attrs: {
+                                    value: "9",
+                                    label:
+                                      "Early Childhood Care & Development [09]"
+                                  }
+                                },
+                                [
+                                  _vm._v(
+                                    "Early Childhood Care & Development [09]"
+                                  )
+                                ]
+                              )
+                            ]
+                          )
                         ]
                       )
                     ]),
                     _vm._v(" "),
-                    _vm._m(1)
+                    _c("div", { staticClass: "row form-group" }, [
+                      _c(
+                        "div",
+                        { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
+                        [
+                          _c("label", { staticClass: "font-weight-normal" }, [
+                            _vm._v("School Location")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "select",
+                            {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.schoolLocation,
+                                  expression: "schoolLocation"
+                                }
+                              ],
+                              staticClass: "select2bs4",
+                              staticStyle: { width: "100%" },
+                              attrs: { id: "schoolLocation" },
+                              on: {
+                                change: function($event) {
+                                  var $$selectedVal = Array.prototype.filter
+                                    .call($event.target.options, function(o) {
+                                      return o.selected
+                                    })
+                                    .map(function(o) {
+                                      var val =
+                                        "_value" in o ? o._value : o.value
+                                      return val
+                                    })
+                                  _vm.schoolLocation = $event.target.multiple
+                                    ? $$selectedVal
+                                    : $$selectedVal[0]
+                                }
+                              }
+                            },
+                            [
+                              _c(
+                                "option",
+                                {
+                                  attrs: {
+                                    value: "",
+                                    label: "- Please Select -"
+                                  }
+                                },
+                                [_vm._v("- Please Select -")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                {
+                                  attrs: {
+                                    value: "1",
+                                    label: "Urban Grade 1 [01]"
+                                  }
+                                },
+                                [_vm._v("Urban Grade 1 [01]")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                {
+                                  attrs: {
+                                    value: "2",
+                                    label: "Urban Grade 2 [02]"
+                                  }
+                                },
+                                [_vm._v("Urban Grade 2 [02]")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                {
+                                  attrs: {
+                                    value: "3",
+                                    label: "Semi-Urban [03]"
+                                  }
+                                },
+                                [_vm._v("Semi-Urban [03]")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                {
+                                  attrs: {
+                                    value: "4",
+                                    label: "Semi-Remote [04]"
+                                  }
+                                },
+                                [_vm._v("Semi-Remote [04]")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                { attrs: { value: "5", label: "Remote [05]" } },
+                                [_vm._v("Remote [05]")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                {
+                                  attrs: {
+                                    value: "6",
+                                    label: "Very-Remote [06]"
+                                  }
+                                },
+                                [_vm._v("Very-Remote [06]")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                {
+                                  attrs: { value: "7", label: "Difficult [07]" }
+                                },
+                                [_vm._v("Difficult [07]")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                { attrs: { value: "9", label: "Rural [08]" } },
+                                [_vm._v("Rural [08]")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                {
+                                  attrs: {
+                                    value: "10",
+                                    label: "Semi-Rural [09]"
+                                  }
+                                },
+                                [_vm._v("Semi-Rural [09]")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                { attrs: { value: "11", label: "Urban [10]" } },
+                                [_vm._v("Urban [10]")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                {
+                                  attrs: { value: "8", label: "Unknown [99]" }
+                                },
+                                [_vm._v("Unknown [99]")]
+                              )
+                            ]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
+                        [
+                          _c("label", { staticClass: "font-weight-normal" }, [
+                            _vm._v("School Status")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "select",
+                            {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.schoolstatus,
+                                  expression: "schoolstatus"
+                                }
+                              ],
+                              staticClass: "select2bs4 font-weight-bolder",
+                              staticStyle: { width: "100%" },
+                              attrs: { id: "schoolstatus" },
+                              on: {
+                                change: function($event) {
+                                  var $$selectedVal = Array.prototype.filter
+                                    .call($event.target.options, function(o) {
+                                      return o.selected
+                                    })
+                                    .map(function(o) {
+                                      var val =
+                                        "_value" in o ? o._value : o.value
+                                      return val
+                                    })
+                                  _vm.schoolstatus = $event.target.multiple
+                                    ? $$selectedVal
+                                    : $$selectedVal[0]
+                                }
+                              }
+                            },
+                            [
+                              _c(
+                                "option",
+                                {
+                                  attrs: {
+                                    value: "",
+                                    label: "- Please Select -"
+                                  }
+                                },
+                                [_vm._v("- Please Select -")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                { attrs: { value: "1", label: "Opened [1]" } },
+                                [_vm._v("Opened [1]")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                { attrs: { value: "2", label: "Closed [2]" } },
+                                [_vm._v("Closed [2]")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                {
+                                  attrs: { value: "3", label: "Bifurcated [3]" }
+                                },
+                                [_vm._v("Bifurcated [3]")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                { attrs: { value: "4", label: "Merged [4]" } },
+                                [_vm._v("Merged [4]")]
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    ])
                   ]),
                   _vm._v(" "),
-                  _c("div", { attrs: { id: "schoolsections" } }, [
-                    _c("div", { staticClass: "row form-group" }, [
-                      _c("div", { staticClass: "col-6" }, [
-                        _c("label", [
-                          _vm._v("School Name (please do not enter level)")
+                  _c("div", { staticClass: "row form-group" }, [
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
+                      [
+                        _vm._m(3),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.agencycode,
+                              expression: "agencycode"
+                            }
+                          ],
+                          staticClass: "form-control font-weight-bolder",
+                          staticStyle: { width: "100%" },
+                          attrs: { type: "number", id: "agencycode" },
+                          domProps: { value: _vm.agencycode },
+                          on: {
+                            change: function($event) {
+                              return _vm.removeerror(
+                                "agencycode",
+                                "agencycode_err"
+                              )
+                            },
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.agencycode = $event.target.value
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("span", {
+                          staticClass: "text-danger",
+                          attrs: { id: "agencycode_err" }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
+                      [
+                        _c("label", { staticClass: "font-weight-normal" }, [
+                          _vm._v(
+                            "RCSC Code (15 letters, like 001.002.003.004, defined by RCSC)"
+                          )
                         ]),
                         _vm._v(" "),
                         _c("input", {
@@ -59153,498 +60112,127 @@ var render = function() {
                             {
                               name: "model",
                               rawName: "v-model",
-                              value: _vm.schoolname,
-                              expression: "schoolname"
+                              value: _vm.rcsccode,
+                              expression: "rcsccode"
                             }
                           ],
-                          staticClass: "form-control",
+                          staticClass: "form-control font-weight-bolder",
                           staticStyle: { width: "100%" },
-                          attrs: { type: "text", id: "schoolname" },
-                          domProps: { value: _vm.schoolname },
+                          attrs: { type: "number", id: "rcsccode" },
+                          domProps: { value: _vm.rcsccode },
                           on: {
                             input: function($event) {
                               if ($event.target.composing) {
                                 return
                               }
-                              _vm.schoolname = $event.target.value
+                              _vm.rcsccode = $event.target.value
                             }
                           }
                         })
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col-6" }, [
-                        _c("label", [_vm._v("School Level")]),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.schoollevel,
-                                expression: "schoollevel"
-                              }
-                            ],
-                            staticClass: "select2bs4",
-                            staticStyle: { width: "100%" },
-                            attrs: { id: "schoollevel" },
-                            on: {
-                              change: function($event) {
-                                var $$selectedVal = Array.prototype.filter
-                                  .call($event.target.options, function(o) {
-                                    return o.selected
-                                  })
-                                  .map(function(o) {
-                                    var val = "_value" in o ? o._value : o.value
-                                    return val
-                                  })
-                                _vm.schoollevel = $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              }
-                            }
-                          },
-                          [
-                            _c(
-                              "option",
-                              {
-                                attrs: { value: "", label: "- Please Select -" }
-                              },
-                              [_vm._v("- Please Select -")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              {
-                                attrs: {
-                                  value: "1",
-                                  label: "Community Primary School [01]"
-                                }
-                              },
-                              [_vm._v("Community Primary School [01]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              {
-                                attrs: {
-                                  value: "2",
-                                  label: "Primary School [02]"
-                                }
-                              },
-                              [_vm._v("Primary School [02]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              {
-                                attrs: {
-                                  value: "3",
-                                  label: "Lower Secondary School [03]"
-                                }
-                              },
-                              [_vm._v("Lower Secondary School [03]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              {
-                                attrs: {
-                                  value: "4",
-                                  label: "Middle Secondary School [04]"
-                                }
-                              },
-                              [_vm._v("Middle Secondary School [04]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              {
-                                attrs: {
-                                  value: "5",
-                                  label: "Higher Secondary School [05]"
-                                }
-                              },
-                              [_vm._v("Higher Secondary School [05]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              {
-                                attrs: {
-                                  value: "7",
-                                  label: "Special Institute [06]"
-                                }
-                              },
-                              [_vm._v("Special Institute [06]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              {
-                                attrs: {
-                                  value: "8",
-                                  label: "Extended Classroom [07]"
-                                }
-                              },
-                              [_vm._v("Extended Classroom [07]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              {
-                                attrs: {
-                                  value: "9",
-                                  label:
-                                    "Early Childhood Care & Development [09]"
-                                }
-                              },
-                              [
-                                _vm._v(
-                                  "Early Childhood Care & Development [09]"
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "row form-group" }, [
-                      _c("div", { staticClass: "col-6" }, [
-                        _c("label", [_vm._v("School Location")]),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.schoolLocation,
-                                expression: "schoolLocation"
-                              }
-                            ],
-                            staticClass: "select2bs4",
-                            staticStyle: { width: "100%" },
-                            attrs: { id: "schoolLocation" },
-                            on: {
-                              change: function($event) {
-                                var $$selectedVal = Array.prototype.filter
-                                  .call($event.target.options, function(o) {
-                                    return o.selected
-                                  })
-                                  .map(function(o) {
-                                    var val = "_value" in o ? o._value : o.value
-                                    return val
-                                  })
-                                _vm.schoolLocation = $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              }
-                            }
-                          },
-                          [
-                            _c(
-                              "option",
-                              {
-                                attrs: { value: "", label: "- Please Select -" }
-                              },
-                              [_vm._v("- Please Select -")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              {
-                                attrs: {
-                                  value: "1",
-                                  label: "Urban Grade 1 [01]"
-                                }
-                              },
-                              [_vm._v("Urban Grade 1 [01]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              {
-                                attrs: {
-                                  value: "2",
-                                  label: "Urban Grade 2 [02]"
-                                }
-                              },
-                              [_vm._v("Urban Grade 2 [02]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              {
-                                attrs: { value: "3", label: "Semi-Urban [03]" }
-                              },
-                              [_vm._v("Semi-Urban [03]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              {
-                                attrs: { value: "4", label: "Semi-Remote [04]" }
-                              },
-                              [_vm._v("Semi-Remote [04]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              { attrs: { value: "5", label: "Remote [05]" } },
-                              [_vm._v("Remote [05]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              {
-                                attrs: { value: "6", label: "Very-Remote [06]" }
-                              },
-                              [_vm._v("Very-Remote [06]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              {
-                                attrs: { value: "7", label: "Difficult [07]" }
-                              },
-                              [_vm._v("Difficult [07]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              { attrs: { value: "9", label: "Rural [08]" } },
-                              [_vm._v("Rural [08]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              {
-                                attrs: { value: "10", label: "Semi-Rural [09]" }
-                              },
-                              [_vm._v("Semi-Rural [09]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              { attrs: { value: "11", label: "Urban [10]" } },
-                              [_vm._v("Urban [10]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              { attrs: { value: "8", label: "Unknown [99]" } },
-                              [_vm._v("Unknown [99]")]
-                            )
-                          ]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col-6" }, [
-                        _c("label", [_vm._v("School Status")]),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.schoolstatus,
-                                expression: "schoolstatus"
-                              }
-                            ],
-                            staticClass: "select2bs4",
-                            staticStyle: { width: "100%" },
-                            attrs: { id: "schoolstatus" },
-                            on: {
-                              change: function($event) {
-                                var $$selectedVal = Array.prototype.filter
-                                  .call($event.target.options, function(o) {
-                                    return o.selected
-                                  })
-                                  .map(function(o) {
-                                    var val = "_value" in o ? o._value : o.value
-                                    return val
-                                  })
-                                _vm.schoolstatus = $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              }
-                            }
-                          },
-                          [
-                            _c(
-                              "option",
-                              {
-                                attrs: { value: "", label: "- Please Select -" }
-                              },
-                              [_vm._v("- Please Select -")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              { attrs: { value: "1", label: "Opened [1]" } },
-                              [_vm._v("Opened [1]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              { attrs: { value: "2", label: "Closed [2]" } },
-                              [_vm._v("Closed [2]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              {
-                                attrs: { value: "3", label: "Bifurcated [3]" }
-                              },
-                              [_vm._v("Bifurcated [3]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              { attrs: { value: "4", label: "Merged [4]" } },
-                              [_vm._v("Merged [4]")]
-                            )
-                          ]
-                        )
-                      ])
-                    ])
+                      ]
+                    )
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "row form-group" }, [
-                    _c("div", { staticClass: "col-6" }, [
-                      _c("label", [
-                        _vm._v(
-                          "Agency Code (7 letters, like 028.001, defined by RCSC)"
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.agencycode,
-                            expression: "agencycode"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        staticStyle: { width: "100%" },
-                        attrs: { type: "number", id: "agencycode" },
-                        domProps: { value: _vm.agencycode },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
+                      [
+                        _c("label", { staticClass: "font-weight-normal" }, [
+                          _vm._v(
+                            " MoF Code (6 letters, like 121.01, defined by MoF)"
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mofcode,
+                              expression: "mofcode"
                             }
-                            _vm.agencycode = $event.target.value
+                          ],
+                          staticClass: "form-control font-weight-bolder",
+                          staticStyle: { width: "100%" },
+                          attrs: { type: "number", id: "mofcode" },
+                          domProps: { value: _vm.mofcode },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.mofcode = $event.target.value
+                            }
                           }
-                        }
-                      })
-                    ]),
+                        })
+                      ]
+                    ),
                     _vm._v(" "),
-                    _c("div", { staticClass: "col-6" }, [
-                      _c("label", [
-                        _vm._v(
-                          "RCSC Code (15 letters, like 001.002.003.004, defined by RCSC)"
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.rcsccode,
-                            expression: "rcsccode"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        staticStyle: { width: "100%" },
-                        attrs: { type: "number", id: "rcsccode" },
-                        domProps: { value: _vm.rcsccode },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
+                      [
+                        _c("label", { staticClass: "font-weight-normal" }, [
+                          _vm._v("Year of establishment (e.g. 1976)")
+                        ]),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.establishmentyear,
+                              expression: "establishmentyear"
                             }
-                            _vm.rcsccode = $event.target.value
-                          }
-                        }
-                      })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "row form-group" }, [
-                    _c("div", { staticClass: "col-6" }, [
-                      _c("label", [
-                        _vm._v(
-                          " MoF Code (6 letters, like 121.01, defined by MoF)"
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.mofcode,
-                            expression: "mofcode"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        staticStyle: { width: "100%" },
-                        attrs: { type: "number", id: "mofcode" },
-                        domProps: { value: _vm.mofcode },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
+                          ],
+                          staticClass: "form-control font-weight-bolder",
+                          staticStyle: { width: "100%" },
+                          attrs: { type: "number", id: "establishmentyear" },
+                          domProps: { value: _vm.establishmentyear },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.establishmentyear = $event.target.value
                             }
-                            _vm.mofcode = $event.target.value
                           }
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-6" }, [
-                      _c("label", [
-                        _vm._v("Year of establishment (e.g. 1976)")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.establishmentyear,
-                            expression: "establishmentyear"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        staticStyle: { width: "100%" },
-                        attrs: { type: "number", id: "establishmentyear" },
-                        domProps: { value: _vm.establishmentyear },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.establishmentyear = $event.target.value
-                          }
-                        }
-                      })
-                    ])
+                        })
+                      ]
+                    )
                   ]),
                   _vm._v(" "),
                   _c("hr"),
                   _vm._v(" "),
-                  _vm._m(2)
+                  _c("div", { staticClass: "row form-group fa-pull-right" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                      },
+                      [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-flat btn-primary",
+                            on: {
+                              click: function($event) {
+                                return _vm.shownexttab(
+                                  "basic-tabs",
+                                  "location-tab"
+                                )
+                              }
+                            }
+                          },
+                          [
+                            _vm._v(" Next "),
+                            _c("i", { staticClass: "fa fa-arrow-right" })
+                          ]
+                        )
+                      ]
+                    )
+                  ])
                 ]
               ),
               _vm._v(" "),
@@ -59659,9 +60247,689 @@ var render = function() {
                   }
                 },
                 [
-                  _vm._v(
-                    "\n                            location details\n                        "
-                  )
+                  _c("div", { staticClass: "row form-group" }, [
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _vm._m(4),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.locationdzongkhag,
+                                expression: "locationdzongkhag"
+                              }
+                            ],
+                            staticClass: "select2bs4 font-weight-bolder",
+                            staticStyle: { width: "100%" },
+                            attrs: { id: "locationdzongkhag" },
+                            on: {
+                              change: function($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function(o) {
+                                    return o.selected
+                                  })
+                                  .map(function(o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.locationdzongkhag = $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              }
+                            }
+                          },
+                          [
+                            _c(
+                              "option",
+                              {
+                                attrs: { value: "", label: "- Please Select -" }
+                              },
+                              [_vm._v("- Please Select -")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "1", label: "Bumthang [01]" } },
+                              [_vm._v("Bumthang ")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "2", label: "Chhukha [02]" } },
+                              [_vm._v("Chhukha")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "3", label: "Dagana [03]" } },
+                              [_vm._v("Dagana")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "4", label: "Gasa [04]" } },
+                              [_vm._v("Gasa")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "5", label: "Haa [05]" } },
+                              [_vm._v("Haa")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "6", label: "Lhuentse [06]" } },
+                              [_vm._v("Lhuentse")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "7", label: "Mongar [07]" } },
+                              [_vm._v("Mongar")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "8", label: "Paro [08]" } },
+                              [_vm._v("Paro")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "9",
+                                  label: "Pema Gatshel [09]"
+                                }
+                              },
+                              [_vm._v("Pema Gatshel")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "10", label: "Punakha [10]" } },
+                              [_vm._v("Punakha")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "11",
+                                  label: "Samdrup Jongkhar [11]"
+                                }
+                              },
+                              [_vm._v("Samdrup Jongkhar")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "12", label: "Samtse [12]" } },
+                              [_vm._v("Samtse")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "13", label: "Sarpang [13]" } },
+                              [_vm._v("Sarpang")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "14", label: "Thimphu [14]" } },
+                              [_vm._v("Thimphu")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: { value: "15", label: "Trashigang [15]" }
+                              },
+                              [_vm._v("Trashigang ")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "16",
+                                  label: "Trashiyangtse [16]"
+                                }
+                              },
+                              [_vm._v("Trashiyangtse ")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "17", label: "Trongsa [17]" } },
+                              [_vm._v("Trongsa ")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "18", label: "Tsirang [18]" } },
+                              [_vm._v("Tsirang ")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "19",
+                                  label: "Wangdue Phodrang [19]"
+                                }
+                              },
+                              [_vm._v("Wangdue Phodrang ")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: { value: "20", label: "Zhemgang [20]" }
+                              },
+                              [_vm._v("Zhemgang ")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "25",
+                                  label: "SJongkhar Thromde [55]"
+                                }
+                              },
+                              [_vm._v("SJongkhar Thromde ")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "24",
+                                  label: "Phuntsholing Thromde [66]"
+                                }
+                              },
+                              [_vm._v("Phuntsholing Thromde")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "23",
+                                  label: "Gelephu Thromde [77]"
+                                }
+                              },
+                              [_vm._v("Gelephu Thromde ")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "22",
+                                  label: "Thimphu Thromde [88]"
+                                }
+                              },
+                              [_vm._v("Thimphu Thromde ")]
+                            )
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _vm._m(5),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.locationgewog,
+                                expression: "locationgewog"
+                              }
+                            ],
+                            staticClass: "select2bs4 font-weight-bolder",
+                            staticStyle: { width: "100%" },
+                            attrs: { id: "locationgewog" },
+                            on: {
+                              change: function($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function(o) {
+                                    return o.selected
+                                  })
+                                  .map(function(o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.locationgewog = $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              }
+                            }
+                          },
+                          [
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "",
+                                  label: "- First Select Dzongkhag -"
+                                }
+                              },
+                              [_vm._v("- First Select Dzongkhag -")]
+                            ),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "1" } }, [
+                              _vm._v("Chokhor")
+                            ]),
+                            _c("option", { attrs: { value: "2" } }, [
+                              _vm._v("Chumey ")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "3" } }, [
+                              _vm._v("Tang ")
+                            ]),
+                            _c("option", { attrs: { value: "4" } }, [
+                              _vm._v("Ura ")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "208" } }, [
+                              _vm._v("Other ")
+                            ])
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _vm._m(6),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.locationvillage,
+                                expression: "locationvillage"
+                              }
+                            ],
+                            staticClass: "select2bs4 font-weight-bolder",
+                            staticStyle: { width: "100%" },
+                            attrs: { id: "locationvillage" },
+                            on: {
+                              change: function($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function(o) {
+                                    return o.selected
+                                  })
+                                  .map(function(o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.locationvillage = $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              }
+                            }
+                          },
+                          [
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "",
+                                  label: "- First Select Gewog -"
+                                }
+                              },
+                              [_vm._v("- First Select Gewog -")]
+                            ),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "1" } }, [
+                              _vm._v("Chakhar [0001]")
+                            ]),
+                            _c("option", { attrs: { value: "2" } }, [
+                              _vm._v("Chamkhar [0002]")
+                            ]),
+                            _c("option", { attrs: { value: "3" } }, [
+                              _vm._v("Chamkhar Throm [0003]")
+                            ]),
+                            _c("option", { attrs: { value: "4" } }, [
+                              _vm._v("Changwa [0004]")
+                            ]),
+                            _c("option", { attrs: { value: "5" } }, [
+                              _vm._v("Damphel [0005]")
+                            ]),
+                            _c("option", { attrs: { value: "6" } }, [
+                              _vm._v("Dawathang [0006]")
+                            ]),
+                            _c("option", { attrs: { value: "7" } }, [
+                              _vm._v("Dhur Dok [0007]")
+                            ]),
+                            _c("option", { attrs: { value: "8" } }, [
+                              _vm._v("Dhur Lusibe [0008]")
+                            ]),
+                            _c("option", { attrs: { value: "9" } }, [
+                              _vm._v("Dhur Moen [0009]")
+                            ]),
+                            _c("option", { attrs: { value: "10" } }, [
+                              _vm._v("Dodrong [0010]")
+                            ]),
+                            _c("option", { attrs: { value: "11" } }, [
+                              _vm._v("Dorjibe [0011]")
+                            ]),
+                            _c("option", { attrs: { value: "12" } }, [
+                              _vm._v("Goling [0012]")
+                            ]),
+                            _c("option", { attrs: { value: "13" } }, [
+                              _vm._v("Gongkhar [0013]")
+                            ]),
+                            _c("option", { attrs: { value: "14" } }, [
+                              _vm._v("Gyelkhar [0014]")
+                            ]),
+                            _c("option", { attrs: { value: "15" } }, [
+                              _vm._v("Jakar [0015]")
+                            ]),
+                            _c("option", { attrs: { value: "16" } }, [
+                              _vm._v("Jakar Lhakhang [0016]")
+                            ]),
+                            _c("option", { attrs: { value: "17" } }, [
+                              _vm._v("Jampel Lhakhang [0017]")
+                            ]),
+                            _c("option", { attrs: { value: "18" } }, [
+                              _vm._v("Kenchosum [0018]")
+                            ]),
+                            _c("option", { attrs: { value: "19" } }, [
+                              _vm._v("Khangdok [0019]")
+                            ]),
+                            _c("option", { attrs: { value: "20" } }, [
+                              _vm._v("Kharsa [0020]")
+                            ]),
+                            _c("option", { attrs: { value: "21" } }, [
+                              _vm._v("Kharsum [0021]")
+                            ]),
+                            _c("option", { attrs: { value: "22" } }, [
+                              _vm._v("Lamagonpa [0022]")
+                            ]),
+                            _c("option", { attrs: { value: "23" } }, [
+                              _vm._v("Nanglakhang [0023]")
+                            ]),
+                            _c("option", { attrs: { value: "24" } }, [
+                              _vm._v("Nangsephel/Tendok [0024]")
+                            ]),
+                            _c("option", { attrs: { value: "25" } }, [
+                              _vm._v("Nangseyphel [0025]")
+                            ]),
+                            _c("option", { attrs: { value: "26" } }, [
+                              _vm._v("Norbugang [0026]")
+                            ]),
+                            _c("option", { attrs: { value: "27" } }, [
+                              _vm._v("Pangrey [0027]")
+                            ]),
+                            _c("option", { attrs: { value: "28" } }, [
+                              _vm._v("Petseling [0028]")
+                            ]),
+                            _c("option", { attrs: { value: "29" } }, [
+                              _vm._v("Poengar [0029]")
+                            ]),
+                            _c("option", { attrs: { value: "30" } }, [
+                              _vm._v("Potola [0030]")
+                            ]),
+                            _c("option", { attrs: { value: "31" } }, [
+                              _vm._v("Samthang [0031]")
+                            ]),
+                            _c("option", { attrs: { value: "32" } }, [
+                              _vm._v("Saram [0032]")
+                            ]),
+                            _c("option", { attrs: { value: "33" } }, [
+                              _vm._v("Shukdak [0033]")
+                            ]),
+                            _c("option", { attrs: { value: "34" } }, [
+                              _vm._v("Tamshing [0034]")
+                            ]),
+                            _c("option", { attrs: { value: "35" } }, [
+                              _vm._v("Tashiling [0035]")
+                            ]),
+                            _c("option", { attrs: { value: "36" } }, [
+                              _vm._v("Tendok [0036]")
+                            ]),
+                            _c("option", { attrs: { value: "37" } }, [
+                              _vm._v("Thangbi [0037]")
+                            ]),
+                            _c("option", { attrs: { value: "38" } }, [
+                              _vm._v("Torshong [0038]")
+                            ]),
+                            _c("option", { attrs: { value: "39" } }, [
+                              _vm._v("Wangdicholing [0039]")
+                            ]),
+                            _c("option", { attrs: { value: "40" } }, [
+                              _vm._v("Zangling [0040]")
+                            ]),
+                            _c("option", { attrs: { value: "41" } }, [
+                              _vm._v("Zhapthang [0041]")
+                            ]),
+                            _c("option", { attrs: { value: "4983" } }, [
+                              _vm._v("Sangsangma [5001]")
+                            ]),
+                            _c("option", { attrs: { value: "4984" } }, [
+                              _vm._v("Tashigatshel [5002]")
+                            ]),
+                            _c("option", { attrs: { value: "4985" } }, [
+                              _vm._v("Dekiling [5003]")
+                            ]),
+                            _c("option", { attrs: { value: "4356" } }, [
+                              _vm._v("Other [8501]")
+                            ]),
+                            _c("option", { attrs: { value: "4357" } }, [
+                              _vm._v("Unknown [9001]")
+                            ])
+                          ]
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "row form-group" }, [
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _c("label", { staticClass: "font-weight-normal" }, [
+                          _vm._v(" Altitude: ")
+                        ]),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.altitute,
+                              expression: "altitute"
+                            }
+                          ],
+                          staticClass: "form-control font-weight-bolder",
+                          staticStyle: { width: "100%" },
+                          attrs: { type: "number", id: "altitute" },
+                          domProps: { value: _vm.altitute },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.altitute = $event.target.value
+                            }
+                          }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _c("label", { staticClass: "font-weight-normal" }, [
+                          _vm._v("Latitude")
+                        ]),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.latitute,
+                              expression: "latitute"
+                            }
+                          ],
+                          staticClass: "form-control font-weight-bolder",
+                          staticStyle: { width: "100%" },
+                          attrs: { type: "number", id: "latitute" },
+                          domProps: { value: _vm.latitute },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.latitute = $event.target.value
+                            }
+                          }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _c("label", { staticClass: "font-weight-normal" }, [
+                          _vm._v("Longitude")
+                        ]),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.longitute,
+                              expression: "longitute"
+                            }
+                          ],
+                          staticClass: "form-control font-weight-bolder",
+                          staticStyle: { width: "100%" },
+                          attrs: { type: "number", id: "longitute" },
+                          domProps: { value: _vm.longitute },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.longitute = $event.target.value
+                            }
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "row form-group" }, [
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _vm._m(7),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.thrmno,
+                              expression: "thrmno"
+                            }
+                          ],
+                          staticClass: "form-control font-weight-bolder",
+                          staticStyle: { width: "100%" },
+                          attrs: { type: "text", id: "thrmno" },
+                          domProps: { value: _vm.thrmno },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.thrmno = $event.target.value
+                            }
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("hr"),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "row form-group fa-pull-right" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                      },
+                      [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-flat btn-success",
+                            on: {
+                              click: function($event) {
+                                return _vm.previoustab(
+                                  "basic-tabs",
+                                  "location-tab"
+                                )
+                              }
+                            }
+                          },
+                          [
+                            _c("i", { staticClass: "fa fa-arrow-left" }),
+                            _vm._v(" Previous ")
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-flat btn-primary",
+                            on: {
+                              click: function($event) {
+                                return _vm.shownexttab(
+                                  "location-tab",
+                                  "schooldetails-tab"
+                                )
+                              }
+                            }
+                          },
+                          [
+                            _vm._v(" Next "),
+                            _c("i", { staticClass: "fa fa-arrow-right" })
+                          ]
+                        )
+                      ]
+                    )
+                  ])
                 ]
               ),
               _vm._v(" "),
@@ -59676,9 +60944,732 @@ var render = function() {
                   }
                 },
                 [
-                  _vm._v(
-                    "\n                            School Details\n                        "
-                  )
+                  _c("div", { staticClass: "row form-group" }, [
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _vm._m(8),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.climatetype,
+                                expression: "climatetype"
+                              }
+                            ],
+                            staticClass: "select2bs4 font-weight-bolder",
+                            staticStyle: { width: "100%" },
+                            attrs: { id: "climatetype" },
+                            on: {
+                              change: function($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function(o) {
+                                    return o.selected
+                                  })
+                                  .map(function(o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.climatetype = $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              }
+                            }
+                          },
+                          [
+                            _c(
+                              "option",
+                              {
+                                attrs: { value: "", label: "- Please Select -" }
+                              },
+                              [_vm._v("- Please Select -")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "1",
+                                  label: "Hot Sub-tropical [01]"
+                                }
+                              },
+                              [_vm._v("Hot Sub-tropical [01]")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "2",
+                                  label: "Warm Sub-tropical [02]"
+                                }
+                              },
+                              [_vm._v("Warm Sub-tropical [02]")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "3",
+                                  label: "Warm Temprate [03]"
+                                }
+                              },
+                              [_vm._v("Warm Temprate [03]")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "4",
+                                  label: "Cool Temprate [04]"
+                                }
+                              },
+                              [_vm._v("Cool Temprate [04]")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "5", label: "Alpine [05]" } },
+                              [_vm._v("Alpine [05]")]
+                            )
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _vm._m(9),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.locationgewog,
+                                expression: "locationgewog"
+                              }
+                            ],
+                            staticClass: "select2bs4 font-weight-bolder",
+                            staticStyle: { width: "100%" },
+                            attrs: { id: "locationgewog" },
+                            on: {
+                              change: function($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function(o) {
+                                    return o.selected
+                                  })
+                                  .map(function(o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.locationgewog = $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              }
+                            }
+                          },
+                          [
+                            _c(
+                              "option",
+                              {
+                                attrs: { value: "", label: "- Please Select -" }
+                              },
+                              [_vm._v("- Please Select -")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "3",
+                                  label: "Farm/Power tiller Road [03]"
+                                }
+                              },
+                              [_vm._v("Farm/Power tiller Road [03]")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: { value: "2", label: "FeederRoad [02]" }
+                              },
+                              [_vm._v("FeederRoad [02]")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: { value: "1", label: "TarredRoad [01]" }
+                              },
+                              [_vm._v("TarredRoad [01]")]
+                            )
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _vm._m(10)
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "row form-group",
+                      staticStyle: { display: "none" },
+                      attrs: { id: "roadnotaccesible" }
+                    },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                        [
+                          _c("label", { staticClass: "font-weight-normal" }, [
+                            _vm._v(
+                              " How far is the school from road in days (e.g. 1.3 days): "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.distancefromroaddays,
+                                expression: "distancefromroaddays"
+                              }
+                            ],
+                            staticClass: "form-control font-weight-bolder",
+                            staticStyle: { width: "100%" },
+                            attrs: {
+                              type: "number",
+                              id: "distancefromroaddays"
+                            },
+                            domProps: { value: _vm.distancefromroaddays },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.distancefromroaddays = $event.target.value
+                              }
+                            }
+                          })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                        [
+                          _c("label", { staticClass: "font-weight-normal" }, [
+                            _vm._v(
+                              "How far is the school from road in kilometers (e.g. 12.3 Km)"
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.distancefromroadkm,
+                                expression: "distancefromroadkm"
+                              }
+                            ],
+                            staticClass: "form-control font-weight-bolder",
+                            staticStyle: { width: "100%" },
+                            attrs: { type: "number", id: "distancefromroadkm" },
+                            domProps: { value: _vm.distancefromroadkm },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.distancefromroadkm = $event.target.value
+                              }
+                            }
+                          })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                        [
+                          _c("label", { staticClass: "font-weight-normal" }, [
+                            _vm._v(
+                              "How far is the school from road in hours? (e.g. 4.8 hours)"
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.distancefromroadhrs,
+                                expression: "distancefromroadhrs"
+                              }
+                            ],
+                            staticClass: "form-control font-weight-bolder",
+                            staticStyle: { width: "100%" },
+                            attrs: {
+                              type: "number",
+                              id: "distancefromroadhrs"
+                            },
+                            domProps: { value: _vm.distancefromroadhrs },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.distancefromroadhrs = $event.target.value
+                              }
+                            }
+                          })
+                        ]
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "row form-group" }, [
+                    _vm._m(11),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _c("label", { staticClass: "font-weight-normal" }, [
+                          _vm._v("Compound Area (in acres)")
+                        ]),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.compoundarea,
+                              expression: "compoundarea"
+                            }
+                          ],
+                          staticClass: "form-control font-weight-bolder",
+                          staticStyle: { width: "100%" },
+                          attrs: { type: "text", id: "compoundarea" },
+                          domProps: { value: _vm.compoundarea },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.compoundarea = $event.target.value
+                            }
+                          }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _c("label", { staticClass: "font-weight-normal" }, [
+                          _vm._v("Play ground Area (in sq. M)")
+                        ]),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.playgroundmeasure,
+                              expression: "playgroundmeasure"
+                            }
+                          ],
+                          staticClass: "form-control font-weight-bolder",
+                          staticStyle: { width: "100%" },
+                          attrs: { type: "text", id: "playgroundmeasure" },
+                          domProps: { value: _vm.playgroundmeasure },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.playgroundmeasure = $event.target.value
+                            }
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "row form-group" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                      },
+                      [
+                        _c("label", { staticClass: "font-weight-normal" }, [
+                          _vm._v("Play ground Description")
+                        ]),
+                        _vm._v(" "),
+                        _c("textarea", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.playgrounddescription,
+                              expression: "playgrounddescription"
+                            }
+                          ],
+                          staticClass: "form-control font-weight-bolder",
+                          attrs: { id: "playgrounddescription" },
+                          domProps: { value: _vm.playgrounddescription },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.playgrounddescription = $event.target.value
+                            }
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "row form-group" }, [
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _c("label", { staticClass: "font-weight-normal" }, [
+                          _vm._v("Agriculture Area (in acres)")
+                        ]),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.agrriculturearea,
+                              expression: "agrriculturearea"
+                            }
+                          ],
+                          staticClass: "form-control font-weight-bolder",
+                          staticStyle: { width: "100%" },
+                          attrs: { type: "number", id: "agrriculturearea" },
+                          domProps: { value: _vm.agrriculturearea },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.agrriculturearea = $event.target.value
+                            }
+                          }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _c("label", { staticClass: "font-weight-normal" }, [
+                          _vm._v("Used Agriculture Area (in acres)")
+                        ]),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.usedagriculture,
+                              expression: "usedagriculture"
+                            }
+                          ],
+                          staticClass: "form-control font-weight-bolder",
+                          staticStyle: { width: "100%" },
+                          attrs: { type: "number", id: "usedagriculture" },
+                          domProps: { value: _vm.usedagriculture },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.usedagriculture = $event.target.value
+                            }
+                          }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _vm._m(12)
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "row form-group" }, [
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _c("label", { staticClass: "font-weight-normal" }, [
+                          _vm._v("No of tap stand for students")
+                        ]),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.tabstandNo,
+                              expression: "tabstandNo"
+                            }
+                          ],
+                          staticClass: "form-control font-weight-bolder",
+                          staticStyle: { width: "100%" },
+                          attrs: { type: "number", id: "tabstandNo" },
+                          domProps: { value: _vm.tabstandNo },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.tabstandNo = $event.target.value
+                            }
+                          }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _c("label", { staticClass: "font-weight-normal" }, [
+                          _vm._v("Reason for Water Problem")
+                        ]),
+                        _vm._v(" "),
+                        _c("textarea", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.waterproblem,
+                              expression: "waterproblem"
+                            }
+                          ],
+                          staticClass: "form-control font-weight-bolder",
+                          attrs: { id: "waterproblem" },
+                          domProps: { value: _vm.waterproblem },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.waterproblem = $event.target.value
+                            }
+                          }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _vm._m(13)
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "row form-group" }, [
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _c("label", { staticClass: "font-weight-normal" }, [
+                          _vm._v("Remarks on electricity")
+                        ]),
+                        _vm._v(" "),
+                        _c("textarea", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.electricremarks,
+                              expression: "electricremarks"
+                            }
+                          ],
+                          staticClass: "form-control font-weight-bolder",
+                          attrs: { id: "electricremarks" },
+                          domProps: { value: _vm.electricremarks },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.electricremarks = $event.target.value
+                            }
+                          }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _c("label", { staticClass: "font-weight-normal" }, [
+                          _vm._v("The way to collect data from school")
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.wayofdatacollection,
+                                expression: "wayofdatacollection"
+                              }
+                            ],
+                            staticClass: "select2bs4 font-weight-bolder",
+                            staticStyle: { width: "100%" },
+                            attrs: { id: "wayofdatacollection" },
+                            on: {
+                              change: function($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function(o) {
+                                    return o.selected
+                                  })
+                                  .map(function(o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.wayofdatacollection = $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              }
+                            }
+                          },
+                          [
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "",
+                                  label: "- Please Select -",
+                                  selected: "selected"
+                                }
+                              },
+                              [_vm._v("- Please Select -")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "2",
+                                  label: "By web interface [1]"
+                                }
+                              },
+                              [_vm._v("By web interface [1]")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "3",
+                                  label: "By excel sheet [2]"
+                                }
+                              },
+                              [_vm._v("By excel sheet [2]")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "4",
+                                  label: "By paper form [3]"
+                                }
+                              },
+                              [_vm._v("By paper form [3]")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "1", label: "Unknown [9]" } },
+                              [_vm._v("Unknown [9]")]
+                            )
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _vm._m(14)
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(15),
+                  _vm._v(" "),
+                  _c("hr"),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "row form-group fa-pull-right" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                      },
+                      [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-flat btn-success",
+                            on: {
+                              click: function($event) {
+                                return _vm.previoustab(
+                                  "location-tab",
+                                  "schooldetails-tab"
+                                )
+                              }
+                            }
+                          },
+                          [
+                            _c("i", { staticClass: "fa fa-arrow-left" }),
+                            _vm._v(" Previous ")
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-flat btn-primary",
+                            on: {
+                              click: function($event) {
+                                return _vm.shownexttab(
+                                  "schooldetails-tab",
+                                  "contactdetails-tab"
+                                )
+                              }
+                            }
+                          },
+                          [
+                            _vm._v(" Next "),
+                            _c("i", { staticClass: "fa fa-arrow-right" })
+                          ]
+                        )
+                      ]
+                    )
+                  ])
                 ]
               ),
               _vm._v(" "),
@@ -59693,9 +61684,56 @@ var render = function() {
                   }
                 },
                 [
-                  _vm._v(
-                    "\n                            Contact Details\n                        "
-                  )
+                  _vm._m(16),
+                  _vm._v(" "),
+                  _vm._m(17),
+                  _vm._v(" "),
+                  _c("hr"),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "row form-group fa-pull-right" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                      },
+                      [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-flat btn-success",
+                            on: {
+                              click: function($event) {
+                                return _vm.previoustab(
+                                  "schooldetails-tab",
+                                  "contactdetails-tab"
+                                )
+                              }
+                            }
+                          },
+                          [
+                            _c("i", { staticClass: "fa fa-arrow-left" }),
+                            _vm._v(" Previous ")
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-flat btn-primary",
+                            on: {
+                              click: function($event) {
+                                return _vm.submitfinalform("")
+                              }
+                            }
+                          },
+                          [
+                            _vm._v(" Submit "),
+                            _c("i", { staticClass: "fa fa-arrow-save" })
+                          ]
+                        )
+                      ]
+                    )
+                  ])
                 ]
               )
             ])
@@ -59710,139 +61748,216 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-header p-0 border-bottom-0" }, [
-      _c("ul", { staticClass: "nav nav-tabs" }, [
-        _c("li", { staticClass: "nav-item basic-tabs" }, [
+    return _c("li", { staticClass: "nav-item basic-tabs" }, [
+      _c(
+        "a",
+        {
+          staticClass: "nav-link active",
+          attrs: {
+            id: "basic-tabs-head",
+            "data-toggle": "pill",
+            href: "#basic-tabs",
+            role: "tab",
+            "aria-controls": "custom-tabs-four-home",
+            "aria-selected": "true"
+          }
+        },
+        [
           _c(
-            "a",
+            "span",
             {
-              staticClass: "nav-link active",
-              attrs: {
-                id: "basicdetails",
-                "data-toggle": "pill",
-                href: "#basic-tabs",
-                role: "tab",
-                "aria-controls": "custom-tabs-four-home",
-                "aria-selected": "true"
-              }
+              staticClass:
+                "step_no img-bordered pr-2 pl-2 pb-1 pt-1 bg-cool-gray-600 text-white"
             },
-            [
-              _c(
-                "span",
-                { staticClass: "step_no img-bordered pr-2 pl-2 pb-2 pt-2" },
-                [_vm._v("1")]
-              ),
-              _vm._v("\n                                 Basic Details "),
-              _c("span", { staticClass: "fa fa-check pl-2" })
-            ]
-          )
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "nav-item location-tab" }, [
-          _c(
-            "a",
-            {
-              staticClass: "nav-link",
-              attrs: {
-                id: "locationdetails",
-                "data-toggle": "pill",
-                href: "#location-tab",
-                role: "tab",
-                "aria-controls": "custom-tabs-four-profile",
-                "aria-selected": "false"
-              }
-            },
-            [
-              _c(
-                "span",
-                { staticClass: "step_no img-bordered pr-2 pl-2 pb-2 pt-2" },
-                [_vm._v("2")]
-              ),
-              _vm._v(
-                "\n                                Location Details\n                                "
-              ),
-              _c("span", { staticClass: "fa fa-angle-double-right" })
-            ]
-          )
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "nav-item schooldetails-tab" }, [
-          _c(
-            "a",
-            {
-              staticClass: "nav-link",
-              attrs: {
-                id: "schooldetails",
-                "data-toggle": "pill",
-                href: "#schooldetails-tab",
-                role: "tab",
-                "aria-controls": "custom-tabs-four-messages",
-                "aria-selected": "false"
-              }
-            },
-            [
-              _c(
-                "span",
-                { staticClass: "step_no img-bordered pr-2 pl-2 pb-2 pt-2" },
-                [_vm._v("3")]
-              ),
-              _vm._v(
-                "\n                                School/organization Details\n                                "
-              ),
-              _c("span", { staticClass: "fa fa-angle-double-right" })
-            ]
-          )
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "nav-item contactdetails-tab" }, [
-          _c(
-            "a",
-            {
-              staticClass: "nav-link",
-              attrs: {
-                id: "contactdetails",
-                "data-toggle": "pill",
-                href: "#contactdetails-tab",
-                role: "tab",
-                "aria-controls": "custom-tabs-four-settings",
-                "aria-selected": "false"
-              }
-            },
-            [
-              _c(
-                "span",
-                { staticClass: "step_no img-bordered pr-2 pl-2 pb-2 pt-2" },
-                [_vm._v("4")]
-              ),
-              _vm._v(
-                "\n                                Contact Details\n                            "
-              )
-            ]
-          )
-        ])
-      ])
+            [_vm._v("1")]
+          ),
+          _vm._v(" "),
+          _c("label", [_vm._v(" Basic Details ")]),
+          _c("span", { staticClass: "fa fa-check pl-2" })
+        ]
+      )
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-6", attrs: { id: "schoolcat" } }, [
-      _c("label", [_vm._v("School Category")]),
+    return _c("div", { staticClass: "row form-group" }, [
+      _c("div", { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" }, [
+        _c("label", { staticClass: "font-weight-normal" }, [
+          _vm._v("Organization Type "),
+          _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+        ]),
+        _vm._v(" "),
+        _c(
+          "select",
+          {
+            staticClass: "select2bs4",
+            staticStyle: { width: "100%" },
+            attrs: { id: "organizationtype" }
+          },
+          [
+            _c("option", { attrs: { value: "" } }, [_vm._v("Select")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "School" } }, [_vm._v("School")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "Dzongkhag Administration" } }, [
+              _vm._v("Dzongkhag Administration")
+            ]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "Ministry" } }, [_vm._v("Ministry")])
+          ]
+        ),
+        _vm._v(" "),
+        _c("span", {
+          staticClass: "text-danger",
+          attrs: { id: "organizatioid_err" }
+        })
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12",
+          attrs: { id: "schoolcat" }
+        },
+        [
+          _c("label", { staticClass: "font-weight-normal" }, [
+            _vm._v("School Category")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "clearfix" }, [
+            _c("div", { staticClass: "icheck-primary d-inline" }, [
+              _c("input", {
+                attrs: {
+                  type: "radio",
+                  id: "radioPrimary1",
+                  name: "schoolcategory"
+                }
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: "radioPrimary1" } }, [
+                _vm._v(
+                  "\n                                                Public School\n                                            "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "icheck-primary d-inline pl-4" }, [
+              _c("input", {
+                attrs: {
+                  type: "radio",
+                  id: "radioPrimary2",
+                  name: "schoolcategory"
+                }
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: "radioPrimary2" } }, [
+                _vm._v(
+                  "\n                                                Private School\n                                            "
+                )
+              ])
+            ])
+          ])
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "font-weight-normal" }, [
+      _vm._v("School Name (please do not enter level) "),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "font-weight-normal" }, [
+      _vm._v("Agency Code (7 letters, like 028.001, defined by RCSC) "),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "font-weight-normal" }, [
+      _vm._v("Dzongkhag "),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "font-weight-normal" }, [
+      _vm._v("Gewog "),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "font-weight-normal" }, [
+      _vm._v("Village "),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "font-weight-normal" }, [
+      _vm._v(" Thram Number "),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "font-weight-normal" }, [
+      _vm._v("Climate Type "),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "font-weight-normal" }, [
+      _vm._v("Road Type "),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" }, [
+      _c("label", { staticClass: "font-weight-normal" }, [
+        _vm._v("Is the school accessible by motor road? "),
+        _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+      ]),
       _vm._v(" "),
       _c("div", { staticClass: "clearfix" }, [
         _c("div", { staticClass: "icheck-primary d-inline" }, [
           _c("input", {
             attrs: {
               type: "radio",
-              id: "radioPrimary1",
-              name: "schoolcategory"
+              id: "moterroadaccessible1",
+              name: "moterroadaccessible"
             }
           }),
           _vm._v(" "),
-          _c("label", { attrs: { for: "radioPrimary1" } }, [
+          _c("label", { attrs: { for: "moterroadaccessible1" } }, [
             _vm._v(
-              "\n                                                Public School\n                                            "
+              "\n                                               Yes\n                                            "
             )
           ])
         ]),
@@ -59851,14 +61966,14 @@ var staticRenderFns = [
           _c("input", {
             attrs: {
               type: "radio",
-              id: "radioPrimary2",
-              name: "schoolcategory"
+              id: "moterroadaccessible2",
+              name: "moterroadaccessible"
             }
           }),
           _vm._v(" "),
-          _c("label", { attrs: { for: "radioPrimary2" } }, [
+          _c("label", { attrs: { for: "moterroadaccessible2" } }, [
             _vm._v(
-              "\n                                                Private School\n                                            "
+              "\n                                                No\n                                            "
             )
           ])
         ])
@@ -59869,12 +61984,354 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row form-group fa-pull-right" }, [
-      _c("div", { staticClass: "col-12" }, [
-        _c("button", { staticClass: "btn btn-primary" }, [
-          _vm._v(" Next "),
-          _c("i", { staticClass: "fa fa-arrow-right" })
+    return _c("div", { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" }, [
+      _c("label", { staticClass: "font-weight-normal" }, [
+        _vm._v(" Is the school a resource center? ")
+      ]),
+      _c("br"),
+      _vm._v(" "),
+      _c("div", { staticClass: "icheck-primary d-inline" }, [
+        _c("input", {
+          attrs: {
+            type: "radio",
+            id: "resourceschool1",
+            name: "resourceschool"
+          }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "resourceschool1" } }, [
+          _vm._v(
+            "\n                                            Yes\n                                        "
+          )
         ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "icheck-primary d-inline pl-4" }, [
+        _c("input", {
+          attrs: {
+            type: "radio",
+            id: "resourceschool2",
+            name: "resourceschool"
+          }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "resourceschool2" } }, [
+          _vm._v(
+            "\n                                            No\n                                        "
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" }, [
+      _c("label", { staticClass: "font-weight-normal" }, [
+        _vm._v(" Does school have sufficient water supply? ")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "icheck-primary d-inline" }, [
+        _c("input", {
+          attrs: { type: "radio", id: "watersupply1", name: "watersupply" }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "watersupply1" } }, [
+          _vm._v(
+            "\n                                            Yes\n                                        "
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "icheck-primary d-inline pl-4" }, [
+        _c("input", {
+          attrs: { type: "radio", id: "watersupply12", name: "watersupply" }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "watersupply12" } }, [
+          _vm._v(
+            "\n                                            No\n                                        "
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" }, [
+      _c("label", { staticClass: "font-weight-normal" }, [
+        _vm._v(" Does the school have sufficient electricity? ")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "icheck-primary d-inline" }, [
+        _c("input", {
+          attrs: { type: "radio", id: "electricity1", name: "electricity" }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "electricity1" } }, [
+          _vm._v(
+            "\n                                            Yes\n                                        "
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "icheck-primary d-inline pl-4" }, [
+        _c("input", {
+          attrs: { type: "radio", id: "electricity12", name: "electricity" }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "electricity12" } }, [
+          _vm._v(
+            "\n                                            No\n                                        "
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" }, [
+      _c("label", { staticClass: "font-weight-normal" }, [
+        _vm._v("Owner of land")
+      ]),
+      _c("br"),
+      _vm._v(" "),
+      _c("div", { staticClass: "icheck-primary d-inline" }, [
+        _c("input", {
+          attrs: { type: "radio", id: "landowner1", name: "landowner" }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "landowner1" } }, [
+          _vm._v(
+            "\n                                            Government \n                                        "
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "icheck-primary d-inline pl-4" }, [
+        _c("input", {
+          attrs: { type: "radio", id: "landowner12", name: "landowner" }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "landowner12" } }, [
+          _vm._v(
+            "\n                                            Private \n                                        "
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row form-group" }, [
+      _c("div", { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" }, [
+        _c("label", { staticClass: "font-weight-normal" }, [
+          _vm._v("Internet at laboratory")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "icheck-primary d-inline" }, [
+          _c("input", {
+            attrs: {
+              type: "radio",
+              id: "internetlaboratory1",
+              name: "internetlaboratory"
+            }
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "internetlaboratory1" } }, [
+            _vm._v(
+              "\n                                            Yes \n                                        "
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "icheck-primary d-inline pl-4" }, [
+          _c("input", {
+            attrs: {
+              type: "radio",
+              id: "internetlaboratory12",
+              name: "internetlaboratory"
+            }
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "internetlaboratory12" } }, [
+            _vm._v(
+              "\n                                            No \n                                        "
+            )
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" }, [
+        _c("label", { staticClass: "font-weight-normal" }, [
+          _vm._v("LAN at laboratory")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "icheck-primary d-inline" }, [
+          _c("input", {
+            attrs: {
+              type: "radio",
+              id: "lanlaboratory1",
+              name: "lanlaboratory"
+            }
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "lanlaboratory1" } }, [
+            _vm._v(
+              "\n                                            Yes \n                                        "
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "icheck-primary d-inline pl-4" }, [
+          _c("input", {
+            attrs: {
+              type: "radio",
+              id: "lanlaboratory12",
+              name: "lanlaboratory"
+            }
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "lanlaboratory12" } }, [
+            _vm._v(
+              "\n                                            No \n                                        "
+            )
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row form-group" }, [
+      _c("div", { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" }, [
+        _c("label", { staticClass: "font-weight-normal" }, [
+          _vm._v("Does the school have telephone connection?")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "icheck-primary d-inline" }, [
+          _c("input", {
+            attrs: {
+              type: "radio",
+              id: "telephoneconnection1",
+              name: "telephoneconnection"
+            }
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "telephoneconnection1" } }, [
+            _vm._v(
+              "\n                                            Yes \n                                        "
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "icheck-primary d-inline pl-4" }, [
+          _c("input", {
+            attrs: {
+              type: "radio",
+              id: "telephoneconnection12",
+              name: "telephoneconnection"
+            }
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "telephoneconnection12" } }, [
+            _vm._v(
+              "\n                                            No \n                                        "
+            )
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" }, [
+        _c("label", { staticClass: "font-weight-normal" }, [
+          _vm._v("Telephone No (less than 15 letters)")
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "form-control font-weight-bolder",
+          staticStyle: { width: "100%" },
+          attrs: { type: "text", id: "telephone" }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" }, [
+        _c("label", { staticClass: "font-weight-normal" }, [
+          _vm._v("Fax No (less than 15 letters)")
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "form-control font-weight-bolder",
+          staticStyle: { width: "100%" },
+          attrs: { type: "text", id: "faxno" }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row form-group" }, [
+      _c("div", { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" }, [
+        _c("label", { staticClass: "font-weight-normal" }, [
+          _vm._v("Does the school have internet connection?")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "icheck-primary d-inline" }, [
+          _c("input", {
+            attrs: { type: "radio", id: "internetconn1", name: "internetconn" }
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "internetconn1" } }, [
+            _vm._v(
+              "\n                                            Yes \n                                        "
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "icheck-primary d-inline pl-4" }, [
+          _c("input", {
+            attrs: { type: "radio", id: "internetconn12", name: "internetconn" }
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "internetconn12" } }, [
+            _vm._v(
+              "\n                                            No \n                                        "
+            )
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" }, [
+        _c("label", { staticClass: "font-weight-normal" }, [
+          _vm._v("Email Address (e.g. hajime.ishii@gmail.com)")
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "form-control font-weight-bolder",
+          staticStyle: { width: "100%" },
+          attrs: { type: "text", id: "email" }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" }, [
+        _c("label", { staticClass: "font-weight-normal" }, [
+          _vm._v("Remarks On Telephone (less than 100 letters)")
+        ]),
+        _vm._v(" "),
+        _c("textarea", {
+          staticClass: "form-control font-weight-bolder",
+          attrs: { id: "teleremarks" }
+        })
       ])
     ])
   }
