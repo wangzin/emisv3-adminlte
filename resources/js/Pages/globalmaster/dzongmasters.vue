@@ -197,7 +197,7 @@
 							<form class="bootbox-form">
 								<div class="row">
 									<div class="col-12 alert alert-danger">
-										<span class="">Are you sure you wish to delete the selected Dzongkhag?</span>
+										<span class="">Do you sure you wish to delete the selected Dzongkhag?</span>
 										<input type="hidden" id="deleterecordid"/>
 									</div>
 								</div>
