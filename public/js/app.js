@@ -55520,7 +55520,7 @@ var render = function() {
         _c("input", {
           staticClass: "btn btn-primary",
           staticStyle: { "margin-left": "400px" },
-          attrs: { type: "button", value: "cancel", id: "reset" },
+          attrs: { type: "button", value: "Cancel", id: "reset" },
           on: {
             click: function($event) {
               return _vm.reset()
