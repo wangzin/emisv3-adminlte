@@ -7,27 +7,27 @@
                         <ul class="nav nav-tabs">
                             <li class="nav-item basic-tabs">
                                 <a class="nav-link active" id="basic-tabs-head" data-toggle="pill" href="#basic-tabs" role="tab" aria-controls="custom-tabs-four-home" aria-selected="true"> 
-                                    <span class="step_no img-bordered pr-2 pl-2 pb-1 pt-1 bg-cool-gray-600 text-white">1</span>
+                                    <span class="step_no img-bordered pr-2 pl-2 pb-1 pt-1 bg-gradient-secondary text-white">1</span>
                                     <label> Basic Details </label><span class="fa fa-check pl-2"></span>                                
                                 </a>
                             </li>
                             <li class="nav-item location-tab">
                                 <a class="nav-link disabled" href="#" id="location-tab-head" data-toggle="pill" @click="shownexttab('basic-tabs','location-tab')" role="tab" aria-controls="custom-tabs-four-profile" aria-selected="false">
-                                    <span class="step_no img-bordered pr-2 pl-2 pb-1 pt-1 bg-cool-gray-600 text-white">2</span>
+                                    <span class="step_no img-bordered pr-2 pl-2 pb-1 pt-1bg-gradient-secondary text-white">2</span>
                                     <label>Location Details</label>
                                     <span class="fa fa-angle-double-right"></span> 
                                 </a>
                             </li>
                             <li class="nav-item schooldetails-tab">
                                 <a class="nav-link disabled" id="schooldetails-tab-head" data-toggle="pill" @click="shownexttab('location-tab','schooldetails-tab')" role="tab" aria-controls="custom-tabs-four-messages" aria-selected="false">
-                                    <span class="step_no img-bordered pr-2 pl-2 pb-1 pt-1 bg-cool-gray-600 text-white">3</span>
+                                    <span class="step_no img-bordered pr-2 pl-2 pb-1 pt-1 bg-gradient-secondary text-white">3</span>
                                     <label>School/organization Details</label>
                                     <span class="fa fa-angle-double-right"></span> 
                                 </a>
                             </li>
                             <li class="nav-item contactdetails-tab">
                                 <a class="nav-link disabled" id="contactdetails-tab-head" data-toggle="pill" @click="shownexttab('schooldetails-tab','contactdetails-tab')" role="tab" aria-controls="custom-tabs-four-settings" aria-selected="false">
-                                    <span class="step_no img-bordered pr-2 pl-2 pb-1 pt-1 bg-cool-gray-600 text-white">4</span>
+                                    <span class="step_no img-bordered pr-2 pl-2 pb-1 pt-1 bg-gradient-secondary text-white">4</span>
                                     <label>Contact Details</label>
                                 </a>
                             </li>
@@ -561,7 +561,7 @@ export default {
                 if (result.isConfirmed) {
                     Swal.fire(
                         'Submitted!',
-                        'Your Applicaiton details has been submitted.',
+                        'Your Applicaiton details has been submitted. System generated application number for this transaction is: #02234. You may use this application nunber to track application status.',
                         'success',
                         this.$router.push('/orgmanagement')
                     )

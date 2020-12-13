@@ -37,6 +37,11 @@ let routes = [
             { path: '/neworganization', component: require('./Pages/organization/transactions/neworganization.vue').default },
         ]    
     }, 
+    
+    { path: '/taslistforall', name: 'Task List', component: require('./Pages/common/tasklist.vue').default },
+    { path: '/searchapplication', name: 'Task List', component: require('./Pages/common/trackapplication.vue').default },
+    { path: '/taslist', name: 'Task List', component: require('./Pages/organization/transactions/verificationpage.vue').default },
+    { path: '/openapplicaiton', name: 'Organizaiton Verification and Approval', component: require('./Pages/organization/transactions/organizationapproval.vue').default },
 
     // Inset Route
     { path: '/createTraining', name: 'Create', component: require('./Pages/Inset/createTraining.vue').default },

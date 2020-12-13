@@ -11,10 +11,12 @@
 			</ul>
 			<form class="form-inline ml-3">
 				<div class="input-group input-group-sm">
-					<input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+					<input class="form-control form-control-navbar" type="search" placeholder="Track Application" aria-label="Search">
 					<div class="input-group-append">
-					<button class="btn btn-navbar" type="submit">
-						<i class="fas fa-search"></i>
+					<button class="btn btn-navbar" type="button">
+						<router-link to="/searchapplication">
+							<i class="fas fa-search"></i>
+						</router-link>
 					</button>
 					</div>
 				</div>
@@ -43,7 +45,7 @@
 					<a class="nav-link" data-toggle="dropdown" href="#">
 						<div class="user-panel d-flex">
 							<div class="image">
-								<img src="admin3/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+								<img src="admin3/dist/img/avatar5.png" class="img-circle elevation-2" alt="User Image">
 							</div>
 							<div class="info">
 								<a href="#" class="d-block">Tshewang Tenzin

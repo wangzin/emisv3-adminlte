@@ -98,6 +98,14 @@
                                         </p>
                                     </router-link>
                                 </li>
+                                <li class="nav-item" id="organizationapproval" @click="setclass('organizationlink','organizationapproval')">
+                                    <router-link to="/taslist" class="nav-link">
+                                        <p>
+                                            <i class="fa fa-angle-double-right nav-icon"></i>
+                                            Org. Verif. & Approval
+                                        </p>
+                                    </router-link>
+                                </li>
                             </ul>
                         </li>
 
@@ -167,6 +175,7 @@
                             <a href="#" class="nav-link">
                             <i class="far fa-address-card nav-icon"></i>
                             <p>Inset Module</p>
+                             <i class="fas fa-angle-left right"></i>
                             </a>
                                 <ul class="nav nav-treeview">                                
                                 <li class="nav-item" id="rolepriv" @click="setclass('','')">
@@ -189,7 +198,22 @@
                                 </li>
                             </ul>
                         </li>
-
+                        <li class="nav-item">
+                            <router-link to="/taslistforall" class="nav-link">
+                                <p>
+                                    <i class="fa fa-list nav-icon"></i>
+                                    Task List
+                                </p>
+                            </router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link to="/searchapplication" class="nav-link">
+                                <p>
+                                    <i class="fa fa-search nav-icon"></i>
+                                    Track/ Search Application
+                                </p>
+                            </router-link>
+                        </li>
                         <!-- result processing side menu -->
                         <li class="nav-item">
                             <a href="#" class="nav-link">
@@ -197,6 +221,7 @@
                             <p>Result Processing</p>
                             </a>
                         </li>
+                        
 
                         <!-- MDCA side menu -->
                         <li class="nav-item">
@@ -234,6 +259,7 @@ export default {
             $('#organizationlink'+'>ul').hide();
             $('#roganizationmaster').removeClass('navbar-cyan active');
             $('#organizationlinksub').removeClass('navbar-cyan active');
+            $('#organizationapproval').removeClass('navbar-cyan active');
 
             //staff
             $('#stafflink').removeClass('menu-open');
