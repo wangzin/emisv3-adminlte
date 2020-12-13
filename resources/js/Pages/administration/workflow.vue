@@ -69,7 +69,7 @@
         </form>
             <div class="row">
                 <div class="col-md-9 col-md-offset-8">
-                    <input type="button" class="btn btn-primary" value="cancel" id="reset" style="margin-left: 400px;" @click="reset()"/>
+                    <input type="button" class="btn btn-primary" value="Cancel" id="reset" style="margin-left: 400px;" @click="reset()"/>
                             &nbsp; &nbsp; &nbsp;
                     <input type="button" class="btn btn-primary" value="Submit" id="submit" @click="save()"/>
                             

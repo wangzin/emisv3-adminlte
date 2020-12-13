@@ -4687,14 +4687,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 if ('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
@@ -4734,20 +4726,12 @@ if ('ontouchstart' in document.documentElement) document.write("<script src='ass
     }
   },
   mounted: function mounted() {
-    jQuery(function ($) {
-      var myTable = $('#dynamic-table').DataTable({
-        bAutoWidth: false,
-        "aoColumns": [{
-          "bSortable": false
-        }, null, null, null, {
-          "bSortable": false
-        }],
-        "aaSorting": [],
-        select: {
-          style: 'multi'
-        }
-      });
+    $("#dynamic-table").DataTable({
+      "responsive": true,
+      "autoWidth": true
     });
+    $('.dataTables_filter').addClass('fa-pull-right');
+    $('#dynamic-table_paginate').addClass('fa-pull-right');
   }
 });
 
@@ -54978,399 +54962,381 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "card-body" }, [
-                _c(
-                  "table",
-                  {
-                    staticClass: "table table-bordered table-striped",
-                    attrs: { id: "dynamic-table" }
-                  },
-                  [
-                    _vm._m(1),
-                    _vm._v(" "),
-                    _c("tbody", [
-                      _c("tr", { attrs: { id: "record1" } }, [
-                        _c("td", [_vm._v("1")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("12345678901")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("201.00005.11.0925")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("Karma Wangmo")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("Bumthang")]),
-                        _vm._v(" "),
-                        _c("th", [_vm._v("Jakar HSS")]),
-                        _vm._v(" "),
-                        _vm._m(2),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("2019-10-12")]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _vm._m(3),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-xs",
-                              attrs: { type: "button" },
-                              on: {
-                                click: function($event) {
-                                  return _vm.showdelete("1")
-                                }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "fa fa-trash" }),
-                              _vm._v(" Delete")
-                            ]
-                          )
-                        ])
-                      ]),
+                _c("div", { staticClass: "col-sm-12" }, [
+                  _c(
+                    "table",
+                    {
+                      staticClass: "table table-bordered table-striped",
+                      attrs: { id: "dynamic-table" }
+                    },
+                    [
+                      _vm._m(1),
                       _vm._v(" "),
-                      _c("tr", { attrs: { id: "record2" } }, [
-                        _c("td", [_vm._v("2")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("10948753421")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("201.00010.11.0032")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("Choki Wangchuk")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("Bumthang")]),
-                        _vm._v(" "),
-                        _c("th", [_vm._v("Jakar HSS")]),
-                        _vm._v(" "),
-                        _vm._m(4),
-                        _vm._v(" "),
-                        _c("td", {}, [_vm._v("2019-10-12")]),
-                        _vm._v(" "),
-                        _c("td", {}, [
-                          _vm._m(5),
+                      _c("tbody", [
+                        _c("tr", { attrs: { id: "record1" } }, [
+                          _c("td", [_vm._v("1")]),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-xs",
-                              on: {
-                                click: function($event) {
-                                  return _vm.showdelete("2")
-                                }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "fa fa-trash" }),
-                              _vm._v(" Delete")
-                            ]
-                          )
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("tr", { attrs: { id: "record3" } }, [
-                        _c("td", {}, [_vm._v("3")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("10946740934")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("201.00020.13.0164")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("Deki Tshomo")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("Bumthang")]),
-                        _vm._v(" "),
-                        _c("th", [_vm._v("Jakar HSS")]),
-                        _vm._v(" "),
-                        _vm._m(6),
-                        _vm._v(" "),
-                        _c("td", {}, [_vm._v("2019-10-12")]),
-                        _vm._v(" "),
-                        _c("td", {}, [
-                          _vm._m(7),
+                          _c("td", [_vm._v("12345678901")]),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-xs",
-                              on: {
-                                click: function($event) {
-                                  return _vm.showdelete("3")
-                                }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "fa fa-trash" }),
-                              _vm._v(" Delete")
-                            ]
-                          )
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("tr", { attrs: { id: "record4" } }, [
-                        _c("td", {}, [_vm._v("4")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("19463566974")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("201.00010.11.0016")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("Hemant Biswa ")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("Bumthang")]),
-                        _vm._v(" "),
-                        _c("th", [_vm._v("Jakar HSS")]),
-                        _vm._v(" "),
-                        _vm._m(8),
-                        _vm._v(" "),
-                        _c("td", {}, [_vm._v("2019-10-12")]),
-                        _vm._v(" "),
-                        _c("td", {}, [
-                          _vm._m(9),
+                          _c("td", [_vm._v("201.00005.11.0925")]),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-xs",
-                              on: {
-                                click: function($event) {
-                                  return _vm.showdelete("4")
-                                }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "fa fa-trash" }),
-                              _vm._v(" Delete")
-                            ]
-                          )
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("tr", { attrs: { id: "record5" } }, [
-                        _c("td", {}, [_vm._v("5")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("12345098701")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("201.00017.11.0165")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("Karma Rigden Namgyel")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("Bumthang")]),
-                        _vm._v(" "),
-                        _c("th", [_vm._v("Jakar HSS")]),
-                        _vm._v(" "),
-                        _vm._m(10),
-                        _vm._v(" "),
-                        _c("td", {}, [_vm._v("2019-10-12")]),
-                        _vm._v(" "),
-                        _c("td", {}, [
-                          _vm._m(11),
+                          _c("td", [_vm._v("Karma Wangmo")]),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-xs",
-                              on: {
-                                click: function($event) {
-                                  return _vm.showdelete("5")
-                                }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "fa fa-trash" }),
-                              _vm._v(" Delete")
-                            ]
-                          )
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("tr", { attrs: { id: "record6" } }, [
-                        _c("td", {}, [_vm._v("6")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("1234792987")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("201.00010.11.0018")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("Kuenzang Dechen Dorji")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("Bumthang")]),
-                        _vm._v(" "),
-                        _c("th", [_vm._v("Jakar HSS")]),
-                        _vm._v(" "),
-                        _vm._m(12),
-                        _vm._v(" "),
-                        _c("td", {}, [_vm._v("2019-10-12")]),
-                        _vm._v(" "),
-                        _c("td", {}, [
-                          _vm._m(13),
+                          _c("td", [_vm._v("Bumthang")]),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-xs",
-                              on: {
-                                click: function($event) {
-                                  return _vm.showdelete("6")
-                                }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "fa fa-trash" }),
-                              _vm._v(" Delete")
-                            ]
-                          )
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("tr", { attrs: { id: "record7" } }, [
-                        _c("td", {}, [_vm._v("7")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("11289987601")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("201.00010.11.0018")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("Palden Drakpa")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("Bumthang")]),
-                        _vm._v(" "),
-                        _c("th", [_vm._v("Jakar HSS")]),
-                        _vm._v(" "),
-                        _vm._m(14),
-                        _vm._v(" "),
-                        _c("td", {}, [_vm._v("2019-10-12")]),
-                        _vm._v(" "),
-                        _c("td", {}, [
-                          _vm._m(15),
+                          _c("th", [_vm._v("Jakar HSS")]),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-xs",
-                              on: {
-                                click: function($event) {
-                                  return _vm.showdelete("7")
-                                }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "fa fa-trash" }),
-                              _vm._v(" Delete")
-                            ]
-                          )
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("tr", { attrs: { id: "record8" } }, [
-                        _c("td", {}, [_vm._v("8")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("1123487807")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("201.00005.11.0955")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("Pema Chenzom")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("Bumthang")]),
-                        _vm._v(" "),
-                        _c("th", [_vm._v("Jakar HSS")]),
-                        _vm._v(" "),
-                        _vm._m(16),
-                        _vm._v(" "),
-                        _c("td", {}, [_vm._v("2019-10-12")]),
-                        _vm._v(" "),
-                        _c("td", {}, [
-                          _vm._m(17),
+                          _c("td", [_vm._v("Inschool")]),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-xs",
-                              on: {
-                                click: function($event) {
-                                  return _vm.showdelete("8")
+                          _c("td", [
+                            _vm._m(2),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-xs",
+                                attrs: { type: "button" },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.showdelete("1")
+                                  }
                                 }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "fa fa-trash" }),
-                              _vm._v(" Delete")
-                            ]
-                          )
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("tr", { attrs: { id: "record9" } }, [
-                        _c("td", {}, [_vm._v("9")]),
+                              },
+                              [
+                                _c("i", { staticClass: "fa fa-trash" }),
+                                _vm._v(" Delete")
+                              ]
+                            )
+                          ])
+                        ]),
                         _vm._v(" "),
-                        _c("td", [_vm._v("1120498766")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("201.00005.11.0959")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("Pema Lhaden")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("Bumthang")]),
-                        _vm._v(" "),
-                        _c("th", [_vm._v("Jakar HSS")]),
-                        _vm._v(" "),
-                        _vm._m(18),
-                        _vm._v(" "),
-                        _c("td", {}, [_vm._v("2019-10-12")]),
-                        _vm._v(" "),
-                        _c("td", {}, [
-                          _vm._m(19),
+                        _c("tr", { attrs: { id: "record2" } }, [
+                          _c("td", [_vm._v("2")]),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-xs",
-                              on: {
-                                click: function($event) {
-                                  return _vm.showdelete("9")
-                                }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "fa fa-trash" }),
-                              _vm._v(" Delete")
-                            ]
-                          )
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("tr", { attrs: { id: "record10" } }, [
-                        _c("td", {}, [_vm._v("10")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("11120378904")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("201.00005.11.0015")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("Pema Sithi")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v("Bumthang")]),
-                        _vm._v(" "),
-                        _c("th", [_vm._v("Jakar HSS")]),
-                        _vm._v(" "),
-                        _vm._m(20),
-                        _vm._v(" "),
-                        _c("td", {}, [_vm._v("2019-10-12")]),
-                        _vm._v(" "),
-                        _c("td", {}, [
-                          _vm._m(21),
+                          _c("td", [_vm._v("10948753421")]),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-xs",
-                              on: {
-                                click: function($event) {
-                                  return _vm.showdelete("10")
+                          _c("td", [_vm._v("201.00010.11.0032")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Choki Wangchuk")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Bumthang")]),
+                          _vm._v(" "),
+                          _c("th", [_vm._v("Jakar HSS")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Inschool")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._m(3),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-xs",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.showdelete("2")
+                                  }
                                 }
-                              }
-                            },
-                            [
-                              _c("i", { staticClass: "fa fa-trash" }),
-                              _vm._v(" Delete")
-                            ]
-                          )
+                              },
+                              [
+                                _c("i", { staticClass: "fa fa-trash" }),
+                                _vm._v(" Delete")
+                              ]
+                            )
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("tr", { attrs: { id: "record3" } }, [
+                          _c("td", {}, [_vm._v("3")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("10946740934")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("201.00020.13.0164")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Deki Tshomo")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Bumthang")]),
+                          _vm._v(" "),
+                          _c("th", [_vm._v("Jakar HSS")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Inschool")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._m(4),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-xs",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.showdelete("3")
+                                  }
+                                }
+                              },
+                              [
+                                _c("i", { staticClass: "fa fa-trash" }),
+                                _vm._v(" Delete")
+                              ]
+                            )
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("tr", { attrs: { id: "record4" } }, [
+                          _c("td", {}, [_vm._v("4")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("19463566974")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("201.00010.11.0016")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Hemant Biswa ")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Bumthang")]),
+                          _vm._v(" "),
+                          _c("th", [_vm._v("Jakar HSS")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Inschool")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._m(5),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-xs",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.showdelete("4")
+                                  }
+                                }
+                              },
+                              [
+                                _c("i", { staticClass: "fa fa-trash" }),
+                                _vm._v(" Delete")
+                              ]
+                            )
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("tr", { attrs: { id: "record5" } }, [
+                          _c("td", {}, [_vm._v("5")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("12345098701")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("201.00017.11.0165")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Karma Rigden Namgyel")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Bumthang")]),
+                          _vm._v(" "),
+                          _c("th", [_vm._v("Jakar HSS")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Inschool")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._m(6),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-xs",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.showdelete("5")
+                                  }
+                                }
+                              },
+                              [
+                                _c("i", { staticClass: "fa fa-trash" }),
+                                _vm._v(" Delete")
+                              ]
+                            )
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("tr", { attrs: { id: "record6" } }, [
+                          _c("td", {}, [_vm._v("6")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("1234792987")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("201.00010.11.0018")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Kuenzang Dechen Dorji")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Bumthang")]),
+                          _vm._v(" "),
+                          _c("th", [_vm._v("Jakar HSS")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Inschool")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._m(7),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-xs",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.showdelete("6")
+                                  }
+                                }
+                              },
+                              [
+                                _c("i", { staticClass: "fa fa-trash" }),
+                                _vm._v(" Delete")
+                              ]
+                            )
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("tr", { attrs: { id: "record7" } }, [
+                          _c("td", {}, [_vm._v("7")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("11289987601")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("201.00010.11.0018")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Palden Drakpa")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Bumthang")]),
+                          _vm._v(" "),
+                          _c("th", [_vm._v("Jakar HSS")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Inschool")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._m(8),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-xs",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.showdelete("7")
+                                  }
+                                }
+                              },
+                              [
+                                _c("i", { staticClass: "fa fa-trash" }),
+                                _vm._v(" Delete")
+                              ]
+                            )
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("tr", { attrs: { id: "record8" } }, [
+                          _c("td", {}, [_vm._v("8")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("1123487807")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("201.00005.11.0955")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Pema Chenzom")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Bumthang")]),
+                          _vm._v(" "),
+                          _c("th", [_vm._v("Jakar HSS")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Inschool")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._m(9),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-xs",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.showdelete("8")
+                                  }
+                                }
+                              },
+                              [
+                                _c("i", { staticClass: "fa fa-trash" }),
+                                _vm._v(" Delete")
+                              ]
+                            )
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("tr", { attrs: { id: "record9" } }, [
+                          _c("td", {}, [_vm._v("9")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("1120498766")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("201.00005.11.0959")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Pema Lhaden")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Bumthang")]),
+                          _vm._v(" "),
+                          _c("th", [_vm._v("Jakar HSS")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Inschool")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._m(10),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-xs",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.showdelete("9")
+                                  }
+                                }
+                              },
+                              [
+                                _c("i", { staticClass: "fa fa-trash" }),
+                                _vm._v(" Delete")
+                              ]
+                            )
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("tr", { attrs: { id: "record10" } }, [
+                          _c("td", {}, [_vm._v("10")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("11120378904")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("201.00005.11.0015")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Pema Sithi")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Bumthang")]),
+                          _vm._v(" "),
+                          _c("th", [_vm._v("Jakar HSS")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("Inschool")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._m(11),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-xs",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.showdelete("10")
+                                  }
+                                }
+                              },
+                              [
+                                _c("i", { staticClass: "fa fa-trash" }),
+                                _vm._v(" Delete")
+                              ]
+                            )
+                          ])
                         ])
                       ])
-                    ])
-                  ]
-                )
+                    ]
+                  )
+                ])
               ])
             ])
           ])
@@ -55388,9 +55354,9 @@ var render = function() {
       [
         _c("div", { staticClass: "modal-dialog" }, [
           _c("div", { staticClass: "modal-content" }, [
-            _vm._m(22),
+            _vm._m(12),
             _vm._v(" "),
-            _vm._m(23),
+            _vm._m(13),
             _vm._v(" "),
             _c("div", { staticClass: "modal-footer justify-content-between" }, [
               _c(
@@ -55434,9 +55400,9 @@ var render = function() {
       [
         _c("div", { staticClass: "modal-dialog" }, [
           _c("div", { staticClass: "modal-content" }, [
-            _vm._m(24),
+            _vm._m(14),
             _vm._v(" "),
-            _vm._m(25),
+            _vm._m(15),
             _vm._v(" "),
             _c("div", { staticClass: "modal-footer" }, [
               _c(
@@ -55489,12 +55455,10 @@ var staticRenderFns = [
             _c("a", { attrs: { href: "#" } }, [_vm._v("Home")])
           ]),
           _vm._v(" "),
-          _c("li", { staticClass: "breadcrumb-item" }, [
-            _vm._v("Master Management")
-          ]),
+          _c("li", { staticClass: "breadcrumb-item" }, [_vm._v("Student")]),
           _vm._v(" "),
           _c("li", { staticClass: "breadcrumb-item active" }, [
-            _vm._v("Dzongkhag")
+            _vm._v("Regular Student")
           ])
         ])
       ]
@@ -55520,19 +55484,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Status")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Last Action Date")]),
-        _vm._v(" "),
         _c("th", [_vm._v("Action")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", [
-      _c("span", { staticClass: "label label-success label-sm" }, [
-        _vm._v("Inschool")
       ])
     ])
   },
@@ -55550,10 +55502,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("td", [
-      _c("span", { staticClass: "label label-success label-sm" }, [
-        _vm._v("Inschool")
-      ])
+    return _c("button", { staticClass: "btn btn-primary btn-xs" }, [
+      _c("i", { staticClass: "fa fa-edit" }),
+      _vm._v(" Edit")
     ])
   },
   function() {
@@ -55569,10 +55520,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("td", [
-      _c("span", { staticClass: "label label-success label-sm" }, [
-        _vm._v("Inschool")
-      ])
+    return _c("button", { staticClass: "btn btn-primary btn-xs" }, [
+      _c("i", { staticClass: "fa fa-edit" }),
+      _vm._v(" Edit")
     ])
   },
   function() {
@@ -55588,10 +55538,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("td", [
-      _c("span", { staticClass: "label label-success label-sm" }, [
-        _vm._v("Inschool")
-      ])
+    return _c("button", { staticClass: "btn btn-primary btn-xs" }, [
+      _c("i", { staticClass: "fa fa-edit" }),
+      _vm._v(" Edit")
     ])
   },
   function() {
@@ -55607,16 +55556,6 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("td", [
-      _c("span", { staticClass: "label label-success label-sm" }, [
-        _vm._v("Inschool")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("button", { staticClass: "btn btn-primary btn-xs" }, [
       _c("i", { staticClass: "fa fa-edit" }),
       _vm._v(" Edit")
@@ -55626,86 +55565,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("td", [
-      _c("span", { staticClass: "label label-success label-sm" }, [
-        _vm._v("Inschool")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("button", { staticClass: "btn btn-primary btn-xs" }, [
       _c("i", { staticClass: "fa fa-edit" }),
       _vm._v(" Edit")
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", [
-      _c("span", { staticClass: "label label-success label-sm" }, [
-        _vm._v("Inschool")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("button", { staticClass: "btn btn-primary btn-xs" }, [
-      _c("i", { staticClass: "fa fa-edit" }),
-      _vm._v(" Edit")
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", [
-      _c("span", { staticClass: "label label-success label-sm" }, [
-        _vm._v("Inschool")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("button", { staticClass: "btn btn-primary btn-xs" }, [
-      _c("i", { staticClass: "fa fa-edit" }),
-      _vm._v(" Edit")
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", [
-      _c("span", { staticClass: "label label-success label-sm" }, [
-        _vm._v("Inschool")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("button", { staticClass: "btn btn-primary btn-xs" }, [
-      _c("i", { staticClass: "fa fa-edit" }),
-      _vm._v(" Edit")
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", [
-      _c("span", { staticClass: "label label-success label-sm" }, [
-        _vm._v("Inschool")
-      ])
     ])
   },
   function() {
@@ -55762,7 +55624,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "modal-header" }, [
-      _c("h4", { staticClass: "modal-title" }, [_vm._v("Deleting student")]),
+      _c("h4", { staticClass: "modal-title" }, [_vm._v("Deleting Student")]),
       _vm._v(" "),
       _c(
         "button",
@@ -57059,7 +56921,7 @@ var render = function() {
         _c("input", {
           staticClass: "btn btn-primary",
           staticStyle: { "margin-left": "400px" },
-          attrs: { type: "button", value: "cancel", id: "reset" },
+          attrs: { type: "button", value: "Cancel", id: "reset" },
           on: {
             click: function($event) {
               return _vm.reset()
@@ -59666,9 +59528,7 @@ var staticRenderFns = [
           _c("div", { staticClass: "row" }, [
             _c("div", { staticClass: "col-12 alert alert-danger" }, [
               _c("span", {}, [
-                _vm._v(
-                  "Are you sure you wish to delete the selected Dzongkhag?"
-                )
+                _vm._v("Do you sure you wish to delete the selected Dzongkhag?")
               ]),
               _vm._v(" "),
               _c("input", { attrs: { type: "hidden", id: "deleterecordid" } })
