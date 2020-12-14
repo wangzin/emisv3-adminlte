@@ -1,12 +1,12 @@
 <template>
     <div>
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
-            <a href="/userlogin" class="brand-link">
+            <a v-bind:href="url" class="brand-link">
                 <img src="admin3/dist/img/MoE_Logo.png" alt="AdminLTE Logo" class="brand-image elevation-3"
                     style="opacity: .8">
                 <span class="brand-text"><b>MOE</b> >> EMIS</span>
             </a>
-            <div class="sidebar">
+            <div class="sidebar"> 
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent" data-widget="treeview" role="menu" data-accordion="false">
                         
@@ -198,7 +198,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" id="tasklistlink" @click="setclass('','tasklistlink')">
                             <router-link to="/taslistforall" class="nav-link">
                                 <p>
                                     <i class="fa fa-list nav-icon"></i>
@@ -206,7 +206,7 @@
                                 </p>
                             </router-link>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" id="searchapplication" @click="setclass('','searchapplication')">
                             <router-link to="/searchapplication" class="nav-link">
                                 <p>
                                     <i class="fa fa-search nav-icon"></i>
@@ -215,14 +215,28 @@
                             </router-link>
                         </li>
                         <!-- result processing side menu -->
-                        <li class="nav-item">
+                        <li class="nav-item" id="resultprocessing">
                             <a href="#" class="nav-link">
                             <i class="fa fa-book nav-icon"></i>
                             <p>Result Processing</p>
+                             <i class="fas fa-angle-left right"></i>
                             </a>
+                                <ul class="nav nav-treeview">                                
+                                <li class="nav-item" id="resultsubmitive" @click="setclass('resultprocessing','resultsubmitive')">
+                                    <router-link to="/createTraining"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
+                                        <i class="fa fa-angle-double-right nav-icon"></i>
+                                        <p>Submitive (IV-XII)</p>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item" id="resultformative" @click="setclass('resultprocessing','resultformative')">
+                                    <router-link to="/applyTraining"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
+                                        <i class="fa fa-angle-double-right nav-icon"></i>
+                                        <p>Formative (PP-III)</p>
+                                    </router-link>
+                                </li>
+                            </ul>
                         </li>
-                        
-
+                       
                         <!-- MDCA side menu -->
                         <li class="nav-item">
                             <a href="#" class="nav-link">
@@ -238,6 +252,11 @@
 </template> 
 <script>
 export default {
+    data() {
+        return {
+            url: 'userlogin'
+        }
+    },
     methods: {
         setclass(mainmenu,submenu){
             //global masters
@@ -266,6 +285,15 @@ export default {
             $('#stafflink'+'>ul').hide();
             $('#staffMaster').removeClass('navbar-cyan active');
             $('#stafflinksub').removeClass('navbar-cyan active');
+
+            //result processing
+            $('#resultprocessing').removeClass('menu-open');
+            $('#resultprocessing'+'>ul').hide();
+            $('#resultsubmitive').removeClass('navbar-cyan active');
+            $('#resultformative').removeClass('navbar-cyan active');
+
+            $('#searchapplication').removeClass('navbar-cyan active');
+            $('#tasklistlink').removeClass('navbar-cyan active');
 
             $('#'+mainmenu).addClass('menu-open');
             $('#'+mainmenu+'>ul').show();

@@ -6,8 +6,8 @@
 					<a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
 				</li>
 				<li class="nav-item d-none d-sm-inline-block">
-					<a href="/userlogin" class="nav-link"><span class="nav-icon fas fa-tachometer-alt"></span> Dashboard</a>
-				</li>
+					<a v-bind:href="url" class="nav-link"><span class="nav-icon fas fa-tachometer-alt"></span> Dashboard</a>
+				</li> 
 			</ul>
 			<form class="form-inline ml-3">
 				<div class="input-group input-group-sm">
@@ -80,6 +80,11 @@
 </template>
 <script>
     export default {
+		data() {
+			return {
+				url:"userlogin",
+			}
+		},
         methods: {
             logout(){
 				Swal.fire({
@@ -91,9 +96,7 @@
 					confirmButtonText: 'Yes!',
 					}).then((result) => {
 					if (result.isConfirmed) {
-						axios.post(route('logout').url()).then(response => {
-							window.location = '/';
-						})
+						window.location = "http://localhost:83/emisv3-adminlte/public";
 					}
 				})
             },

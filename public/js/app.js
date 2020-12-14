@@ -2987,6 +2987,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      url: "userlogin"
+    };
+  },
   methods: {
     logout: function logout() {
       Swal.fire({
@@ -2998,9 +3003,7 @@ __webpack_require__.r(__webpack_exports__);
         confirmButtonText: 'Yes!'
       }).then(function (result) {
         if (result.isConfirmed) {
-          axios.post(route('logout').url()).then(function (response) {
-            window.location = '/';
-          });
+          window.location = "http://localhost:83/emisv3-adminlte/public";
         }
       });
     }
@@ -3257,7 +3260,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      url: 'userlogin'
+    };
+  },
   methods: {
     setclass: function setclass(mainmenu, submenu) {
       //global masters
@@ -3282,7 +3304,14 @@ __webpack_require__.r(__webpack_exports__);
       $('#stafflink').removeClass('menu-open');
       $('#stafflink' + '>ul').hide();
       $('#staffMaster').removeClass('navbar-cyan active');
-      $('#stafflinksub').removeClass('navbar-cyan active');
+      $('#stafflinksub').removeClass('navbar-cyan active'); //result processing
+
+      $('#resultprocessing').removeClass('menu-open');
+      $('#resultprocessing' + '>ul').hide();
+      $('#resultsubmitive').removeClass('navbar-cyan active');
+      $('#resultformative').removeClass('navbar-cyan active');
+      $('#searchapplication').removeClass('navbar-cyan active');
+      $('#tasklistlink').removeClass('navbar-cyan active');
       $('#' + mainmenu).addClass('menu-open');
       $('#' + mainmenu + '>ul').show();
       $('#' + submenu).addClass('navbar-cyan active');
@@ -51726,7 +51755,16 @@ var render = function() {
           "main-header navbar navbar-expand navbar-white navbar-light"
       },
       [
-        _vm._m(0),
+        _c("ul", { staticClass: "navbar-nav" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("li", { staticClass: "nav-item d-none d-sm-inline-block" }, [
+            _c("a", { staticClass: "nav-link", attrs: { href: _vm.url } }, [
+              _c("span", { staticClass: "nav-icon fas fa-tachometer-alt" }),
+              _vm._v(" Dashboard")
+            ])
+          ])
+        ]),
         _vm._v(" "),
         _c("form", { staticClass: "form-inline ml-3" }, [
           _c("div", { staticClass: "input-group input-group-sm" }, [
@@ -51825,24 +51863,15 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "navbar-nav" }, [
-      _c("li", { staticClass: "nav-item" }, [
-        _c(
-          "a",
-          {
-            staticClass: "nav-link",
-            attrs: { "data-widget": "pushmenu", href: "#", role: "button" }
-          },
-          [_c("i", { staticClass: "fas fa-bars" })]
-        )
-      ]),
-      _vm._v(" "),
-      _c("li", { staticClass: "nav-item d-none d-sm-inline-block" }, [
-        _c("a", { staticClass: "nav-link", attrs: { href: "/userlogin" } }, [
-          _c("span", { staticClass: "nav-icon fas fa-tachometer-alt" }),
-          _vm._v(" Dashboard")
-        ])
-      ])
+    return _c("li", { staticClass: "nav-item" }, [
+      _c(
+        "a",
+        {
+          staticClass: "nav-link",
+          attrs: { "data-widget": "pushmenu", href: "#", role: "button" }
+        },
+        [_c("i", { staticClass: "fas fa-bars" })]
+      )
     ])
   },
   function() {
@@ -51956,7 +51985,15 @@ var render = function() {
       "aside",
       { staticClass: "main-sidebar sidebar-dark-primary elevation-4" },
       [
-        _vm._m(0),
+        _c("a", { staticClass: "brand-link", attrs: { href: _vm.url } }, [
+          _c("img", {
+            staticClass: "brand-image elevation-3",
+            staticStyle: { opacity: ".8" },
+            attrs: { src: "admin3/dist/img/MoE_Logo.png", alt: "AdminLTE Logo" }
+          }),
+          _vm._v(" "),
+          _vm._m(0)
+        ]),
         _vm._v(" "),
         _c("div", { staticClass: "sidebar" }, [
           _c("nav", { staticClass: "mt-2" }, [
@@ -52565,7 +52602,15 @@ var render = function() {
                 _vm._v(" "),
                 _c(
                   "li",
-                  { staticClass: "nav-item" },
+                  {
+                    staticClass: "nav-item",
+                    attrs: { id: "tasklistlink" },
+                    on: {
+                      click: function($event) {
+                        return _vm.setclass("", "tasklistlink")
+                      }
+                    }
+                  },
                   [
                     _c(
                       "router-link",
@@ -52588,7 +52633,15 @@ var render = function() {
                 _vm._v(" "),
                 _c(
                   "li",
-                  { staticClass: "nav-item" },
+                  {
+                    staticClass: "nav-item",
+                    attrs: { id: "searchapplication" },
+                    on: {
+                      click: function($event) {
+                        return _vm.setclass("", "searchapplication")
+                      }
+                    }
+                  },
                   [
                     _c(
                       "router-link",
@@ -52609,7 +52662,92 @@ var render = function() {
                   1
                 ),
                 _vm._v(" "),
-                _vm._m(9),
+                _c(
+                  "li",
+                  {
+                    staticClass: "nav-item",
+                    attrs: { id: "resultprocessing" }
+                  },
+                  [
+                    _vm._m(9),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "nav nav-treeview" }, [
+                      _c(
+                        "li",
+                        {
+                          staticClass: "nav-item",
+                          attrs: { id: "resultsubmitive" },
+                          on: {
+                            click: function($event) {
+                              return _vm.setclass(
+                                "resultprocessing",
+                                "resultsubmitive"
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c(
+                            "router-link",
+                            {
+                              staticClass: "nav-link",
+                              attrs: {
+                                to: "/createTraining",
+                                "data-toggle": "awesome_tooltip",
+                                title: "Administration"
+                              }
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "fa fa-angle-double-right nav-icon"
+                              }),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Submitive (IV-XII)")])
+                            ]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        {
+                          staticClass: "nav-item",
+                          attrs: { id: "resultformative" },
+                          on: {
+                            click: function($event) {
+                              return _vm.setclass(
+                                "resultprocessing",
+                                "resultformative"
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c(
+                            "router-link",
+                            {
+                              staticClass: "nav-link",
+                              attrs: {
+                                to: "/applyTraining",
+                                "data-toggle": "awesome_tooltip",
+                                title: "Administration"
+                              }
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "fa fa-angle-double-right nav-icon"
+                              }),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Formative (PP-III)")])
+                            ]
+                          )
+                        ],
+                        1
+                      )
+                    ])
+                  ]
+                ),
                 _vm._v(" "),
                 _vm._m(10)
               ]
@@ -52625,22 +52763,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      { staticClass: "brand-link", attrs: { href: "/userlogin" } },
-      [
-        _c("img", {
-          staticClass: "brand-image elevation-3",
-          staticStyle: { opacity: ".8" },
-          attrs: { src: "admin3/dist/img/MoE_Logo.png", alt: "AdminLTE Logo" }
-        }),
-        _vm._v(" "),
-        _c("span", { staticClass: "brand-text" }, [
-          _c("b", [_vm._v("MOE")]),
-          _vm._v(" >> EMIS")
-        ])
-      ]
-    )
+    return _c("span", { staticClass: "brand-text" }, [
+      _c("b", [_vm._v("MOE")]),
+      _vm._v(" >> EMIS")
+    ])
   },
   function() {
     var _vm = this
@@ -52757,12 +52883,12 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "nav-item" }, [
-      _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-        _c("i", { staticClass: "fa fa-book nav-icon" }),
-        _vm._v(" "),
-        _c("p", [_vm._v("Result Processing")])
-      ])
+    return _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+      _c("i", { staticClass: "fa fa-book nav-icon" }),
+      _vm._v(" "),
+      _c("p", [_vm._v("Result Processing")]),
+      _vm._v(" "),
+      _c("i", { staticClass: "fas fa-angle-left right" })
     ])
   },
   function() {
@@ -62799,7 +62925,7 @@ var render = function() {
                       "span",
                       {
                         staticClass:
-                          "step_no img-bordered pr-2 pl-2 pb-1 pt-1bg-gradient-secondary text-white"
+                          "step_no img-bordered pr-2 pl-2 pb-1 pt-1 bg-gradient-secondary text-white"
                       },
                       [_vm._v("2")]
                     ),
@@ -87803,8 +87929,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\office\EMIS Enhancement\emisv3-adminlte\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\office\EMIS Enhancement\emisv3-adminlte\resources\css\app.css */"./resources/css/app.css");
+__webpack_require__(/*! D:\office\EMIS Enhancement\xampp\htdocs\emisv3-adminlte\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\office\EMIS Enhancement\xampp\htdocs\emisv3-adminlte\resources\css\app.css */"./resources/css/app.css");
 
 
 /***/ })

@@ -13,7 +13,7 @@
                             </li>
                             <li class="nav-item location-tab">
                                 <a class="nav-link disabled" href="#" id="location-tab-head" data-toggle="pill" @click="shownexttab('basic-tabs','location-tab')" role="tab" aria-controls="custom-tabs-four-profile" aria-selected="false">
-                                    <span class="step_no img-bordered pr-2 pl-2 pb-1 pt-1bg-gradient-secondary text-white">2</span>
+                                    <span class="step_no img-bordered pr-2 pl-2 pb-1 pt-1 bg-gradient-secondary text-white">2</span>
                                     <label>Location Details</label>
                                     <span class="fa fa-angle-double-right"></span> 
                                 </a>
