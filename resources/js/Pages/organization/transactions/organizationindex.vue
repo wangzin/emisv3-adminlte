@@ -8,6 +8,7 @@
                     <i class="menu-icon fa fa-save"></i>
                     <span class=""> Apply For New Organization</span>
                 </router-link>
+                
             </div>
             <div class="card-body">
                 <router-view></router-view>

@@ -22,6 +22,8 @@ let routes = [
     { path: '/villagemaster', name: 'Village Master', component: require('./Pages/globalmaster/village.vue').default },
     { path: '/StudentIndex', name: 'Student Index', component: require('./Pages/Students/regstd.vue').default },
     { path: '/regularstd', name: 'Regular Student', component: require('./Pages/Students/regstd.vue').default },
+    { path: '/newstdreg', name: 'New Regular Student', component: require('./Pages/Students/newregstd.vue').default },
+    { path: '/newstdeccd', name: 'New Eccd Student', component: require('./Pages/Students/eccdstd.vue').default },
     { path: '/orgmastermanagement', name: 'Organization Master Management',
     component: require('./Pages/organization/masters/orgmasterindex.vue').default,
         children: [
