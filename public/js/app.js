@@ -7439,10 +7439,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/organization/masters/orgmasterindex.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/organization/masters/orgmasterindex.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/organization/masters/orgmasterdata.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/organization/masters/orgmasterdata.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -7503,6 +7503,79 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {},
+  methods: {},
+  mounted: function mounted() {
+    $('[data-toggle="tooltip"]').tooltip();
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/organization/masters/orgmasterindex.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/organization/masters/orgmasterindex.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 //
 //
 //
@@ -62403,31 +62476,432 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c(
+      "table",
+      {
+        staticClass: "table table-bordered table-striped",
+        attrs: { id: "dynamic-table" }
+      },
+      [
+        _vm._m(1),
+        _vm._v(" "),
+        _c("tbody", [
+          _c("tr", { attrs: { id: "record1" } }, [
+            _c("td", [_vm._v("1")]),
+            _vm._v(" "),
+            _c("td", [
+              _c(
+                "a",
+                { attrs: { href: "#" } },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      attrs: {
+                        to: "/orgmasterlevel",
+                        "data-toggle": "tooltip",
+                        title: "Click here to do further configuration"
+                      }
+                    },
+                    [
+                      _c("i", { staticClass: "menu-icon fa fa-caret-right" }),
+                      _vm._v(
+                        "\n                            School Level\n                        "
+                      )
+                    ]
+                  )
+                ],
+                1
+              )
+            ]),
+            _vm._v(" "),
+            _vm._m(2),
+            _vm._v(" "),
+            _c("td", [_vm._v("2019-10-12")]),
+            _vm._v(" "),
+            _c("td", [
+              _vm._m(3),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-danger btn-xs",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.showdelete("1")
+                    }
+                  }
+                },
+                [_c("i", { staticClass: "fa fa-trash" }), _vm._v(" Delete")]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", { attrs: { id: "record2" } }, [
+            _c("td", {}, [_vm._v("2")]),
+            _vm._v(" "),
+            _c("td", {}, [
+              _c(
+                "a",
+                {
+                  attrs: { href: "#" },
+                  on: {
+                    click: function($event) {
+                      return _vm.manageclasses("Org Location Type")
+                    }
+                  }
+                },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      attrs: {
+                        to: "/orglocationmaster",
+                        "data-toggle": "tooltip",
+                        title: "Click here to do further configuration"
+                      }
+                    },
+                    [
+                      _c("i", { staticClass: "menu-icon fa fa-caret-right" }),
+                      _vm._v(
+                        "\n                            Org Location Type\n                        "
+                      )
+                    ]
+                  )
+                ],
+                1
+              )
+            ]),
+            _vm._v(" "),
+            _vm._m(4),
+            _vm._v(" "),
+            _c("td", {}, [_vm._v("2019-10-12")]),
+            _vm._v(" "),
+            _c("td", {}, [
+              _vm._m(5),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-danger btn-xs",
+                  on: {
+                    click: function($event) {
+                      return _vm.showdelete("2")
+                    }
+                  }
+                },
+                [_c("i", { staticClass: "fa fa-trash" }), _vm._v(" Delete")]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", { attrs: { id: "record3" } }, [
+            _c("td", {}, [_vm._v("3")]),
+            _vm._v(" "),
+            _c("td", {}, [
+              _c(
+                "a",
+                {
+                  attrs: { href: "#" },
+                  on: {
+                    click: function($event) {
+                      return _vm.manageclasses("School/Org Status")
+                    }
+                  }
+                },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "dropdown-item",
+                      attrs: { to: "#" },
+                      on: {
+                        click: function($event) {
+                          return _vm.manageclasses("")
+                        }
+                      }
+                    },
+                    [
+                      _c("i", { staticClass: "menu-icon fa fa-caret-right" }),
+                      _vm._v(
+                        "\n                            School/Org Status\n                        "
+                      )
+                    ]
+                  )
+                ],
+                1
+              )
+            ]),
+            _vm._v(" "),
+            _vm._m(6),
+            _vm._v(" "),
+            _c("td", {}, [_vm._v("2019-10-12")]),
+            _vm._v(" "),
+            _c("td", {}, [
+              _vm._m(7),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-danger btn-xs",
+                  on: {
+                    click: function($event) {
+                      return _vm.showdelete("3")
+                    }
+                  }
+                },
+                [_c("i", { staticClass: "fa fa-trash" }), _vm._v(" Delete")]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", { attrs: { id: "record4" } }, [
+            _c("td", {}, [_vm._v("4")]),
+            _vm._v(" "),
+            _c("td", {}, [
+              _c(
+                "a",
+                {
+                  attrs: { href: "#" },
+                  on: {
+                    click: function($event) {
+                      return _vm.manageclasses("Climate Type")
+                    }
+                  }
+                },
+                [
+                  _c(
+                    "router-link",
+                    { staticClass: "dropdown-item", attrs: { to: "#" } },
+                    [
+                      _c("i", { staticClass: "menu-icon fa fa-caret-right" }),
+                      _vm._v(
+                        "\n                            Climate Type\n                        "
+                      )
+                    ]
+                  )
+                ],
+                1
+              )
+            ]),
+            _vm._v(" "),
+            _vm._m(8),
+            _vm._v(" "),
+            _c("td", {}, [_vm._v("2019-10-12")]),
+            _vm._v(" "),
+            _c("td", {}, [
+              _vm._m(9),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-danger btn-xs",
+                  on: {
+                    click: function($event) {
+                      return _vm.showdelete("4")
+                    }
+                  }
+                },
+                [_c("i", { staticClass: "fa fa-trash" }), _vm._v(" Delete")]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", { attrs: { id: "record5" } }, [
+            _c("td", {}, [_vm._v("5")]),
+            _vm._v(" "),
+            _c("td", {}, [
+              _c(
+                "a",
+                {
+                  attrs: { href: "#" },
+                  on: {
+                    click: function($event) {
+                      return _vm.manageclasses("Road Type")
+                    }
+                  }
+                },
+                [
+                  _c(
+                    "router-link",
+                    { staticClass: "dropdown-item", attrs: { to: "#" } },
+                    [
+                      _c("i", { staticClass: "menu-icon fa fa-caret-right" }),
+                      _vm._v(
+                        "\n                            Road Type\n                        "
+                      )
+                    ]
+                  )
+                ],
+                1
+              )
+            ]),
+            _vm._v(" "),
+            _vm._m(10),
+            _vm._v(" "),
+            _c("td", {}, [_vm._v("2019-10-12")]),
+            _vm._v(" "),
+            _c("td", {}, [
+              _vm._m(11),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-danger btn-xs",
+                  on: {
+                    click: function($event) {
+                      return _vm.showdelete("5")
+                    }
+                  }
+                },
+                [_c("i", { staticClass: "fa fa-trash" }), _vm._v(" Delete")]
+              )
+            ])
+          ])
+        ])
+      ]
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "info-box mb-3 bg-success" }, [
-        _c("span", { staticClass: "info-box-icon" }, [
-          _c("i", { staticClass: "ion-icon ion-android-checkmark-circle" })
+    return _c("div", { staticClass: "info-box mb-3 bg-success" }, [
+      _c("span", { staticClass: "info-box-icon" }, [
+        _c("i", { staticClass: "ion-icon ion-android-checkmark-circle" })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "info-box-content" }, [
+        _c("span", { staticClass: "info-box-number" }, [
+          _vm._v("Manage all organization masters from here!")
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "info-box-content" }, [
-          _c("span", { staticClass: "info-box-number" }, [
-            _vm._v("Manage all organization masters from here!")
-          ]),
-          _vm._v(" "),
-          _c("span", { staticClass: "info-box-text" }, [
-            _vm._v(
-              "Select respective master link in above dropdown to do further configuration"
-            )
-          ])
+        _c("span", { staticClass: "info-box-text" }, [
+          _vm._v(
+            "Select respective master link in above dropdown to do further configuration"
+          )
         ])
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v("No.")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Master Type")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Status")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Last Action Date")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Action")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c("span", { staticClass: "label label-success label-sm" }, [
+        _vm._v("Active")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      { staticClass: "btn btn-primary btn-xs", attrs: { type: "button" } },
+      [_c("i", { staticClass: "fa fa-edit" }), _vm._v(" Edit")]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", {}, [
+      _c("span", { staticClass: "label label-danger label-sm" }, [
+        _vm._v("In Active")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("button", { staticClass: "btn btn-primary btn-xs" }, [
+      _c("i", { staticClass: "fa fa-edit" }),
+      _vm._v(" Edit")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", {}, [
+      _c("span", { staticClass: "label label-success label-sm" }, [
+        _vm._v("Active")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("button", { staticClass: "btn btn-primary btn-xs" }, [
+      _c("i", { staticClass: "fa fa-edit" }),
+      _vm._v(" Edit")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", {}, [
+      _c("span", { staticClass: "label label-success label-sm" }, [
+        _vm._v("Active")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("button", { staticClass: "btn btn-primary btn-xs" }, [
+      _c("i", { staticClass: "fa fa-edit" }),
+      _vm._v(" Edit")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", {}, [
+      _c("span", { staticClass: "label label-success label-sm" }, [
+        _vm._v("Active")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("button", { staticClass: "btn btn-primary btn-xs" }, [
+      _c("i", { staticClass: "fa fa-edit" }),
+      _vm._v(" Edit")
     ])
   }
 ]
@@ -62456,170 +62930,6 @@ var render = function() {
     _vm._m(0),
     _vm._v(" "),
     _c("div", { staticClass: "card card-primary card-outline card-tabs" }, [
-      _c("div", { staticClass: "card-header p-0 pt-1 border-bottom-0" }, [
-        _c(
-          "ul",
-          {
-            staticClass: "nav nav-tabs",
-            attrs: { id: "custom-tabs-three-tab", role: "tablist" }
-          },
-          [
-            _c("li", { staticClass: "nav-item dropdown" }, [
-              _vm._m(1),
-              _vm._v(" "),
-              _c("div", { staticClass: "dropdown-menu" }, [
-                _c(
-                  "a",
-                  {
-                    attrs: { href: "#" },
-                    on: {
-                      click: function($event) {
-                        return _vm.manageclasses("School Level")
-                      }
-                    }
-                  },
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "dropdown-item",
-                        attrs: { to: "/orgmasterlevel" }
-                      },
-                      [
-                        _c("i", { staticClass: "menu-icon fa fa-caret-right" }),
-                        _vm._v(
-                          "\n                                School Level\n                            "
-                        )
-                      ]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "dropdown-divider" }),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    attrs: { href: "#" },
-                    on: {
-                      click: function($event) {
-                        return _vm.manageclasses("Org Location Type")
-                      }
-                    }
-                  },
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "dropdown-item",
-                        attrs: { to: "/orglocationmaster" }
-                      },
-                      [
-                        _c("i", { staticClass: "menu-icon fa fa-caret-right" }),
-                        _vm._v(
-                          "\n                                Org Location Type\n                            "
-                        )
-                      ]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "dropdown-divider" }),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    attrs: { href: "#" },
-                    on: {
-                      click: function($event) {
-                        return _vm.manageclasses("School/Org Status")
-                      }
-                    }
-                  },
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "dropdown-item",
-                        attrs: { to: "#" },
-                        on: {
-                          click: function($event) {
-                            return _vm.manageclasses("")
-                          }
-                        }
-                      },
-                      [
-                        _c("i", { staticClass: "menu-icon fa fa-caret-right" }),
-                        _vm._v(
-                          "\n                                School/Org Status\n                            "
-                        )
-                      ]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "dropdown-divider" }),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    attrs: { href: "#" },
-                    on: {
-                      click: function($event) {
-                        return _vm.manageclasses("Climate Type")
-                      }
-                    }
-                  },
-                  [
-                    _c(
-                      "router-link",
-                      { staticClass: "dropdown-item", attrs: { to: "#" } },
-                      [
-                        _c("i", { staticClass: "menu-icon fa fa-caret-right" }),
-                        _vm._v(
-                          "\n                                Climate Type\n                            "
-                        )
-                      ]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "dropdown-divider" }),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    attrs: { href: "#" },
-                    on: {
-                      click: function($event) {
-                        return _vm.manageclasses("Road Type")
-                      }
-                    }
-                  },
-                  [
-                    _c(
-                      "router-link",
-                      { staticClass: "dropdown-item", attrs: { to: "#" } },
-                      [
-                        _c("i", { staticClass: "menu-icon fa fa-caret-right" }),
-                        _vm._v(
-                          "\n                                Road Type\n                            "
-                        )
-                      ]
-                    )
-                  ],
-                  1
-                )
-              ])
-            ])
-          ]
-        )
-      ]),
-      _vm._v(" "),
       _c("div", { staticClass: "card-body" }, [
         _c(
           "div",
@@ -62671,30 +62981,6 @@ var staticRenderFns = [
           _c("li", { staticClass: "breadcrumb-item active" }, [
             _vm._v("Organization Masters")
           ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
-        staticClass: "nav-link active dropdown-toggle",
-        attrs: {
-          "data-toggle": "dropdown",
-          href: "#",
-          "aria-expanded": "false"
-        }
-      },
-      [
-        _c("i", { staticClass: "green ace-icon fa fa-database bigger-120" }),
-        _vm._v(" "),
-        _c("span", { attrs: { id: "selected" } }, [
-          _vm._v("Select Masters   "),
-          _c("span", { staticClass: "caret" })
         ])
       ]
     )
@@ -87012,15 +87298,17 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _orgmasterdata_vue_vue_type_template_id_3a9d57c2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./orgmasterdata.vue?vue&type=template&id=3a9d57c2& */ "./resources/js/Pages/organization/masters/orgmasterdata.vue?vue&type=template&id=3a9d57c2&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _orgmasterdata_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./orgmasterdata.vue?vue&type=script&lang=js& */ "./resources/js/Pages/organization/masters/orgmasterdata.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _orgmasterdata_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _orgmasterdata_vue_vue_type_template_id_3a9d57c2___WEBPACK_IMPORTED_MODULE_0__["render"],
   _orgmasterdata_vue_vue_type_template_id_3a9d57c2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -87034,6 +87322,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/Pages/organization/masters/orgmasterdata.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/organization/masters/orgmasterdata.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/Pages/organization/masters/orgmasterdata.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_orgmasterdata_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./orgmasterdata.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/organization/masters/orgmasterdata.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_orgmasterdata_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
