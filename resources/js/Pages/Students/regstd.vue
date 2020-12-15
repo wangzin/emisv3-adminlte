@@ -13,12 +13,16 @@
                    <div class="col-12">
                       <div class="card">
                           <div class="card-header">
-                              <h3 class="card-title">Student Details</h3>
-                               <button class="btn btn-success btn-sm fa-pull-right" type="button" @click="showmodal()"><span class="fa fa-plus"> Add New Student</span></button>
-                          </div>
-                                 
+                              <h3 class="card-title" id="cardheader">Student Details</h3>
+                                  
+                                   <router-link to="/newstdreg" id="addnewstd" class="btn btn-success btn-sm fa-pull-right"><button class="btn btn-success btn-sm fa-pull-right" type="button" @click="showmodal()"><span class="fa fa-plus"> Add New Student</span></button>
+                                    </router-link>
+                                 <!-- <div class="card-body">
+                                    <router-view></router-view>
+                                  </div>-->
+                               </div>
                           <div class="card-body">
-                              <div class="col-sm-12">
+                             
                                   <table id="dynamic-table" class="table table-bordered table-striped">
                                       <thead>
                                            <tr>
@@ -165,7 +169,7 @@
                                           </tr>
                                       </tbody>
                                  </table>
-                              </div>
+                             
                           </div>
                      </div>
                   </div>
@@ -173,7 +177,7 @@
             </div>
      </section>
 
-       <div class="modal fade show" id="samplemodal" aria-modal="true" style="padding-right: 17px;">
+      <!-- <div class="modal fade show" id="samplemodal" aria-modal="true" style="padding-right: 17px;">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -191,14 +195,14 @@
                                 </div>
                             </div>
                         </form>
-                    </div>
+                    </div> 
                     <div class="modal-footer justify-content-between">
                         <button data-bb-handler="cancel" type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
 						<button data-bb-handler="confirm" @click="addrecords()" type="button" class="btn btn-primary">OK</button>
                     </div>
                 </div>
             </div>
-        </div>    
+        </div> -->
 		<div class="modal fade" id="deletemodal" tabindex="-1" role="dialog">
 			<div class="modal-dialog">
 				<div class="modal-content">
@@ -274,8 +278,13 @@ export default {
         }); 
         $('.dataTables_filter').addClass('fa-pull-right');
         $('#dynamic-table_paginate').addClass('fa-pull-right');
+
+         $('#cardheader').html('Student Infromation');
+        $('#addnewstd').show();
+
     },
     
+
 }
 </script>
 
