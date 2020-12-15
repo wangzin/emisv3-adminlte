@@ -12,7 +12,7 @@
                     <div class="card-body box-profile">
                         <div class="text-center">
                         <img class="profile-user-img img-fluid img-circle"
-                            src="admin3/dist/img/user2-160x160.jpg"
+                            src="admin3/dist/img/avatar5.png"
                             alt="User profile picture">
                         </div>
                         <h3 class="profile-username text-center">Tshewang Tenzin</h3>
@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="col-8">
-                <div class="card card-primary card-outline">
+                <div class="card card-success card-outline">
                     <div class="card-header">
                         <h3 class="card-title">About Me</h3>
                     </div>
