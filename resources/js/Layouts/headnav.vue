@@ -49,6 +49,8 @@
 							</div>
 							<div class="info">
 								<a href="#" class="d-block">Tshewang Tenzin
+									<span id="roleid"></span>
+									 
 								</a>
 							</div>
 						</div>
@@ -82,7 +84,8 @@
     export default {
 		data() {
 			return {
-				url:"userlogin",
+				user: '',
+                role: ''
 			}
 		},
         methods: {
@@ -102,6 +105,15 @@
             },
         },
         mounted() {
+			axios.get('verify')
+			.then(response => {
+				this.user = response.data.user;
+				this.role = response.data.role;
+			})
+			.catch(error => {
+				//Vue.component('default-component', require('./components/unauthorized.vue').default);
+			});
+			
         },
     }
 </script>

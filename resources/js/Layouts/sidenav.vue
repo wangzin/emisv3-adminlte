@@ -9,10 +9,10 @@
             <div class="sidebar"> 
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent" data-widget="treeview" role="menu" data-accordion="false">
-                        
                         <!-- global master side menu -->
-                        <li class="nav-item has-treeview" id="globalsetup">
-                            <a href="#" class="nav-link">
+                       
+                        <li class="nav-item has-treeview" v-if="user === 'DBA'" id="globalsetup">
+                            <a href="#" class="nav-link"> 
                                 <i class="nav-icon fas fa-database"></i>
                                 <p>
                                     Global Master
@@ -254,7 +254,8 @@
 export default {
     data() {
         return {
-            url: 'userlogin'
+            url: 'userlogin',
+            user: '',
         }
     },
     methods: {
@@ -299,6 +300,16 @@ export default {
             $('#'+mainmenu+'>ul').show();
             $('#'+submenu).addClass('navbar-cyan active');
             $('#'+submenu+ ">a").addClass('text-white');
+        },
+        mounted() {
+			axios.get('verify')
+			.then(response => {
+				this.user = response.data.user;
+			})
+			.catch(error => {
+				//Vue.component('default-component', require('./components/unauthorized.vue').default);
+			});
+			
         },
     },
     

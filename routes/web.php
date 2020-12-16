@@ -17,8 +17,11 @@ use App\Http\Controllers\LoginController;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/userloginindex', function () {
+    return view('loginpage');
+});
 Route::get('userlogin',[LoginController::class,'userdashboard'])->name('userlogin');
+Route::get('/verify', [LoginController::class,'verify'])->name('verify');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia\Inertia::render('Dashboard');
 })->name('dashboard');
