@@ -37,130 +37,130 @@
                                           </tr>
                                        </thead>
                                      <tbody>
-                                         <tr id="record1">
+                                         <tr id="record1"  role="row" class="even">
                                               <td>1</td>
                                               <td>12345678901</td>
                                               <td>201.00005.11.0925</td>
                                               <td>Karma Wangmo</td>
                                               <td>Bumthang</td>
-                                              <th >Jakar HSS</th>
+                                              <td >Jakar HSS</td>
                                               <td>Inschool</td>
                                               <td>
                                                    <button class="btn btn-primary btn-xs" type="button"><i class="fa fa-edit"></i> Edit</button>
                                                    <button class="btn btn-danger btn-xs" @click="showdelete('1')" type="button"><i class="fa fa-trash"></i> Delete</button>
                                               </td>
                                           </tr>
-                                          <tr id="record2">
+                                          <tr id="record2"  role="row" class="even">
                                               <td>2</td>
                                               <td>10948753421</td>
                                               <td>201.00010.11.0032</td>
                                               <td>Choki Wangchuk</td>
                                               <td>Bumthang</td>
-                                              <th >Jakar HSS</th>
+                                              <td >Jakar HSS</td>
                                               <td>Inschool</td>
                                               <td >
                                                  <button class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</button>
                                                  <button class="btn btn-danger btn-xs" @click="showdelete('2')"><i class="fa fa-trash"></i> Delete</button>
                                               </td>
                                           </tr>
-                                           <tr id="record3"> 
+                                           <tr id="record3"  role="row" class="even"> 
                                               <td class="">3</td>
                                               <td>10946740934</td>
                                               <td>201.00020.13.0164</td>
                                               <td>Deki Tshomo</td>
                                               <td>Bumthang</td>
-                                              <th >Jakar HSS</th>
+                                              <td >Jakar HSS</td>
                                               <td>Inschool</td>
                                               <td >
                                                  <button class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</button>
                                                  <button class="btn btn-danger btn-xs" @click="showdelete('3')"><i class="fa fa-trash"></i> Delete</button>
                                               </td>
                                           </tr>
-                                          <tr id="record4"> 
+                                          <tr id="record4"  role="row" class="even"> 
                                               <td class="">4</td>
                                               <td>19463566974</td>
                                               <td>201.00010.11.0016</td>
                                               <td>Hemant Biswa </td>
                                               <td>Bumthang</td>
-                                              <th >Jakar HSS</th>
+                                              <td >Jakar HSS</td>
                                               <td>Inschool</td>
                                               <td >
                                                   <button class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</button>
                                                   <button class="btn btn-danger btn-xs" @click="showdelete('4')"><i class="fa fa-trash"></i> Delete</button>
                                               </td>
                                           </tr>
-                                          <tr id="record5"> 
+                                          <tr id="record5"  role="row" class="even"> 
                                               <td class="">5</td>
                                               <td>12345098701</td>
                                               <td>201.00017.11.0165</td>
                                               <td>Karma Rigden Namgyel</td>
                                               <td>Bumthang</td>
-                                              <th >Jakar HSS</th>
+                                              <td >Jakar HSS</td>
                                               <td>Inschool</td>
                                               <td >
                                                   <button class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</button>
                                                   <button class="btn btn-danger btn-xs" @click="showdelete('5')"><i class="fa fa-trash"></i> Delete</button>
                                               </td>
                                           </tr>
-                                          <tr id="record6"> 
+                                          <tr id="record6"  role="row" class="even"> 
                                               <td class="">6</td>
                                               <td>1234792987</td>
                                               <td>201.00010.11.0018</td>
                                               <td>Kuenzang Dechen Dorji</td>
                                               <td>Bumthang</td>
-                                              <th >Jakar HSS</th>
+                                              <td >Jakar HSS</td>
                                               <td>Inschool</td>
                                               <td >
                                                   <button class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</button>
                                                   <button class="btn btn-danger btn-xs" @click="showdelete('6')"><i class="fa fa-trash"></i> Delete</button>
                                               </td>
                                           </tr>
-                                          <tr id="record7"> 
+                                          <tr id="record7"  role="row" class="even"> 
                                               <td class="">7</td>
                                               <td>11289987601</td>
                                               <td>201.00010.11.0018</td>
                                               <td>Palden Drakpa</td>
                                               <td>Bumthang</td>
-                                              <th >Jakar HSS</th>
+                                              <td >Jakar HSS</td>
                                               <td>Inschool</td>
                                               <td >
                                                   <button class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</button>
                                                   <button class="btn btn-danger btn-xs" @click="showdelete('7')"><i class="fa fa-trash"></i> Delete</button>
                                               </td>
                                           </tr>
-                                          <tr id="record8"> 
+                                          <tr id="record8"  role="row" class="even"> 
                                               <td class="">8</td>
                                               <td>1123487807</td>
                                               <td>201.00005.11.0955</td>
                                               <td>Pema Chenzom</td>
                                               <td>Bumthang</td>
-                                              <th >Jakar HSS</th>
+                                              <td >Jakar HSS</td>
                                               <td>Inschool</td>
                                               <td >
                                                   <button class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</button>
                                                   <button class="btn btn-danger btn-xs" @click="showdelete('8')"><i class="fa fa-trash"></i> Delete</button>
                                               </td>
                                           </tr>
-                                          <tr id="record9"> 
+                                          <tr id="record9"  role="row" class="even"> 
                                               <td class="">9</td>
                                               <td>1120498766</td>
                                               <td>201.00005.11.0959</td>
                                               <td>Pema Lhaden</td>
                                               <td>Bumthang</td>
-                                              <th >Jakar HSS</th>
+                                              <td >Jakar HSS</td>
                                               <td>Inschool</td>
                                               <td >
                                                   <button class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</button>
                                                   <button class="btn btn-danger btn-xs" @click="showdelete('9')"><i class="fa fa-trash"></i> Delete</button>
                                               </td>
                                           </tr>
-                                          <tr id="record10"> 
+                                          <tr id="record10" role="row" class="even"> 
                                               <td class="">10</td>
                                               <td>11120378904</td>
                                               <td>201.00005.11.0015</td>
                                               <td>Pema Sithi</td>
                                               <td>Bumthang</td>
-                                              <th >Jakar HSS</th>
+                                              <td >Jakar HSS</td>
                                               <td>Inschool</td>
                                               <td >
                                                   <button class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</button>
