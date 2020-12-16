@@ -149,23 +149,23 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <router-link to="regularstd" class="nav-link" data-toggle="awesome_tooltip" title="Regular Student">
+                                    <router-link to="regstdmanagement" class="nav-link" data-toggle="awesome_tooltip" title="Regular Student">
                                         <i class="fa fa-angle-double-right nav-icon"></i>
                                         <p>Regular Student</p>
                                     </router-link>
                                 </li>
                                
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <router-link to="stdmanagement" class="nav-link" data-toggle="awesome_tooltip" title="ECCD Student">
                                     <i class="fa fa-angle-double-right nav-icon"></i>
                                     <p>ECCD Students</p>
-                                    </a>
+                                    </router-link>
                                 </li>
                                  <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <router-link to="cestdmanagement" class="nav-link" data-toggle="awesome_tooltip" title="ECCD Student">
                                     <i class="fa fa-angle-double-right nav-icon"></i>
-                                    <p>CE Students</p>
-                                    </a>
+                                    <p>CE Students</p>     
+                                    </router-link>
                                 </li>
                             </ul>
                         </li>

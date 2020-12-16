@@ -4,6 +4,7 @@ require('moment');
 
 import Vue from 'vue';
 
+
 import { InertiaApp } from '@inertiajs/inertia-vue';
 import { InertiaForm } from 'laravel-jetstream';
 import PortalVue from 'portal-vue';
@@ -22,10 +23,7 @@ let routes = [
     { path: '/dzongmasters', name: 'Dzongkhag Master', component: require('./Pages/globalmaster/dzongmasters.vue').default },
     { path: '/gewogmasters', name: 'Gewog Master', component: require('./Pages/globalmaster/gewog.vue').default },
     { path: '/villagemaster', name: 'Village Master', component: require('./Pages/globalmaster/village.vue').default },
-    { path: '/StudentIndex', name: 'Student Index', component: require('./Pages/Students/regstd.vue').default },
-    { path: '/regularstd', name: 'Regular Student', component: require('./Pages/Students/regstd.vue').default },
-    { path: '/newstdreg', name: 'New Regular Student', component: require('./Pages/Students/newregstd.vue').default },
-    { path: '/newstdeccd', name: 'New Eccd Student', component: require('./Pages/Students/eccdstd.vue').default },
+    
     { path: '/orgmastermanagement', name: 'Organization Master Management',
     component: require('./Pages/organization/masters/orgmasterindex.vue').default,
         children: [
@@ -76,6 +74,31 @@ let routes = [
 
         ]    
     }, 
+    //student route
+
+    { path: '/regstdmanagement', name: ' Reg Student Management',
+    component: require('./Pages/Students/regstd/regstdindex.vue').default,
+        children: [
+            { path: '/', component: require('./Pages/Students/regstd/regstdexisting.vue').default },
+            { path: '/newregstd', component: require('./Pages/Students/regstd/newregstd.vue').default },
+        ]    
+    }, 
+
+    { path: '/stdmanagement', name: 'Student Management',
+    component: require('./Pages/Students/eccdstd/eccdindex.vue').default,
+        children: [
+            { path: '/', component: require('./Pages/Students/eccdstd/eccdstdexisting.vue').default },
+            { path: '/neweccdstd', component: require('./Pages/Students/eccdstd/neweccdstd.vue').default },
+        ]    
+    }, 
+    { path: '/cestdmanagement', name: 'Student Management',
+    component: require('./Pages/Students/CEstd/cestdindex.vue').default,
+        children: [
+            { path: '/', component: require('./Pages/Students/CEstd/cestdexisting.vue').default },
+            //{ path: '/newecestd', component: require('./Pages/Students/CEstd/newcestd.vue').default },
+        ]    
+    }, 
+
 ]
 const router = new VueRouter({
     routes // short for `routes: routes`
