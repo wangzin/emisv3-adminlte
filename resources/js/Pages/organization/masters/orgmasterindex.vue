@@ -8,61 +8,6 @@
             </ol>
         </div>
         <div class="card card-primary card-outline card-tabs">
-            <div class="card-header p-0 pt-1 border-bottom-0">
-                <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-                            <i class="green ace-icon fa fa-database bigger-120"></i>
-                            <span id="selected">Select Masters &nbsp; <span class="caret"></span></span>
-                        </a>
-                        <div class="dropdown-menu" style="">
-                            <a href="#" @click="manageclasses('School Level')">
-                                <router-link  to="/orgmasterlevel"  class="dropdown-item">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    School Level
-                                </router-link>
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a href="#" @click="manageclasses('Org Location Type')">
-                                <router-link to="/orglocationmaster" class="dropdown-item">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    Org Location Type
-                                </router-link>
-                            </a>
-                            
-                            <div class="dropdown-divider"></div>
-                             <a href="#" @click="manageclasses('School/Org Status')">
-                                <router-link to="#"  @click="manageclasses('')" class="dropdown-item">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    School/Org Status
-                                </router-link>
-                            </a>
-                            
-                            <div class="dropdown-divider"></div>
-                             <a href="#"  @click="manageclasses('Climate Type')">
-                                <router-link to="#" class="dropdown-item">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    Climate Type
-                                </router-link>
-                            </a>
-                            
-                            <div class="dropdown-divider"></div>
-                            <a href="#" @click="manageclasses('Road Type')">
-                                <router-link to="#" class="dropdown-item">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    Road Type
-                                </router-link>
-                            </a>
-                        </div>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" id="custom-tabs-three-profile-tab" data-toggle="pill" href="#custom-tabs-three-profile" role="tab" aria-controls="custom-tabs-three-profile" aria-selected="false">
-                            <i class="green ace-icon fa fa-database bigger-120"></i>
-                            Profile
-                        </a>
-                    </li> -->
-                </ul>
-            </div>
             <div class="card-body">
                 <div class="tab-content" id="custom-tabs-three-tabContent">
                     <div class="tab-pane fade active show" id="custom-tabs-three-home" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
