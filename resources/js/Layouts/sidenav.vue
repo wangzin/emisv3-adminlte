@@ -49,7 +49,7 @@
                                     Administration
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
-                            </a>
+                            </a>  
                             <ul class="nav nav-treeview">                                
                                 <li class="nav-item" id="rolepriv" @click="setclass('administrationlink','rolepriv')">
                                     <router-link to="/rolesAndPriviledges"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
@@ -154,7 +154,6 @@
                                         <p>Regular Student</p>
                                     </router-link>
                                 </li>
-                               
                                 <li class="nav-item">
                                     <router-link to="stdmanagement" class="nav-link" data-toggle="awesome_tooltip" title="ECCD Student">
                                     <i class="fa fa-angle-double-right nav-icon"></i>
@@ -301,17 +300,12 @@ export default {
             $('#'+submenu).addClass('navbar-cyan active');
             $('#'+submenu+ ">a").addClass('text-white');
         },
-        mounted() {
-			axios.get('verify')
-			.then(response => {
-				this.user = response.data.user;
-			})
-			.catch(error => {
-				//Vue.component('default-component', require('./components/unauthorized.vue').default);
-			});
-			
-        },
     },
-    
+    mounted() {
+        axios.get('verify')
+        .then(response => {
+            this.user = response.data.user;
+        });
+    },
 }
 </script>

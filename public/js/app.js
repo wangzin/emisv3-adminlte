@@ -3284,7 +3284,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -3328,15 +3327,14 @@ __webpack_require__.r(__webpack_exports__);
       $('#' + mainmenu + '>ul').show();
       $('#' + submenu).addClass('navbar-cyan active');
       $('#' + submenu + ">a").addClass('text-white');
-    },
-    mounted: function mounted() {
-      var _this = this;
-
-      axios.get('verify').then(function (response) {
-        _this.user = response.data.user;
-      })["catch"](function (error) {//Vue.component('default-component', require('./components/unauthorized.vue').default);
-      });
     }
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    axios.get('verify').then(function (response) {
+      _this.user = response.data.user;
+    });
   }
 });
 
