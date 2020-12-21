@@ -6270,35 +6270,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {},
   data: function data() {
@@ -6306,14 +6277,26 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
     return _ref = {
       organizationtype: "",
+      fathername: "",
+      mothername: "",
+      fathercontact: "",
+      mothercontact: "",
       schoollevel: "",
+      guardaincontact: "",
       schoolname: "",
+      studentclass: "",
+      studentsection: "",
+      studentstream: "",
+      nationality: "",
+      dzongkhag: "",
+      gewog: "",
       schoolLocation: "",
       schoolstatus: "",
       agencycode: "",
       rcsccode: "",
       mofcode: "",
       establishmentyear: "",
+      locationroadtype: "",
       locationdzongkhag: "",
       locationgewog: "",
       locationvillage: "",
@@ -6321,6 +6304,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       altitute: "",
       latitute: "",
       longitute: "",
+      locationschool: "",
       climatetype: ""
     }, _defineProperty(_ref, "locationvillage", ""), _defineProperty(_ref, "distancefromroaddays", ""), _defineProperty(_ref, "distancefromroadkm", ""), _defineProperty(_ref, "distancefromroadhrs", ""), _defineProperty(_ref, "compoundarea", ""), _defineProperty(_ref, "playgroundmeasure", ""), _defineProperty(_ref, "playgrounddescription", ""), _defineProperty(_ref, "agrriculturearea", ""), _defineProperty(_ref, "usedagriculture", ""), _defineProperty(_ref, "tabstandNo", ""), _defineProperty(_ref, "waterproblem", ""), _defineProperty(_ref, "electricremarks", ""), _defineProperty(_ref, "wayofdatacollection", ""), _defineProperty(_ref, "count", 5), _ref;
   },
@@ -6404,6 +6388,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       if ($('#' + fieldid).val() != "") {
         $('#' + fieldid).removeClass('is-invalid');
         $('#' + errid).html('');
+      }
+    },
+    showidentity: function showidentity(type) {
+      if (type == "Non-Bhutanese") {
+        $('#telephonesec').show();
+      } else {
+        $('#telephonesec').hide();
       }
     }
   },
@@ -61406,7 +61397,7 @@ var render = function() {
                       [_vm._v("2")]
                     ),
                     _vm._v(" "),
-                    _c("label", [_vm._v("Location Details")]),
+                    _c("label", [_vm._v("School Detail")]),
                     _vm._v(" "),
                     _c("span", { staticClass: "fa fa-angle-double-right" })
                   ]
@@ -61444,7 +61435,7 @@ var render = function() {
                       [_vm._v("3")]
                     ),
                     _vm._v(" "),
-                    _c("label", [_vm._v("School/organization Details")]),
+                    _c("label", [_vm._v("Student Guardian Details")]),
                     _vm._v(" "),
                     _c("span", { staticClass: "fa fa-angle-double-right" })
                   ]
@@ -61502,7 +61493,91 @@ var render = function() {
                   }
                 },
                 [
-                  _vm._m(1),
+                  _c("div", { staticClass: "row form-group" }, [
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
+                      [
+                        _vm._m(1),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.agencycode,
+                              expression: "agencycode"
+                            }
+                          ],
+                          staticClass: "form-control font-weight-bolder",
+                          staticStyle: { width: "100%" },
+                          attrs: { type: "number", id: "agencycode" },
+                          domProps: { value: _vm.agencycode },
+                          on: {
+                            change: function($event) {
+                              return _vm.removeerror("cidno", "cidno_err")
+                            },
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.agencycode = $event.target.value
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("span", {
+                          staticClass: "text-danger",
+                          attrs: { id: "cidno_err" }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12",
+                        attrs: { id: "schoolcat" }
+                      },
+                      [
+                        _vm._m(2),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.studentcode,
+                              expression: "studentcode"
+                            }
+                          ],
+                          staticClass: "form-control font-weight-bolder",
+                          staticStyle: { width: "100%" },
+                          attrs: { type: "text", id: "schoolname" },
+                          domProps: { value: _vm.studentcode },
+                          on: {
+                            change: function($event) {
+                              return _vm.removeerror(
+                                "studentcode",
+                                "studentcode_err"
+                              )
+                            },
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.studentcode = $event.target.value
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("span", {
+                          staticClass: "text-danger",
+                          attrs: { id: "studentcode_err" }
+                        })
+                      ]
+                    )
+                  ]),
                   _vm._v(" "),
                   _c("div", { attrs: { id: "schoolsections" } }, [
                     _c("div", { staticClass: "row form-group" }, [
@@ -61510,7 +61585,7 @@ var render = function() {
                         "div",
                         { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
                         [
-                          _vm._m(2),
+                          _vm._m(3),
                           _vm._v(" "),
                           _c("input", {
                             directives: [
@@ -61528,8 +61603,8 @@ var render = function() {
                             on: {
                               change: function($event) {
                                 return _vm.removeerror(
-                                  "schoolname",
-                                  "schoolname_err"
+                                  "studentname",
+                                  "studentname_err"
                                 )
                               },
                               input: function($event) {
@@ -61543,7 +61618,7 @@ var render = function() {
                           _vm._v(" "),
                           _c("span", {
                             staticClass: "text-danger",
-                            attrs: { id: "schoolname_err" }
+                            attrs: { id: "studentname_err" }
                           })
                         ]
                       ),
@@ -61553,7 +61628,7 @@ var render = function() {
                         { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
                         [
                           _c("label", { staticClass: "font-weight-normal" }, [
-                            _vm._v("School Level")
+                            _vm._v("Gender")
                           ]),
                           _vm._v(" "),
                           _c(
@@ -61569,7 +61644,7 @@ var render = function() {
                               ],
                               staticClass: "select2bs4",
                               staticStyle: { width: "100%" },
-                              attrs: { id: "schoollevel" },
+                              attrs: { id: "gender" },
                               on: {
                                 change: function($event) {
                                   var $$selectedVal = Array.prototype.filter
@@ -61601,95 +61676,20 @@ var render = function() {
                               _vm._v(" "),
                               _c(
                                 "option",
-                                {
-                                  attrs: {
-                                    value: "1",
-                                    label: "Community Primary School [01]"
-                                  }
-                                },
-                                [_vm._v("Community Primary School [01]")]
+                                { attrs: { value: "1", label: "male" } },
+                                [_vm._v("Male")]
                               ),
                               _vm._v(" "),
                               _c(
                                 "option",
-                                {
-                                  attrs: {
-                                    value: "2",
-                                    label: "Primary School [02]"
-                                  }
-                                },
-                                [_vm._v("Primary School [02]")]
+                                { attrs: { value: "2", label: "female" } },
+                                [_vm._v("Female")]
                               ),
                               _vm._v(" "),
                               _c(
                                 "option",
-                                {
-                                  attrs: {
-                                    value: "3",
-                                    label: "Lower Secondary School [03]"
-                                  }
-                                },
-                                [_vm._v("Lower Secondary School [03]")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                {
-                                  attrs: {
-                                    value: "4",
-                                    label: "Middle Secondary School [04]"
-                                  }
-                                },
-                                [_vm._v("Middle Secondary School [04]")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                {
-                                  attrs: {
-                                    value: "5",
-                                    label: "Higher Secondary School [05]"
-                                  }
-                                },
-                                [_vm._v("Higher Secondary School [05]")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                {
-                                  attrs: {
-                                    value: "7",
-                                    label: "Special Institute [06]"
-                                  }
-                                },
-                                [_vm._v("Special Institute [06]")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                {
-                                  attrs: {
-                                    value: "8",
-                                    label: "Extended Classroom [07]"
-                                  }
-                                },
-                                [_vm._v("Extended Classroom [07]")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                {
-                                  attrs: {
-                                    value: "9",
-                                    label:
-                                      "Early Childhood Care & Development [09]"
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    "Early Childhood Care & Development [09]"
-                                  )
-                                ]
+                                { attrs: { value: "3", label: "unknown" } },
+                                [_vm._v("Unknown")]
                               )
                             ]
                           )
@@ -61703,153 +61703,31 @@ var render = function() {
                         { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
                         [
                           _c("label", { staticClass: "font-weight-normal" }, [
-                            _vm._v("School Location")
+                            _vm._v("Date of Birth")
                           ]),
                           _vm._v(" "),
-                          _c(
-                            "select",
-                            {
-                              directives: [
-                                {
-                                  name: "model",
-                                  rawName: "v-model",
-                                  value: _vm.schoolLocation,
-                                  expression: "schoolLocation"
-                                }
-                              ],
-                              staticClass: "select2bs4",
-                              staticStyle: { width: "100%" },
-                              attrs: { id: "schoolLocation" },
-                              on: {
-                                change: function($event) {
-                                  var $$selectedVal = Array.prototype.filter
-                                    .call($event.target.options, function(o) {
-                                      return o.selected
-                                    })
-                                    .map(function(o) {
-                                      var val =
-                                        "_value" in o ? o._value : o.value
-                                      return val
-                                    })
-                                  _vm.schoolLocation = $event.target.multiple
-                                    ? $$selectedVal
-                                    : $$selectedVal[0]
-                                }
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.establishmentyear,
+                                expression: "establishmentyear"
                               }
-                            },
-                            [
-                              _c(
-                                "option",
-                                {
-                                  attrs: {
-                                    value: "",
-                                    label: "- Please Select -"
-                                  }
-                                },
-                                [_vm._v("- Please Select -")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                {
-                                  attrs: {
-                                    value: "1",
-                                    label: "Urban Grade 1 [01]"
-                                  }
-                                },
-                                [_vm._v("Urban Grade 1 [01]")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                {
-                                  attrs: {
-                                    value: "2",
-                                    label: "Urban Grade 2 [02]"
-                                  }
-                                },
-                                [_vm._v("Urban Grade 2 [02]")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                {
-                                  attrs: {
-                                    value: "3",
-                                    label: "Semi-Urban [03]"
-                                  }
-                                },
-                                [_vm._v("Semi-Urban [03]")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                {
-                                  attrs: {
-                                    value: "4",
-                                    label: "Semi-Remote [04]"
-                                  }
-                                },
-                                [_vm._v("Semi-Remote [04]")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                { attrs: { value: "5", label: "Remote [05]" } },
-                                [_vm._v("Remote [05]")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                {
-                                  attrs: {
-                                    value: "6",
-                                    label: "Very-Remote [06]"
-                                  }
-                                },
-                                [_vm._v("Very-Remote [06]")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                {
-                                  attrs: { value: "7", label: "Difficult [07]" }
-                                },
-                                [_vm._v("Difficult [07]")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                { attrs: { value: "9", label: "Rural [08]" } },
-                                [_vm._v("Rural [08]")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                {
-                                  attrs: {
-                                    value: "10",
-                                    label: "Semi-Rural [09]"
-                                  }
-                                },
-                                [_vm._v("Semi-Rural [09]")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                { attrs: { value: "11", label: "Urban [10]" } },
-                                [_vm._v("Urban [10]")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "option",
-                                {
-                                  attrs: { value: "8", label: "Unknown [99]" }
-                                },
-                                [_vm._v("Unknown [99]")]
-                              )
-                            ]
-                          )
+                            ],
+                            staticClass: "form-control font-weight-bolder",
+                            staticStyle: { width: "100%" },
+                            attrs: { type: "date", id: "establishmentyear" },
+                            domProps: { value: _vm.establishmentyear },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.establishmentyear = $event.target.value
+                              }
+                            }
+                          })
                         ]
                       ),
                       _vm._v(" "),
@@ -61858,7 +61736,7 @@ var render = function() {
                         { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
                         [
                           _c("label", { staticClass: "font-weight-normal" }, [
-                            _vm._v("School Status")
+                            _vm._v("Mother Tongue")
                           ]),
                           _vm._v(" "),
                           _c(
@@ -61906,28 +61784,40 @@ var render = function() {
                               _vm._v(" "),
                               _c(
                                 "option",
-                                { attrs: { value: "1", label: "Opened [1]" } },
-                                [_vm._v("Opened [1]")]
+                                { attrs: { value: "1", label: "Dzongkha" } },
+                                [_vm._v("Dzongkha")]
                               ),
                               _vm._v(" "),
                               _c(
                                 "option",
-                                { attrs: { value: "2", label: "Closed [2]" } },
-                                [_vm._v("Closed [2]")]
+                                { attrs: { value: "2", label: "Tshangla" } },
+                                [_vm._v("Tshangla")]
                               ),
                               _vm._v(" "),
                               _c(
                                 "option",
                                 {
-                                  attrs: { value: "3", label: "Bifurcated [3]" }
+                                  attrs: { value: "3", label: "Lhotshampkha" }
                                 },
-                                [_vm._v("Bifurcated [3]")]
+                                [_vm._v("Lhotshampkha")]
                               ),
                               _vm._v(" "),
                               _c(
                                 "option",
-                                { attrs: { value: "4", label: "Merged [4]" } },
-                                [_vm._v("Merged [4]")]
+                                { attrs: { value: "4", label: "Kurtokha" } },
+                                [_vm._v("Kurtokha")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                { attrs: { value: "4", label: "Bumthangkha" } },
+                                [_vm._v("Bumthangkha")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                { attrs: { value: "4", label: "Chalikha" } },
+                                [_vm._v("Chalikha")]
                               )
                             ]
                           )
@@ -61941,151 +61831,132 @@ var render = function() {
                       "div",
                       { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
                       [
-                        _vm._m(3),
+                        _c("label", { staticClass: "font-weight-normal" }, [
+                          _vm._v("Nationality of the Student")
+                        ]),
+                        _c("br"),
+                        _vm._v(" "),
+                        _c("input", {
+                          attrs: {
+                            type: "radio",
+                            name: "connecgtion",
+                            id: "connecgtion"
+                          },
+                          on: {
+                            click: function($event) {
+                              return _vm.showidentity("Bhutanese")
+                            }
+                          }
+                        }),
+                        _vm._v(
+                          " Bhutanese\n                                           "
+                        ),
+                        _c("input", {
+                          attrs: {
+                            type: "radio",
+                            name: "connecgtion",
+                            id: "connecgtion"
+                          },
+                          on: {
+                            click: function($event) {
+                              return _vm.showidentity("Non-Bhutanese")
+                            }
+                          }
+                        }),
+                        _vm._v(
+                          " Non-Bhutanese \n                                      "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12",
+                        staticStyle: { display: "none" },
+                        attrs: { id: "telephonesec" }
+                      },
+                      [
+                        _c("label", [
+                          _vm._v(
+                            "If Non-Bhutanese, Please Specify your Nationality "
+                          )
+                        ]),
                         _vm._v(" "),
                         _c("input", {
                           directives: [
                             {
                               name: "model",
                               rawName: "v-model",
-                              value: _vm.agencycode,
-                              expression: "agencycode"
+                              value: _vm.nationality,
+                              expression: "nationality"
                             }
                           ],
-                          staticClass: "form-control font-weight-bolder",
-                          staticStyle: { width: "100%" },
-                          attrs: { type: "number", id: "agencycode" },
-                          domProps: { value: _vm.agencycode },
+                          staticClass: "form-control",
+                          attrs: {
+                            type: "text",
+                            id: "Telephone",
+                            placeholder: "Indian, Bangaldeshi, Nepalese"
+                          },
+                          domProps: { value: _vm.nationality },
                           on: {
-                            change: function($event) {
-                              return _vm.removeerror(
-                                "agencycode",
-                                "agencycode_err"
-                              )
+                            click: function($event) {
+                              return _vm.remove_err("error_Telephone")
                             },
                             input: function($event) {
                               if ($event.target.composing) {
                                 return
                               }
-                              _vm.agencycode = $event.target.value
+                              _vm.nationality = $event.target.value
                             }
                           }
                         }),
                         _vm._v(" "),
                         _c("span", {
                           staticClass: "text-danger",
-                          attrs: { id: "agencycode_err" }
-                        })
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
-                      [
-                        _c("label", { staticClass: "font-weight-normal" }, [
-                          _vm._v(
-                            "RCSC Code (15 letters, like 001.002.003.004, defined by RCSC)"
-                          )
-                        ]),
+                          attrs: { id: "error_Telephone" }
+                        }),
+                        _vm._v(" "),
+                        _c("br"),
+                        _vm._v(" "),
+                        _c("label", [_vm._v("Please Specify  ")]),
                         _vm._v(" "),
                         _c("input", {
                           directives: [
                             {
                               name: "model",
                               rawName: "v-model",
-                              value: _vm.rcsccode,
-                              expression: "rcsccode"
+                              value: _vm.nationality,
+                              expression: "nationality"
                             }
                           ],
-                          staticClass: "form-control font-weight-bolder",
-                          staticStyle: { width: "100%" },
-                          attrs: { type: "number", id: "rcsccode" },
-                          domProps: { value: _vm.rcsccode },
+                          staticClass: "form-control",
+                          attrs: {
+                            type: "text",
+                            id: "Telephone",
+                            placeholder: "country diplomate, expriate"
+                          },
+                          domProps: { value: _vm.nationality },
                           on: {
+                            click: function($event) {
+                              return _vm.remove_err("error_Telephone")
+                            },
                             input: function($event) {
                               if ($event.target.composing) {
                                 return
                               }
-                              _vm.rcsccode = $event.target.value
+                              _vm.nationality = $event.target.value
                             }
                           }
+                        }),
+                        _vm._v(" "),
+                        _c("span", {
+                          staticClass: "text-danger",
+                          attrs: { id: "error_Telephone" }
                         })
                       ]
                     )
                   ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "row form-group" }, [
-                    _c(
-                      "div",
-                      { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
-                      [
-                        _c("label", { staticClass: "font-weight-normal" }, [
-                          _vm._v(
-                            " MoF Code (6 letters, like 121.01, defined by MoF)"
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mofcode,
-                              expression: "mofcode"
-                            }
-                          ],
-                          staticClass: "form-control font-weight-bolder",
-                          staticStyle: { width: "100%" },
-                          attrs: { type: "number", id: "mofcode" },
-                          domProps: { value: _vm.mofcode },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.mofcode = $event.target.value
-                            }
-                          }
-                        })
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" },
-                      [
-                        _c("label", { staticClass: "font-weight-normal" }, [
-                          _vm._v("Year of establishment (e.g. 1976)")
-                        ]),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.establishmentyear,
-                              expression: "establishmentyear"
-                            }
-                          ],
-                          staticClass: "form-control font-weight-bolder",
-                          staticStyle: { width: "100%" },
-                          attrs: { type: "number", id: "establishmentyear" },
-                          domProps: { value: _vm.establishmentyear },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.establishmentyear = $event.target.value
-                            }
-                          }
-                        })
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("hr"),
                   _vm._v(" "),
                   _c("div", { staticClass: "row form-group fa-pull-right" }, [
                     _c(
@@ -62412,25 +62283,25 @@ var render = function() {
                                   label: "- First Select Dzongkhag -"
                                 }
                               },
-                              [_vm._v("- First Select Dzongkhag -")]
+                              [_vm._v("- Please Select Dzongkhag -")]
                             ),
                             _vm._v(" "),
                             _c("option", { attrs: { value: "1" } }, [
                               _vm._v("Chokhor")
                             ]),
                             _c("option", { attrs: { value: "2" } }, [
-                              _vm._v("Chumey ")
+                              _vm._v("Chumey  ")
                             ]),
                             _vm._v(" "),
                             _c("option", { attrs: { value: "3" } }, [
                               _vm._v("Tang ")
                             ]),
                             _c("option", { attrs: { value: "4" } }, [
-                              _vm._v("Ura ")
+                              _vm._v("Tang")
                             ]),
                             _vm._v(" "),
                             _c("option", { attrs: { value: "208" } }, [
-                              _vm._v("Other ")
+                              _vm._v("Ura ")
                             ])
                           ]
                         )
@@ -62442,6 +62313,1163 @@ var render = function() {
                       { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
                       [
                         _vm._m(6),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.locationschool,
+                                expression: "locationschool"
+                              }
+                            ],
+                            staticClass: "select2bs4 font-weight-bolder",
+                            staticStyle: { width: "100%" },
+                            attrs: { id: "locationschool" },
+                            on: {
+                              change: function($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function(o) {
+                                    return o.selected
+                                  })
+                                  .map(function(o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.locationschool = $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              }
+                            }
+                          },
+                          [
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "",
+                                  label: "- First Select Gewog -"
+                                }
+                              },
+                              [_vm._v("- First Select Gewog -")]
+                            ),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "1" } }, [
+                              _vm._v("Chakhar [0001]")
+                            ]),
+                            _c("option", { attrs: { value: "2" } }, [
+                              _vm._v("Jakar HSS")
+                            ]),
+                            _c("option", { attrs: { value: "3" } }, [
+                              _vm._v("Chamkhar Throm [0003]")
+                            ]),
+                            _c("option", { attrs: { value: "4" } }, [
+                              _vm._v("Changwa [0004]")
+                            ]),
+                            _c("option", { attrs: { value: "5" } }, [
+                              _vm._v("Damphel [0005]")
+                            ]),
+                            _c("option", { attrs: { value: "6" } }, [
+                              _vm._v("Dawathang [0006]")
+                            ]),
+                            _c("option", { attrs: { value: "7" } }, [
+                              _vm._v("Dhur Dok [0007]")
+                            ]),
+                            _c("option", { attrs: { value: "8" } }, [
+                              _vm._v("Dhur Lusibe [0008]")
+                            ]),
+                            _c("option", { attrs: { value: "9" } }, [
+                              _vm._v("Dhur Moen [0009]")
+                            ]),
+                            _c("option", { attrs: { value: "10" } }, [
+                              _vm._v("Dodrong [0010]")
+                            ]),
+                            _c("option", { attrs: { value: "11" } }, [
+                              _vm._v("Dorjibe [0011]")
+                            ]),
+                            _c("option", { attrs: { value: "12" } }, [
+                              _vm._v("Goling [0012]")
+                            ]),
+                            _c("option", { attrs: { value: "13" } }, [
+                              _vm._v("Gongkhar [0013]")
+                            ]),
+                            _c("option", { attrs: { value: "14" } }, [
+                              _vm._v("Gyelkhar [0014]")
+                            ]),
+                            _c("option", { attrs: { value: "15" } }, [
+                              _vm._v("Jakar [0015]")
+                            ]),
+                            _c("option", { attrs: { value: "16" } }, [
+                              _vm._v("Jakar Lhakhang [0016]")
+                            ]),
+                            _c("option", { attrs: { value: "17" } }, [
+                              _vm._v("Jampel Lhakhang [0017]")
+                            ]),
+                            _c("option", { attrs: { value: "18" } }, [
+                              _vm._v("Kenchosum [0018]")
+                            ]),
+                            _c("option", { attrs: { value: "19" } }, [
+                              _vm._v("Khangdok [0019]")
+                            ]),
+                            _c("option", { attrs: { value: "20" } }, [
+                              _vm._v("Kharsa [0020]")
+                            ]),
+                            _c("option", { attrs: { value: "21" } }, [
+                              _vm._v("Kharsum [0021]")
+                            ]),
+                            _c("option", { attrs: { value: "22" } }, [
+                              _vm._v("Lamagonpa [0022]")
+                            ]),
+                            _c("option", { attrs: { value: "23" } }, [
+                              _vm._v("Nanglakhang [0023]")
+                            ]),
+                            _c("option", { attrs: { value: "24" } }, [
+                              _vm._v("Nangsephel/Tendok [0024]")
+                            ]),
+                            _c("option", { attrs: { value: "25" } }, [
+                              _vm._v("Nangseyphel [0025]")
+                            ]),
+                            _c("option", { attrs: { value: "26" } }, [
+                              _vm._v("Norbugang [0026]")
+                            ]),
+                            _c("option", { attrs: { value: "27" } }, [
+                              _vm._v("Pangrey [0027]")
+                            ]),
+                            _c("option", { attrs: { value: "28" } }, [
+                              _vm._v("Petseling [0028]")
+                            ]),
+                            _c("option", { attrs: { value: "29" } }, [
+                              _vm._v("Poengar [0029]")
+                            ]),
+                            _c("option", { attrs: { value: "30" } }, [
+                              _vm._v("Potola [0030]")
+                            ]),
+                            _c("option", { attrs: { value: "31" } }, [
+                              _vm._v("Samthang [0031]")
+                            ]),
+                            _c("option", { attrs: { value: "32" } }, [
+                              _vm._v("Saram [0032]")
+                            ]),
+                            _c("option", { attrs: { value: "33" } }, [
+                              _vm._v("Shukdak [0033]")
+                            ]),
+                            _c("option", { attrs: { value: "34" } }, [
+                              _vm._v("Tamshing [0034]")
+                            ]),
+                            _c("option", { attrs: { value: "35" } }, [
+                              _vm._v("Tashiling [0035]")
+                            ]),
+                            _c("option", { attrs: { value: "36" } }, [
+                              _vm._v("Tendok [0036]")
+                            ]),
+                            _c("option", { attrs: { value: "37" } }, [
+                              _vm._v("Thangbi [0037]")
+                            ]),
+                            _c("option", { attrs: { value: "38" } }, [
+                              _vm._v("Torshong [0038]")
+                            ]),
+                            _c("option", { attrs: { value: "39" } }, [
+                              _vm._v("Wangdicholing [0039]")
+                            ]),
+                            _c("option", { attrs: { value: "40" } }, [
+                              _vm._v("Zangling [0040]")
+                            ]),
+                            _c("option", { attrs: { value: "41" } }, [
+                              _vm._v("Zhapthang [0041]")
+                            ]),
+                            _c("option", { attrs: { value: "4983" } }, [
+                              _vm._v("Sangsangma [5001]")
+                            ]),
+                            _c("option", { attrs: { value: "4984" } }, [
+                              _vm._v("Tashigatshel [5002]")
+                            ]),
+                            _c("option", { attrs: { value: "4985" } }, [
+                              _vm._v("Dekiling [5003]")
+                            ]),
+                            _c("option", { attrs: { value: "4356" } }, [
+                              _vm._v("Other [8501]")
+                            ]),
+                            _c("option", { attrs: { value: "4357" } }, [
+                              _vm._v("Unknown [9001]")
+                            ])
+                          ]
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "row form-group" }, [
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _vm._m(7),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.studentclass,
+                                expression: "studentclass"
+                              }
+                            ],
+                            staticClass: "select2bs4 font-weight-bolder",
+                            staticStyle: { width: "100%" },
+                            attrs: { id: "studentclass" },
+                            on: {
+                              change: function($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function(o) {
+                                    return o.selected
+                                  })
+                                  .map(function(o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.studentclass = $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              }
+                            }
+                          },
+                          [
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "",
+                                  label: "- First Select Class -"
+                                }
+                              },
+                              [_vm._v("- Please Select Class -")]
+                            ),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "1" } }, [
+                              _vm._v("PP")
+                            ]),
+                            _c("option", { attrs: { value: "2" } }, [
+                              _vm._v("I")
+                            ]),
+                            _c("option", { attrs: { value: "3" } }, [
+                              _vm._v("II")
+                            ]),
+                            _c("option", { attrs: { value: "4" } }, [
+                              _vm._v("III")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "5" } }, [
+                              _vm._v("IV")
+                            ]),
+                            _c("option", { attrs: { value: "6" } }, [
+                              _vm._v("V")
+                            ]),
+                            _c("option", { attrs: { value: "7" } }, [
+                              _vm._v("VI")
+                            ]),
+                            _c("option", { attrs: { value: "8" } }, [
+                              _vm._v("VII")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "9" } }, [
+                              _vm._v("VIII")
+                            ]),
+                            _c("option", { attrs: { value: "10" } }, [
+                              _vm._v("IX")
+                            ]),
+                            _c("option", { attrs: { value: "11" } }, [
+                              _vm._v("X")
+                            ]),
+                            _c("option", { attrs: { value: "12" } }, [
+                              _vm._v("XI")
+                            ]),
+                            _c("option", { attrs: { value: "13" } }, [
+                              _vm._v("XII")
+                            ])
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _vm._m(8),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.studentsection,
+                                expression: "studentsection"
+                              }
+                            ],
+                            staticClass: "select2bs4 font-weight-bolder",
+                            staticStyle: { width: "100%" },
+                            attrs: { id: "studentsection" },
+                            on: {
+                              change: function($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function(o) {
+                                    return o.selected
+                                  })
+                                  .map(function(o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.studentsection = $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              }
+                            }
+                          },
+                          [
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "",
+                                  label: "- First Select Section -"
+                                }
+                              },
+                              [_vm._v("- Please Select Section -")]
+                            ),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "1" } }, [
+                              _vm._v("A")
+                            ]),
+                            _c("option", { attrs: { value: "2" } }, [
+                              _vm._v("B")
+                            ]),
+                            _c("option", { attrs: { value: "3" } }, [
+                              _vm._v("C")
+                            ]),
+                            _c("option", { attrs: { value: "4" } }, [
+                              _vm._v("D")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "5" } }, [
+                              _vm._v("E")
+                            ]),
+                            _c("option", { attrs: { value: "6" } }, [
+                              _vm._v("F")
+                            ]),
+                            _c("option", { attrs: { value: "7" } }, [
+                              _vm._v("G")
+                            ]),
+                            _c("option", { attrs: { value: "8" } }, [
+                              _vm._v("H")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "9" } }, [
+                              _vm._v("I")
+                            ]),
+                            _c("option", { attrs: { value: "10" } }, [
+                              _vm._v("J")
+                            ]),
+                            _c("option", { attrs: { value: "11" } }, [
+                              _vm._v("K")
+                            ]),
+                            _c("option", { attrs: { value: "12" } }, [
+                              _vm._v("L")
+                            ]),
+                            _c("option", { attrs: { value: "13" } }, [
+                              _vm._v("M")
+                            ])
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _vm._m(9),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.studentstream,
+                                expression: "studentstream"
+                              }
+                            ],
+                            staticClass: "select2bs4 font-weight-bolder",
+                            staticStyle: { width: "100%" },
+                            attrs: { id: "studentstream" },
+                            on: {
+                              change: function($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function(o) {
+                                    return o.selected
+                                  })
+                                  .map(function(o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.studentstream = $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              }
+                            }
+                          },
+                          [
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "",
+                                  label: "- First Select Stream -"
+                                }
+                              },
+                              [_vm._v("- Please Select Stream -")]
+                            ),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "1" } }, [
+                              _vm._v("General")
+                            ]),
+                            _c("option", { attrs: { value: "2" } }, [
+                              _vm._v("Science")
+                            ]),
+                            _c("option", { attrs: { value: "3" } }, [
+                              _vm._v("Arts")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "4" } }, [
+                              _vm._v("Commerce")
+                            ])
+                          ]
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "row form-group" }, [
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _vm._m(10),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.thrmno,
+                              expression: "thrmno"
+                            }
+                          ],
+                          staticClass: "form-control font-weight-bolder",
+                          staticStyle: { width: "100%" },
+                          attrs: { type: "text", id: "thrmno" },
+                          domProps: { value: _vm.thrmno },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.thrmno = $event.target.value
+                            }
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("hr"),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "row form-group fa-pull-right" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                      },
+                      [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-flat btn-success",
+                            on: {
+                              click: function($event) {
+                                return _vm.previoustab(
+                                  "basic-tabs",
+                                  "location-tab"
+                                )
+                              }
+                            }
+                          },
+                          [
+                            _c("i", { staticClass: "fa fa-arrow-left" }),
+                            _vm._v(" Previous ")
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-flat btn-primary",
+                            on: {
+                              click: function($event) {
+                                return _vm.shownexttab(
+                                  "location-tab",
+                                  "schooldetails-tab"
+                                )
+                              }
+                            }
+                          },
+                          [
+                            _vm._v(" Next "),
+                            _c("i", { staticClass: "fa fa-arrow-right" })
+                          ]
+                        )
+                      ]
+                    )
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "tab-pane fade",
+                  attrs: {
+                    id: "schooldetails-tab",
+                    role: "tabpanel",
+                    "aria-labelledby": "custom-tabs-four-messages-tab"
+                  }
+                },
+                [
+                  _c("div", { staticClass: "row form-group" }, [
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _vm._m(11),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.fathername,
+                              expression: "fathername"
+                            }
+                          ],
+                          staticClass: "form-control font-weight-bolder",
+                          staticStyle: { width: "100%" },
+                          attrs: { type: "text", id: "fathername" },
+                          domProps: { value: _vm.fathername },
+                          on: {
+                            change: function($event) {
+                              return _vm.removeerror(
+                                "fathername",
+                                "studentname_err"
+                              )
+                            },
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.fathername = $event.target.value
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("span", {
+                          staticClass: "text-danger",
+                          attrs: { id: "studentname_err" }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _vm._m(12),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mothername,
+                              expression: "mothername"
+                            }
+                          ],
+                          staticClass: "form-control font-weight-bolder",
+                          staticStyle: { width: "100%" },
+                          attrs: { type: "text", id: "mothername" },
+                          domProps: { value: _vm.mothername },
+                          on: {
+                            change: function($event) {
+                              return _vm.removeerror(
+                                "mothername",
+                                "studentname_err"
+                              )
+                            },
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.mothername = $event.target.value
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("span", {
+                          staticClass: "text-danger",
+                          attrs: { id: "studentname_err" }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _vm._m(13),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.guardainname,
+                              expression: "guardainname"
+                            }
+                          ],
+                          staticClass: "form-control font-weight-bolder",
+                          staticStyle: { width: "100%" },
+                          attrs: { type: "text", id: "guardainname" },
+                          domProps: { value: _vm.guardainname },
+                          on: {
+                            change: function($event) {
+                              return _vm.removeerror(
+                                "guardainname",
+                                "studentname_err"
+                              )
+                            },
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.guardainname = $event.target.value
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("span", {
+                          staticClass: "text-danger",
+                          attrs: { id: "studentname_err" }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "row form-group" }, [
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _vm._m(14),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.fathercontact,
+                              expression: "fathercontact"
+                            }
+                          ],
+                          staticClass: "form-control font-weight-bolder",
+                          staticStyle: { width: "100%" },
+                          attrs: { type: "number", id: "fathercontact" },
+                          domProps: { value: _vm.fathercontact },
+                          on: {
+                            change: function($event) {
+                              return _vm.removeerror(
+                                "fathercontact",
+                                "studentname_err"
+                              )
+                            },
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.fathercontact = $event.target.value
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("span", {
+                          staticClass: "text-danger",
+                          attrs: { id: "studentname_err" }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _vm._m(15),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.mothercontact,
+                              expression: "mothercontact"
+                            }
+                          ],
+                          staticClass: "form-control font-weight-bolder",
+                          staticStyle: { width: "100%" },
+                          attrs: { type: "text", id: "mothercontact" },
+                          domProps: { value: _vm.mothercontact },
+                          on: {
+                            change: function($event) {
+                              return _vm.removeerror(
+                                "mothercontact",
+                                "studentname_err"
+                              )
+                            },
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.mothercontact = $event.target.value
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("span", {
+                          staticClass: "text-danger",
+                          attrs: { id: "studentname_err" }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _vm._m(16),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.guardaincontact,
+                              expression: "guardaincontact"
+                            }
+                          ],
+                          staticClass: "form-control font-weight-bolder",
+                          staticStyle: { width: "100%" },
+                          attrs: { type: "text", id: "guardaincontact" },
+                          domProps: { value: _vm.guardaincontact },
+                          on: {
+                            change: function($event) {
+                              return _vm.removeerror(
+                                "guardaincontact",
+                                "studentname_err"
+                              )
+                            },
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.guardaincontact = $event.target.value
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("span", {
+                          staticClass: "text-danger",
+                          attrs: { id: "studentname_err" }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "row form-group" }, [
+                    _c(
+                      "p",
+                      [_c("B", [_vm._v("Present Address of the Student")])],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                      },
+                      [
+                        _c("label", { staticClass: "font-weight-normal" }, [
+                          _vm._v("Specify location of your address")
+                        ]),
+                        _vm._v(" "),
+                        _c("textarea", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.playgrounddescription,
+                              expression: "playgrounddescription"
+                            }
+                          ],
+                          staticClass: "form-control font-weight-bolder",
+                          attrs: {
+                            id: "playgrounddescription",
+                            placeholder: "lama building, langjophkha, Thimphu"
+                          },
+                          domProps: { value: _vm.playgrounddescription },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.playgrounddescription = $event.target.value
+                            }
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("hr"),
+                  _vm._v(" "),
+                  _vm._m(17),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "row form-group" }, [
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _vm._m(18),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.dzongkhag,
+                                expression: "dzongkhag"
+                              }
+                            ],
+                            staticClass: "select2bs4 font-weight-bolder",
+                            staticStyle: { width: "100%" },
+                            attrs: { id: "dzongkhag" },
+                            on: {
+                              change: function($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function(o) {
+                                    return o.selected
+                                  })
+                                  .map(function(o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.dzongkhag = $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              }
+                            }
+                          },
+                          [
+                            _c(
+                              "option",
+                              {
+                                attrs: { value: "", label: "- Please Select -" }
+                              },
+                              [_vm._v("- Please Select -")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "1", label: "Bumthang [01]" } },
+                              [_vm._v("Bumthang ")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "2", label: "Chhukha [02]" } },
+                              [_vm._v("Chhukha")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "3", label: "Dagana [03]" } },
+                              [_vm._v("Dagana")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "4", label: "Gasa [04]" } },
+                              [_vm._v("Gasa")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "5", label: "Haa [05]" } },
+                              [_vm._v("Haa")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "6", label: "Lhuentse [06]" } },
+                              [_vm._v("Lhuentse")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "7", label: "Mongar [07]" } },
+                              [_vm._v("Mongar")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "8", label: "Paro [08]" } },
+                              [_vm._v("Paro")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "9",
+                                  label: "Pema Gatshel [09]"
+                                }
+                              },
+                              [_vm._v("Pema Gatshel")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "10", label: "Punakha [10]" } },
+                              [_vm._v("Punakha")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "11",
+                                  label: "Samdrup Jongkhar [11]"
+                                }
+                              },
+                              [_vm._v("Samdrup Jongkhar")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "12", label: "Samtse [12]" } },
+                              [_vm._v("Samtse")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "13", label: "Sarpang [13]" } },
+                              [_vm._v("Sarpang")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "14", label: "Thimphu [14]" } },
+                              [_vm._v("Thimphu")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: { value: "15", label: "Trashigang [15]" }
+                              },
+                              [_vm._v("Trashigang ")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "16",
+                                  label: "Trashiyangtse [16]"
+                                }
+                              },
+                              [_vm._v("Trashiyangtse ")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "17", label: "Trongsa [17]" } },
+                              [_vm._v("Trongsa ")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "18", label: "Tsirang [18]" } },
+                              [_vm._v("Tsirang ")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "19",
+                                  label: "Wangdue Phodrang [19]"
+                                }
+                              },
+                              [_vm._v("Wangdue Phodrang ")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: { value: "20", label: "Zhemgang [20]" }
+                              },
+                              [_vm._v("Zhemgang ")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "25",
+                                  label: "SJongkhar Thromde [55]"
+                                }
+                              },
+                              [_vm._v("SJongkhar Thromde ")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "24",
+                                  label: "Phuntsholing Thromde [66]"
+                                }
+                              },
+                              [_vm._v("Phuntsholing Thromde")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "23",
+                                  label: "Gelephu Thromde [77]"
+                                }
+                              },
+                              [_vm._v("Gelephu Thromde ")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "22",
+                                  label: "Thimphu Thromde [88]"
+                                }
+                              },
+                              [_vm._v("Thimphu Thromde ")]
+                            )
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _vm._m(19),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.gewog,
+                                expression: "gewog"
+                              }
+                            ],
+                            staticClass: "select2bs4 font-weight-bolder",
+                            staticStyle: { width: "100%" },
+                            attrs: { id: "gewog" },
+                            on: {
+                              change: function($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function(o) {
+                                    return o.selected
+                                  })
+                                  .map(function(o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.gewog = $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              }
+                            }
+                          },
+                          [
+                            _c(
+                              "option",
+                              {
+                                attrs: {
+                                  value: "",
+                                  label: "- First Select Dzongkhag -"
+                                }
+                              },
+                              [_vm._v("- Please Select Dzongkhag -")]
+                            ),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "1" } }, [
+                              _vm._v("Chokhor")
+                            ]),
+                            _c("option", { attrs: { value: "2" } }, [
+                              _vm._v("Chumey  ")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "3" } }, [
+                              _vm._v("Tang ")
+                            ]),
+                            _c("option", { attrs: { value: "4" } }, [
+                              _vm._v("Tang")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "208" } }, [
+                              _vm._v("Ura ")
+                            ])
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
+                      [
+                        _vm._m(20),
                         _vm._v(" "),
                         _c(
                           "select",
@@ -62489,7 +63517,7 @@ var render = function() {
                               _vm._v("Chakhar [0001]")
                             ]),
                             _c("option", { attrs: { value: "2" } }, [
-                              _vm._v("Chamkhar [0002]")
+                              _vm._v("Jakar HSS")
                             ]),
                             _c("option", { attrs: { value: "3" } }, [
                               _vm._v("Chamkhar Throm [0003]")
@@ -62635,679 +63663,6 @@ var render = function() {
                       { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
                       [
                         _c("label", { staticClass: "font-weight-normal" }, [
-                          _vm._v(" Altitude: ")
-                        ]),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.altitute,
-                              expression: "altitute"
-                            }
-                          ],
-                          staticClass: "form-control font-weight-bolder",
-                          staticStyle: { width: "100%" },
-                          attrs: { type: "number", id: "altitute" },
-                          domProps: { value: _vm.altitute },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.altitute = $event.target.value
-                            }
-                          }
-                        })
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                      [
-                        _c("label", { staticClass: "font-weight-normal" }, [
-                          _vm._v("Latitude")
-                        ]),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.latitute,
-                              expression: "latitute"
-                            }
-                          ],
-                          staticClass: "form-control font-weight-bolder",
-                          staticStyle: { width: "100%" },
-                          attrs: { type: "number", id: "latitute" },
-                          domProps: { value: _vm.latitute },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.latitute = $event.target.value
-                            }
-                          }
-                        })
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                      [
-                        _c("label", { staticClass: "font-weight-normal" }, [
-                          _vm._v("Longitude")
-                        ]),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.longitute,
-                              expression: "longitute"
-                            }
-                          ],
-                          staticClass: "form-control font-weight-bolder",
-                          staticStyle: { width: "100%" },
-                          attrs: { type: "number", id: "longitute" },
-                          domProps: { value: _vm.longitute },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.longitute = $event.target.value
-                            }
-                          }
-                        })
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "row form-group" }, [
-                    _c(
-                      "div",
-                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                      [
-                        _vm._m(7),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.thrmno,
-                              expression: "thrmno"
-                            }
-                          ],
-                          staticClass: "form-control font-weight-bolder",
-                          staticStyle: { width: "100%" },
-                          attrs: { type: "text", id: "thrmno" },
-                          domProps: { value: _vm.thrmno },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.thrmno = $event.target.value
-                            }
-                          }
-                        })
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("hr"),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "row form-group fa-pull-right" }, [
-                    _c(
-                      "div",
-                      {
-                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
-                      },
-                      [
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-flat btn-success",
-                            on: {
-                              click: function($event) {
-                                return _vm.previoustab(
-                                  "basic-tabs",
-                                  "location-tab"
-                                )
-                              }
-                            }
-                          },
-                          [
-                            _c("i", { staticClass: "fa fa-arrow-left" }),
-                            _vm._v(" Previous ")
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-flat btn-primary",
-                            on: {
-                              click: function($event) {
-                                return _vm.shownexttab(
-                                  "location-tab",
-                                  "schooldetails-tab"
-                                )
-                              }
-                            }
-                          },
-                          [
-                            _vm._v(" Next "),
-                            _c("i", { staticClass: "fa fa-arrow-right" })
-                          ]
-                        )
-                      ]
-                    )
-                  ])
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "tab-pane fade",
-                  attrs: {
-                    id: "schooldetails-tab",
-                    role: "tabpanel",
-                    "aria-labelledby": "custom-tabs-four-messages-tab"
-                  }
-                },
-                [
-                  _c("div", { staticClass: "row form-group" }, [
-                    _c(
-                      "div",
-                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                      [
-                        _vm._m(8),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.climatetype,
-                                expression: "climatetype"
-                              }
-                            ],
-                            staticClass: "select2bs4 font-weight-bolder",
-                            staticStyle: { width: "100%" },
-                            attrs: { id: "climatetype" },
-                            on: {
-                              change: function($event) {
-                                var $$selectedVal = Array.prototype.filter
-                                  .call($event.target.options, function(o) {
-                                    return o.selected
-                                  })
-                                  .map(function(o) {
-                                    var val = "_value" in o ? o._value : o.value
-                                    return val
-                                  })
-                                _vm.climatetype = $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              }
-                            }
-                          },
-                          [
-                            _c(
-                              "option",
-                              {
-                                attrs: { value: "", label: "- Please Select -" }
-                              },
-                              [_vm._v("- Please Select -")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              {
-                                attrs: {
-                                  value: "1",
-                                  label: "Hot Sub-tropical [01]"
-                                }
-                              },
-                              [_vm._v("Hot Sub-tropical [01]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              {
-                                attrs: {
-                                  value: "2",
-                                  label: "Warm Sub-tropical [02]"
-                                }
-                              },
-                              [_vm._v("Warm Sub-tropical [02]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              {
-                                attrs: {
-                                  value: "3",
-                                  label: "Warm Temprate [03]"
-                                }
-                              },
-                              [_vm._v("Warm Temprate [03]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              {
-                                attrs: {
-                                  value: "4",
-                                  label: "Cool Temprate [04]"
-                                }
-                              },
-                              [_vm._v("Cool Temprate [04]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              { attrs: { value: "5", label: "Alpine [05]" } },
-                              [_vm._v("Alpine [05]")]
-                            )
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                      [
-                        _vm._m(9),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.locationgewog,
-                                expression: "locationgewog"
-                              }
-                            ],
-                            staticClass: "select2bs4 font-weight-bolder",
-                            staticStyle: { width: "100%" },
-                            attrs: { id: "locationgewog" },
-                            on: {
-                              change: function($event) {
-                                var $$selectedVal = Array.prototype.filter
-                                  .call($event.target.options, function(o) {
-                                    return o.selected
-                                  })
-                                  .map(function(o) {
-                                    var val = "_value" in o ? o._value : o.value
-                                    return val
-                                  })
-                                _vm.locationgewog = $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              }
-                            }
-                          },
-                          [
-                            _c(
-                              "option",
-                              {
-                                attrs: { value: "", label: "- Please Select -" }
-                              },
-                              [_vm._v("- Please Select -")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              {
-                                attrs: {
-                                  value: "3",
-                                  label: "Farm/Power tiller Road [03]"
-                                }
-                              },
-                              [_vm._v("Farm/Power tiller Road [03]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              {
-                                attrs: { value: "2", label: "FeederRoad [02]" }
-                              },
-                              [_vm._v("FeederRoad [02]")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              {
-                                attrs: { value: "1", label: "TarredRoad [01]" }
-                              },
-                              [_vm._v("TarredRoad [01]")]
-                            )
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _vm._m(10)
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass: "row form-group",
-                      staticStyle: { display: "none" },
-                      attrs: { id: "roadnotaccesible" }
-                    },
-                    [
-                      _c(
-                        "div",
-                        { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                        [
-                          _c("label", { staticClass: "font-weight-normal" }, [
-                            _vm._v(
-                              " How far is the school from road in days (e.g. 1.3 days): "
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.distancefromroaddays,
-                                expression: "distancefromroaddays"
-                              }
-                            ],
-                            staticClass: "form-control font-weight-bolder",
-                            staticStyle: { width: "100%" },
-                            attrs: {
-                              type: "number",
-                              id: "distancefromroaddays"
-                            },
-                            domProps: { value: _vm.distancefromroaddays },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
-                                }
-                                _vm.distancefromroaddays = $event.target.value
-                              }
-                            }
-                          })
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                        [
-                          _c("label", { staticClass: "font-weight-normal" }, [
-                            _vm._v(
-                              "How far is the school from road in kilometers (e.g. 12.3 Km)"
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.distancefromroadkm,
-                                expression: "distancefromroadkm"
-                              }
-                            ],
-                            staticClass: "form-control font-weight-bolder",
-                            staticStyle: { width: "100%" },
-                            attrs: { type: "number", id: "distancefromroadkm" },
-                            domProps: { value: _vm.distancefromroadkm },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
-                                }
-                                _vm.distancefromroadkm = $event.target.value
-                              }
-                            }
-                          })
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                        [
-                          _c("label", { staticClass: "font-weight-normal" }, [
-                            _vm._v(
-                              "How far is the school from road in hours? (e.g. 4.8 hours)"
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.distancefromroadhrs,
-                                expression: "distancefromroadhrs"
-                              }
-                            ],
-                            staticClass: "form-control font-weight-bolder",
-                            staticStyle: { width: "100%" },
-                            attrs: {
-                              type: "number",
-                              id: "distancefromroadhrs"
-                            },
-                            domProps: { value: _vm.distancefromroadhrs },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
-                                }
-                                _vm.distancefromroadhrs = $event.target.value
-                              }
-                            }
-                          })
-                        ]
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "row form-group" }, [
-                    _vm._m(11),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                      [
-                        _c("label", { staticClass: "font-weight-normal" }, [
-                          _vm._v("Compound Area (in acres)")
-                        ]),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.compoundarea,
-                              expression: "compoundarea"
-                            }
-                          ],
-                          staticClass: "form-control font-weight-bolder",
-                          staticStyle: { width: "100%" },
-                          attrs: { type: "text", id: "compoundarea" },
-                          domProps: { value: _vm.compoundarea },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.compoundarea = $event.target.value
-                            }
-                          }
-                        })
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                      [
-                        _c("label", { staticClass: "font-weight-normal" }, [
-                          _vm._v("Play ground Area (in sq. M)")
-                        ]),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.playgroundmeasure,
-                              expression: "playgroundmeasure"
-                            }
-                          ],
-                          staticClass: "form-control font-weight-bolder",
-                          staticStyle: { width: "100%" },
-                          attrs: { type: "text", id: "playgroundmeasure" },
-                          domProps: { value: _vm.playgroundmeasure },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.playgroundmeasure = $event.target.value
-                            }
-                          }
-                        })
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "row form-group" }, [
-                    _c(
-                      "div",
-                      {
-                        staticClass: "col-lg-12 col-md-12 col-sm-12 col-xs-12"
-                      },
-                      [
-                        _c("label", { staticClass: "font-weight-normal" }, [
-                          _vm._v("Play ground Description")
-                        ]),
-                        _vm._v(" "),
-                        _c("textarea", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.playgrounddescription,
-                              expression: "playgrounddescription"
-                            }
-                          ],
-                          staticClass: "form-control font-weight-bolder",
-                          attrs: { id: "playgrounddescription" },
-                          domProps: { value: _vm.playgrounddescription },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.playgrounddescription = $event.target.value
-                            }
-                          }
-                        })
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "row form-group" }, [
-                    _c(
-                      "div",
-                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                      [
-                        _c("label", { staticClass: "font-weight-normal" }, [
-                          _vm._v("Agriculture Area (in acres)")
-                        ]),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.agrriculturearea,
-                              expression: "agrriculturearea"
-                            }
-                          ],
-                          staticClass: "form-control font-weight-bolder",
-                          staticStyle: { width: "100%" },
-                          attrs: { type: "number", id: "agrriculturearea" },
-                          domProps: { value: _vm.agrriculturearea },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.agrriculturearea = $event.target.value
-                            }
-                          }
-                        })
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                      [
-                        _c("label", { staticClass: "font-weight-normal" }, [
-                          _vm._v("Used Agriculture Area (in acres)")
-                        ]),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.usedagriculture,
-                              expression: "usedagriculture"
-                            }
-                          ],
-                          staticClass: "form-control font-weight-bolder",
-                          staticStyle: { width: "100%" },
-                          attrs: { type: "number", id: "usedagriculture" },
-                          domProps: { value: _vm.usedagriculture },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.usedagriculture = $event.target.value
-                            }
-                          }
-                        })
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _vm._m(12)
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "row form-group" }, [
-                    _c(
-                      "div",
-                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                      [
-                        _c("label", { staticClass: "font-weight-normal" }, [
                           _vm._v("No of tap stand for students")
                         ]),
                         _vm._v(" "),
@@ -63368,7 +63723,7 @@ var render = function() {
                       ]
                     ),
                     _vm._v(" "),
-                    _vm._m(13)
+                    _vm._m(21)
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "row form-group" }, [
@@ -63498,10 +63853,10 @@ var render = function() {
                       ]
                     ),
                     _vm._v(" "),
-                    _vm._m(14)
+                    _vm._m(22)
                   ]),
                   _vm._v(" "),
-                  _vm._m(15),
+                  _vm._m(23),
                   _vm._v(" "),
                   _c("hr"),
                   _vm._v(" "),
@@ -63566,9 +63921,9 @@ var render = function() {
                   }
                 },
                 [
-                  _vm._m(16),
+                  _vm._m(24),
                   _vm._v(" "),
-                  _vm._m(17),
+                  _vm._m(25),
                   _vm._v(" "),
                   _c("hr"),
                   _vm._v(" "),
@@ -63664,93 +64019,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row form-group" }, [
-      _c("div", { staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12" }, [
-        _c("label", { staticClass: "font-weight-normal" }, [
-          _vm._v("Organization Type "),
-          _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
-        ]),
-        _vm._v(" "),
-        _c(
-          "select",
-          {
-            staticClass: "select2bs4",
-            staticStyle: { width: "100%" },
-            attrs: { id: "organizationtype" }
-          },
-          [
-            _c("option", { attrs: { value: "" } }, [_vm._v("Select")]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "School" } }, [_vm._v("School")]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "Dzongkhag Administration" } }, [
-              _vm._v("Dzongkhag Administration")
-            ]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "Ministry" } }, [_vm._v("Ministry")])
-          ]
-        ),
-        _vm._v(" "),
-        _c("span", {
-          staticClass: "text-danger",
-          attrs: { id: "organizatioid_err" }
-        })
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "col-lg-6 col-md-6 col-sm-6 col-xs-12",
-          attrs: { id: "schoolcat" }
-        },
-        [
-          _c("label", { staticClass: "font-weight-normal" }, [
-            _vm._v("School Category")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "clearfix" }, [
-            _c("div", { staticClass: "icheck-primary d-inline" }, [
-              _c("input", {
-                attrs: {
-                  type: "radio",
-                  id: "radioPrimary1",
-                  name: "schoolcategory"
-                }
-              }),
-              _vm._v(" "),
-              _c("label", { attrs: { for: "radioPrimary1" } }, [
-                _vm._v(
-                  "\n                                                Public School\n                                            "
-                )
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "icheck-primary d-inline pl-4" }, [
-              _c("input", {
-                attrs: {
-                  type: "radio",
-                  id: "radioPrimary2",
-                  name: "schoolcategory"
-                }
-              }),
-              _vm._v(" "),
-              _c("label", { attrs: { for: "radioPrimary2" } }, [
-                _vm._v(
-                  "\n                                                Private School\n                                            "
-                )
-              ])
-            ])
-          ])
-        ]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("label", { staticClass: "font-weight-normal" }, [
-      _vm._v("School Name (please do not enter level) "),
+      _vm._v("Citizenship ID No(11 letters): "),
       _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
     ])
   },
@@ -63759,7 +64029,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("label", { staticClass: "font-weight-normal" }, [
-      _vm._v("Agency Code (7 letters, like 028.001, defined by RCSC) "),
+      _vm._v("Student Code: "),
       _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
     ])
   },
@@ -63768,7 +64038,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("label", { staticClass: "font-weight-normal" }, [
-      _vm._v("Dzongkhag "),
+      _vm._v("Student Name: "),
       _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
     ])
   },
@@ -63777,7 +64047,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("label", { staticClass: "font-weight-normal" }, [
-      _vm._v("Gewog "),
+      _vm._v("Dzongkhag of the School "),
       _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
     ])
   },
@@ -63786,7 +64056,43 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("label", { staticClass: "font-weight-normal" }, [
-      _vm._v("Village "),
+      _vm._v("Gewog: "),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "font-weight-normal" }, [
+      _vm._v("School Name: "),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "font-weight-normal" }, [
+      _vm._v("Student Class: "),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "font-weight-normal" }, [
+      _vm._v("Student Section: "),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "font-weight-normal" }, [
+      _vm._v("Student Stream: "),
       _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
     ])
   },
@@ -63804,7 +64110,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("label", { staticClass: "font-weight-normal" }, [
-      _vm._v("Climate Type "),
+      _vm._v("Father's Name: "),
       _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
     ])
   },
@@ -63813,7 +64119,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("label", { staticClass: "font-weight-normal" }, [
-      _vm._v("Road Type "),
+      _vm._v("Mother's Name: "),
       _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
     ])
   },
@@ -63821,122 +64127,71 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" }, [
-      _c("label", { staticClass: "font-weight-normal" }, [
-        _vm._v("Is the school accessible by motor road? "),
-        _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "clearfix" }, [
-        _c("div", { staticClass: "icheck-primary d-inline" }, [
-          _c("input", {
-            attrs: {
-              type: "radio",
-              id: "moterroadaccessible1",
-              name: "moterroadaccessible"
-            }
-          }),
-          _vm._v(" "),
-          _c("label", { attrs: { for: "moterroadaccessible1" } }, [
-            _vm._v(
-              "\n                                               Yes\n                                            "
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "icheck-primary d-inline pl-4" }, [
-          _c("input", {
-            attrs: {
-              type: "radio",
-              id: "moterroadaccessible2",
-              name: "moterroadaccessible"
-            }
-          }),
-          _vm._v(" "),
-          _c("label", { attrs: { for: "moterroadaccessible2" } }, [
-            _vm._v(
-              "\n                                                No\n                                            "
-            )
-          ])
-        ])
-      ])
+    return _c("label", { staticClass: "font-weight-normal" }, [
+      _vm._v("Guardain's Name: "),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" }, [
-      _c("label", { staticClass: "font-weight-normal" }, [
-        _vm._v(" Is the school a resource center? ")
-      ]),
-      _c("br"),
-      _vm._v(" "),
-      _c("div", { staticClass: "icheck-primary d-inline" }, [
-        _c("input", {
-          attrs: {
-            type: "radio",
-            id: "resourceschool1",
-            name: "resourceschool"
-          }
-        }),
-        _vm._v(" "),
-        _c("label", { attrs: { for: "resourceschool1" } }, [
-          _vm._v(
-            "\n                                            Yes\n                                        "
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "icheck-primary d-inline pl-4" }, [
-        _c("input", {
-          attrs: {
-            type: "radio",
-            id: "resourceschool2",
-            name: "resourceschool"
-          }
-        }),
-        _vm._v(" "),
-        _c("label", { attrs: { for: "resourceschool2" } }, [
-          _vm._v(
-            "\n                                            No\n                                        "
-          )
-        ])
-      ])
+    return _c("label", { staticClass: "font-weight-normal" }, [
+      _vm._v("Father's Contact No: "),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" }, [
-      _c("label", { staticClass: "font-weight-normal" }, [
-        _vm._v(" Does school have sufficient water supply? ")
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "icheck-primary d-inline" }, [
-        _c("input", {
-          attrs: { type: "radio", id: "watersupply1", name: "watersupply" }
-        }),
-        _vm._v(" "),
-        _c("label", { attrs: { for: "watersupply1" } }, [
-          _vm._v(
-            "\n                                            Yes\n                                        "
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "icheck-primary d-inline pl-4" }, [
-        _c("input", {
-          attrs: { type: "radio", id: "watersupply12", name: "watersupply" }
-        }),
-        _vm._v(" "),
-        _c("label", { attrs: { for: "watersupply12" } }, [
-          _vm._v(
-            "\n                                            No\n                                        "
-          )
-        ])
-      ])
+    return _c("label", { staticClass: "font-weight-normal" }, [
+      _vm._v("Mother's Contact No: "),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "font-weight-normal" }, [
+      _vm._v("Guardain's Contact No: "),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row form-group" }, [
+      _c("p", [_c("b", [_vm._v("Permanent Address of the Student ")])])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "font-weight-normal" }, [
+      _vm._v("Dzongkhag "),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "font-weight-normal" }, [
+      _vm._v("Gewog: "),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "font-weight-normal" }, [
+      _vm._v("Village: "),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
     ])
   },
   function() {
