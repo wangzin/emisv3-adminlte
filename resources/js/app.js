@@ -10,10 +10,12 @@ import { InertiaForm } from 'laravel-jetstream';
 import PortalVue from 'portal-vue';
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)   
+import VueSession from 'vue-session'
+Vue.use(VueSession)
  
 Vue.mixin({ methods: { route } });
 Vue.use(InertiaApp);
-Vue.use(InertiaForm);
+Vue.use(InertiaForm); 
 Vue.use(PortalVue);
 let routes = [
     { path: '/', name: 'Dashboard', component: require('./Pages/dashboard_data.vue').default },

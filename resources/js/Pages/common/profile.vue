@@ -16,7 +16,7 @@
                             alt="User profile picture">
                         </div>
                         <h3 class="profile-username text-center">Tshewang Tenzin</h3>
-                        <p class="text-muted text-center">Software Developer</p>
+                        <p class="text-muted text-center">{{user}}</p>
                         <ul class="list-group list-group-unbordered mb-3">
                             <li class="list-group-item">
                                 <b>Working Agency Dzongkhag</b> <a class="float-right">Thimphu</a>
@@ -64,3 +64,22 @@
         
     </div>
 </template>
+<script>
+    export default {
+		data() {
+			return {
+				user: '',
+			}
+		},
+        
+        mounted() { 
+			axios.get('verify')
+			.then(response => {
+                this.user = response.data.user;
+			})
+			.catch(error => {
+			});
+			
+        },
+    }
+</script>
