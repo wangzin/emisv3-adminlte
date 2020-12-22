@@ -15,14 +15,14 @@
                             <li class="nav-item location-tab">
                                 <a class="nav-link disabled" href="#" id="location-tab-head" data-toggle="pill" @click="shownexttab('basic-tabs','location-tab')" role="tab" aria-controls="custom-tabs-four-profile" aria-selected="false">
                                     <span class="step_no img-bordered pr-2 pl-2 pb-1 pt-1 bg-gradient-secondary text-white">2</span>
-                                    <label>Location Details</label>
+                                    <label>School Detail</label>
                                     <span class="fa fa-angle-double-right"></span> 
                                 </a>
                             </li>
                             <li class="nav-item schooldetails-tab">
                                 <a class="nav-link disabled" id="schooldetails-tab-head" data-toggle="pill" @click="shownexttab('location-tab','schooldetails-tab')" role="tab" aria-controls="custom-tabs-four-messages" aria-selected="false">
                                     <span class="step_no img-bordered pr-2 pl-2 pb-1 pt-1 bg-gradient-secondary text-white">3</span>
-                                    <label>School/organization Details</label>
+                                    <label>Student Guardian Details</label>
                                     <span class="fa fa-angle-double-right"></span> 
                                 </a>
                             </li>
@@ -39,81 +39,49 @@
                             <div class="tab-pane fade active show" id="basic-tabs" role="tabpanel" aria-labelledby="basicdetails">
                                 <div class="row form-group">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <label class="font-weight-normal">Organization Type <span class="text-danger">*</span></label>
-                                        <select class="select2bs4" id="organizationtype" style="width: 100%;">
-                                            <option value="">Select</option> 
-                                            <option value="School">School</option>
-                                            <option value="Dzongkhag Administration">Dzongkhag Administration</option>
-                                            <option value="Ministry">Ministry</option>
-                                        </select>
-                                        <span class="text-danger" id="organizatioid_err"></span>
+                                        <label class="font-weight-normal">Citizenship ID No(11 letters): <span class="text-danger">*</span></label>
+                                        <input type="number" @change="removeerror('cidno','cidno_err')" class="form-control font-weight-bolder" id="agencycode" v-model="agencycode" style="width: 100%;"/>
+                                        <span class="text-danger" id="cidno_err"></span>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="schoolcat"> 
-                                        <label class="font-weight-normal">School Category</label>
-                                        <div class="clearfix">
-                                            <div class="icheck-primary d-inline">
-                                                <input type="radio" id="radioPrimary1" name="schoolcategory">
-                                                <label for="radioPrimary1">
-                                                    Public School
-                                                </label>
-                                            </div>
-                                            <div class="icheck-primary d-inline pl-4">
-                                                <input type="radio" id="radioPrimary2" name="schoolcategory">
-                                                <label for="radioPrimary2">
-                                                    Private School
-                                                </label>
-                                            </div>
-                                        </div>
+                                        <label class="font-weight-normal">Student Code: <span class="text-danger">*</span></label>
+                                        <input type="text" @change="removeerror('studentcode','studentcode_err')" class="form-control font-weight-bolder" id="schoolname" v-model="studentcode" style="width: 100%;"/>
+                                        <span id="studentcode_err" class="text-danger"></span>
                                     </div>
                                 </div>
                                 <div id="schoolsections">
                                     <div class="row form-group">
                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                            <label class="font-weight-normal">School Name (please do not enter level) <span class="text-danger">*</span></label>
-                                            <input type="text" @change="removeerror('schoolname','schoolname_err')" class="form-control font-weight-bolder" id="schoolname" v-model="schoolname" style="width: 100%;"/>
-                                            <span id="schoolname_err" class="text-danger"></span>
+                                            <label class="font-weight-normal">Student Name: <span class="text-danger">*</span></label>
+                                            <input type="text" @change="removeerror('studentname','studentname_err')" class="form-control font-weight-bolder" id="schoolname" v-model="schoolname" style="width: 100%;"/>
+                                            <span id="studentname_err" class="text-danger"></span>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                            <label class="font-weight-normal">School Level</label>
-                                            <select class="select2bs4" id="schoollevel" v-model="schoollevel" style="width: 100%;">
+                                            <label class="font-weight-normal">Gender</label>
+                                            <select class="select2bs4" id="gender" v-model="schoollevel" style="width: 100%;">
                                                 <option value="" label="- Please Select -">- Please Select -</option>
-                                                <option value="1" label="Community Primary School [01]">Community Primary School [01]</option>
-                                                <option value="2" label="Primary School [02]">Primary School [02]</option>
-                                                <option value="3" label="Lower Secondary School [03]">Lower Secondary School [03]</option>
-                                                <option value="4" label="Middle Secondary School [04]">Middle Secondary School [04]</option>
-                                                <option value="5" label="Higher Secondary School [05]">Higher Secondary School [05]</option>
-                                                <option value="7" label="Special Institute [06]">Special Institute [06]</option>
-                                                <option value="8" label="Extended Classroom [07]">Extended Classroom [07]</option>
-                                                <option value="9" label="Early Childhood Care &amp; Development [09]">Early Childhood Care &amp; Development [09]</option>
+                                                <option value="1" label="male">Male</option>
+                                                <option value="2" label="female">Female</option>
+                                                <option value="3" label="unknown">Unknown</option>
+                                               
                                             </select>
                                         </div>
                                     </div>
                                     <div class="row form-group">
                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                            <label class="font-weight-normal">School Location</label>
-                                            <select class="select2bs4" id="schoolLocation" v-model="schoolLocation" style="width: 100%;">
-                                                <option value="" label="- Please Select -">- Please Select -</option>
-                                                <option value="1" label="Urban Grade 1 [01]">Urban Grade 1 [01]</option>
-                                                <option value="2" label="Urban Grade 2 [02]">Urban Grade 2 [02]</option>
-                                                <option value="3" label="Semi-Urban [03]">Semi-Urban [03]</option>
-                                                <option value="4" label="Semi-Remote [04]">Semi-Remote [04]</option>
-                                                <option value="5" label="Remote [05]">Remote [05]</option>
-                                                <option value="6" label="Very-Remote [06]">Very-Remote [06]</option>
-                                                <option value="7" label="Difficult [07]">Difficult [07]</option>
-                                                <option value="9" label="Rural [08]">Rural [08]</option>
-                                                <option value="10" label="Semi-Rural [09]">Semi-Rural [09]</option>
-                                                <option value="11" label="Urban [10]">Urban [10]</option>
-                                                <option value="8" label="Unknown [99]">Unknown [99]</option>
-                                            </select>
+                                           <label class="font-weight-normal">Date of Birth</label>
+                                        <input type="date" class="form-control font-weight-bolder" id="establishmentyear" v-model="establishmentyear" style="width: 100%;"/>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                            <label class="font-weight-normal">School Status</label>
+                                            <label class="font-weight-normal">Mother Tongue</label>
                                             <select class="select2bs4 font-weight-bolder" id="schoolstatus" v-model="schoolstatus" style="width: 100%;">
                                                 <option value="" label="- Please Select -">- Please Select -</option>
-                                                <option value="1" label="Opened [1]">Opened [1]</option>
-                                                <option value="2" label="Closed [2]">Closed [2]</option>
-                                                <option value="3" label="Bifurcated [3]">Bifurcated [3]</option>
-                                                <option value="4" label="Merged [4]">Merged [4]</option>
+                                                <option value="1" label="Dzongkha">Dzongkha</option>
+                                                <option value="2" label="Tshangla">Tshangla</option>
+                                                <option value="3" label="Lhotshampkha">Lhotshampkha</option>
+                                                <option value="4" label="Kurtokha">Kurtokha</option>
+                                                <option value="4" label="Bumthangkha">Bumthangkha</option>
+                                                 <option value="4" label="Chalikha">Chalikha</option>
                                             </select>
                                         </div>
                                     </div>
@@ -121,36 +89,36 @@
 
                                 <div class="row form-group">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <label class="font-weight-normal">Agency Code (7 letters, like 028.001, defined by RCSC) <span class="text-danger">*</span></label>
-                                        <input type="number" @change="removeerror('agencycode','agencycode_err')" class="form-control font-weight-bolder" id="agencycode" v-model="agencycode" style="width: 100%;"/>
-                                        <span id="agencycode_err" class="text-danger"></span>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <label class="font-weight-normal">RCSC Code (15 letters, like 001.002.003.004, defined by RCSC)</label>
-                                        <input type="number" class="form-control font-weight-bolder" id="rcsccode" v-model="rcsccode" style="width: 100%;"/>
-                                    </div>
+                                        <label class="font-weight-normal">Nationality of the Student</label><br>
+                                               <input type="radio" name="connecgtion" id="connecgtion" @click="showidentity('Bhutanese')"> Bhutanese
+                                               <input type="radio" name="connecgtion" id="connecgtion" @click="showidentity('Non-Bhutanese')"> Non-Bhutanese 
+                                          </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="display:none" id="telephonesec">
+                                                <label >If Non-Bhutanese, Please Specify your Nationality </label>
+                                                <input type="text" class="form-control" @click="remove_err('error_Telephone')" id="Telephone" v-model="nationality" placeholder="Indian, Bangaldeshi, Nepalese">
+                                                <span class="text-danger" id="error_Telephone"></span> <br>
+                                                <label >Please Specify  </label>
+                                                <input type="text" class="form-control" @click="remove_err('error_Telephone')" id="Telephone" v-model="nationality" placeholder="country diplomate, expriate">
+                                                <span class="text-danger" id="error_Telephone"></span>
+                                          </div> 
+
+                                     
                                 </div>
-                                <div class="row form-group">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <label class="font-weight-normal"> MoF Code (6 letters, like 121.01, defined by MoF)</label>
-                                        <input type="number" class="form-control font-weight-bolder" id="mofcode" v-model="mofcode" style="width: 100%;"/>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <label class="font-weight-normal">Year of establishment (e.g. 1976)</label>
-                                        <input type="number" class="form-control font-weight-bolder" id="establishmentyear" v-model="establishmentyear" style="width: 100%;"/>
-                                    </div>
-                                </div>
-                                <hr>
+                               
+                                <!--next button--> 
                                 <div class="row form-group fa-pull-right">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <button class="btn btn-flat btn-primary" @click="shownexttab('basic-tabs','location-tab')"> Next <i class="fa fa-arrow-right"></i></button>
                                     </div>
                                 </div>
+
                             </div>
+                            <!--school detail of the student-->
+
                             <div class="tab-pane fade" id="location-tab" role="tabpanel" aria-labelledby="location">
                                 <div class="row form-group">
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <label class="font-weight-normal">Dzongkhag <span class="text-danger">*</span></label>
+                                        <label class="font-weight-normal">Dzongkhag of the School <span class="text-danger">*</span></label>
                                         <select class="select2bs4 font-weight-bolder" id="locationdzongkhag" v-model="locationdzongkhag" style="width: 100%;">
                                             <option value="" label="- Please Select -">- Please Select -</option>
                                             <option value="1" label="Bumthang [01]">Bumthang </option>
@@ -180,35 +148,50 @@
                                         </select>                                    
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <label class="font-weight-normal">Gewog <span class="text-danger">*</span></label>
+                                         <label class="font-weight-normal">Gewog: <span class="text-danger">*</span></label>
                                         <select class="select2bs4 font-weight-bolder" id="locationgewog" v-model="locationgewog" style="width: 100%;">
-                                            <option value="" label="- First Select Dzongkhag -">- First Select Dzongkhag -</option>
-                                            <option value="1">Chokhor</option><option value="2">Chumey </option>
-                                            <option value="3">Tang </option><option value="4">Ura </option>
-                                            <option value="208">Other </option>
+                                            <option value="" label="- First Select Dzongkhag -">- Please Select Dzongkhag -</option>
+                                            <option value="1">Chokhor</option><option value="2">Chumey  </option>
+                                            <option value="3">Tang </option><option value="4">Tang</option>
+                                            <option value="208">Ura </option>
                                         </select>
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <label class="font-weight-normal">Village <span class="text-danger">*</span></label>
-                                        <select class="select2bs4 font-weight-bolder" id="locationvillage" v-model="locationvillage" style="width: 100%;">
+                                        <label class="font-weight-normal">School Name: <span class="text-danger">*</span></label>
+                                        <select class="select2bs4 font-weight-bolder" id="locationschool" v-model="locationschool" style="width: 100%;">
                                             <option value="" label="- First Select Gewog -">- First Select Gewog -</option>
-                                            <option value="1">Chakhar [0001]</option><option value="2">Chamkhar [0002]</option><option value="3">Chamkhar Throm [0003]</option><option value="4">Changwa [0004]</option><option value="5">Damphel [0005]</option><option value="6">Dawathang [0006]</option><option value="7">Dhur Dok [0007]</option><option value="8">Dhur Lusibe [0008]</option><option value="9">Dhur Moen [0009]</option><option value="10">Dodrong [0010]</option><option value="11">Dorjibe [0011]</option><option value="12">Goling [0012]</option><option value="13">Gongkhar [0013]</option><option value="14">Gyelkhar [0014]</option><option value="15">Jakar [0015]</option><option value="16">Jakar Lhakhang [0016]</option><option value="17">Jampel Lhakhang [0017]</option><option value="18">Kenchosum [0018]</option><option value="19">Khangdok [0019]</option><option value="20">Kharsa [0020]</option><option value="21">Kharsum [0021]</option><option value="22">Lamagonpa [0022]</option><option value="23">Nanglakhang [0023]</option><option value="24">Nangsephel/Tendok [0024]</option><option value="25">Nangseyphel [0025]</option><option value="26">Norbugang [0026]</option><option value="27">Pangrey [0027]</option><option value="28">Petseling [0028]</option><option value="29">Poengar [0029]</option><option value="30">Potola [0030]</option><option value="31">Samthang [0031]</option><option value="32">Saram [0032]</option><option value="33">Shukdak [0033]</option><option value="34">Tamshing [0034]</option><option value="35">Tashiling [0035]</option><option value="36">Tendok [0036]</option><option value="37">Thangbi [0037]</option><option value="38">Torshong [0038]</option><option value="39">Wangdicholing [0039]</option><option value="40">Zangling [0040]</option><option value="41">Zhapthang [0041]</option><option value="4983">Sangsangma [5001]</option><option value="4984">Tashigatshel [5002]</option><option value="4985">Dekiling [5003]</option><option value="4356">Other [8501]</option><option value="4357">Unknown [9001]</option>
+                                            <option value="1">Chakhar [0001]</option><option value="2">Jakar HSS</option><option value="3">Chamkhar Throm [0003]</option><option value="4">Changwa [0004]</option><option value="5">Damphel [0005]</option><option value="6">Dawathang [0006]</option><option value="7">Dhur Dok [0007]</option><option value="8">Dhur Lusibe [0008]</option><option value="9">Dhur Moen [0009]</option><option value="10">Dodrong [0010]</option><option value="11">Dorjibe [0011]</option><option value="12">Goling [0012]</option><option value="13">Gongkhar [0013]</option><option value="14">Gyelkhar [0014]</option><option value="15">Jakar [0015]</option><option value="16">Jakar Lhakhang [0016]</option><option value="17">Jampel Lhakhang [0017]</option><option value="18">Kenchosum [0018]</option><option value="19">Khangdok [0019]</option><option value="20">Kharsa [0020]</option><option value="21">Kharsum [0021]</option><option value="22">Lamagonpa [0022]</option><option value="23">Nanglakhang [0023]</option><option value="24">Nangsephel/Tendok [0024]</option><option value="25">Nangseyphel [0025]</option><option value="26">Norbugang [0026]</option><option value="27">Pangrey [0027]</option><option value="28">Petseling [0028]</option><option value="29">Poengar [0029]</option><option value="30">Potola [0030]</option><option value="31">Samthang [0031]</option><option value="32">Saram [0032]</option><option value="33">Shukdak [0033]</option><option value="34">Tamshing [0034]</option><option value="35">Tashiling [0035]</option><option value="36">Tendok [0036]</option><option value="37">Thangbi [0037]</option><option value="38">Torshong [0038]</option><option value="39">Wangdicholing [0039]</option><option value="40">Zangling [0040]</option><option value="41">Zhapthang [0041]</option><option value="4983">Sangsangma [5001]</option><option value="4984">Tashigatshel [5002]</option><option value="4985">Dekiling [5003]</option><option value="4356">Other [8501]</option><option value="4357">Unknown [9001]</option>
                                         </select>
                                     </div>
                                 </div>
                                
                                 <div class="row form-group">
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <label class="font-weight-normal"> Altitude: </label>
-                                        <input type="number" class="form-control font-weight-bolder" id="altitute" v-model="altitute" style="width: 100%;"/>
+                                        <label class="font-weight-normal">Student Class: <span class="text-danger">*</span></label>
+                                        <select class="select2bs4 font-weight-bolder" id="studentclass" v-model="studentclass" style="width: 100%;">
+                                            <option value="" label="- First Select Class -">- Please Select Class -</option>
+                                            <option value="1">PP</option><option value="2">I</option><option value="3">II</option><option value="4">III</option>
+                                            <option value="5">IV</option><option value="6">V</option><option value="7">VI</option><option value="8">VII</option>
+                                             <option value="9">VIII</option><option value="10">IX</option><option value="11">X</option><option value="12">XI</option><option value="13">XII</option>
+                                      </select>
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <label class="font-weight-normal">Latitude</label>
-                                        <input type="number" class="form-control font-weight-bolder" id="latitute" v-model="latitute" style="width: 100%;"/>
+                                        <label class="font-weight-normal">Student Section: <span class="text-danger">*</span></label>
+                                        <select class="select2bs4 font-weight-bolder" id="studentsection" v-model="studentsection" style="width: 100%;">
+                                            <option value="" label="- First Select Section -">- Please Select Section -</option>
+                                            <option value="1">A</option><option value="2">B</option><option value="3">C</option><option value="4">D</option>
+                                            <option value="5">E</option><option value="6">F</option><option value="7">G</option><option value="8">H</option>
+                                             <option value="9">I</option><option value="10">J</option><option value="11">K</option><option value="12">L</option><option value="13">M</option>
+                                      </select>
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <label class="font-weight-normal">Longitude</label>
-                                        <input type="number" class="form-control font-weight-bolder" id="longitute" v-model="longitute" style="width: 100%;"/>
+                                        <label class="font-weight-normal">Student Stream: <span class="text-danger">*</span></label>
+                                        <select class="select2bs4 font-weight-bolder" id="studentstream" v-model="studentstream" style="width: 100%;">
+                                            <option value="" label="- First Select Stream -">- Please Select Stream -</option>
+                                            <option value="1">General</option><option value="2">Science</option><option value="3">Arts</option>
+                                            <option value="4">Commerce</option>
+                                             
+                                      </select>
                                     </div>
                                 </div>
                                 <div class="row form-group">
@@ -225,115 +208,103 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!--Student Guardain Info-->
                             <div class="tab-pane fade" id="schooldetails-tab" role="tabpanel" aria-labelledby="custom-tabs-four-messages-tab">
                                 <div class="row form-group">
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <label class="font-weight-normal">Climate Type <span class="text-danger">*</span></label>
-                                        <select class="select2bs4 font-weight-bolder" id="climatetype" v-model="climatetype" style="width: 100%;">
-                                            <option value="" label="- Please Select -">- Please Select -</option>
-                                            <option value="1" label="Hot Sub-tropical [01]">Hot Sub-tropical [01]</option>
-                                            <option value="2" label="Warm Sub-tropical [02]">Warm Sub-tropical [02]</option>
-                                            <option value="3" label="Warm Temprate [03]">Warm Temprate [03]</option>
-                                            <option value="4" label="Cool Temprate [04]">Cool Temprate [04]</option>
-                                            <option value="5" label="Alpine [05]">Alpine [05]</option>
-                                        </select>                                 
+                                        <label class="font-weight-normal">Father's Name: <span class="text-danger">*</span></label>
+                                            <input type="text" @change="removeerror('fathername','studentname_err')" class="form-control font-weight-bolder" id="fathername" v-model="fathername" style="width: 100%;"/>
+                                            <span id="studentname_err" class="text-danger"></span>                               
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <label class="font-weight-normal">Road Type <span class="text-danger">*</span></label>
-                                        <select class="select2bs4 font-weight-bolder" id="locationgewog" v-model="locationgewog" style="width: 100%;">
+                                        <label class="font-weight-normal">Mother's Name: <span class="text-danger">*</span></label>
+                                            <input type="text" @change="removeerror('mothername','studentname_err')" class="form-control font-weight-bolder" id="mothername" v-model="mothername" style="width: 100%;"/>
+                                            <span id="studentname_err" class="text-danger"></span>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                        <label class="font-weight-normal">Guardain's Name: <span class="text-danger">*</span></label>
+                                            <input type="text" @change="removeerror('guardainname','studentname_err')" class="form-control font-weight-bolder" id="guardainname" v-model="guardainname" style="width: 100%;"/>
+                                            <span id="studentname_err" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="row form-group" >
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                       <label class="font-weight-normal">Father's Contact No: <span class="text-danger">*</span></label>
+                                            <input type="number" @change="removeerror('fathercontact','studentname_err')" class="form-control font-weight-bolder" id="fathercontact" v-model="fathercontact" style="width: 100%;"/>
+                                            <span id="studentname_err" class="text-danger"></span>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                        <label class="font-weight-normal">Mother's Contact No: <span class="text-danger">*</span></label>
+                                            <input type="text" @change="removeerror('mothercontact','studentname_err')" class="form-control font-weight-bolder" id="mothercontact" v-model="mothercontact" style="width: 100%;"/>
+                                            <span id="studentname_err" class="text-danger"></span>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                        <label class="font-weight-normal">Guardain's Contact No: <span class="text-danger">*</span></label>
+                                            <input type="text" @change="removeerror('guardaincontact','studentname_err')" class="form-control font-weight-bolder" id="guardaincontact" v-model="guardaincontact" style="width: 100%;"/>
+                                            <span id="studentname_err" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row form-group" >
+                                    <p><B>Present Address of the Student</B></p>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <label class="font-weight-normal">Specify location of your address</label>
+                                        <textarea class="form-control font-weight-bolder" id="playgrounddescription" v-model="playgrounddescription" placeholder="lama building, langjophkha, Thimphu"></textarea>
+                                    </div>
+                                </div>
+          <hr>          
+                                <div class="row form-group" >
+                                          <p><b>Permanent Address of the Student </b></p> 
+                                </div>
+                                <div class="row form-group" > 
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                        <label class="font-weight-normal">Dzongkhag <span class="text-danger">*</span></label>
+                                        <select class="select2bs4 font-weight-bolder" id="dzongkhag" v-model="dzongkhag" style="width: 100%;">
                                             <option value="" label="- Please Select -">- Please Select -</option>
-                                            <option value="3" label="Farm/Power tiller Road [03]">Farm/Power tiller Road [03]</option>
-                                            <option value="2" label="FeederRoad [02]">FeederRoad [02]</option>
-                                            <option value="1" label="TarredRoad [01]">TarredRoad [01]</option>
+                                            <option value="1" label="Bumthang [01]">Bumthang </option>
+                                            <option value="2" label="Chhukha [02]">Chhukha</option>
+                                            <option value="3" label="Dagana [03]">Dagana</option>
+                                            <option value="4" label="Gasa [04]">Gasa</option>
+                                            <option value="5" label="Haa [05]">Haa</option>
+                                            <option value="6" label="Lhuentse [06]">Lhuentse</option>
+                                            <option value="7" label="Mongar [07]">Mongar</option>
+                                            <option value="8" label="Paro [08]">Paro</option>
+                                            <option value="9" label="Pema Gatshel [09]">Pema Gatshel</option>
+                                            <option value="10" label="Punakha [10]">Punakha</option>
+                                            <option value="11" label="Samdrup Jongkhar [11]">Samdrup Jongkhar</option>
+                                            <option value="12" label="Samtse [12]">Samtse</option>
+                                            <option value="13" label="Sarpang [13]">Sarpang</option>
+                                            <option value="14" label="Thimphu [14]">Thimphu</option>
+                                            <option value="15" label="Trashigang [15]">Trashigang </option>
+                                            <option value="16" label="Trashiyangtse [16]">Trashiyangtse </option>
+                                            <option value="17" label="Trongsa [17]">Trongsa </option>
+                                            <option value="18" label="Tsirang [18]">Tsirang </option>
+                                            <option value="19" label="Wangdue Phodrang [19]">Wangdue Phodrang </option>
+                                            <option value="20" label="Zhemgang [20]">Zhemgang </option>
+                                            <option value="25" label="SJongkhar Thromde [55]">SJongkhar Thromde </option>
+                                            <option value="24" label="Phuntsholing Thromde [66]">Phuntsholing Thromde</option>
+                                            <option value="23" label="Gelephu Thromde [77]">Gelephu Thromde </option>
+                                            <option value="22" label="Thimphu Thromde [88]">Thimphu Thromde </option>
+                                        </select>                                    
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                        <label class="font-weight-normal">Gewog: <span class="text-danger">*</span></label>
+                                        <select class="select2bs4 font-weight-bolder" id="gewog" v-model="gewog" style="width: 100%;">
+                                            <option value="" label="- First Select Dzongkhag -">- Please Select Dzongkhag -</option>
+                                            <option value="1">Chokhor</option><option value="2">Chumey  </option>
+                                            <option value="3">Tang </option><option value="4">Tang</option>
+                                            <option value="208">Ura </option>
                                         </select>
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <label class="font-weight-normal">Is the school accessible by motor road? <span class="text-danger">*</span></label>
-                                        <div class="clearfix">
-                                            <div class="icheck-primary d-inline">
-                                                <input type="radio" id="moterroadaccessible1" name="moterroadaccessible">
-                                                <label for="moterroadaccessible1">
-                                                   Yes
-                                                </label>
-                                            </div>
-                                            <div class="icheck-primary d-inline pl-4">
-                                                <input type="radio" id="moterroadaccessible2" name="moterroadaccessible">
-                                                <label for="moterroadaccessible2">
-                                                    No
-                                                </label>
-                                            </div>
-                                        </div>
+                                        <label class="font-weight-normal">Village: <span class="text-danger">*</span></label>
+                                        <select class="select2bs4 font-weight-bolder" id="locationvillage" v-model="locationvillage" style="width: 100%;">
+                                            <option value="" label="- First Select Gewog -">- First Select Gewog -</option>
+                                            <option value="1">Chakhar [0001]</option><option value="2">Jakar HSS</option><option value="3">Chamkhar Throm [0003]</option><option value="4">Changwa [0004]</option><option value="5">Damphel [0005]</option><option value="6">Dawathang [0006]</option><option value="7">Dhur Dok [0007]</option><option value="8">Dhur Lusibe [0008]</option><option value="9">Dhur Moen [0009]</option><option value="10">Dodrong [0010]</option><option value="11">Dorjibe [0011]</option><option value="12">Goling [0012]</option><option value="13">Gongkhar [0013]</option><option value="14">Gyelkhar [0014]</option><option value="15">Jakar [0015]</option><option value="16">Jakar Lhakhang [0016]</option><option value="17">Jampel Lhakhang [0017]</option><option value="18">Kenchosum [0018]</option><option value="19">Khangdok [0019]</option><option value="20">Kharsa [0020]</option><option value="21">Kharsum [0021]</option><option value="22">Lamagonpa [0022]</option><option value="23">Nanglakhang [0023]</option><option value="24">Nangsephel/Tendok [0024]</option><option value="25">Nangseyphel [0025]</option><option value="26">Norbugang [0026]</option><option value="27">Pangrey [0027]</option><option value="28">Petseling [0028]</option><option value="29">Poengar [0029]</option><option value="30">Potola [0030]</option><option value="31">Samthang [0031]</option><option value="32">Saram [0032]</option><option value="33">Shukdak [0033]</option><option value="34">Tamshing [0034]</option><option value="35">Tashiling [0035]</option><option value="36">Tendok [0036]</option><option value="37">Thangbi [0037]</option><option value="38">Torshong [0038]</option><option value="39">Wangdicholing [0039]</option><option value="40">Zangling [0040]</option><option value="41">Zhapthang [0041]</option><option value="4983">Sangsangma [5001]</option><option value="4984">Tashigatshel [5002]</option><option value="4985">Dekiling [5003]</option><option value="4356">Other [8501]</option><option value="4357">Unknown [9001]</option>
+                                        </select>
                                     </div>
-                                </div>
-                                <div class="row form-group" id="roadnotaccesible" style="display:none">
-                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <label class="font-weight-normal"> How far is the school from road in days (e.g. 1.3 days): </label>
-                                        <input type="number" class="form-control font-weight-bolder" id="distancefromroaddays" v-model="distancefromroaddays" style="width: 100%;"/>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <label class="font-weight-normal">How far is the school from road in kilometers (e.g. 12.3 Km)</label>
-                                        <input type="number" class="form-control font-weight-bolder" id="distancefromroadkm" v-model="distancefromroadkm" style="width: 100%;"/>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <label class="font-weight-normal">How far is the school from road in hours? (e.g. 4.8 hours)</label>
-                                        <input type="number" class="form-control font-weight-bolder" id="distancefromroadhrs" v-model="distancefromroadhrs" style="width: 100%;"/>
-                                    </div>
-                                </div>
-                                <div class="row form-group" >
-                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <label class="font-weight-normal"> Is the school a resource center? </label><br>
-                                        <div class="icheck-primary d-inline">
-                                            <input type="radio" id="resourceschool1" name="resourceschool">
-                                            <label for="resourceschool1">
-                                                Yes
-                                            </label>
-                                        </div>
-                                        <div class="icheck-primary d-inline pl-4">
-                                            <input type="radio" id="resourceschool2" name="resourceschool">
-                                            <label for="resourceschool2">
-                                                No
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <label class="font-weight-normal">Compound Area (in acres)</label>
-                                        <input type="text" class="form-control font-weight-bolder" id="compoundarea" v-model="compoundarea" style="width: 100%;"/>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <label class="font-weight-normal">Play ground Area (in sq. M)</label>
-                                        <input type="text" class="form-control font-weight-bolder" id="playgroundmeasure" v-model="playgroundmeasure" style="width: 100%;"/>
-                                    </div>
-                                </div>
-                                <div class="row form-group" >
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <label class="font-weight-normal">Play ground Description</label>
-                                        <textarea class="form-control font-weight-bolder" id="playgrounddescription" v-model="playgrounddescription"></textarea>
-                                    </div>
-                                </div>
-                                <div class="row form-group" >
-                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <label class="font-weight-normal">Agriculture Area (in acres)</label>
-                                        <input type="number" class="form-control font-weight-bolder" id="agrriculturearea" v-model="agrriculturearea" style="width: 100%;"/>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <label class="font-weight-normal">Used Agriculture Area (in acres)</label>
-                                        <input type="number" class="form-control font-weight-bolder" id="usedagriculture" v-model="usedagriculture" style="width: 100%;"/>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <label class="font-weight-normal"> Does school have sufficient water supply? </label>
-                                        <div class="icheck-primary d-inline">
-                                            <input type="radio" id="watersupply1" name="watersupply">
-                                            <label for="watersupply1">
-                                                Yes
-                                            </label>
-                                        </div>
-                                        <div class="icheck-primary d-inline pl-4">
-                                            <input type="radio" id="watersupply12" name="watersupply">
-                                            <label for="watersupply12">
-                                                No
-                                            </label>
-                                        </div>
-                                    </div>
+                                        
                                 </div>
                                 <div class="row form-group" >
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -503,13 +474,14 @@ export default {
     },
     data() {
         return {
-            organizationtype:"",
-            schoollevel:"",
-            schoolname:"",
+            organizationtype:"", fathername:"", mothername:"", fathercontact:"", mothercontact:"",
+            schoollevel:"", guardaincontact:"", 
+            schoolname:"", studentclass:"", studentsection:"", studentstream:"",
+            nationality:"", dzongkhag:"", gewog:"",
             schoolLocation:"",schoolstatus:"",
             agencycode:"",rcsccode:"",mofcode:"",
-            establishmentyear:"",
-            locationdzongkhag:"",locationgewog:"",locationvillage:"",thrmno:"",altitute:"",latitute:"",longitute:"",
+            establishmentyear:"", locationroadtype:"",
+            locationdzongkhag:"", locationgewog:"", locationvillage:"",thrmno:"",altitute:"",latitute:"",longitute:"", locationschool:"",
             climatetype:"",locationvillage:"",distancefromroaddays:"",distancefromroadkm:"",distancefromroadhrs:"",compoundarea:"",playgroundmeasure:"",playgrounddescription:"",
             agrriculturearea:"",usedagriculture:"",tabstandNo:"",waterproblem:"",electricremarks:"",wayofdatacollection:"",
             count:5,
@@ -583,6 +555,9 @@ export default {
                     $('#schoolname_err').html('Please mention the name of the school'); 
                     returntype=false;
                 }
+               
+               
+               
                 if($('#agencycode').val()==""){
                     $('#agencycode').addClass('is-invalid');
                     $('#agencycode_err').html('Please mention agency code'); 
@@ -596,8 +571,20 @@ export default {
                 $('#'+fieldid).removeClass('is-invalid');
                 $('#'+errid).html(''); 
             }
+        },
+        showidentity:function(type){
+                if(type=="Non-Bhutanese"){
+                    $('#telephonesec').show();
+                }
+                else{
+                    $('#telephonesec').hide();
+                }
         }
+
     },
+
+    
+           
 
     mounted() {
         $('#cardheader').html('New Student Form');
