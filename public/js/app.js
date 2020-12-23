@@ -6290,6 +6290,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {},
   data: function data() {
@@ -62525,7 +62536,7 @@ var render = function() {
                                   label: "- First Select Dzongkhag -"
                                 }
                               },
-                              [_vm._v("- Please Select Dzongkhag -")]
+                              [_vm._v("- Please Select Gewog -")]
                             ),
                             _vm._v(" "),
                             _c("option", { attrs: { value: "1" } }, [
@@ -62595,65 +62606,65 @@ var render = function() {
                                   label: "- First Select Gewog -"
                                 }
                               },
-                              [_vm._v("- First Select Gewog -")]
+                              [_vm._v("- Select School -")]
                             ),
                             _vm._v(" "),
                             _c("option", { attrs: { value: "1" } }, [
-                              _vm._v("Chakhar [0001]")
+                              _vm._v("Chhumey Central School")
                             ]),
                             _c("option", { attrs: { value: "2" } }, [
                               _vm._v("Jakar HSS")
                             ]),
                             _c("option", { attrs: { value: "3" } }, [
-                              _vm._v("Chamkhar Throm [0003]")
+                              _vm._v("Ura Central School")
                             ]),
                             _c("option", { attrs: { value: "4" } }, [
-                              _vm._v("Changwa [0004]")
+                              _vm._v("Tang Central School")
                             ]),
                             _c("option", { attrs: { value: "5" } }, [
-                              _vm._v("Damphel [0005]")
+                              _vm._v("Wangdicholing\tLSS")
                             ]),
                             _c("option", { attrs: { value: "6" } }, [
-                              _vm._v("Dawathang [0006]")
+                              _vm._v("Chhoekhor Toe\tPS")
                             ]),
                             _c("option", { attrs: { value: "7" } }, [
-                              _vm._v("Dhur Dok [0007]")
+                              _vm._v("Chungphel\tPS")
                             ]),
                             _c("option", { attrs: { value: "8" } }, [
-                              _vm._v("Dhur Lusibe [0008]")
+                              _vm._v("Dhur PS")
                             ]),
                             _c("option", { attrs: { value: "9" } }, [
-                              _vm._v("Dhur Moen [0009]")
+                              _vm._v("Gytesa PS")
                             ]),
                             _c("option", { attrs: { value: "10" } }, [
-                              _vm._v("Dodrong [0010]")
+                              _vm._v("Gangrithang\tPS")
                             ]),
                             _c("option", { attrs: { value: "11" } }, [
-                              _vm._v("Dorjibe [0011]")
+                              _vm._v("Jigmeling\tPS")
                             ]),
                             _c("option", { attrs: { value: "12" } }, [
-                              _vm._v("Goling [0012]")
+                              _vm._v("Khangrab PS")
                             ]),
                             _c("option", { attrs: { value: "13" } }, [
-                              _vm._v("Gongkhar [0013]")
+                              _vm._v("Kharsat PS")
                             ]),
                             _c("option", { attrs: { value: "14" } }, [
-                              _vm._v("Gyelkhar [0014]")
+                              _vm._v("Shingnyer PS")
                             ]),
                             _c("option", { attrs: { value: "15" } }, [
-                              _vm._v("Jakar [0015]")
+                              _vm._v("Tangsibi\tPS")
                             ]),
                             _c("option", { attrs: { value: "16" } }, [
-                              _vm._v("Jakar Lhakhang [0016]")
+                              _vm._v("Zangtherpo PS")
                             ]),
                             _c("option", { attrs: { value: "17" } }, [
-                              _vm._v("Jampel Lhakhang [0017]")
+                              _vm._v("Zungnye PS")
                             ]),
                             _c("option", { attrs: { value: "18" } }, [
-                              _vm._v("Kenchosum [0018]")
+                              _vm._v("Chukha Central School HSS")
                             ]),
                             _c("option", { attrs: { value: "19" } }, [
-                              _vm._v("Khangdok [0019]")
+                              _vm._v("Phuentsholing\tLSS")
                             ]),
                             _c("option", { attrs: { value: "20" } }, [
                               _vm._v("Kharsa [0020]")
@@ -62998,38 +63009,9 @@ var render = function() {
                     )
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "row form-group" }, [
-                    _c(
-                      "div",
-                      { staticClass: "col-lg-4 col-md-4 col-sm-4 col-xs-12" },
-                      [
-                        _vm._m(10),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.thrmno,
-                              expression: "thrmno"
-                            }
-                          ],
-                          staticClass: "form-control font-weight-bolder",
-                          staticStyle: { width: "100%" },
-                          attrs: { type: "text", id: "thrmno" },
-                          domProps: { value: _vm.thrmno },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.thrmno = $event.target.value
-                            }
-                          }
-                        })
-                      ]
-                    )
-                  ]),
+                  _c("br"),
+                  _vm._v(" "),
+                  _vm._m(10),
                   _vm._v(" "),
                   _c("hr"),
                   _vm._v(" "),
@@ -63682,7 +63664,7 @@ var render = function() {
                                   label: "- First Select Dzongkhag -"
                                 }
                               },
-                              [_vm._v("- Please Select Dzongkhag -")]
+                              [_vm._v("- Select Gewog -")]
                             ),
                             _vm._v(" "),
                             _c("option", { attrs: { value: "1" } }, [
@@ -63752,14 +63734,14 @@ var render = function() {
                                   label: "- First Select Gewog -"
                                 }
                               },
-                              [_vm._v("- First Select Gewog -")]
+                              [_vm._v("- Select VIllage -")]
                             ),
                             _vm._v(" "),
                             _c("option", { attrs: { value: "1" } }, [
                               _vm._v("Chakhar [0001]")
                             ]),
                             _c("option", { attrs: { value: "2" } }, [
-                              _vm._v("Jakar HSS")
+                              _vm._v("Chokhor")
                             ]),
                             _c("option", { attrs: { value: "3" } }, [
                               _vm._v("Chamkhar Throm [0003]")
@@ -64342,9 +64324,36 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "font-weight-normal" }, [
-      _vm._v(" Thram Number "),
-      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+    return _c("div", { staticClass: "row form-group" }, [
+      _c("label", { staticClass: "font-weight-normal" }, [
+        _vm._v(
+          " Do you think the children/student has a disability? (Eg: difficulty seeing, hearing, walking, learning or remembering, focusing, with fine motor skills, self care, being understood, controlling behavior, socializing or playing) "
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "icheck-primary d-inline" }, [
+        _c("input", {
+          attrs: { type: "radio", id: "SENdetail1", name: "SENdetail" }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "SENdetail1" } }, [
+          _vm._v(
+            "\n                                            Yes\n                                        "
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "icheck-primary d-inline pl-4" }, [
+        _c("input", {
+          attrs: { type: "radio", id: "SENdetail2", name: "SENdetail" }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "SENdetail2" } }, [
+          _vm._v(
+            "\n                                            No\n                                        "
+          )
+        ])
+      ])
     ])
   },
   function() {
@@ -98455,8 +98464,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\office\EMIS Enhancement\xampp\htdocs\emisv3-adminlte\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\office\EMIS Enhancement\xampp\htdocs\emisv3-adminlte\resources\css\app.css */"./resources/css/app.css");
+__webpack_require__(/*! D:\laravel project\emisv3-adminlte\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\laravel project\emisv3-adminlte\resources\css\app.css */"./resources/css/app.css");
 
 
 /***/ })

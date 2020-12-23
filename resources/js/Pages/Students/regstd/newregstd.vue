@@ -150,7 +150,7 @@
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                          <label class="font-weight-normal">Gewog: <span class="text-danger">*</span></label>
                                         <select class="select2bs4 font-weight-bolder" id="locationgewog" v-model="locationgewog" style="width: 100%;">
-                                            <option value="" label="- First Select Dzongkhag -">- Please Select Dzongkhag -</option>
+                                            <option value="" label="- First Select Dzongkhag -">- Please Select Gewog -</option>
                                             <option value="1">Chokhor</option><option value="2">Chumey  </option>
                                             <option value="3">Tang </option><option value="4">Tang</option>
                                             <option value="208">Ura </option>
@@ -159,8 +159,8 @@
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                         <label class="font-weight-normal">School Name: <span class="text-danger">*</span></label>
                                         <select class="select2bs4 font-weight-bolder" id="locationschool" v-model="locationschool" style="width: 100%;">
-                                            <option value="" label="- First Select Gewog -">- First Select Gewog -</option>
-                                            <option value="1">Chakhar [0001]</option><option value="2">Jakar HSS</option><option value="3">Chamkhar Throm [0003]</option><option value="4">Changwa [0004]</option><option value="5">Damphel [0005]</option><option value="6">Dawathang [0006]</option><option value="7">Dhur Dok [0007]</option><option value="8">Dhur Lusibe [0008]</option><option value="9">Dhur Moen [0009]</option><option value="10">Dodrong [0010]</option><option value="11">Dorjibe [0011]</option><option value="12">Goling [0012]</option><option value="13">Gongkhar [0013]</option><option value="14">Gyelkhar [0014]</option><option value="15">Jakar [0015]</option><option value="16">Jakar Lhakhang [0016]</option><option value="17">Jampel Lhakhang [0017]</option><option value="18">Kenchosum [0018]</option><option value="19">Khangdok [0019]</option><option value="20">Kharsa [0020]</option><option value="21">Kharsum [0021]</option><option value="22">Lamagonpa [0022]</option><option value="23">Nanglakhang [0023]</option><option value="24">Nangsephel/Tendok [0024]</option><option value="25">Nangseyphel [0025]</option><option value="26">Norbugang [0026]</option><option value="27">Pangrey [0027]</option><option value="28">Petseling [0028]</option><option value="29">Poengar [0029]</option><option value="30">Potola [0030]</option><option value="31">Samthang [0031]</option><option value="32">Saram [0032]</option><option value="33">Shukdak [0033]</option><option value="34">Tamshing [0034]</option><option value="35">Tashiling [0035]</option><option value="36">Tendok [0036]</option><option value="37">Thangbi [0037]</option><option value="38">Torshong [0038]</option><option value="39">Wangdicholing [0039]</option><option value="40">Zangling [0040]</option><option value="41">Zhapthang [0041]</option><option value="4983">Sangsangma [5001]</option><option value="4984">Tashigatshel [5002]</option><option value="4985">Dekiling [5003]</option><option value="4356">Other [8501]</option><option value="4357">Unknown [9001]</option>
+                                            <option value="" label="- First Select Gewog -">- Select School -</option>
+                                            <option value="1">Chhumey Central School</option><option value="2">Jakar HSS</option><option value="3">Ura Central School</option><option value="4">Tang Central School</option><option value="5">Wangdicholing	LSS</option><option value="6">Chhoekhor Toe	PS</option><option value="7">Chungphel	PS</option><option value="8">Dhur PS</option><option value="9">Gytesa PS</option><option value="10">Gangrithang	PS</option><option value="11">Jigmeling	PS</option><option value="12">Khangrab PS</option><option value="13">Kharsat PS</option><option value="14">Shingnyer PS</option><option value="15">Tangsibi	PS</option><option value="16">Zangtherpo PS</option><option value="17">Zungnye PS</option><option value="18">Chukha Central School HSS</option><option value="19">Phuentsholing	LSS</option><option value="20">Kharsa [0020]</option><option value="21">Kharsum [0021]</option><option value="22">Lamagonpa [0022]</option><option value="23">Nanglakhang [0023]</option><option value="24">Nangsephel/Tendok [0024]</option><option value="25">Nangseyphel [0025]</option><option value="26">Norbugang [0026]</option><option value="27">Pangrey [0027]</option><option value="28">Petseling [0028]</option><option value="29">Poengar [0029]</option><option value="30">Potola [0030]</option><option value="31">Samthang [0031]</option><option value="32">Saram [0032]</option><option value="33">Shukdak [0033]</option><option value="34">Tamshing [0034]</option><option value="35">Tashiling [0035]</option><option value="36">Tendok [0036]</option><option value="37">Thangbi [0037]</option><option value="38">Torshong [0038]</option><option value="39">Wangdicholing [0039]</option><option value="40">Zangling [0040]</option><option value="41">Zhapthang [0041]</option><option value="4983">Sangsangma [5001]</option><option value="4984">Tashigatshel [5002]</option><option value="4985">Dekiling [5003]</option><option value="4356">Other [8501]</option><option value="4357">Unknown [9001]</option>
                                         </select>
                                     </div>
                                 </div>
@@ -193,12 +193,23 @@
                                              
                                       </select>
                                     </div>
-                                </div>
+                                </div> <br>
                                 <div class="row form-group">
-                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <label class="font-weight-normal"> Thram Number <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control font-weight-bolder" id="thrmno" v-model="thrmno" style="width: 100%;"/>
-                                    </div>
+                                    <!--<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">-->
+                                        <label class="font-weight-normal"> Do you think the children/student has a disability? (Eg: difficulty seeing, hearing, walking, learning or remembering, focusing, with fine motor skills, self care, being understood, controlling behavior, socializing or playing) </label>
+                                        <div class="icheck-primary d-inline">
+                                            <input type="radio" id="SENdetail1" name="SENdetail">
+                                            <label for="SENdetail1">
+                                                Yes
+                                            </label>
+                                        </div>
+                                        <div class="icheck-primary d-inline pl-4">
+                                            <input type="radio" id="SENdetail2" name="SENdetail">
+                                            <label for="SENdetail2">
+                                                No
+                                            </label>
+                                        </div>
+                                   <!-- </div>-->
                                 </div>
                                 <hr>
                                 <div class="row form-group fa-pull-right">
@@ -291,7 +302,7 @@
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                         <label class="font-weight-normal">Gewog: <span class="text-danger">*</span></label>
                                         <select class="select2bs4 font-weight-bolder" id="gewog" v-model="gewog" style="width: 100%;">
-                                            <option value="" label="- First Select Dzongkhag -">- Please Select Dzongkhag -</option>
+                                            <option value="" label="- First Select Dzongkhag -">- Select Gewog -</option>
                                             <option value="1">Chokhor</option><option value="2">Chumey  </option>
                                             <option value="3">Tang </option><option value="4">Tang</option>
                                             <option value="208">Ura </option>
@@ -300,8 +311,8 @@
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                         <label class="font-weight-normal">Village: <span class="text-danger">*</span></label>
                                         <select class="select2bs4 font-weight-bolder" id="locationvillage" v-model="locationvillage" style="width: 100%;">
-                                            <option value="" label="- First Select Gewog -">- First Select Gewog -</option>
-                                            <option value="1">Chakhar [0001]</option><option value="2">Jakar HSS</option><option value="3">Chamkhar Throm [0003]</option><option value="4">Changwa [0004]</option><option value="5">Damphel [0005]</option><option value="6">Dawathang [0006]</option><option value="7">Dhur Dok [0007]</option><option value="8">Dhur Lusibe [0008]</option><option value="9">Dhur Moen [0009]</option><option value="10">Dodrong [0010]</option><option value="11">Dorjibe [0011]</option><option value="12">Goling [0012]</option><option value="13">Gongkhar [0013]</option><option value="14">Gyelkhar [0014]</option><option value="15">Jakar [0015]</option><option value="16">Jakar Lhakhang [0016]</option><option value="17">Jampel Lhakhang [0017]</option><option value="18">Kenchosum [0018]</option><option value="19">Khangdok [0019]</option><option value="20">Kharsa [0020]</option><option value="21">Kharsum [0021]</option><option value="22">Lamagonpa [0022]</option><option value="23">Nanglakhang [0023]</option><option value="24">Nangsephel/Tendok [0024]</option><option value="25">Nangseyphel [0025]</option><option value="26">Norbugang [0026]</option><option value="27">Pangrey [0027]</option><option value="28">Petseling [0028]</option><option value="29">Poengar [0029]</option><option value="30">Potola [0030]</option><option value="31">Samthang [0031]</option><option value="32">Saram [0032]</option><option value="33">Shukdak [0033]</option><option value="34">Tamshing [0034]</option><option value="35">Tashiling [0035]</option><option value="36">Tendok [0036]</option><option value="37">Thangbi [0037]</option><option value="38">Torshong [0038]</option><option value="39">Wangdicholing [0039]</option><option value="40">Zangling [0040]</option><option value="41">Zhapthang [0041]</option><option value="4983">Sangsangma [5001]</option><option value="4984">Tashigatshel [5002]</option><option value="4985">Dekiling [5003]</option><option value="4356">Other [8501]</option><option value="4357">Unknown [9001]</option>
+                                            <option value="" label="- First Select Gewog -">- Select VIllage -</option>
+                                            <option value="1">Chakhar [0001]</option><option value="2">Chokhor</option><option value="3">Chamkhar Throm [0003]</option><option value="4">Changwa [0004]</option><option value="5">Damphel [0005]</option><option value="6">Dawathang [0006]</option><option value="7">Dhur Dok [0007]</option><option value="8">Dhur Lusibe [0008]</option><option value="9">Dhur Moen [0009]</option><option value="10">Dodrong [0010]</option><option value="11">Dorjibe [0011]</option><option value="12">Goling [0012]</option><option value="13">Gongkhar [0013]</option><option value="14">Gyelkhar [0014]</option><option value="15">Jakar [0015]</option><option value="16">Jakar Lhakhang [0016]</option><option value="17">Jampel Lhakhang [0017]</option><option value="18">Kenchosum [0018]</option><option value="19">Khangdok [0019]</option><option value="20">Kharsa [0020]</option><option value="21">Kharsum [0021]</option><option value="22">Lamagonpa [0022]</option><option value="23">Nanglakhang [0023]</option><option value="24">Nangsephel/Tendok [0024]</option><option value="25">Nangseyphel [0025]</option><option value="26">Norbugang [0026]</option><option value="27">Pangrey [0027]</option><option value="28">Petseling [0028]</option><option value="29">Poengar [0029]</option><option value="30">Potola [0030]</option><option value="31">Samthang [0031]</option><option value="32">Saram [0032]</option><option value="33">Shukdak [0033]</option><option value="34">Tamshing [0034]</option><option value="35">Tashiling [0035]</option><option value="36">Tendok [0036]</option><option value="37">Thangbi [0037]</option><option value="38">Torshong [0038]</option><option value="39">Wangdicholing [0039]</option><option value="40">Zangling [0040]</option><option value="41">Zhapthang [0041]</option><option value="4983">Sangsangma [5001]</option><option value="4984">Tashigatshel [5002]</option><option value="4985">Dekiling [5003]</option><option value="4356">Other [8501]</option><option value="4357">Unknown [9001]</option>
                                         </select>
                                     </div>
                                         
