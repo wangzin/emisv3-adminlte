@@ -57,7 +57,8 @@
                             <div class="col-md-4">
                                 <label class="col-md-4 font-weight-normal">Module:<span class="text-danger">*</span></label>
 
-                                <select name="module" id="module" class="form-control editable_fields font-weight-bolder">
+                                <select name="module" id="module" class="form-control editable_fields font-weight-bolder"
+                                    @change="removeerror('module','module_err')">
                                     <option value="">--- Please Select ---</option>
                                     <option value="1">System Admin</option>
                                     <option value="2">Organization</option>
@@ -65,7 +66,8 @@
                                     <option value="4">Staff</option>
                                     <option value="5">Admission</option>
                                     <option value="5">Result Processing</option>
-                                </select>                                
+                                </select> 
+                                <span id="module_err" class="text-danger"></span>                               
                             </div>  
                         
                             <div class="col-md-4">
@@ -84,10 +86,11 @@
                             </div>                                                                  
                         </div>        
 
-                    <table id="ddd" class="table table-bordered table-striped">
+                    <table id="aaa" class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <th>Screen/Page</th>
+                                <th>Screen</th>
+                                <th></th>
                                 <th>Organization</th>
                                 <th>Dzongkhag</th>
                                 <th>National</th>
@@ -97,109 +100,94 @@
                         </tbody>
                     </table>
 
-                    <table id="rolesAndPriviledges" class="table table-bordered table-striped hidden">
-                        <thead>
-                            <tr>
-                                <th>Screen/Page</th>
-                                <th>Organization</th>
-                                <th>Dzongkhag</th>
-                                <th>National</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr id="record1" style="float-right;">
-                                <td>User Management
-                                    <tr><td>View</td></tr>
-                                    <tr><td>Add</td></tr>
-                                    <tr><td>Edit</td></tr>
-                                    <tr><td>Delete</td></tr>
-                                </td>
-                                <td>dsdfsdf
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-
-                                </td>
-                                <td>dsdfsdf
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-
-                                </td><td>dsdfsdf
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-
-                                </td>
-                            </tr>
-                            <tr id="record2">
-                                <td>Roles And Priviledges
-                                    <tr><td>View</td></tr>
-                                    <tr><td>Add</td></tr>
-                                    <tr><td>Edit</td></tr>
-                                    <tr><td>Delete</td></tr>
-                                </td>
-                                <td>dsdfsdf
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-
-                                </td>
-                                <td>dsdfsdf
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-
-                                </td>
-                                <td>dsdfsdf
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-
-                                </td>
-                            </tr>
-
-                            <tr id="record3">
-                                <td>WorkFlow Management
-                                    <tr><td>View</td></tr>
-                                    <tr><td>Add</td></tr>
-                                    <tr><td>Edit</td></tr>
-                                    <tr><td>Delete</td></tr>
-                                </td>
-                                <td>dsdfsdf
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-
-                                </td>
-                                <td>dsdfsdf
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-
-                                </td>
-                                <td>dsdfsdf
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-                                    <tr><td><input type="radio" name ="permission" id="organization"/></td></tr>
-
-                                </td>
-                            </tr>
-
-                        </tbody>
-
-                    </table>
                     
+                    <table id="ddd" class="table table-bordered table-striped hidden">
+                        <tr>
+                            <th>Screen</th>
+                            <th></th>
+                            <th>Organization</th>
+                            <th>Dzongkhag</th>
+                            <th>National</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="4">User Management</th>
+                            <th>Add</th>
+                            <td><input type="radio" name="add" /></td>
+                            <td><input type="radio" name="add" /></td>
+                            <td><input type="radio" name="add" /></td>
+                        </tr>
+                        <tr>
+                            <th>View</th>
+                            <td><input type="radio" name="view" /></td>
+                            <td><input type="radio" name="view" /></td>
+                            <td><input type="radio" name="view" /></td>
+                        </tr>
+                         <tr>
+                            <th>Edit</th>
+                            <td><input type="radio" name="edit" /></td>
+                            <td><input type="radio" name="edit" /></td>
+                            <td><input type="radio" name="edit" /></td>
+                        </tr>
+                         <tr>
+                            <th>Delete</th>
+                            <td><input type="radio" name="delete" /></td>
+                            <td><input type="radio" name="delete" /></td>
+                            <td><input type="radio" name="delete" /></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="4">Roles And Priviledges</th>
+                            <th>Add</th>
+                            <td><input type="radio" name="add1" /></td>
+                            <td><input type="radio" name="add1" /></td>
+                            <td><input type="radio" name="add1" /></td>
+                        </tr>
+                        <tr>
+                            <th>View</th>
+                            <td><input type="radio" name="view1" /></td>
+                            <td><input type="radio" name="view1" /></td>
+                            <td><input type="radio" name="view1" /></td>
+                        </tr>
+                         <tr>
+                            <th>Edit</th>
+                            <td><input type="radio" name="edit1" /></td>
+                            <td><input type="radio" name="edit1" /></td>
+                            <td><input type="radio" name="edit1" /></td>
+                        </tr>
+                         <tr>
+                            <th>Delete</th>
+                            <td><input type="radio" name="delete1" /></td>
+                            <td><input type="radio" name="delete1" /></td>
+                            <td><input type="radio" name="delete1" /></td>
+                        </tr>
+
+                        <tr>
+                            <th rowspan="4">WorkFow Management</th>
+                            <th>Add</th>
+                            <td><input type="radio" name="add2" /></td>
+                            <td><input type="radio" name="add2" /></td>
+                            <td><input type="radio" name="add2" /></td>
+                        </tr>
+                        <tr>
+                            <th>View</th>
+                            <td><input type="radio" name="view2" /></td>
+                            <td><input type="radio" name="view2" /></td>
+                            <td><input type="radio" name="view2" /></td>
+                        </tr>
+                         <tr>
+                            <th>Edit</th>
+                            <td><input type="radio" name="edit2" /></td>
+                            <td><input type="radio" name="edit2" /></td>
+                            <td><input type="radio" name="edit2" /></td>
+                        </tr>
+                         <tr>
+                            <th>Delete</th>
+                            <td><input type="radio" name="delete2" /></td>
+                            <td><input type="radio" name="delete2" /></td>
+                            <td><input type="radio" name="delete2" /></td>
+                        </tr>
+                    </table>
+
+
                 </div>
             </div>
         </form>
@@ -256,29 +244,31 @@ export default {
 
     /** method to get screen list based on module id */
         getScreenList: function(){
-            $("#ddd").hide();
-            $("#rolesAndPriviledges").show();
-            // var dd = $('#module option:selected').text();
-            // let tablestr="";
+            let list = $("#module").val();
+           if(list === ''){
+                $('#module').addClass('is-invalid');
+                $('#module_err').html('Please select the module'); 
+                returntype=false;
+           }else{
+               if(list == 1){
+                    $("#aaa").hide();
+                    $("#ddd").show();
+               }
+                
+           }
+                      
+        },
 
-            //     tablestr = "<tr>" +
-            //         "<td><input type='text' class='' id='employeeName' value='User Management' readonly></td>" +
-            //         "<td><input type='radio' class='' id='role' >" +
-            //         "<td><input type='radio' class=''></td>" +
-            //         "<td><input type='radio' class='' id='level'></td>" +
-            //         "</tr>";            
-            //        $('#rolesAndPriviledges').append(tablestr); 
-            
+        removeerror(fieldid,errid){
+            if($('#'+fieldid).val()!=""){
+                $('#'+fieldid).removeClass('is-invalid');
+                $('#'+errid).html(''); 
+            }
         }
   },
 
   mounted() {
-    //   $("#rolesAndPriviledges").DataTable({
-    //         "responsive": true,
-    //         "autoWidth": true,
-    //     }); 
-        // $('.dataTables_filter').addClass('fa-pull-right');
-        // $('#rolesAndPriviledges_paginate').addClass('fa-pull-right');
+    
 
   }
     

@@ -6872,18 +6872,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -6924,25 +6912,27 @@ __webpack_require__.r(__webpack_exports__);
 
     /** method to get screen list based on module id */
     getScreenList: function getScreenList() {
-      $("#ddd").hide();
-      $("#rolesAndPriviledges").show(); // var dd = $('#module option:selected').text();
-      // let tablestr="";
-      //     tablestr = "<tr>" +
-      //         "<td><input type='text' class='' id='employeeName' value='User Management' readonly></td>" +
-      //         "<td><input type='radio' class='' id='role' >" +
-      //         "<td><input type='radio' class=''></td>" +
-      //         "<td><input type='radio' class='' id='level'></td>" +
-      //         "</tr>";            
-      //        $('#rolesAndPriviledges').append(tablestr); 
+      var list = $("#module").val();
+
+      if (list === '') {
+        $('#module').addClass('is-invalid');
+        $('#module_err').html('Please select the module');
+        returntype = false;
+      } else {
+        if (list == 1) {
+          $("#aaa").hide();
+          $("#ddd").show();
+        }
+      }
+    },
+    removeerror: function removeerror(fieldid, errid) {
+      if ($('#' + fieldid).val() != "") {
+        $('#' + fieldid).removeClass('is-invalid');
+        $('#' + errid).html('');
+      }
     }
   },
-  mounted: function mounted() {//   $("#rolesAndPriviledges").DataTable({
-    //         "responsive": true,
-    //         "autoWidth": true,
-    //     }); 
-    // $('.dataTables_filter').addClass('fa-pull-right');
-    // $('#rolesAndPriviledges_paginate').addClass('fa-pull-right');
-  }
+  mounted: function mounted() {}
 });
 
 /***/ }),
@@ -7289,7 +7279,68 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  methods: {
+    showdelete: function showdelete() {
+      // $('#deleterecordid').val(id);
+      $('#deletemodal').modal('show');
+    }
+  },
+  mounted: function mounted() {}
+});
 
 /***/ }),
 
@@ -64857,7 +64908,53 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "card-body" }, [
           _c("div", { staticClass: "form-group row" }, [
-            _vm._m(3),
+            _c("div", { staticClass: "col-md-4" }, [
+              _vm._m(3),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  staticClass:
+                    "form-control editable_fields font-weight-bolder",
+                  attrs: { name: "module", id: "module" },
+                  on: {
+                    change: function($event) {
+                      return _vm.removeerror("module", "module_err")
+                    }
+                  }
+                },
+                [
+                  _c("option", { attrs: { value: "" } }, [
+                    _vm._v("--- Please Select ---")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "1" } }, [
+                    _vm._v("System Admin")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "2" } }, [
+                    _vm._v("Organization")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "3" } }, [_vm._v("Student")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "4" } }, [_vm._v("Staff")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "5" } }, [
+                    _vm._v("Admission")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "5" } }, [
+                    _vm._v("Result Processing")
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c("span", {
+                staticClass: "text-danger",
+                attrs: { id: "module_err" }
+              })
+            ]),
             _vm._v(" "),
             _vm._m(4),
             _vm._v(" "),
@@ -64966,36 +65063,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-4" }, [
-      _c("label", { staticClass: "col-md-4 font-weight-normal" }, [
-        _vm._v("Module:"),
-        _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
-      ]),
-      _vm._v(" "),
-      _c(
-        "select",
-        {
-          staticClass: "form-control editable_fields font-weight-bolder",
-          attrs: { name: "module", id: "module" }
-        },
-        [
-          _c("option", { attrs: { value: "" } }, [
-            _vm._v("--- Please Select ---")
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "1" } }, [_vm._v("System Admin")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "2" } }, [_vm._v("Organization")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "3" } }, [_vm._v("Student")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "4" } }, [_vm._v("Staff")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "5" } }, [_vm._v("Admission")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "5" } }, [_vm._v("Result Processing")])
-        ]
-      )
+    return _c("label", { staticClass: "col-md-4 font-weight-normal" }, [
+      _vm._v("Module:"),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
     ])
   },
   function() {
@@ -65041,12 +65111,14 @@ var staticRenderFns = [
       "table",
       {
         staticClass: "table table-bordered table-striped",
-        attrs: { id: "ddd" }
+        attrs: { id: "aaa" }
       },
       [
         _c("thead", [
           _c("tr", [
-            _c("th", [_vm._v("Screen/Page")]),
+            _c("th", [_vm._v("Screen")]),
+            _vm._v(" "),
+            _c("th"),
             _vm._v(" "),
             _c("th", [_vm._v("Organization")]),
             _vm._v(" "),
@@ -65068,518 +65140,155 @@ var staticRenderFns = [
       "table",
       {
         staticClass: "table table-bordered table-striped hidden",
-        attrs: { id: "rolesAndPriviledges" }
+        attrs: { id: "ddd" }
       },
       [
-        _c("thead", [
-          _c("tr", [
-            _c("th", [_vm._v("Screen/Page")]),
-            _vm._v(" "),
-            _c("th", [_vm._v("Organization")]),
-            _vm._v(" "),
-            _c("th", [_vm._v("Dzongkhag")]),
-            _vm._v(" "),
-            _c("th", [_vm._v("National")])
-          ])
+        _c("tr", [
+          _c("th", [_vm._v("Screen")]),
+          _vm._v(" "),
+          _c("th"),
+          _vm._v(" "),
+          _c("th", [_vm._v("Organization")]),
+          _vm._v(" "),
+          _c("th", [_vm._v("Dzongkhag")]),
+          _vm._v(" "),
+          _c("th", [_vm._v("National")])
         ]),
         _vm._v(" "),
-        _c("tbody", [
-          _c("tr", { staticStyle: {}, attrs: { id: "record1" } }, [
-            _c("td", [
-              _vm._v("User Management\n                                "),
-              _c("tr", [_c("td", [_vm._v("View")])]),
-              _vm._v(" "),
-              _c("tr", [_c("td", [_vm._v("Add")])]),
-              _vm._v(" "),
-              _c("tr", [_c("td", [_vm._v("Edit")])]),
-              _vm._v(" "),
-              _c("tr", [_c("td", [_vm._v("Delete")])])
-            ]),
-            _vm._v(" "),
-            _c("td", [
-              _vm._v("dsdfsdf\n                                "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("td", [
-              _vm._v("dsdfsdf\n                                "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ])
-            ]),
-            _c("td", [
-              _vm._v("dsdfsdf\n                                "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ])
-            ])
+        _c("tr", [
+          _c("th", { attrs: { rowspan: "4" } }, [_vm._v("User Management")]),
+          _vm._v(" "),
+          _c("th", [_vm._v("Add")]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "add" } })]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "add" } })]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "add" } })])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("th", [_vm._v("View")]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "view" } })]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "view" } })]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "view" } })])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("th", [_vm._v("Edit")]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "edit" } })]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "edit" } })]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "edit" } })])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("th", [_vm._v("Delete")]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "delete" } })]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "delete" } })]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "delete" } })])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("th", { attrs: { rowspan: "4" } }, [
+            _vm._v("Roles And Priviledges")
           ]),
           _vm._v(" "),
-          _c("tr", { attrs: { id: "record2" } }, [
-            _c("td", [
-              _vm._v("Roles And Priviledges\n                                "),
-              _c("tr", [_c("td", [_vm._v("View")])]),
-              _vm._v(" "),
-              _c("tr", [_c("td", [_vm._v("Add")])]),
-              _vm._v(" "),
-              _c("tr", [_c("td", [_vm._v("Edit")])]),
-              _vm._v(" "),
-              _c("tr", [_c("td", [_vm._v("Delete")])])
-            ]),
-            _vm._v(" "),
-            _c("td", [
-              _vm._v("dsdfsdf\n                                "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("td", [
-              _vm._v("dsdfsdf\n                                "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("td", [
-              _vm._v("dsdfsdf\n                                "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ])
-            ])
+          _c("th", [_vm._v("Add")]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "add1" } })]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "add1" } })]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "add1" } })])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("th", [_vm._v("View")]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "view1" } })]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "view1" } })]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "view1" } })])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("th", [_vm._v("Edit")]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "edit1" } })]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "edit1" } })]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "edit1" } })])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("th", [_vm._v("Delete")]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", { attrs: { type: "radio", name: "delete1" } })
           ]),
           _vm._v(" "),
-          _c("tr", { attrs: { id: "record3" } }, [
-            _c("td", [
-              _vm._v("WorkFlow Management\n                                "),
-              _c("tr", [_c("td", [_vm._v("View")])]),
-              _vm._v(" "),
-              _c("tr", [_c("td", [_vm._v("Add")])]),
-              _vm._v(" "),
-              _c("tr", [_c("td", [_vm._v("Edit")])]),
-              _vm._v(" "),
-              _c("tr", [_c("td", [_vm._v("Delete")])])
-            ]),
-            _vm._v(" "),
-            _c("td", [
-              _vm._v("dsdfsdf\n                                "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("td", [
-              _vm._v("dsdfsdf\n                                "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("td", [
-              _vm._v("dsdfsdf\n                                "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("input", {
-                    attrs: {
-                      type: "radio",
-                      name: "permission",
-                      id: "organization"
-                    }
-                  })
-                ])
-              ])
-            ])
-          ])
+          _c("td", [
+            _c("input", { attrs: { type: "radio", name: "delete1" } })
+          ]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "delete1" } })])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("th", { attrs: { rowspan: "4" } }, [_vm._v("WorkFow Management")]),
+          _vm._v(" "),
+          _c("th", [_vm._v("Add")]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "add2" } })]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "add2" } })]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "add2" } })])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("th", [_vm._v("View")]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "view2" } })]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "view2" } })]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "view2" } })])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("th", [_vm._v("Edit")]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "edit2" } })]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "edit2" } })]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "edit2" } })])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("th", [_vm._v("Delete")]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", { attrs: { type: "radio", name: "delete2" } })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", { attrs: { type: "radio", name: "delete2" } })
+          ]),
+          _vm._v(" "),
+          _c("td", [_c("input", { attrs: { type: "radio", name: "delete2" } })])
         ])
       ]
     )
@@ -66255,72 +65964,244 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c("div", { staticClass: "card" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "card-body" }, [
+        _c(
+          "table",
+          {
+            staticClass: "table table-bordered table-striped",
+            attrs: { id: "dynamic-table" }
+          },
+          [
+            _vm._m(1),
+            _vm._v(" "),
+            _c("tbody", [
+              _c("tr", { attrs: { id: "record1" } }, [
+                _c("td", [_vm._v("Ugyen")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("ugyen@gmaill.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Yangchenphug HSS")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Teacher")]),
+                _vm._v(" "),
+                _vm._m(2),
+                _vm._v(" "),
+                _c("td", { attrs: { width: "3%" } }, [
+                  _c("input", {
+                    staticClass: "btn btn-flat btn-danger delete",
+                    attrs: { type: "button", value: "Delete", id: "edit" },
+                    on: {
+                      click: function($event) {
+                        return _vm.showdelete()
+                      }
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", { attrs: { id: "record2" } }, [
+                _c("td", [_vm._v("Pema Dorji")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("pema@gmaill.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Motithang HSS")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Teacher")]),
+                _vm._v(" "),
+                _vm._m(3),
+                _vm._v(" "),
+                _c("td", { attrs: { width: "3%" } }, [
+                  _c("input", {
+                    staticClass: "btn btn-flat btn-danger delete",
+                    attrs: { type: "button", value: "Delete", id: "delete" },
+                    on: {
+                      click: function($event) {
+                        return _vm.showdelete()
+                      }
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", { attrs: { id: "record3" } }, [
+                _c("td", [_vm._v("Karma Phuntsho")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("karma@gmaill.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("MOE")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("IT personnel")]),
+                _vm._v(" "),
+                _vm._m(4),
+                _vm._v(" "),
+                _c("td", { attrs: { width: "3%" } }, [
+                  _c("input", {
+                    staticClass: "btn btn-flat btn-danger delete",
+                    attrs: { type: "button", value: "Delete", id: "edit" },
+                    on: {
+                      click: function($event) {
+                        return _vm.showdelete()
+                      }
+                    }
+                  })
+                ])
+              ])
+            ])
+          ]
+        )
+      ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "modal fade",
+        attrs: { id: "deletemodal", tabindex: "-1", role: "dialog" }
+      },
+      [
+        _c("div", { staticClass: "modal-dialog" }, [
+          _c("div", { staticClass: "modal-content" }, [
+            _vm._m(5),
+            _vm._v(" "),
+            _vm._m(6),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-footer" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-default",
+                  attrs: {
+                    "data-bb-handler": "cancel",
+                    type: "button",
+                    "data-dismiss": "modal"
+                  }
+                },
+                [_vm._v("No")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-primary",
+                  attrs: { "data-bb-handler": "confirm", type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.deleterecords()
+                    }
+                  }
+                },
+                [_vm._v("Yes")]
+              )
+            ])
+          ])
+        ])
+      ]
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-header" }, [
-          _c("h3", { staticClass: "card-title" }, [_vm._v("User Lists")])
-        ]),
+    return _c("div", { staticClass: "card-header" }, [
+      _c("h3", { staticClass: "card-title" }, [_vm._v("User Lists")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v("Name")]),
         _vm._v(" "),
-        _c("div", { staticClass: "card-body" }, [
-          _c(
-            "table",
-            {
-              staticClass: "table table-bordered table-striped",
-              attrs: { id: "dynamic-table" }
-            },
-            [
-              _c("thead", [
-                _c("tr", [
-                  _c("th", [_vm._v("Name")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Email")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Organization Unit")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Role")])
-                ])
+        _c("th", [_vm._v("Email")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Organization Unit")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Role")]),
+        _vm._v(" "),
+        _c("th"),
+        _vm._v(" "),
+        _c("th")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", { attrs: { width: "3%" } }, [
+      _c("input", {
+        staticClass: "btn btn-flat btn-primary",
+        attrs: { type: "button", value: "Edit", id: "edit" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", { attrs: { width: "3%" } }, [
+      _c("input", {
+        staticClass: "btn btn-flat btn-primary",
+        attrs: { type: "button", value: "Edit", id: "edit" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", { attrs: { width: "3%" } }, [
+      _c("input", {
+        staticClass: "btn btn-flat btn-primary",
+        attrs: { type: "button", value: "Edit", id: "edit" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-header" }, [
+      _c("h4", { staticClass: "modal-title" }, [_vm._v("Delete Confirmation")]),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-body" }, [
+      _c("div", { staticClass: "bootbox-body" }, [
+        _c("form", { staticClass: "bootbox-form" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-12 alert alert-danger" }, [
+              _c("span", {}, [
+                _vm._v("Are you sure you wish to delete the user?")
               ]),
               _vm._v(" "),
-              _c("tbody", [
-                _c("tr", { attrs: { id: "record1" } }, [
-                  _c("td", [_vm._v("Ugyen")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("ugyen@gmaill.com")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("Yangchenphug HSS")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("Teacher")])
-                ]),
-                _vm._v(" "),
-                _c("tr", { attrs: { id: "record2" } }, [
-                  _c("td", [_vm._v("Pema Dorji")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("pema@gmaill.com")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("Motithang HSS")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("Teacher")])
-                ]),
-                _vm._v(" "),
-                _c("tr", { attrs: { id: "record3" } }, [
-                  _c("td", [_vm._v("Karma Phuntsho")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("karma@gmaill.com")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("MOE")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("IT personnel")])
-                ])
-              ])
-            ]
-          )
+              _c("input", { attrs: { type: "hidden", id: "deleterecordid" } })
+            ])
+          ])
         ])
       ])
     ])
