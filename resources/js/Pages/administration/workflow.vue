@@ -4,14 +4,14 @@
             <div class="card-header">
                 <h3 class="card-title">Work Flow</h3>
             </div>
-        </div>
+        
 
         <form>
             <div class="card-body">
                 <div class="form-group row">
-                        <label class="col-md-1">Process:</label>
+                        <label class="col-md-1 font-weight-normal">Process:<span class="text-danger">*</span></label>
                         <div class="col-md-6">
-                            <select name="role" id="roles" class="form-control editable_fields">
+                            <select name="role" id="roles" class="form-control editable_fields font-weight-bolder">
                                     <option value="">--- Please Select ---</option>
                                     <option value="1">Admission</option>
                                     <option value="2">New School Opening</option>
@@ -52,7 +52,7 @@
                             </td>
 
                             <td width="3%">
-                                <input type="button" class="btn btn-primary" value="Add More" id="addMore" 
+                                <input type="button" class="btn btn-flat btn-primary" value="Add More" id="addMore" 
                                 @click="addMore()" v-show="index == users.length-1">
                             </td>
                             <td width="3%">
@@ -67,15 +67,16 @@
             </div>
             
         </form>
+       </div>
+
             <div class="row">
-                <div class="col-md-9 col-md-offset-8">
-                    <input type="button" class="btn btn-primary" value="Cancel" id="reset" style="margin-left: 400px;" @click="reset()"/>
+                <div class="col-md-9 col-md-offset-8" style="margin-left: 850px;">
+                    <input type="button" class="btn btn-flat btn-primary" value="Cancel" id="reset"  @click="reset()"/>
                             &nbsp; &nbsp; &nbsp;
-                    <input type="button" class="btn btn-primary" value="Submit" id="submit" @click="save()"/>
+                    <input type="button" class="btn btn-flat btn-primary" value="Submit" id="submit" @click="save()"/>
                             
                 </div>
             </div> 
-       
     </div>
 </template>
 
@@ -109,7 +110,16 @@ export default {
         remove(index){    
              this.users.splice(index,1);             
         }
-    }
+    },
+
+    mounted() {
+      $("#dynamic-table").DataTable({
+            "responsive": true,
+            "autoWidth": true,
+        }); 
+        $('.dataTables_filter').addClass('fa-pull-right');
+        $('#dynamic-table_paginate').addClass('fa-pull-right');
+  }
     
 }
 </script>
