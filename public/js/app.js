@@ -54003,7 +54003,7 @@ var render = function() {
                                 staticClass: "fa fa-angle-double-right nav-icon"
                               }),
                               _vm._v(" "),
-                              _c("p", [_vm._v("user management")])
+                              _c("p", [_vm._v("User Management")])
                             ]
                           )
                         ],
@@ -54040,7 +54040,7 @@ var render = function() {
                                 staticClass: "fa fa-angle-double-right nav-icon"
                               }),
                               _vm._v(" "),
-                              _c("p", [_vm._v("workflow management")])
+                              _c("p", [_vm._v("Workflow Management")])
                             ]
                           )
                         ],
@@ -61326,7 +61326,7 @@ var render = function() {
                       [_vm._v("4")]
                     ),
                     _vm._v(" "),
-                    _c("label", [_vm._v("Contact Details")])
+                    _c("label", [_vm._v("Student Co-curricular Activities")])
                   ]
                 )
               ])
@@ -98717,13 +98717,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 __webpack_require__(/*! D:\laravel project\emisv3-adminlte\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! D:\laravel project\emisv3-adminlte\resources\css\app.css */"./resources/css/app.css");
-=======
-__webpack_require__(/*! C:\xampp1\htdocs\emisv3-adminlte\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp1\htdocs\emisv3-adminlte\resources\css\app.css */"./resources/css/app.css");
->>>>>>> bbd6ab05cc427757d3fcb58d3ed39883fca77c5c
 
 
 /***/ })

@@ -29,7 +29,7 @@
                             <li class="nav-item contactdetails-tab">
                                 <a class="nav-link disabled" id="contactdetails-tab-head" data-toggle="pill" @click="shownexttab('schooldetails-tab','contactdetails-tab')" role="tab" aria-controls="custom-tabs-four-settings" aria-selected="false">
                                     <span class="step_no img-bordered pr-2 pl-2 pb-1 pt-1 bg-gradient-secondary text-white">4</span>
-                                    <label>Contact Details</label>
+                                    <label>Student Co-curricular Activities</label>
                                 </a>
                             </li>
                         </ul>
