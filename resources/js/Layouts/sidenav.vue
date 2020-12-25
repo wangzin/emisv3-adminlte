@@ -60,13 +60,13 @@
                                 <li class="nav-item" id="usermanagement" @click="setclass('administrationlink','usermanagement')">
                                     <router-link to="/administrationmaster"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
                                         <i class="fa fa-angle-double-right nav-icon"></i>
-                                        <p>user management</p>
+                                        <p>User Management</p>
                                     </router-link>
                                 </li>
                                 <li class="nav-item" id="workflowmanagement" @click="setclass('administrationlink','workflowmanagement')">
                                     <router-link to="/workFlow"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
                                         <i class="fa fa-angle-double-right nav-icon"></i>
-                                        <p>workflow management</p>
+                                        <p>Workflow Management</p>
                                     </router-link>
                                 </li>
                             </ul>
