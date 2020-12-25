@@ -85,27 +85,59 @@
                                 <li class="nav-item" id="roganizationmaster" @click="setclass('organizationlink','roganizationmaster')">
                                     <router-link to="/orgmastermanagement" class="nav-link">
                                         <p>
-                                            <i class="fa fa-angle-double-right nav-icon"></i>
+                                            <i class="fa fa-list nav-icon"></i>
                                             Organization Masters
                                         </p>
-                                    </router-link>
+                                    </router-link> 
                                 </li>
-                                <li class="nav-item" id="organizationlinksub" @click="setclass('organizationlink','organizationlinksub')">
-                                    <router-link to="/orgmanagement" class="nav-link">
+                                <li class="nav-item has-treeview" id="organizationtransactionLink">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fas fa-book"></i>
                                         <p>
-                                            <i class="fa fa-angle-double-right nav-icon"></i>
-                                            Organization
+                                            Appl. & Transactions
+                                            <i class="fas fa-angle-left right"></i>
                                         </p>
-                                    </router-link>
+                                    </a>
+                                    <ul class="nav nav-treeview nav-pills flex-column">
+                                        <li class="nav-item" id="organization_basic_contact" @click="setclass('organizationlink','organization_basic_contact')">
+                                            <router-link to="/org_basic_contact" class="nav-link">
+                                                <i class="nav-icon fas fa-phone"></i>
+                                                &nbsp;&nbsp;Basic & Contact
+                                                <i class="fas fa-angle-double-right float-right pt-1"></i>  
+                                            </router-link>
+                                        </li>
+                                        <li class="nav-item" id="organization_location" @click="setclass('organizationlink','organization_location')">
+                                            <router-link to="/org_location" class="nav-link">
+                                                <i class="nav-icon fas fa-map-marker-alt"></i>
+                                                &nbsp;&nbsp;Location
+                                                <i class="fas fa-angle-double-right float-right pt-1"></i>  
+                                            </router-link>
+                                        </li>
+                                        <li class="nav-item" id="organization_structure" @click="setclass('organizationlink','organization_structure')">
+                                            <router-link to="/org_structure" class="nav-link">
+                                                <i class="nav-icon fas fa-hotel"></i>
+                                                &nbsp;&nbsp;Structure
+                                                <i class="fas fa-angle-double-right float-right pt-1"></i>  
+                                            </router-link>
+                                        </li>
+                                        <li class="nav-item" id="organization_wash" @click="setclass('organizationlink','organization_wash')">
+                                            <router-link to="/orgwash" class="nav-link">
+                                                <i class="nav-icon fas fa-water"></i>
+                                                &nbsp;&nbsp;Wash Facility
+                                                <i class="fas fa-angle-double-right float-right pt-1"></i>  
+                                            </router-link>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li class="nav-item" id="organizationapproval" @click="setclass('organizationlink','organizationapproval')">
+                                
+                                <!-- <li class="nav-item" id="organizationapproval" @click="setclass('organizationlink','organizationapproval')">
                                     <router-link to="/taslist" class="nav-link">
                                         <p>
                                             <i class="fa fa-angle-double-right nav-icon"></i>
                                             Org. Verif. & Approval
                                         </p>
                                     </router-link>
-                                </li>
+                                </li> -->
                             </ul>
                         </li>
 
@@ -277,7 +309,11 @@ export default {
             $('#organizationlink').removeClass('menu-open');
             $('#organizationlink'+'>ul').hide();
             $('#roganizationmaster').removeClass('navbar-cyan active');
-            $('#organizationlinksub').removeClass('navbar-cyan active');
+            $('#organization_basic_contact').removeClass('navbar-cyan active');
+            $('#organization_location').removeClass('navbar-cyan active');
+            $('#organization_wash').removeClass('navbar-cyan active');
+            $('#organization_structure').removeClass('navbar-cyan active');
+             
             $('#organizationapproval').removeClass('navbar-cyan active');
 
             //staff

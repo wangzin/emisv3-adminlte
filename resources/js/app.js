@@ -24,6 +24,10 @@ let routes = [
     { path: '/gewogmasters', name: 'Gewog Master', component: require('./Pages/globalmaster/gewog.vue').default },
     { path: '/villagemaster', name: 'Village Master', component: require('./Pages/globalmaster/village.vue').default },
     
+    { path: '/org_basic_contact', name: 'Organization Basic and Contact Detials', component: require('./Pages/organization/transactions/basic_contact.vue').default },
+    { path: '/org_location', name: 'Organization Location Detials', component: require('./Pages/organization/transactions/location.vue').default },
+    //{ path: '/org_structure', name: 'Organization Structure Detials', component: require('./Pages/organization/transactions/location.vue').default },
+    
     { path: '/orgmastermanagement', name: 'Organization Master Management',
     component: require('./Pages/organization/masters/orgmasterindex.vue').default,
         children: [
@@ -32,7 +36,7 @@ let routes = [
             { path: '/orglocationmaster', name: 'Location Master', component: require('./Pages/organization/masters/locationmaster.vue').default },
         ]    
     }, 
-    { path: '/orgmanagement', name: 'Organization Management',
+    { path: '/org_structure', name: 'Organization Management',
     component: require('./Pages/organization/transactions/organizationindex.vue').default,
         children: [
             { path: '/', component: require('./Pages/organization/transactions/existingorg.vue').default },
