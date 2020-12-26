@@ -83,9 +83,9 @@
         </div>
         <div class="row">
             <div class="col-md-9 col-md-offset-8" style="margin-left: 400px;">
-                <input type="button" class="btn btn-primary" value="Cancel" id="reset" style="margin-left: 400px;" @click="reset()"/>
+                <input type="button" class="btn btn-primary btn-flat" value="Cancel" id="reset" style="margin-left: 400px;" @click="reset()"/>
                         &nbsp; &nbsp; &nbsp;
-                <input type="button" class="btn btn-primary" value="Submit" id="submit" @click="save()"/>
+                <input type="button" class="btn btn-primary btn-flat" value="Submit" id="submit" @click="save()"/>
                            
             </div>
         </div> 
