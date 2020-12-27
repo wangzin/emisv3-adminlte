@@ -253,6 +253,9 @@ export default {
                if(list == 1){
                     $("#aaa").hide();
                     $("#ddd").show();
+               }else{
+                   $("#aaa").show();
+                    $("#ddd").hide();
                }
                 
            }

@@ -6932,6 +6932,9 @@ __webpack_require__.r(__webpack_exports__);
         if (list == 1) {
           $("#aaa").hide();
           $("#ddd").show();
+        } else {
+          $("#aaa").show();
+          $("#ddd").hide();
         }
       }
     },
@@ -65459,7 +65462,7 @@ var render = function() {
         },
         [
           _c("input", {
-            staticClass: "btn btn-primary",
+            staticClass: "btn btn-primary btn-flat",
             staticStyle: { "margin-left": "400px" },
             attrs: { type: "button", value: "Cancel", id: "reset" },
             on: {
@@ -65470,7 +65473,7 @@ var render = function() {
           }),
           _vm._v("\n                         \n            "),
           _c("input", {
-            staticClass: "btn btn-primary",
+            staticClass: "btn btn-primary btn-flat",
             attrs: { type: "button", value: "Submit", id: "submit" },
             on: {
               click: function($event) {
@@ -65797,7 +65800,7 @@ var render = function() {
         { staticClass: "col-md-9", staticStyle: { "margin-left": "400px" } },
         [
           _c("input", {
-            staticClass: "btn btn-primary",
+            staticClass: "btn btn-flat btn-primary",
             staticStyle: { "margin-left": "400px" },
             attrs: { type: "button", value: "Cancel", id: "reset" },
             on: {
@@ -65810,7 +65813,7 @@ var render = function() {
             "\n                                                 \n                    "
           ),
           _c("input", {
-            staticClass: "btn btn-primary",
+            staticClass: "btn btn-flat btn-primary",
             attrs: { type: "button", value: "Submit", id: "submit" },
             on: {
               click: function($event) {
