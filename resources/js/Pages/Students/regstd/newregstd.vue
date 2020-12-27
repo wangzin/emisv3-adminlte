@@ -485,7 +485,7 @@ export default {
     },
     data() {
         return {
-            organizationtype:"", fathername:"", mothername:"", fathercontact:"", mothercontact:"",
+            fathername:"", mothername:"", fathercontact:"", mothercontact:"",
             schoollevel:"", guardaincontact:"", 
             schoolname:"", studentclass:"", studentsection:"", studentstream:"",
             nationality:"", dzongkhag:"", gewog:"",
