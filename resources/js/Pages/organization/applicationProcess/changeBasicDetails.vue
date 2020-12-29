@@ -155,6 +155,60 @@
                         </div>
                     </div>
             </div>
+
+            <div class="card" style="width:500px" >
+                <div class="card-header hidden classAndStream">
+                    <h3 class="card-title">Class and Stream</h3>
+                </div>
+                    <div class="card-body hidden classAndStream">
+                        <table id="dynamic-table" class="table table-bordered table-striped" >
+                    <thead>
+                         <tr>
+                            <th>Class</th>
+                            <th>Stream</th>                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="record1" >
+                            <td>
+                                <input type="text" value="9" class="form-control" readonly/>
+                            </td>
+                            <td>                                
+                                <input type="checkbox"/><label for="dd"> A </label>
+                            </td>
+                        </tr>
+
+                        <tr id="record2" >
+                            <td>
+                                <input type="text" value="10" class="form-control" readonly/>
+                            </td>
+                            <td>                                
+                                <input type="checkbox"/><label for="dd">  A </label>
+                            </td>
+                        </tr>
+
+                        <tr id="record3" >
+                            <td>
+                                <input type="text" value="11" class="form-control" readonly/>
+                            </td>
+                            <td>                                
+                                <input type="checkbox" id="dd"/><label for="dd"> A </label>
+                            </td>
+                        </tr>  
+
+                        <tr id="record4" >
+                            <td>
+                                <input type="text" value="12" class="form-control" readonly/>
+                            </td>
+                            <td>                                
+                                <input type="checkbox" /><label for="dd"> A </label>
+                            </td>
+                        </tr>                                         
+                        
+                    </tbody>
+                </table>
+                    </div>
+            </div>
         </form>
         <div class="row">
             <div class="col-md-1" style="margin-left: 800px;">
@@ -169,7 +223,9 @@
 </template>
 
 <script>
+import Input from '../../../Jetstream/Input.vue';
 export default {
+  components: { Input },
 data(){
         return{
 
@@ -207,6 +263,7 @@ data(){
                 $("#parentSchool").prop('disabled', true);
                 $("#coLoParent").prop('disabled', true);
                 $("#senSchool option:selected").text("No");
+                $(".classAndStream").show();
            }else{
                 $("#code").val("0022000"); 
                 $("#name").val("ECCD1");

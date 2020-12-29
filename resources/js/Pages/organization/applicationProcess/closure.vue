@@ -18,7 +18,7 @@
                             </div>
                             <div class="col-md-5">
                             <label class="col-md-5 font-weight-normal">Year of Closure:</label>
-                                <input type="text" class="form-control editable_fields font-weight-bolder" id="closure"/>
+                                <input type="text" class="form-control editable_fields font-weight-bolder datepicker" id="closure"/>
                             </div>                   
                         </div>
                     </div>

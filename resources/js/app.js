@@ -41,7 +41,7 @@ let routes = [
     }, 
 
     { path: '/applicationProcess', name: 'Application Process',
-    component: require('./Pages/organization/applicationProcess/applicationprocessindex.vue').default,
+    component: require('./Pages/organization/applicationProcess/applicationProcessindex.vue').default,
         children: [
             { path: '/', component: require('./Pages/organization/applicationProcess/applicationProcessData.vue').default },
             { path: '/establishment', name: 'Org Est', component: require('./Pages/organization/applicationProcess/establishment.vue').default },

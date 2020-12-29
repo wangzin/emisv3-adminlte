@@ -62,9 +62,6 @@
                                     Closure
                                 </router-link>
                             </a>  
-
-                                                  
-                            
                         </div>
                     </li>                    
                 </ul>
