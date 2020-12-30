@@ -1,5 +1,6 @@
 <template>
     <div>
+        <!-- new establishment card -->
         <div class="card">
              <div class="card-header">
                 <h3 class="card-title">New Establishment</h3>
@@ -124,6 +125,8 @@
         </form>
        
         </div>
+
+        <!-- button -->
          <div class="row">
             <div class="col-md-1" style="margin-left: 800px;">
                 <input type="button" class="btn btn-flat btn-primary" value="Cancel" id="reset" @click="reset()"/>

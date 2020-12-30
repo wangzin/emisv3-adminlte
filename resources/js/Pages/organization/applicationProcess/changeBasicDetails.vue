@@ -1,6 +1,7 @@
 <template>
     <div>
         <form>
+            <!--change basic detail card -->
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">Change Basic Details</h3>
@@ -24,6 +25,7 @@
                     </div>
             </div>
 
+            <!-- Basic details card -->
              <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">Basic Details</h3>
@@ -155,7 +157,7 @@
                         </div>
                     </div>
             </div>
-
+            <!-- class and stream card -->
             <div class="card" style="width:500px" >
                 <div class="card-header hidden classAndStream">
                     <h3 class="card-title">Class and Stream</h3>
@@ -171,7 +173,7 @@
                     <tbody>
                         <tr id="record1" >
                             <td>
-                                <input type="text" value="9" class="form-control" readonly/>
+                                <input type="text" value="9" class="form-control"/>
                             </td>
                             <td>                                
                                 <input type="checkbox"/><label for="dd"> A </label>
@@ -180,7 +182,7 @@
 
                         <tr id="record2" >
                             <td>
-                                <input type="text" value="10" class="form-control" readonly/>
+                                <input type="text" value="10" class="form-control"/>
                             </td>
                             <td>                                
                                 <input type="checkbox"/><label for="dd">  A </label>
@@ -189,7 +191,7 @@
 
                         <tr id="record3" >
                             <td>
-                                <input type="text" value="11" class="form-control" readonly/>
+                                <input type="text" value="11" class="form-control"/>
                             </td>
                             <td>                                
                                 <input type="checkbox" id="dd"/><label for="dd"> A </label>
@@ -198,7 +200,7 @@
 
                         <tr id="record4" >
                             <td>
-                                <input type="text" value="12" class="form-control" readonly/>
+                                <input type="text" value="12" class="form-control"/>
                             </td>
                             <td>                                
                                 <input type="checkbox" /><label for="dd"> A </label>
@@ -210,6 +212,8 @@
                     </div>
             </div>
         </form>
+
+        <!-- buttons -->
         <div class="row">
             <div class="col-md-1" style="margin-left: 800px;">
                 <input type="button" class="btn btn-flat btn-primary" value="Cancel" id="reset" @click="reset()"/>
@@ -282,6 +286,7 @@ data(){
            }
         }
     },
+
 
     mounted() {
     }

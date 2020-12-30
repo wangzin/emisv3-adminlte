@@ -1,6 +1,7 @@
 <template>
     <div>
          <form>
+             <!-- closure card -->
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">Closure</h3>
@@ -24,6 +25,7 @@
                     </div>
             </div>
 
+            <!-- details of school card -->
              <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">Details of School</h3>
@@ -155,6 +157,8 @@
                     </div>
             </div>
         </form>
+
+        <!-- button -->
         <div class="row">
             <div class="col-md-1" style="margin-left: 800px;">
                 <input type="button" class="btn btn-flat btn-primary" value="Cancel" id="reset" @click="reset()"/>
