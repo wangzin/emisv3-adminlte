@@ -39,6 +39,21 @@ let routes = [
             { path: '/neworganization', component: require('./Pages/organization/transactions/neworganization.vue').default },
         ]    
     }, 
+
+    { path: '/applicationProcess', name: 'Application Process',
+    component: require('./Pages/organization/applicationProcess/applicationIndex.vue').default,
+        children: [
+            { path: '/', component: require('./Pages/organization/applicationProcess/applicationProcessData.vue').default },
+            { path: '/establishment', name: 'Org Est', component: require('./Pages/organization/applicationProcess/establishment.vue').default },
+            { path: '/changeBasicDetails', name: 'Basic Detail', component: require('./Pages/organization/applicationProcess/changeBasicDetails.vue').default },
+           { path: '/bifurcation', name: 'Basic Detail', component: require('./Pages/organization/applicationProcess/bifurcation.vue').default },
+            { path: '/merger', name: 'Merger', component: require('./Pages/organization/applicationProcess/merger.vue').default },
+        { path: '/annualUpdate', name: 'Annual Update', component: require('./Pages/organization/applicationProcess/annualUpdate.vue').default },
+        { path: '/closure', name: 'Closure', component: require('./Pages/organization/applicationProcess/closure.vue').default },
+
+        ]    
+    }, 
+    
     
     { path: '/taslistforall', name: 'Task List', component: require('./Pages/common/tasklist.vue').default },
     { path: '/searchapplication', name: 'Task List', component: require('./Pages/common/trackapplication.vue').default },

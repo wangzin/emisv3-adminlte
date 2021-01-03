@@ -90,7 +90,7 @@
                                         </p>
                                     </router-link>
                                 </li>
-                                <li class="nav-item" id="organizationlinksub" @click="setclass('organizationlink','organizationlinksub')">
+                                <!-- <li class="nav-item" id="organizationlinksub" @click="setclass('organizationlink','organizationlinksub')">
                                     <router-link to="/orgmanagement" class="nav-link">
                                         <p>
                                             <i class="fa fa-angle-double-right nav-icon"></i>
@@ -104,6 +104,13 @@
                                             <i class="fa fa-angle-double-right nav-icon"></i>
                                             Org. Verif. & Approval
                                         </p>
+                                    </router-link>
+                                </li> -->
+                              
+                                <li class="nav-item" id="applicationProcess" @click="setclass('organizationlink','applicationProcess')">
+                                    <router-link to="/applicationProcess"   class="nav-link" data-toggle="awesome_tooltip" title="applicationProcess">
+                                        <i class="fa fa-angle-double-right nav-icon"></i>
+                                        <p>Application Process</p>
                                     </router-link>
                                 </li>
                             </ul>
@@ -279,6 +286,7 @@ export default {
             $('#organizationlink'+'>ul').hide();
             $('#roganizationmaster').removeClass('navbar-cyan active');
             $('#organizationlinksub').removeClass('navbar-cyan active');
+            $('#applicationProcess').removeClass('navbar-cyan active');
             $('#organizationapproval').removeClass('navbar-cyan active');
 
             //staff
