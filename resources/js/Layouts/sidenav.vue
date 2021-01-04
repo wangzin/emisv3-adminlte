@@ -60,13 +60,13 @@
                                 <li class="nav-item" id="usermanagement" @click="setclass('administrationlink','usermanagement')">
                                     <router-link to="/administrationmaster"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
                                         <i class="fa fa-angle-double-right nav-icon"></i>
-                                        <p>User Management</p>
+                                        <p>user management</p>
                                     </router-link>
                                 </li>
                                 <li class="nav-item" id="workflowmanagement" @click="setclass('administrationlink','workflowmanagement')">
                                     <router-link to="/workFlow"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
                                         <i class="fa fa-angle-double-right nav-icon"></i>
-                                        <p>Workflow Management</p>
+                                        <p>workflow management</p>
                                     </router-link>
                                 </li>
                             </ul>
@@ -82,6 +82,26 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
+                                <li class="nav-item has-treeview" id="organizationtransactionLink">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fas fa-book"></i>
+                                        <p>
+                                            Update Org Info  
+                                            <i class="fas fa-angle-left right"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview nav-pills flex-column">
+                                        <li class="nav-item" id="organization_basic_contact" @click="setclass('organizationlink','organization_basic_contact')">
+                                            <router-link to="/basic_information" class="nav-link">
+                                                <i class="nav-icon fas fa-chalkboard"></i>
+                                                <p>
+                                                    Basic Information 
+                                                    <i class="fas fa-angle-left right"></i>
+                                                </p>
+                                            </router-link> 
+                                        </li>
+                                    </ul>   
+                                </li>
                                 <li class="nav-item" id="roganizationmaster" @click="setclass('organizationlink','roganizationmaster')">
                                     <router-link to="/orgmastermanagement" class="nav-link">
                                         <p>
