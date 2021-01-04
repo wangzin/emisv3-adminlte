@@ -177,29 +177,6 @@ export default {
             }
         },
 
-        /** method to populated data based on newEstablishmentID */
-        edit: function(){
-            $("#category option:selected").text("Public");
-            $("#level option:selected").text("Higher Secondary School"); 
-            $("#proposedName").val("YangchenPhug HSS");
-            $("#dongkhag option:selected").text("Thimphu");
-            $("#gewog option:selected").text("babesa");
-            $("#chiwog option:selected").text("olakha");
-            $("#locationCategory option:selected").text("olakha");
-            $("#senSchool option:selected").text("No");   
-            $("#establishmentID").val(1);
-        },
-
-        /** method to approve application based on newEstablishmentID */
-        approve: function(){
-            alert("New establishment approved sucessfully.");
-        },
-
-        /** method to reject application based on newEstablishmentID */
-        reject: function(){
-            alert("New establishment rejected sucessfully.");
-        },
-
     }
 }
 </script>
