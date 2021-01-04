@@ -24,15 +24,20 @@ let routes = [
     { path: '/gewogmasters', name: 'Gewog Master', component: require('./Pages/globalmaster/gewog.vue').default },
     { path: '/villagemaster', name: 'Village Master', component: require('./Pages/globalmaster/village.vue').default },
     
-    { path: '/orgmastermanagement', name: 'Organization Master Management',
+    { path: '/org_basic_contact', name: 'Organization Basic and Contact Detials', component: require('./Pages/organization/transactions/basic_contact.vue').default },
+    { path: '/org_location', name: 'Organization Location Detials', component: require('./Pages/organization/transactions/location.vue').default },
+    //{ path: '/org_structure', name: 'Organization Structure Detials', component: require('./Pages/organization/transactions/location.vue').default },
+    
+    { path: '/basic_information', name: 'Basic Information', component: require('./Pages/organization/organization_update/org_basic_information.vue').default },
+    { path: '/orgmastermanagement', name: 'Organization Master Management', 
     component: require('./Pages/organization/masters/orgmasterindex.vue').default,
-        children: [
+        children: [ 
             { path: '/', component: require('./Pages/organization/masters/orgmasterdata.vue').default },
             { path: '/orgmasterlevel', name: 'Level Master', component: require('./Pages/organization/masters/masterlevel.vue').default },
             { path: '/orglocationmaster', name: 'Location Master', component: require('./Pages/organization/masters/locationmaster.vue').default },
         ]    
     }, 
-    { path: '/orgmanagement', name: 'Organization Management',
+    { path: '/org_structure', name: 'Organization Management',
     component: require('./Pages/organization/transactions/organizationindex.vue').default,
         children: [
             { path: '/', component: require('./Pages/organization/transactions/existingorg.vue').default },
@@ -82,16 +87,7 @@ let routes = [
     //administration route 
     { path: '/rolesAndPriviledges', name: 'Roles', component: require('./Pages/administration/rolesAndPriviledges.vue').default },
     { path: '/workFlow', name: 'workFlow', component: require('./Pages/administration/workflow.vue').default },
-    { path: '/administrationmaster', name: 'Administration Master',
-    component: require('./Pages/administration/usermanagement/usermanagementindex.vue').default,
-        children: [
-            { path: '/', component: require('./Pages/administration/usermanagement/usermanagementdata.vue').default },
-            { path: '/staffUser', name: 'Staff', component: require('./Pages/administration/usermanagement/staffUser.vue').default },
-            { path: '/externalUser', name: 'External', component: require('./Pages/administration/usermanagement/externalUser.vue').default },
-            { path: '/userList', name: 'User List', component: require('./Pages/administration/usermanagement/userList.vue').default },
-
-        ]    
-    }, 
+    { path: '/administrationmaster', name: 'Administration', component: require('./Pages/administration/usermanagement/usermanagementindex.vue').default}, 
 
     // staff route
     { path: '/staffMaster', name: 'Staff Master',

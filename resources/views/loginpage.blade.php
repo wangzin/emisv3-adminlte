@@ -92,8 +92,24 @@
                     <p class="login-box-msg">Sign in to start your session</p>
                     <form action="userlogin" method="get">
                         <div class="input-group mb-3">
+                            <input type="email" id="emails" placeholder="User name /Email" class="form-control">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-envelope"></span>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" placeholder="Password">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-lock"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
                             <select class="form-control" style="width: 100%;" name="username">
-                                <option value="Select">Select</option>
+                                <option value="Select">Select Role</option>
                                 <option value="DBA">DBA</option>
                                 <option value="DEO">DEO</option>
                                 <option value="ADEO">ADEO</option>
@@ -104,14 +120,6 @@
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-envelope"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="password" class="form-control" placeholder="Password">
-                            <div class="input-group-append">
-                                <div class="input-group-text">
-                                    <span class="fas fa-lock"></span>
                                 </div>
                             </div>
                         </div>
@@ -167,7 +175,7 @@
                 }
                 else{
                     Swal.fire({
-                        title: 'Password Reset link has beed send to your email. Please check in your mail and proceed forther',
+                        title: 'Password Reset link has been send to your email. Please visit your email',
                         icon: 'warning',
                         confirmButtonColor: '#3085d6',
                         confirmButtonText: 'OK',

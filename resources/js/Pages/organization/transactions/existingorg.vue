@@ -1,68 +1,18 @@
 <template>
     <div>
-        <table id="organization-table" class="table table-bordered table-striped table-head-fixed">
-            <thead>
-                <tr>
-                    <th >Sl No.</th>
-                    <th >Dzongkhag</th>
-                    <th >Gewog</th>
-                    <th >School Name</th>
-                    <th >Category</th>
-                    <th >School Code</th>
-                    <th >School Status</th>
-                    <th >Contact</th>
-                    <th >Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="">1</td>
-                    <td class="">Bumthang</td>
-                    <td class="">Chokhor</td>
-                    <td class="">Jakar HSS</td>
-                    <td class="">Public Schools</td>
-                    <td class="">028.201.00001</td>
-                    <td class="">Opened</td>
-                    <td class="">631115</td>
-                    <td class="">
-                        <button @click="showdetails('professional')" class="btn btn-primary btn-xs btn-block">
-                            <i class="fa fa-eye"></i> View Details
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="">2</td>
-                    <td class="">Chhukha</td>
-                    <td class="">Bjachho</td>
-                    <td class="">Chukha Central School HSS</td>
-                    <td class="">Public Schools</td>
-                    <td class="">028.201.00019</td>
-                    <td class="">Opened</td>
-                    <td class="">08478413</td>
-                    <td class="">
-                        <button @click="showdetails('professional')" class="btn btn-primary btn-xs">
-                            <i class="fa fa-eye"></i> View Details
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="">3</td>
-                    <td class="">Bumthang</td>
-                    <td class="">Chokhor</td>
-                    <td class="">Jakar HSS</td>
-                    <td class="">Public Schools</td>
-                    <td class="">028.201.00001</td>
-                    <td class="">Opened</td>
-                    <td class="">631115</td>
-                    <td class="">
-                        <button @click="showdetails('professional')" class="btn btn-primary btn-xs">
-                            <i class="fa fa-eye"></i> View Details
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+        <div class="col-12">
+            <div class="position-relative p-3 bg-gray" style="height: 180px">
+                <div class="ribbon-wrapper ribbon-xl">
+                    <div class="ribbon bg-success">
+                        Organization Fomrs
+                    </div>
+                </div>
+                <div class="col-8">
+                    Organization forms inlcudes all details of organization (school, ECCD, Head Quarters, etc). According to your access level, you can able to proceed for further action. <br>
+                </div>
+            </div>
+        </div>
+    </div>   
 </template>
 <script>
 export default {
@@ -76,12 +26,11 @@ export default {
     methods: {
     },
     mounted() {
-        $("#organization-table").DataTable({
-            "responsive": true,
-            "autoWidth": true,
-        }); 
-        $('.dataTables_filter').addClass('fa-pull-right');
-        $('#organization-table_paginate').addClass('fa-pull-right');
+        $('.select2').select2()
+        $('.select2bs4').select2({
+            theme: 'bootstrap4'
+        });
+        $('.select2-selection__rendered').addClass('font-weight-bolder');
     },
 }
 </script>
