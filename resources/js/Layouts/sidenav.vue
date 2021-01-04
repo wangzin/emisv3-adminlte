@@ -113,6 +113,99 @@
                                         <p>Application Process</p>
                                     </router-link>
                                 </li>
+
+                                <li class="nav-item" id="taskList" @click="setclass('organizationlink','taskList')">
+                                    <router-link to="/taskList" class="nav-link">
+                                        <p>
+                                            <i class="fa fa-angle-double-right nav-icon"></i>
+                                            Task List
+                                        </p>
+                                    </router-link>
+                                </li>
+
+                                <li class="nav-item" id="basicInformation" @click="setclass('organizationlink','basicInformation')">
+                                    <router-link to="/basicInformation" class="nav-link">
+                                        <p>
+                                            <i class="fa fa-angle-double-right nav-icon"></i>
+                                            Basic Information
+                                        </p>
+                                    </router-link>
+                                </li>
+
+                                <li class="nav-item" id="headQuaterOffice" @click="setclass('organizationlink','headQuaterOffice')">
+                                    <router-link to="/headQuaterOffice" class="nav-link">
+                                        <p>
+                                            <i class="fa fa-angle-double-right nav-icon"></i>
+                                            HQ/Dzongkhag Office
+                                        </p>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item" id="location" @click="setclass('organizationlink','location')">
+                                    <router-link to="/location" class="nav-link">
+                                        <p>
+                                            <i class="fa fa-angle-double-right nav-icon"></i>
+                                            Location
+                                        </p>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item" id="contactDetails" @click="setclass('organizationlink','contactDetails')">
+                                    <router-link to="/contactDetails" class="nav-link">
+                                        <p>
+                                            <i class="fa fa-angle-double-right nav-icon"></i>
+                                            Contact Details
+                                        </p>
+                                    </router-link>
+                                </li>
+
+                                <li class="nav-item" id="connectivity" @click="setclass('organizationlink','connectivity')">
+                                    <router-link to="/connectivity" class="nav-link">
+                                        <p>
+                                            <i class="fa fa-angle-double-right nav-icon"></i>
+                                            Connectivity
+                                        </p>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item" id="structure" @click="setclass('organizationlink','structure')">
+                                    <router-link to="/structure" class="nav-link">
+                                        <p>
+                                            <i class="fa fa-angle-double-right nav-icon"></i>
+                                            Structure
+                                        </p>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item" id="equipment" @click="setclass('organizationlink','equipment')">
+                                    <router-link to="/equipment" class="nav-link">
+                                        <p>
+                                            <i class="fa fa-angle-double-right nav-icon"></i>
+                                            Equipment & Furniture
+                                        </p>
+                                    </router-link>
+                                </li>
+
+                                <li class="nav-item" id="sportFacility" @click="setclass('organizationlink','sportFacility')">
+                                    <router-link to="/sportFacility" class="nav-link">
+                                        <p>
+                                            <i class="fa fa-angle-double-right nav-icon"></i>
+                                            Sport Facility
+                                        </p>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item" id="agricultureFacility" @click="setclass('organizationlink','agricultureFacility')">
+                                    <router-link to="/agricultureFacility" class="nav-link">
+                                        <p>
+                                            <i class="fa fa-angle-double-right nav-icon"></i>
+                                            Agriculture Facility
+                                        </p>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item" id="washFacility" @click="setclass('organizationlink','washFacility')">
+                                    <router-link to="/washFacility" class="nav-link">
+                                        <p>
+                                            <i class="fa fa-angle-double-right nav-icon"></i>
+                                            Wash Facility
+                                        </p>
+                                    </router-link>
+                                </li>
                             </ul>
                         </li>
 
@@ -288,6 +381,17 @@ export default {
             $('#organizationlinksub').removeClass('navbar-cyan active');
             $('#applicationProcess').removeClass('navbar-cyan active');
             $('#organizationapproval').removeClass('navbar-cyan active');
+            $('#taskList').removeClass('navbar-cyan active');
+            $('#basicInformation').removeClass('navbar-cyan active');
+            $('#headQuaterOffice').removeClass('navbar-cyan active');
+            $('#location').removeClass('navbar-cyan active');
+            $('#contactDetails').removeClass('navbar-cyan active');
+            $('#connectivity').removeClass('navbar-cyan active');
+            $('#structure').removeClass('navbar-cyan active');
+            $('#equipment').removeClass('navbar-cyan active');
+            $('#sportFacility').removeClass('navbar-cyan active');
+            $('#agricultureFacility').removeClass('navbar-cyan active');
+            $('#washFacility').removeClass('navbar-cyan active');
 
             //staff
             $('#stafflink').removeClass('menu-open');

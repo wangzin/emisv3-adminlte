@@ -26,7 +26,7 @@
             </div>
 
             <!-- Basic details card -->
-             <div class="card">
+            <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">Basic Details</h3>
                 </div>
@@ -66,7 +66,7 @@
                                     <option value="4">Primary School</option>
                                     <option value="5">ECR</option>
                                     <option value="6">ECCD</option>
-                            </select>
+                                </select>
                             </div>                                              
                         </div>
 
@@ -223,6 +223,43 @@
                 <input type="button" class="btn btn-flat btn-primary" value="Submit" id="submit" @click="save()"/>                                                  
             </div>
         </div>
+
+         <!-- new establishment list -->
+        <div class="card">
+             <div class="card-header changeBasicDetaiList hidden">
+                <h3 class="card-title">Change Basic Details List</h3>
+            </div>
+
+            <div class="card-body changeBasicDetaiList hidden">
+                <table id="dynamic-table" class="table table-bordered table-striped">
+                    <thead>
+                         <tr>
+                            <th>Code</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="record1">
+                            <td>00020292</td>
+                            <td>YangchenPhug HSS</td>
+                            <td>Public</td>
+                            <td>Pending</td>
+                            <td width="3%">
+                                <input type="button" class="btn btn-flat btn-primary" value="Approve" id="verify" @click="approve()">
+                            </td> 
+                            <td width="3%">
+                                <input type="button" class="btn btn-flat btn-primary" value="Reject" id="reject" @click="reject()">
+                            </td>                           
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
     </div>
 </template>
 
@@ -241,11 +278,12 @@ data(){
         /** method to save data */
         save: function(){
             alert("data save successfully.");
-            window.location.reload();
+            // window.location.reload();
+            $(".changeBasicDetaiList").show();
         },
         /** method to reset forms */
         reset: function(){
-           window.location.reload();
+        //    window.location.reload();
         },
 
         /** method to get schools/ECR/ECCD details based on code */
@@ -284,7 +322,17 @@ data(){
                 $("#parentSchool").prop('disabled', false);
                 $("#coLoParent").prop('disabled', false);
            }
-        }
+        },
+
+        /** method to approve application based on newEstablishmentID */
+        approve: function(){
+            alert("Change basic details approved.");
+        },
+
+        /** method to reject application based on newEstablishmentID */
+        reject: function(){
+            alert("Change basic details is rejected.");
+        },
     },
 
 

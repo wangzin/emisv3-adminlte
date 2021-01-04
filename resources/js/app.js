@@ -46,14 +46,29 @@ let routes = [
             { path: '/', component: require('./Pages/organization/applicationProcess/applicationProcessData.vue').default },
             { path: '/establishment', name: 'Org Est', component: require('./Pages/organization/applicationProcess/establishment.vue').default },
             { path: '/changeBasicDetails', name: 'Basic Detail', component: require('./Pages/organization/applicationProcess/changeBasicDetails.vue').default },
-           { path: '/bifurcation', name: 'Basic Detail', component: require('./Pages/organization/applicationProcess/bifurcation.vue').default },
+           { path: '/bifurcation', name: 'Bifurcation', component: require('./Pages/organization/applicationProcess/bifurcation.vue').default },
             { path: '/merger', name: 'Merger', component: require('./Pages/organization/applicationProcess/merger.vue').default },
         { path: '/annualUpdate', name: 'Annual Update', component: require('./Pages/organization/applicationProcess/annualUpdate.vue').default },
         { path: '/closure', name: 'Closure', component: require('./Pages/organization/applicationProcess/closure.vue').default },
 
         ]    
     }, 
-    
+
+    { path: '/taskList', name: 'Task List', component: require('./Pages/organization/taskList.vue').default },
+    { path: '/basicInformation', name: 'Basic Info', component: require('./Pages/organization/basicInformation.vue').default },
+    { path: '/headQuaterOffice', name: 'HQ Office', component: require('./Pages/organization/headQuaterOffice.vue').default },
+    { path: '/location', name: 'location', component: require('./Pages/organization/location.vue').default },
+    { path: '/contactDetails', name: 'location', component: require('./Pages/organization/contactDetails.vue').default },
+    { path: '/connectivity', name: 'location', component: require('./Pages/organization/connectivity.vue').default },
+    { path: '/structure', name: 'location', component: require('./Pages/organization/structure.vue').default },
+    { path: '/equipment', name: 'location', component: require('./Pages/organization/equipment.vue').default },
+    { path: '/sportFacility', name: 'location', component: require('./Pages/organization/sportFacility.vue').default },
+    { path: '/agricultureFacility', name: 'location', component: require('./Pages/organization/agricultureFacility.vue').default },
+    { path: '/washFacility', name: 'location', component: require('./Pages/organization/washFacility.vue').default },
+
+    { path: '/approveRejectEstablishment', name: 'location', component: require('./Pages/organization/verification/approveRejectEstablishment.vue').default },
+
+
     
     { path: '/taslistforall', name: 'Task List', component: require('./Pages/common/tasklist.vue').default },
     { path: '/searchapplication', name: 'Task List', component: require('./Pages/common/trackapplication.vue').default },
