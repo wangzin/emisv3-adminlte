@@ -140,7 +140,7 @@
                                         </p>
                                     </router-link>
                                 </li>
-                                <li class="nav-item" id="location" @click="setclass('organizationlink','location')">
+                                <!-- <li class="nav-item" id="location" @click="setclass('organizationlink','location')">
                                     <router-link to="/location" class="nav-link">
                                         <p>
                                             <i class="fa fa-angle-double-right nav-icon"></i>
@@ -205,7 +205,7 @@
                                             Wash Facility
                                         </p>
                                     </router-link>
-                                </li>
+                                </li> -->
                             </ul>
                         </li>
 

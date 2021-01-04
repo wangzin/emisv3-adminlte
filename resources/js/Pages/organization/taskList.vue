@@ -1,5 +1,10 @@
 <template>
     <div>
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Task List</h3>
+            </div>
+        
         <div class="card-body">
                              
             <table id="dynamic-table" class="table table-bordered table-striped">
@@ -45,6 +50,7 @@
                 </tbody>
             </table>
                              
+        </div>
         </div>
     </div>
 </template>

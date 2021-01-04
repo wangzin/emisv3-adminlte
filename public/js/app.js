@@ -12331,6 +12331,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -56793,302 +56799,6 @@ var render = function() {
                           )
                         ],
                         1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "li",
-                        {
-                          staticClass: "nav-item",
-                          attrs: { id: "location" },
-                          on: {
-                            click: function($event) {
-                              return _vm.setclass(
-                                "organizationlink",
-                                "location"
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c(
-                            "router-link",
-                            {
-                              staticClass: "nav-link",
-                              attrs: { to: "/location" }
-                            },
-                            [
-                              _c("p", [
-                                _c("i", {
-                                  staticClass:
-                                    "fa fa-angle-double-right nav-icon"
-                                }),
-                                _vm._v(
-                                  "\n                                        Location\n                                    "
-                                )
-                              ])
-                            ]
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "li",
-                        {
-                          staticClass: "nav-item",
-                          attrs: { id: "contactDetails" },
-                          on: {
-                            click: function($event) {
-                              return _vm.setclass(
-                                "organizationlink",
-                                "contactDetails"
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c(
-                            "router-link",
-                            {
-                              staticClass: "nav-link",
-                              attrs: { to: "/contactDetails" }
-                            },
-                            [
-                              _c("p", [
-                                _c("i", {
-                                  staticClass:
-                                    "fa fa-angle-double-right nav-icon"
-                                }),
-                                _vm._v(
-                                  "\n                                        Contact Details\n                                    "
-                                )
-                              ])
-                            ]
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "li",
-                        {
-                          staticClass: "nav-item",
-                          attrs: { id: "connectivity" },
-                          on: {
-                            click: function($event) {
-                              return _vm.setclass(
-                                "organizationlink",
-                                "connectivity"
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c(
-                            "router-link",
-                            {
-                              staticClass: "nav-link",
-                              attrs: { to: "/connectivity" }
-                            },
-                            [
-                              _c("p", [
-                                _c("i", {
-                                  staticClass:
-                                    "fa fa-angle-double-right nav-icon"
-                                }),
-                                _vm._v(
-                                  "\n                                        Connectivity\n                                    "
-                                )
-                              ])
-                            ]
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "li",
-                        {
-                          staticClass: "nav-item",
-                          attrs: { id: "structure" },
-                          on: {
-                            click: function($event) {
-                              return _vm.setclass(
-                                "organizationlink",
-                                "structure"
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c(
-                            "router-link",
-                            {
-                              staticClass: "nav-link",
-                              attrs: { to: "/structure" }
-                            },
-                            [
-                              _c("p", [
-                                _c("i", {
-                                  staticClass:
-                                    "fa fa-angle-double-right nav-icon"
-                                }),
-                                _vm._v(
-                                  "\n                                        Structure\n                                    "
-                                )
-                              ])
-                            ]
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "li",
-                        {
-                          staticClass: "nav-item",
-                          attrs: { id: "equipment" },
-                          on: {
-                            click: function($event) {
-                              return _vm.setclass(
-                                "organizationlink",
-                                "equipment"
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c(
-                            "router-link",
-                            {
-                              staticClass: "nav-link",
-                              attrs: { to: "/equipment" }
-                            },
-                            [
-                              _c("p", [
-                                _c("i", {
-                                  staticClass:
-                                    "fa fa-angle-double-right nav-icon"
-                                }),
-                                _vm._v(
-                                  "\n                                        Equipment & Furniture\n                                    "
-                                )
-                              ])
-                            ]
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "li",
-                        {
-                          staticClass: "nav-item",
-                          attrs: { id: "sportFacility" },
-                          on: {
-                            click: function($event) {
-                              return _vm.setclass(
-                                "organizationlink",
-                                "sportFacility"
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c(
-                            "router-link",
-                            {
-                              staticClass: "nav-link",
-                              attrs: { to: "/sportFacility" }
-                            },
-                            [
-                              _c("p", [
-                                _c("i", {
-                                  staticClass:
-                                    "fa fa-angle-double-right nav-icon"
-                                }),
-                                _vm._v(
-                                  "\n                                        Sport Facility\n                                    "
-                                )
-                              ])
-                            ]
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "li",
-                        {
-                          staticClass: "nav-item",
-                          attrs: { id: "agricultureFacility" },
-                          on: {
-                            click: function($event) {
-                              return _vm.setclass(
-                                "organizationlink",
-                                "agricultureFacility"
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c(
-                            "router-link",
-                            {
-                              staticClass: "nav-link",
-                              attrs: { to: "/agricultureFacility" }
-                            },
-                            [
-                              _c("p", [
-                                _c("i", {
-                                  staticClass:
-                                    "fa fa-angle-double-right nav-icon"
-                                }),
-                                _vm._v(
-                                  "\n                                        Agriculture Facility\n                                    "
-                                )
-                              ])
-                            ]
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "li",
-                        {
-                          staticClass: "nav-item",
-                          attrs: { id: "washFacility" },
-                          on: {
-                            click: function($event) {
-                              return _vm.setclass(
-                                "organizationlink",
-                                "washFacility"
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c(
-                            "router-link",
-                            {
-                              staticClass: "nav-link",
-                              attrs: { to: "/washFacility" }
-                            },
-                            [
-                              _c("p", [
-                                _c("i", {
-                                  staticClass:
-                                    "fa fa-angle-double-right nav-icon"
-                                }),
-                                _vm._v(
-                                  "\n                                        Wash Facility\n                                    "
-                                )
-                              ])
-                            ]
-                          )
-                        ],
-                        1
                       )
                     ])
                   ]
@@ -79896,78 +79606,90 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "card-body" }, [
-      _c(
-        "table",
-        {
-          staticClass: "table table-bordered table-striped",
-          attrs: { id: "dynamic-table" }
-        },
-        [
-          _vm._m(0),
-          _vm._v(" "),
-          _c("tbody", [
-            _c("tr", { attrs: { id: "record1" } }, [
-              _c("td", [_vm._v("1")]),
-              _vm._v(" "),
-              _c(
-                "td",
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "nav-link",
-                      attrs: { to: "/approveRejectEstablishment" }
-                    },
-                    [_c("p", [_vm._v(" 1222 ")])]
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c("td", [_vm._v("New Establishment")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("Submitted")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("01/01/2021")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("DEO")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("01/01/2021")])
-            ]),
+    _c("div", { staticClass: "card" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "card-body" }, [
+        _c(
+          "table",
+          {
+            staticClass: "table table-bordered table-striped",
+            attrs: { id: "dynamic-table" }
+          },
+          [
+            _vm._m(1),
             _vm._v(" "),
-            _c("tr", { attrs: { id: "record2" } }, [
-              _c("td", [_vm._v("2")]),
+            _c("tbody", [
+              _c("tr", { attrs: { id: "record1" } }, [
+                _c("td", [_vm._v("1")]),
+                _vm._v(" "),
+                _c(
+                  "td",
+                  [
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "nav-link",
+                        attrs: { to: "/approveRejectEstablishment" }
+                      },
+                      [_c("p", [_vm._v(" 1222 ")])]
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c("td", [_vm._v("New Establishment")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Submitted")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("01/01/2021")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("DEO")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("01/01/2021")])
+              ]),
               _vm._v(" "),
-              _c(
-                "td",
-                [
-                  _c(
-                    "router-link",
-                    { staticClass: "nav-link", attrs: { to: "#" } },
-                    [_c("p", [_vm._v(" 1222 ")])]
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c("td", [_vm._v("Change Basic Details")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("Submitted")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("01/01/2021")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("Principle")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("01/01/2021")])
+              _c("tr", { attrs: { id: "record2" } }, [
+                _c("td", [_vm._v("2")]),
+                _vm._v(" "),
+                _c(
+                  "td",
+                  [
+                    _c(
+                      "router-link",
+                      { staticClass: "nav-link", attrs: { to: "#" } },
+                      [_c("p", [_vm._v(" 1222 ")])]
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c("td", [_vm._v("Change Basic Details")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Submitted")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("01/01/2021")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Principle")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("01/01/2021")])
+              ])
             ])
-          ])
-        ]
-      )
+          ]
+        )
+      ])
     ])
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header" }, [
+      _c("h3", { staticClass: "card-title" }, [_vm._v("Task List")])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
