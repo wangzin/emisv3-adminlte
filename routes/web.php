@@ -22,6 +22,10 @@ Route::get('/userloginindex', function () {
 });
 Route::get('userlogin',[LoginController::class,'userdashboard'])->name('userlogin');
 Route::get('/verify', [LoginController::class,'verify'])->name('verify');
+Route::get('/change_basic_info', [LoginController::class,'change_basic_info'])->name('change_basic_info');
+Route::get('/getorgDetails', [LoginController::class,'getorgDetails'])->name('getorgDetails');
+
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia\Inertia::render('Dashboard');
 })->name('dashboard');

@@ -7,6 +7,7 @@
             </div>
 
              <form>
+             <input type="hidden" class="form-control" id="establishmentID"/>
             <div class="card-body" >
                 <div class="form-group row">
                         <div class="col-md-5">
@@ -41,7 +42,7 @@
                         <div class="col-md-5">
                         <label class="col-md- font-weight-normal">Dzongkhag:<span class="text-danger">*</span></label>
 
-                            <select name="category" id="category" class="form-control editable_fields font-weight-bolder">
+                            <select name="dzongkhag" id="dzongkhag" class="form-control editable_fields font-weight-bolder">
                                     <option value="">--- Please Select ---</option>
                                     <option value="1">Thimphu</option>
                             </select>
@@ -51,7 +52,7 @@
                         <div class="col-md-5">
                         <label class="col-md- font-weight-normal">Gewog:<span class="text-danger">*</span></label>
 
-                            <select name="category" id="category" class="form-control editable_fields font-weight-bolder">
+                            <select name="gewog" id="gewog" class="form-control editable_fields font-weight-bolder">
                                     <option value="">--- Please Select ---</option>
                                     <option value="1">Babesa</option>
                                     <option value="2">Motithang</option>
@@ -61,7 +62,7 @@
                         <div class="col-md-5">
                         <label class="col-md- font-weight-normal">Chiwog:<span class="text-danger">*</span></label>
 
-                            <select name="category" id="category" class="form-control editable_fields font-weight-bolder">
+                            <select name="chiwog" id="chiwog" class="form-control editable_fields font-weight-bolder">
                                     <option value="">--- Please Select ---</option>
                                     <option value="1">olakha</option>
                                     <option value="2">changbandu</option>
@@ -73,7 +74,7 @@
                         <div class="col-md-5">
                         <label class="col-md- font-weight-normal">Location Category:<span class="text-danger">*</span></label>
 
-                            <select name="category" id="category" class="form-control editable_fields font-weight-bolder">
+                            <select name="locationCategory" id="locationCategory" class="form-control editable_fields font-weight-bolder">
                                     <option value="">--- Please Select ---</option>
                                     <option value="1">olakha</option>
                             </select>
@@ -81,7 +82,7 @@
                         <div class="col-md-5">
                         <label class="col-md- font-weight-normal">Geopolitically Located:</label>
 
-                            <select name="category" id="category" class="form-control editable_fields font-weight-bolder">
+                            <select name="geoLocated" id="geoLocated" class="form-control editable_fields font-weight-bolder">
                                     <option value="">--- Please Select ---</option>
                                     <option value="1">Yes</option>
                                     <option value="2">No</option>
@@ -92,7 +93,7 @@
                         <div class="col-md-5 hidden" id="parentSchoolDiv">
                         <label class="col-md- font-weight-normal">Parent School:</label>
 
-                            <select name="category" id="category" class="form-control  editable_fields font-weight-bolder">
+                            <select name="parentSchool" id="parentSchool" class="form-control  editable_fields font-weight-bolder">
                                     <option value="">--- Please Select ---</option>
                                     <option value="1">Kabisa</option>
                             </select>
@@ -100,7 +101,7 @@
                         <div class="col-md-5 hidden" id="coLocatedDiv">
                         <label class="col-md-8 font-weight-normal">Co-located with Parent School:</label>
 
-                            <select name="category" id="category" class="form-control editable_fields font-weight-bolder">
+                            <select name="coLocatedParent" id="coLocatedParent" class="form-control editable_fields font-weight-bolder">
                                     <option value="">--- Please Select ---</option>
                                     <option value="1">Yes</option>
                                     <option value="2">No</option>
@@ -111,7 +112,7 @@
                         <div class="col-md-5">
                         <label class="col-md- font-weight-normal">Sen School/ECCD:<span class="text-danger">*</span></label>
 
-                            <select name="category" id="category" class="form-control editable_fields font-weight-bolder">
+                            <select name="senSchool" id="senSchool" class="form-control editable_fields font-weight-bolder">
                                     <option value="">--- Please Select ---</option>
                                     <option value="1">Yes</option>
                                     <option value="2">No</option>
@@ -142,7 +143,9 @@
 </template>
 
 <script>
+import Input from '../../../Jetstream/Input.vue';
 export default {
+  components: { Input },
     data(){
         return{
 
@@ -153,15 +156,16 @@ export default {
 
         /** method to save data */
         save: function(){
-            alert("Data saved successfully.");
-             $(".editable_fields").val("");
+            let establishmentID = $("#establishmentID").val();
+                alert("Data saved successfully.");
+                $(".editable_fields").val("");
         },
         /** method to reset fields */
         reset: function(){
             $(".editable_fields").val("");
         },
 
-        /** method to show and hide if selected level is ECR and ECCD */
+        /** method enable fields if selected level is ECR and ECCD */
         showDiv: function(){
             let level = $("#level").val();
             if(level == 5 || level == 6){
@@ -171,7 +175,31 @@ export default {
                 $("#parentSchoolDiv").hide();
                 $("#coLocatedDiv").hide();
             }
-        }
+        },
+
+        /** method to populated data based on newEstablishmentID */
+        edit: function(){
+            $("#category option:selected").text("Public");
+            $("#level option:selected").text("Higher Secondary School"); 
+            $("#proposedName").val("YangchenPhug HSS");
+            $("#dongkhag option:selected").text("Thimphu");
+            $("#gewog option:selected").text("babesa");
+            $("#chiwog option:selected").text("olakha");
+            $("#locationCategory option:selected").text("olakha");
+            $("#senSchool option:selected").text("No");   
+            $("#establishmentID").val(1);
+        },
+
+        /** method to approve application based on newEstablishmentID */
+        approve: function(){
+            alert("New establishment approved sucessfully.");
+        },
+
+        /** method to reject application based on newEstablishmentID */
+        reject: function(){
+            alert("New establishment rejected sucessfully.");
+        },
+
     }
 }
 </script>

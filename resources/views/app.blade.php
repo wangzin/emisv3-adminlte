@@ -30,7 +30,8 @@
         <link rel="stylesheet" href="admin3/plugins/select2/css/select2.min.css">
         <link rel="stylesheet" href="admin3/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
         <link rel="stylesheet" href="admin3/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
-        
+        <link rel="stylesheet" href="admin3/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" href="admin3/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
         <!-- jQuery UI 1.11.4 -->
         <script src="admin3/plugins/jquery/jquery.min.js"></script>
@@ -54,8 +55,8 @@
         <!-- Sparkline -->
         <script src="admin3/plugins/sparklines/sparkline.js"></script>
         <!-- JQVMap -->
-        <script src="admin3/plugins/jqvmap/jquery.vmap.min.js"></script>
-        <script src="admin3/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+        <!-- <script src="admin3/plugins/jqvmap/jquery.vmap.min.js"></script>
+        <script src="admin3/plugins/jqvmap/maps/jquery.vmap.usa.js"></script> -->
         <!-- jQuery Knob Chart -->
         <script src="admin3/plugins/jquery-knob/jquery.knob.min.js"></script>
         <!-- daterangepicker -->
@@ -74,7 +75,7 @@
         <!-- AdminLTE App -->
         <script src="admin3/dist/js/adminlte.js"></script>
         <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-        <script src="admin3/dist/js/pages/dashboard.js"></script>
+        <!-- <script src="admin3/dist/js/pages/dashboard.js"></script> -->
         <!-- AdminLTE for demo purposes -->
         <script src="admin3/plugins/chart.js/Chart.min.js"></script>
         <script src="admin3/dist/js/demo.js"></script>

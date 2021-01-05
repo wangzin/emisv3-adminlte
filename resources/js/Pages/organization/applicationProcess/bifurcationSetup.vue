@@ -1,7 +1,7 @@
 <template>
 <div>
     <form>
-    <!-- Bifurcation card -->
+        <!-- Bifurcation card -->
     <div class="card">
         <div class="card-header">
             <h3 class="card-title">Bifurcation</h3>
@@ -161,98 +161,9 @@
     </div>
     </div>
 
-    <!-- section -->
-    <section class="content">
-        <div class="container-fluid">
-            <div class="row">
-            <!-- left column -->
-                <div class="col-md-6">
-                    <div class="card card-primary">
-                        <div class="card-header">
-                            <h3 class="card-title">School/ECCD/ECR 1</h3>
-                        </div>
-
-                        <div class="card-body">
-                            <div class="form-group">
-                                <label for="code">Code:</label>
-                                <input type="code" class="form-control" id="code" >
-                            </div>
-                            <div class="form-group">
-                                <label for="name">Name:</label>
-                                <input type="name" class="form-control" id="name" >
-                            </div>
-
-                            <div class="form-group">
-                                <label for="category1">Category:</label>
-                                <select name="category1" id="category1" class="form-control font-weight-bolder editable_fields">
-                                    <option value="">--- Please Select ---</option>
-                                    <option value="1">Public</option>
-                                    <option value="2">Private</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="level1">Level:</label>
-                                <select name="level1" id="level1" class="form-control font-weight-bolder editable_fields">
-                                    <option value="">--- Please Select ---</option>
-                                    <option value="1">Higher Secondary School</option>
-                                    <option value="2">Middle Secondary School</option>
-                                    <option value="3">Lower Secondary School</option>
-                                    <option value="4">Primary School</option>
-                                    <option value="5">ECR</option>
-                                    <option value="6">ECCD</option>
-                                </select>
-                            </div>
-
-</div>
-</div>
-
-                </div>
-            <!-- right column -->
-                <div class="col-md-6">
-                    <div class="card card-success">
-                        <div class="card-header">
-                            <h3 class="card-title">School/ECCD/ECR 2</h3>
-                        </div>
-
-                        <div class="card-body">
-                            <div class="form-group">
-                                <label for="code">Code:</label>
-                                <input type="code" class="form-control" id="code2">
-                            </div>
-                            <div class="form-group">
-                                <label for="name">Name:</label>
-                                <input type="name" class="form-control" id="name2">
-                            </div>
-                            <div class="form-group">
-                                <label for="category2">Category:</label>
-                                <select name="category2" id="category2" class="form-control font-weight-bolder editable_fields">
-                                    <option value="">--- Please Select ---</option>
-                                    <option value="1">Public</option>
-                                    <option value="2">Private</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="level2">Level:</label>
-                                <select name="level2" id="level2" class="form-control font-weight-bolder editable_fields">
-                                    <option value="">--- Please Select ---</option>
-                                    <option value="1">Higher Secondary School</option>
-                                    <option value="2">Middle Secondary School</option>
-                                    <option value="3">Lower Secondary School</option>
-                                    <option value="4">Primary School</option>
-                                    <option value="5">ECR</option>
-                                    <option value="6">ECCD</option>
-                                </select>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</form>
-
-        <!-- button card -->
+   
+    </form>
+     <!-- button card -->
         <div class="row">
             <div class="col-md-1" style="margin-left: 800px;">
                 <input type="button" class="btn btn-flat btn-primary" value="Cancel" id="reset" @click="reset()"/>
@@ -263,10 +174,17 @@
             </div>
         </div>
 </div>
+    
 </template>
 <script>
 export default {
-        methods: {
+    data(){
+        return{
+
+        }
+    },
+
+    methods:{
         /** method to save data */
         save: function(){
         alert("data save successfully.");
@@ -276,7 +194,6 @@ export default {
         reset: function(){
         window.location.reload();
         },
-
         /** method to get schools/ECR/ECCD details based on code */
         getSchoolDetails: function(){
         let organization = $("#organization").val();
@@ -315,6 +232,6 @@ export default {
             $("#coLoParent").prop('disabled', false);
         }
         }
-        }
-        }
+    }
+}
 </script>

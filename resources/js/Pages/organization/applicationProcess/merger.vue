@@ -10,7 +10,7 @@
                 <div class="card-body" >
                         <div class="form-group row">
                             <div class="col-md-5">
-                            <label class="col-md-5 font-weight-normal">1st School/ECR/ECCD:<span class="text-danger">*</span></label>
+                            <label class="col-md-7 font-weight-normal">1st School/ECR/ECCD:<span class="text-danger">*</span></label>
 
                                 <select name="organization1" id="organization1" class="form-control editable_fields font-weight-bolder" @change="getSchoolDetails()">
                                         <option value="">--- Please Select ---</option>
