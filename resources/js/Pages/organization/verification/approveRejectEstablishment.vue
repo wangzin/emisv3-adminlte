@@ -1,13 +1,13 @@
 <template>
     <div>
-        <!-- new establishment card -->
+        <!-- new establishment approve reject card -->
         <div class="card">
              <div class="card-header">
                 <h3 class="card-title">New Establishment Approve Reject</h3>
             </div>
 
              <form>
-             <input type="hidden" class="form-control" id="establishmentID"/>
+
             <div class="card-body" >
                 <div class="form-group row">
                         <div class="col-md-5">
@@ -27,7 +27,7 @@
                 </div>
                  <div class="form-group row">
                         <div class="col-md-5">
-                        <label class="col-md-6 font-weight-normal">Proposed Name:<span class="text-danger">*</span></label>
+                        <label class="col-md-6 font-weight-normal">Proposed Name:</label>
 
                             <input type="text" class="form-control font-weight-bolder" id="proposedName" value="YHSS" readonly/>
                         </div>
