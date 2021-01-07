@@ -186,7 +186,6 @@ export default {
             return data_return;
         },
         check_all_data(type,moduleid){
-            alert(type);
             if(type=='orgdata'){
                 $('.org_'+moduleid).prop('checked',true);
             }
