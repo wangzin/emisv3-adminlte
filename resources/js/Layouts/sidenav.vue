@@ -191,7 +191,7 @@
                                         </p>
                                     </router-link>
                                 </li>
-                                <!-- <li class="nav-item" id="location" @click="setclass('organizationlink','location')">
+                                <li class="nav-item" id="location" @click="setclass('organizationlink','location')">
                                     <router-link to="/location" class="nav-link">
                                         <p>
                                             <i class="fa fa-angle-double-right nav-icon"></i>
@@ -216,14 +216,27 @@
                                         </p>
                                     </router-link>
                                 </li>
-                                <li class="nav-item" id="structure" @click="setclass('organizationlink','structure')">
-                                    <router-link to="/structure" class="nav-link">
+                                
+                                <li class="nav-item has-treeview" id="organizationtransactionLink">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fas fa-book"></i>
                                         <p>
-                                            <i class="fa fa-angle-double-right nav-icon"></i>
-                                            Structure
+                                            Structure 
+                                            <i class="fas fa-angle-left right"></i>
                                         </p>
-                                    </router-link>
+                                    </a>
+                                    <ul class="nav nav-treeview nav-pills flex-column">
+                                        <li class="nav-item" id="structure" @click="setclass('organizationlink','structure')">
+                                            <router-link to="/structure" class="nav-link">
+                                                <p>
+                                                    <i class="fa fa-angle-double-right nav-icon"></i>
+                                                    Structure List
+                                                </p>
+                                            </router-link>
+                                        </li>
+                                    </ul>   
                                 </li>
+
                                 <li class="nav-item" id="equipment" @click="setclass('organizationlink','equipment')">
                                     <router-link to="/equipment" class="nav-link">
                                         <p>
@@ -256,7 +269,7 @@
                                             Wash Facility
                                         </p>
                                     </router-link>
-                                </li> -->
+                                </li>
                             </ul>
                         </li>
 

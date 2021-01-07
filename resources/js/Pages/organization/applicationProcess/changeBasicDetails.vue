@@ -380,7 +380,6 @@
                         </div> -->
 
                         <div class="card-body">
-                           
                         <table id="aaa" class="table table-bordered table-striped">
                         <thead>
                             <tr rowspan="2"> 
@@ -522,16 +521,16 @@ data(){
             
             if(organization=="1"){
                 table_data+='<tr id="1_1" class="tdata">'+
-                    '<td><input type="text" class="form-control" value="9" readonly/></td><td><input type="checkbox" class="" checked/></td> <td><input type="checkbox" name="role_head" /></td><td><input type="checkbox" name="role_head" /></td> <td><input type="checkbox" name="role_head" class=""/></td>'+
+                    '<td><label>  IX</label><input type="checkbox" class="" checked readonly/></td><td><input type="checkbox" class="" checked/></td> <td><input type="checkbox" name="role_head" /></td><td><input type="checkbox" name="role_head" /></td> <td><input type="checkbox" name="role_head" class=""/></td>'+
                 '</tr>';
                 table_data+='<tr id="1_1" class="tdata">'+
-                    '<td><input type="text" class="form-control" value="10" readonly/></td><td><input type="checkbox" class="" checked/></td> <td><input type="checkbox" name="role_head" /></td><td><input type="checkbox" name="role_head" /></td> <td><input type="checkbox" name="role_head" class=""/></td>'+
+                    '<td><label>  X</label><input type="checkbox" class="" checked  readonly/></td><td><input type="checkbox" class="" checked/></td> <td><input type="checkbox" name="role_head" /></td><td><input type="checkbox" name="role_head" /></td> <td><input type="checkbox" name="role_head" class=""/></td>'+
                 '</tr>';
                 table_data+='<tr id="1_1" class="tdata">'+
-                    '<td><input type="text" class="form-control" value="11" readonly/></td><td><input type="checkbox" class="" /></td> <td><input type="checkbox" name="role_head" checked/></td><td><input type="checkbox" name="role_head" checked/></td> <td><input type="checkbox" name="role_head" class="" checked/></td>'+
+                    '<td><label>  XI</label><input type="checkbox" class="" checked  readonly/></td><td><input type="checkbox" class="" /></td> <td><input type="checkbox" name="role_head" checked/></td><td><input type="checkbox" name="role_head" checked/></td> <td><input type="checkbox" name="role_head" class="" checked/></td>'+
                 '</tr>';
                 table_data+='<tr id="1_1" class="tdata">'+
-                    '<td><input type="text" class="form-control" value="12" readonly/></td><td><input type="checkbox" class="" /></td> <td><input type="checkbox" name="role_head" checked/></td><td><input type="checkbox" name="role_head" checked/></td> <td><input type="checkbox" name="role_head" class="" checked/></td>'+
+                    '<td><label>  XII</label><input type="checkbox" class="" checked readonly/></td><td><input type="checkbox" class="" /></td> <td><input type="checkbox" name="role_head" checked/></td><td><input type="checkbox" name="role_head" checked/></td> <td><input type="checkbox" name="role_head" class="" checked/></td>'+
                 '</tr>';
                 
             }
@@ -545,16 +544,16 @@ data(){
             
             if(organization=="1"){
                 table_data+='<tr id="1_1" class="tdata">'+
-                    '<td><input type="text" class="form-control" value="9"/></td><td><input type="checkbox" readonly class="" checked/></td> <td><input type="checkbox" name="role_head" /></td><td><input type="checkbox" name="role_head" /></td> <td><input type="checkbox" name="role_head" class=""/></td>'+
+                    '<td><label>  IX</label><input type="checkbox" checked class=""/></td><td><input type="checkbox" readonly class="" checked/></td> <td><input type="checkbox" name="role_head" /></td><td><input type="checkbox" name="role_head" /></td> <td><input type="checkbox" name="role_head" class=""/></td>'+
                 '</tr>';
                 table_data+='<tr id="1_1" class="tdata">'+
-                    '<td><input type="text" class="form-control" value="10"/></td><td><input type="checkbox" class="" checked/></td> <td><input type="checkbox" name="role_head" /></td><td><input type="checkbox" name="role_head" /></td> <td><input type="checkbox" name="role_head" class=""/></td>'+
+                    '<td><label>  X</label><input type="checkbox" checked class=""/></td><td><input type="checkbox" class="" checked/></td> <td><input type="checkbox" name="role_head" /></td><td><input type="checkbox" name="role_head" /></td> <td><input type="checkbox" name="role_head" class=""/></td>'+
                 '</tr>';
                 table_data+='<tr id="1_1" class="tdata">'+
-                    '<td><input type="text" class="form-control" value="11"/></td><td><input type="checkbox" class="" /></td> <td><input type="checkbox" name="role_head" checked/></td><td><input type="checkbox" name="role_head" checked/></td> <td><input type="checkbox" name="role_head" class="" checked/></td>'+
+                    '<td><label>  XI</label><input type="checkbox" checked class=""/></td><td><input type="checkbox" class="" /></td> <td><input type="checkbox" name="role_head" checked/></td><td><input type="checkbox" name="role_head" checked/></td> <td><input type="checkbox" name="role_head" class="" checked/></td>'+
                 '</tr>';
                 table_data+='<tr id="1_1" class="tdata">'+
-                    '<td><input type="text" class="form-control" value="12"/></td><td><input type="checkbox" class="" /></td> <td><input type="checkbox" name="role_head" checked/></td><td><input type="checkbox" name="role_head" checked/></td> <td><input type="checkbox" name="role_head" class="" checked/></td>'+
+                    '<td><label>  XII</label><input type="checkbox" checked class=""/></td><td><input type="checkbox" class="" /></td> <td><input type="checkbox" name="role_head" checked/></td><td><input type="checkbox" name="role_head" checked/></td> <td><input type="checkbox" name="role_head" class="" checked/></td>'+
                 '</tr>';
             }
             

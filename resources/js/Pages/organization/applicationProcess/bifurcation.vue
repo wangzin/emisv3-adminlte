@@ -27,28 +27,25 @@
     </div>
 
     <!-- Basic details card -->
-    <div class="card">
+    <div class="card card-success card-outline">
         <div class="card-header">
             <h3 class="card-title">Current Details</h3>
         </div>
 
     <div class="card-body" >
         <div class="form-group row">
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <label class="col-md-5 font-weight-normal">Code:</label>
 
                 <input type="text" class="form-control font-weight-bolder editable_fields" id="code"/>
             </div>
 
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <label class="col-md-5 font-weight-normal">Name:</label>
 
                 <input type="text" class="form-control font-weight-bolder editable_fields" id="name"/>
             </div>
-        </div>
-
-        <div class="form-group row">
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <label class="col-md-5 font-weight-normal">Category:</label>
 
                 <select name="category" id="category" class="form-control font-weight-bolder editable_fields">
@@ -57,8 +54,10 @@
                     <option value="2">Private</option>
                 </select>
             </div>
+        </div>
 
-            <div class="col-md-5">
+        <div class="form-group row">
+            <div class="col-md-4">
                 <label class="col-md-5 font-weight-normal">Level:</label>
 
                 <select name="category" id="level" class="form-control font-weight-bolder editable_fields">
@@ -71,10 +70,7 @@
                     <option value="6">ECCD</option>
                 </select>
             </div>
-        </div>
-
-        <div class="form-group row">
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <label class="col-md-5 font-weight-normal">Dzongkhag:</label>
 
                 <select name="dzongkhag" id="dzongkhag" class="form-control font-weight-bolder editable_fields">
@@ -85,7 +81,7 @@
                     <option value="4">Lhuntse</option>
                 </select>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <label class="col-md-5 font-weight-normal">Gewog:</label>
 
                 <select name="category" id="gewog" class="form-control font-weight-bolder editable_fields">
@@ -99,7 +95,7 @@
         </div>
 
         <div class="form-group row">
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <label class="col-md-5 font-weight-normal">Chiwog:</label>
 
                 <select name="category" id="chiwog" class="form-control font-weight-bolder editable_fields">
@@ -108,19 +104,16 @@
                     <option value="2">chngbandu</option>
                 </select>
             </div>
-            <div class="col-md-5">
-                <label class="col-md-5 font-weight-normal">Location Category:</label>
+            <div class="col-md-4">
+                <label class="col-md-9 font-weight-normal">Location Category:</label>
 
                 <select name="category" id="locationCategory" class="form-control font-weight-bolder editable_fields">
                     <option value="">--- Please Select ---</option>
                     <option value="1">Kabisa</option>
                 </select>
             </div>
-        </div>
-
-        <div class="form-group row">
-            <div class="col-md-5">
-                <label class="col-md-5 font-weight-normal">Geopolitically Located:</label>
+             <div class="col-md-4">
+                <label class="col-md-10 font-weight-normal">Geopolitically Located:</label>
 
                 <select name="category" id="geopoliticallyLocated" class="form-control font-weight-bolder editable_fields">
                     <option value="">--- Please Select ---</option>
@@ -128,8 +121,10 @@
                     <option value="2">No</option>
                 </select>
             </div>
+        </div>
 
-            <div class="col-md-5">
+        <div class="form-group row">
+            <div class="col-md-4">
                 <label class="col-md-6 font-weight-normal">SEN School:</label>
 
                 <select name="category" id="senSchool" class="form-control font-weight-bolder editable_fields">
@@ -138,12 +133,7 @@
                     <option value="2">No</option>
                 </select>
             </div>
-            
-        </div>
-
-        <div class="form-group row">
-
-            <div class="col-md-5 hidden aaa">
+            <div class="col-md-4 hidden aaa">
                 <label class="col-md-5 font-weight-normal">Parent School:</label>
 
                 <select name="category" id="parentSchool" class="form-control font-weight-bolder editable_fields">
@@ -152,8 +142,8 @@
                 </select>
             </div>
 
-            <div class="col-md-5 hidden aaa">
-                <label class="col-md-8 font-weight-normal">Co-located with Parent School:</label>
+            <div class="col-md-4 hidden aaa">
+                <label class="col-md-10 font-weight-normal">Co-located with Parent School:</label>
 
                 <select name="category" id="coLoParent" class="form-control font-weight-bolder editable_fields">
                     <option value="">--- Please Select ---</option>
@@ -161,7 +151,6 @@
                     <option value="2">No</option>
                 </select>
             </div>
-            
         </div>
     </div>
     </div>

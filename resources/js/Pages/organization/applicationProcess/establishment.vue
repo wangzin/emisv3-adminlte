@@ -9,7 +9,7 @@
              <form>
             <div class="card-body" >
                 <div class="form-group row">
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                         <label class="col-md-5 font-weight-normal">Category:<span class="text-danger">*</span></label>
 
                             <select name="category" id="category" class="form-control editable_fields font-weight-bolder" @change="removeerror('category','category_error')">
@@ -19,7 +19,7 @@
                             </select>
                             <span id="category_error" class="text-danger"></span>
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                         <label class="col-md-5 font-weight-normal">Level:<span class="text-danger">*</span></label>
 
                             <select name="level" id="level" class="form-control editable_fields font-weight-bolder" @change="showDiv(),removeerror('level','level_error')">
@@ -32,17 +32,18 @@
                                     <option value="6">ECCD</option>
                             </select>
                             <span id="level_error" class="text-danger"></span>
-                        </div>                   
-                </div>
-                 <div class="form-group row">
-                        <div class="col-md-5">
+                        </div>  
+                        <div class="col-md-4">
                         <label class="col-md-6 font-weight-normal">Proposed Name:<span class="text-danger">*</span></label>
 
                             <input type="text" class="form-control font-weight-bolder" id="proposedName" @change="removeerror('proposedName','proposedName_error')"/>
                             <span id="proposedName_error" class="text-danger"></span>
 
-                        </div>
-                        <div class="col-md-5">
+                        </div>                 
+                </div>
+                 <div class="form-group row">
+                        
+                        <div class="col-md-4">
                         <label class="col-md- font-weight-normal">Dzongkhag:<span class="text-danger">*</span></label>
 
                             <select v-model="selectedDzongkhag" name="dzongkhag" id="dzongkhag" class="form-control editable_fields font-weight-bolder" @change="removeerror('dzongkhag','dzongkhag_error')">
@@ -51,10 +52,8 @@
                             </select>
                              <span id="dzongkhag_error" class="text-danger"></span>
                            
-                        </div>                   
-                </div>
-                <div class="form-group row">
-                        <div class="col-md-5">
+                        </div>  
+                        <div class="col-md-4">
                         <label class="col-md- font-weight-normal">Gewog:<span class="text-danger">*</span></label>
 
                             <select v-model="selectedGewog" name="gewog" id="gewog" class="form-control editable_fields font-weight-bolder" @change="removeerror('gewog','gewog_error')">
@@ -65,7 +64,7 @@
                              <span id="gewog_error" class="text-danger"></span>
                            
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                         <label class="col-md- font-weight-normal">Chiwog:<span class="text-danger">*</span></label>
 
                         <select v-model="selectedChiwog" name="chiwog" id="chiwog" class="form-control editable_fields font-weight-bolder" @change="removeerror('chiwog','chiwog_error')">
@@ -74,11 +73,14 @@
                         </select>
                         <span id="chiwog_error" class="text-danger"></span>
 
-                        </div>                   
+                        </div>                 
+                </div>
+                <div class="form-group row">
+                                           
                 </div>
 
                 <div class="form-group row">
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                         <label class="col-md- font-weight-normal">Location Category:<span class="text-danger">*</span></label>
 
                             <select name="locationCategory" id="locationCategory" class="form-control editable_fields font-weight-bolder" @change="removeerror('locationCategory','locationCategory_error')">
@@ -88,7 +90,7 @@
                              <span id="locationCategory_error" class="text-danger"></span>
                            
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                         <label class="col-md- font-weight-normal">Geopolitically Located:</label>
 
                             <select name="geoLocated" id="geoLocated" class="form-control editable_fields font-weight-bolder">
@@ -96,10 +98,20 @@
                                     <option value="1">Yes</option>
                                     <option value="2">No</option>
                             </select>
-                        </div>                   
+                        </div> 
+                        <div class="col-md-4">
+                        <label class="col-md- font-weight-normal">Sen School/ECCD:<span class="text-danger">*</span></label>
+
+                            <select name="senSchool" id="senSchool" class="form-control editable_fields font-weight-bolder" @change="removeerror('senSchool','senSchool_error')">
+                                    <option value="">--- Please Select ---</option>
+                                    <option value="1">Yes</option>
+                                    <option value="2">No</option>
+                            </select>
+                             <span id="senSchool_error" class="text-danger"></span>
+                        </div>                  
                 </div>
                 <div class="form-group row">
-                        <div class="col-md-5 hidden" id="parentSchoolDiv">
+                        <div class="col-md-4 hidden" id="parentSchoolDiv">
                         <label class="col-md- font-weight-normal">Parent School:</label>
 
                             <select name="parentSchool" id="parentSchool" class="form-control  editable_fields font-weight-bolder">
@@ -107,8 +119,8 @@
                                     <option value="1">Kabisa</option>
                             </select>
                         </div>
-                        <div class="col-md-5 hidden" id="coLocatedDiv">
-                        <label class="col-md-8 font-weight-normal">Co-located with Parent School:</label>
+                        <div class="col-md-4 hidden" id="coLocatedDiv">
+                        <label class="col-md-10 font-weight-normal">Co-located with Parent School:</label>
 
                             <select name="coLocatedParent" id="coLocatedParent" class="form-control editable_fields font-weight-bolder">
                                     <option value="">--- Please Select ---</option>
@@ -118,16 +130,7 @@
                         </div>                   
                 </div>
                  <div class="form-group row">
-                        <div class="col-md-5">
-                        <label class="col-md- font-weight-normal">Sen School/ECCD:<span class="text-danger">*</span></label>
-
-                            <select name="senSchool" id="senSchool" class="form-control editable_fields font-weight-bolder" @change="removeerror('senSchool','senSchool_error')">
-                                    <option value="">--- Please Select ---</option>
-                                    <option value="1">Yes</option>
-                                    <option value="2">No</option>
-                            </select>
-                             <span id="senSchool_error" class="text-danger"></span>
-                        </div>
+                        
                 </div>
                  
             </div>
