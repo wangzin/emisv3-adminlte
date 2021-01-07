@@ -81,7 +81,18 @@ let routes = [
     { path: '/openapplicaiton', name: 'Organizaiton Verification and Approval', component: require('./Pages/organization/transactions/organizationapproval.vue').default },
 
     // Inset Route
-    { path: '/createTraining', name: 'Create', component: require('./Pages/Inset/createTraining.vue').default },
+    { path: '/createTraining', name: 'Create', component: require('./Pages/Inset/trainingindex.vue').default },
+    { path: '/create_new_training', name: 'Create', component: require('./Pages/Inset/createTraining.vue').default },
+    { path: '/participant', name: 'Create', component: require('./Pages/Inset/checkparticipant.vue').default },
+    { path: '/traininglist', name: 'Create', component: require('./Pages/Inset/traininglist.vue').default },
+    { path: '/showtrainingdetails', component: require('./Pages/Inset/showtrainingdetails.vue').default },
+    { path: '/edit_training', component: require('./Pages/Inset/editTraining.vue').default },
+    { path: '/apply_training', component: require('./Pages/Inset/trainingApply.vue').default },
+    { path: '/applyfortraining', component: require('./Pages/Inset/applyfortraining.vue').default },
+    { path: '/openapplicaitonfortraining', component: require('./Pages/Inset/verificationapplication.vue').default },
+    
+    
+    
 
 
     //administration route 
@@ -132,6 +143,9 @@ const router = new VueRouter({
 const app = document.getElementById('app');
 Vue.component('headnav', require('./Layouts/headnav.vue').default);
 Vue.component('sidenav', require('./Layouts/sidenav.vue').default);
+Vue.component('generaldashboard', require('./Pages/dashboard/general.vue').default);
+Vue.component('deodashboard', require('./Pages/dashboard/deodashboard.vue').default);
+
 new Vue({
     render: (h) =>
         h(InertiaApp, {

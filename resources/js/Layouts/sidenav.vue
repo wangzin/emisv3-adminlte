@@ -299,6 +299,27 @@
                                         </p>
                                     </router-link>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                    <i class="far fa-address-card nav-icon"></i>
+                                    <p>Inset Module</p>
+                                    <i class="fas fa-angle-left right"></i>
+                                    </a>
+                                    <ul class="nav nav-treeview">                                
+                                        <li class="nav-item" id="rolepriv" @click="setclass('','')">
+                                            <router-link to="/createTraining"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
+                                                <i class="fa fa-angle-double-right nav-icon"></i>
+                                                <p>Training Details</p>
+                                            </router-link>
+                                        </li>
+                                        <li class="nav-item" id="usermanagement" @click="setclass('','')">
+                                            <router-link to="/apply_training"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
+                                                <i class="fa fa-angle-double-right nav-icon"></i>
+                                                <p>Apply for Training</p>
+                                            </router-link>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
 
@@ -334,33 +355,7 @@
                         </li>
                         
                         <!-- Inset side menu -->
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                            <i class="far fa-address-card nav-icon"></i>
-                            <p>Inset Module</p>
-                             <i class="fas fa-angle-left right"></i>
-                            </a>
-                                <ul class="nav nav-treeview">                                
-                                <li class="nav-item" id="rolepriv" @click="setclass('','')">
-                                    <router-link to="/createTraining"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
-                                        <i class="fa fa-angle-double-right nav-icon"></i>
-                                        <p>Create Training</p>
-                                    </router-link>
-                                </li>
-                                <li class="nav-item" id="usermanagement" @click="setclass('','')">
-                                    <router-link to="/applyTraining"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
-                                        <i class="fa fa-angle-double-right nav-icon"></i>
-                                        <p>Apply for Training</p>
-                                    </router-link>
-                                </li>
-                                <li class="nav-item" id="verifyParticipants" @click="setclass('','')">
-                                    <router-link to="/verifyParticipants"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
-                                        <i class="fa fa-angle-double-right nav-icon"></i>
-                                        <p>Verify Participants</p>
-                                    </router-link>
-                                </li>
-                            </ul>
-                        </li>
+                        
                         <li class="nav-item" id="tasklistlink" @click="setclass('','tasklistlink')">
                             <router-link to="/taslistforall" class="nav-link">
                                 <p>

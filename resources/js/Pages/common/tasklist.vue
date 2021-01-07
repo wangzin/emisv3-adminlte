@@ -28,18 +28,34 @@
                         <tr>
                             <td class="">1</td>
                             <td class="">
-                                <router-link to="/openapplicaiton" class="nav-link" data-toggle="tooltip" title="Open and claim Application">
+                                <router-link to="/openapplicaitonfortraining" class="nav-link" data-toggle="tooltip" title="Open and claim Application">
                                     <p>
                                         #02234
                                     </p>
                                 </router-link>
                             </td> 
-                            <td class="">Application for Organization Approval</td>
+                            <td class="">Application for Training</td>
                             <td class=""> <span class="badge bg-primary">Submitted</span></td>
                             <td class="">2020-12-12</td>
                             <td class="">Kelzang Tshering</td>
                             <td class="">2020-12-12</td>
-                            <td class="">Deo</td>
+                            <td class="">Teacher</td>
+                        </tr>
+                        <tr>
+                            <td class="">1</td>
+                            <td class="">
+                                <router-link to="/openapplicaitonfortraining" class="nav-link" data-toggle="tooltip" title="Open and claim Application">
+                                    <p>
+                                        #02232
+                                    </p>
+                                </router-link>
+                            </td> 
+                            <td class="">Application for Training</td>
+                            <td class=""> <span class="badge bg-primary">Verified</span></td>
+                            <td class="">2020-12-12</td>
+                            <td class="">Sonam Tshering</td>
+                            <td class="">2020-12-12</td>
+                            <td class="">Teacher</td>
                         </tr>
                         <tr>
                             <td class="">2</td>
@@ -86,38 +102,6 @@
                             <td class=""><span class="badge bg-primary">Submitted</span></td>
                             <td class="">2020-12-12</td>
                             <td class="">Chimi Rinzin</td>
-                            <td class="">2020-12-12</td>
-                            <td class="">Teacher</td>
-                        </tr>
-                        <tr>
-                            <td class="">5</td>
-                            <td class="">
-                                <router-link to="/trainingpartifipantverification" class="nav-link" data-toggle="tooltip" title="Open and claim Application">
-                                    <p>
-                                        #02336
-                                    </p>
-                                </router-link>
-                            </td> 
-                            <td class="">Application for Training Participant</td>
-                            <td class=""><span class="badge bg-info">Forwarded</span></td>
-                            <td class="">2020-12-12</td>
-                            <td class="">Sonam Tshomo</td>
-                            <td class="">2020-12-13</td>
-                            <td class="">DYS</td>
-                        </tr>
-                        <tr>
-                            <td class="">6</td>
-                            <td class="">
-                                <router-link to="/transger" class="nav-link" data-toggle="tooltip" title="Open and claim Application">
-                                    <p>
-                                        #03336
-                                    </p>
-                                </router-link>
-                            </td> 
-                            <td class="">Application for Transfer Request</td>
-                            <td class=""><span class="badge bg-primary">Submitted</span></td>
-                            <td class="">2020-12-12</td>
-                            <td class="">Karma Tenzin</td>
                             <td class="">2020-12-12</td>
                             <td class="">Teacher</td>
                         </tr>
