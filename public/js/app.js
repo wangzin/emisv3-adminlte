@@ -9764,11 +9764,242 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   methods: {
     /** method to save data */
     save: function save() {
-      alert("data save successfully.");
+      Swal.fire('Success!', 'Your Data has been successfully saved.', 'success');
       window.location.reload();
     },
 
@@ -9791,12 +10022,8 @@ __webpack_require__.r(__webpack_exports__);
         $("#chiwog option:selected").text("Yhs");
         $("#geopoliticallyLocated option:selected").text("Yes");
         $("#locationCategory option:selected").text("Town");
-        $("#parentSchool option:selected").text("");
-        $("#coLoParent option:selected").text("");
-        $("#parentSchool").prop('disabled', true);
-        $("#coLoParent").prop('disabled', true);
         $("#senSchool option:selected").text("No");
-        $(".classAndStream").show();
+        $(".aaa").hide();
       } else {
         $("#code").val("0022000");
         $("#name").val("ECCD1");
@@ -9810,8 +10037,7 @@ __webpack_require__.r(__webpack_exports__);
         $("#parentSchool option:selected").text("jungshina");
         $("#coLoParent option:selected").text("No");
         $("#senSchool option:selected").text("No");
-        $("#parentSchool").prop('disabled', false);
-        $("#coLoParent").prop('disabled', false);
+        $(".aaa").show();
       }
     }
   }
@@ -10339,6 +10565,163 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -10350,13 +10733,14 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     /** method to save data */
     save: function save() {
-      alert("data save successfully."); // window.location.reload();
+      Swal.fire('Success!', 'Your Data has been successfully saved.', 'success'); // window.location.reload();
 
       $(".changeBasicDetaiList").show();
     },
 
     /** method to reset forms */
-    reset: function reset() {//    window.location.reload();
+    reset: function reset() {
+      window.location.reload();
     },
 
     /** method to get schools/ECR/ECCD details based on code */
@@ -10364,6 +10748,7 @@ __webpack_require__.r(__webpack_exports__);
       var organization = $("#organization").val();
 
       if (organization == 1) {
+        /** current details */
         $("#code").val("00020292");
         $("#name").val("YangchenPhug HSS");
         $("#category option:selected").text("Public");
@@ -10373,13 +10758,25 @@ __webpack_require__.r(__webpack_exports__);
         $("#chiwog option:selected").text("Yhs");
         $("#geopoliticallyLocated option:selected").text("Yes");
         $("#locationCategory option:selected").text("Town");
-        $("#parentSchool option:selected").text("");
-        $("#coLoParent option:selected").text("");
-        $("#parentSchool").prop('disabled', true);
-        $("#coLoParent").prop('disabled', true);
         $("#senSchool option:selected").text("No");
-        $(".classAndStream").show();
+        $("#coLocatedCurrent").hide();
+        $("#parentSchoolCurrent").hide();
+        /** after change */
+
+        $("#afterChangeCode").val("00020292");
+        $("#afterChangeName").val("YangchenPhug HSS");
+        $("#afterChangeCategory option:selected").text("Public");
+        $("#afterChangeLevel option:selected").text("Higher Secondary School");
+        $("#afterChangeDzongkhag option:selected").text("Thimphu");
+        $("#afterChangeGewog option:selected").text("yhs");
+        $("#afterChangeChiwog option:selected").text("Yhs");
+        $("#afterChangeGeopoliticallyLocated option:selected").text("Yes");
+        $("#afterChangeLocationCategory option:selected").text("Town");
+        $("#afterChangeSenSchool option:selected").text("No");
+        $("#coLocatedChange").hide();
+        $("#parentSchoolChange").hide();
       } else {
+        /** current details */
         $("#code").val("0022000");
         $("#name").val("ECCD1");
         $("#category option:selected").text("Public");
@@ -10392,19 +10789,52 @@ __webpack_require__.r(__webpack_exports__);
         $("#parentSchool option:selected").text("jungshina");
         $("#coLoParent option:selected").text("No");
         $("#senSchool option:selected").text("No");
-        $("#parentSchool").prop('disabled', false);
-        $("#coLoParent").prop('disabled', false);
+        $("#coLocatedCurrent").show();
+        $("#parentSchoolCurrent").show();
+        /** after change */
+
+        $("#afterChangeCode").val("0022000");
+        $("#afterChangeName").val("ECCD1");
+        $("#afterChangeCategory option:selected").text("Public");
+        $("#afterChangeLevel option:selected").text("ECCD");
+        $("#afterChangeDzongkhag option:selected").text("Thimphu");
+        $("#afterChangeGewog option:selected").text("jungshina");
+        $("#afterChangeChiwog option:selected").text("hejo");
+        $("#afterChangeGeopoliticallyLocated option:selected").text("Yes");
+        $("#afterChangeLocationCategory option:selected").text("jungshina");
+        $(".afterChange").show();
+        $("#afterChangeParentSchool option:selected").text("jungshina");
+        $("#afterChangeCoLoParent option:selected").text("No");
+        $("#afterChangeSenSchool option:selected").text("No");
+        $("#coLocatedChange").show();
+        $("#parentSchoolChange").show();
       }
     },
+    getClassAndStream: function getClassAndStream(organization) {
+      var table_data = "";
+      organization = $('#' + organization).val();
 
-    /** method to approve application based on newEstablishmentID */
-    approve: function approve() {
-      alert("Change basic details approved.");
+      if (organization == "1") {
+        table_data += '<tr id="1_1" class="tdata">' + '<td><input type="text" class="form-control" value="9" readonly/></td><td><input type="checkbox" class="" checked/></td> <td><input type="checkbox" name="role_head" /></td><td><input type="checkbox" name="role_head" /></td> <td><input type="checkbox" name="role_head" class=""/></td>' + '</tr>';
+        table_data += '<tr id="1_1" class="tdata">' + '<td><input type="text" class="form-control" value="10" readonly/></td><td><input type="checkbox" class="" checked/></td> <td><input type="checkbox" name="role_head" /></td><td><input type="checkbox" name="role_head" /></td> <td><input type="checkbox" name="role_head" class=""/></td>' + '</tr>';
+        table_data += '<tr id="1_1" class="tdata">' + '<td><input type="text" class="form-control" value="11" readonly/></td><td><input type="checkbox" class="" /></td> <td><input type="checkbox" name="role_head" checked/></td><td><input type="checkbox" name="role_head" checked/></td> <td><input type="checkbox" name="role_head" class="" checked/></td>' + '</tr>';
+        table_data += '<tr id="1_1" class="tdata">' + '<td><input type="text" class="form-control" value="12" readonly/></td><td><input type="checkbox" class="" /></td> <td><input type="checkbox" name="role_head" checked/></td><td><input type="checkbox" name="role_head" checked/></td> <td><input type="checkbox" name="role_head" class="" checked/></td>' + '</tr>';
+      }
+
+      $('#table_data_populate').html(table_data);
     },
+    getClassAndStreamForAfterChange: function getClassAndStreamForAfterChange(organization) {
+      var table_data = "";
+      organization = $('#' + organization).val();
 
-    /** method to reject application based on newEstablishmentID */
-    reject: function reject() {
-      alert("Change basic details is rejected.");
+      if (organization == "1") {
+        table_data += '<tr id="1_1" class="tdata">' + '<td><input type="text" class="form-control" value="9"/></td><td><input type="checkbox" readonly class="" checked/></td> <td><input type="checkbox" name="role_head" /></td><td><input type="checkbox" name="role_head" /></td> <td><input type="checkbox" name="role_head" class=""/></td>' + '</tr>';
+        table_data += '<tr id="1_1" class="tdata">' + '<td><input type="text" class="form-control" value="10"/></td><td><input type="checkbox" class="" checked/></td> <td><input type="checkbox" name="role_head" /></td><td><input type="checkbox" name="role_head" /></td> <td><input type="checkbox" name="role_head" class=""/></td>' + '</tr>';
+        table_data += '<tr id="1_1" class="tdata">' + '<td><input type="text" class="form-control" value="11"/></td><td><input type="checkbox" class="" /></td> <td><input type="checkbox" name="role_head" checked/></td><td><input type="checkbox" name="role_head" checked/></td> <td><input type="checkbox" name="role_head" class="" checked/></td>' + '</tr>';
+        table_data += '<tr id="1_1" class="tdata">' + '<td><input type="text" class="form-control" value="12"/></td><td><input type="checkbox" class="" /></td> <td><input type="checkbox" name="role_head" checked/></td><td><input type="checkbox" name="role_head" checked/></td> <td><input type="checkbox" name="role_head" class="" checked/></td>' + '</tr>';
+      }
+
+      $('#table_data_populate1').html(table_data);
     }
   },
   mounted: function mounted() {}
@@ -10593,11 +11023,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   methods: {
     /** method to save data */
     save: function save() {
-      alert("data save successfully.");
+      Swal.fire('Success!', 'Your Data has been successfully saved.', 'success');
     },
 
     /** method to reset forms */
@@ -10616,8 +11050,6 @@ __webpack_require__.r(__webpack_exports__);
       $("#chiwog option:selected").text("Yhs");
       $("#geopoliticallyLocated option:selected").text("Yes");
       $("#locationCategory option:selected").text("Town");
-      $("#parentSchool").prop('disabled', true);
-      $("#coLoParent").prop('disabled', true);
       $("#senSchool option:selected").text("No");
     }
   }
@@ -10779,25 +11211,51 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     Input: _Jetstream_Input_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
-    return {};
+    return {
+      places: {
+        "Thimphu": {
+          "Chang": ["Lhoongtsho Tashigang", "Yoedselpang", "Ramtogtog Tsangrina"],
+          "Kawang": ["Boegarna Dodennang", "Dazhi Zhoshuel"]
+        },
+        "Paro": {
+          "Dokar": ["Tenchhekha Tsiphoog", "Goensakha Phuchhekha", "Mendrel Uesuna"],
+          "Dopshari": ["olDuezhi Jipaakha", "Kempa Kuduphoog"]
+        }
+      },
+      gewogs: [],
+      chiwogs: [],
+      selectedDzongkhag: "",
+      selectedGewog: "",
+      selectedChiwog: ""
+    };
   },
   methods: {
     /** method to save data */
     save: function save() {
-      var establishmentID = $("#establishmentID").val();
-      alert("Data saved successfully.");
-      $(".editable_fields").val("");
+      if (this.validate()) {
+        Swal.fire('Success!', 'Your Data has been successfully saved.', 'success');
+        $(".editable_fields").val("");
+      }
     },
 
     /** method to reset fields */
     reset: function reset() {
       $(".editable_fields").val("");
+      window.location.reload();
     },
 
     /** method enable fields if selected level is ECR and ECCD */
@@ -10813,27 +11271,95 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
 
-    /** method to populated data based on newEstablishmentID */
-    edit: function edit() {
-      $("#category option:selected").text("Public");
-      $("#level option:selected").text("Higher Secondary School");
-      $("#proposedName").val("YangchenPhug HSS");
-      $("#dongkhag option:selected").text("Thimphu");
-      $("#gewog option:selected").text("babesa");
-      $("#chiwog option:selected").text("olakha");
-      $("#locationCategory option:selected").text("olakha");
-      $("#senSchool option:selected").text("No");
-      $("#establishmentID").val(1);
-    },
+    /** method to validate fields */
+    validate: function validate() {
+      var returntype = true;
 
-    /** method to approve application based on newEstablishmentID */
-    approve: function approve() {
-      alert("New establishment approved sucessfully.");
-    },
+      if ($('#category').val() == "") {
+        $('#category_error').html('Please select category');
+        $('#category').focus();
+        $('#category').removeClass('is-invalid');
+        returntype = false;
+      }
 
-    /** method to reject application based on newEstablishmentID */
-    reject: function reject() {
-      alert("New establishment rejected sucessfully.");
+      if ($('#level').val() == "") {
+        $('#level_error').html('Please select level');
+        $('#level').focus();
+        $('#level').removeClass('is-invalid');
+        returntype = false;
+      }
+
+      if ($('#proposedName').val() == "") {
+        $('#proposedName_error').html('Please select proposed name');
+        $('#proposedName').focus();
+        $('#proposedName').removeClass('is-invalid');
+        returntype = false;
+      }
+
+      if ($('#dzongkhag').val() == "") {
+        $('#dzongkhag_error').html('Please select dzongkhag');
+        $('#dzongkhag').focus();
+        $('#dzongkhag').removeClass('is-invalid');
+        returntype = false;
+      }
+
+      if ($('#gewog').val() == "") {
+        $('#gewog_error').html('Please select gewog');
+        $('#gewog').focus();
+        $('#gewog').removeClass('is-invalid');
+        returntype = false;
+      }
+
+      if ($('#chiwog').val() == "") {
+        $('#chiwog_error').html('Please select chiwog');
+        $('#chiwog').focus();
+        $('#chiwog').removeClass('is-invalid');
+        returntype = false;
+      }
+
+      if ($('#locationCategory').val() == "") {
+        $('#locationCategory_error').html('Please select location category');
+        $('#locationCategory').focus();
+        $('#locationCategory').removeClass('is-invalid');
+        returntype = false;
+      }
+
+      if ($('#senSchool').val() == "") {
+        $('#senSchool_error').html('Please select sen school/ECCD');
+        $('#senSchool').focus();
+        $('#senSchool').removeClass('is-invalid');
+        returntype = false;
+      }
+
+      return returntype;
+    },
+    removeerror: function removeerror(fieldid, errid) {
+      if ($('#' + fieldid).val() != "") {
+        $('#' + fieldid).removeClass('is-invalid');
+        $('#' + errid).html('');
+      }
+    }
+  },
+  watch: {
+    selectedDzongkhag: function selectedDzongkhag() {
+      // Clear previously selected values
+      this.gewogs = [];
+      this.chiwogs = [];
+      this.selectedGewog = "";
+      this.selectedChiwog = ""; // Populate list of gewogs in the second dropdown
+
+      if (this.selectedDzongkhag.length > 0) {
+        this.gewogs = this.places[this.selectedDzongkhag];
+      }
+    },
+    selectedGewog: function selectedGewog() {
+      // Clear previously selected values
+      this.chiwogs = [];
+      this.selectedChiwog = ""; // Now we have a Dongkhag and gewog. Populate list of chiwogs in the third dropdown
+
+      if (this.selectedGewog.length > 0) {
+        this.chiwogs = this.places[this.selectedDzongkhag][this.selectedGewog];
+      }
     }
   }
 });
@@ -10970,11 +11496,396 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   methods: {
     /** method to save data */
     save: function save() {
-      alert("data save successfully.");
+      Swal.fire('Success!', 'Your Data has been successfully saved.', 'success');
       window.location.reload();
     },
 
@@ -10987,12 +11898,30 @@ __webpack_require__.r(__webpack_exports__);
     getSchoolDetails: function getSchoolDetails() {
       $("#code").val("00020292");
       $("#name").val("YangchenPhug HSS");
+      $("#category option:selected").text("Public");
+      $("#level option:selected").text("Higher Secondary School");
+      $("#dzongkhag option:selected").text("Thimphu");
+      $("#gewog option:selected").text("yhs");
+      $("#chiwog option:selected").text("Yhs");
+      $("#geopoliticallyLocated option:selected").text("Yes");
+      $("#locationCategory option:selected").text("Town");
+      $("#senSchool option:selected").text("No");
+      $(".aaa").hide();
     },
 
     /** method to get schools/ECR/ECCD details based on code */
     getSchool2Details: function getSchool2Details() {
-      $("#code2").val("00020295");
-      $("#name2").val("Motithang HSS");
+      $("#afterChangeCode").val("00020299");
+      $("#afterChangeName").val("Motithang HSS");
+      $("#afterChangeCategory option:selected").text("Public");
+      $("#afterChangeLevel option:selected").text("Higher Secondary School");
+      $("#afterChangeDzongkhag option:selected").text("Thimphu");
+      $("#afterChangeGewog option:selected").text("mhs");
+      $("#afterChangeChiwog option:selected").text("mhs");
+      $("#afterChangeGeopoliticallyLocated option:selected").text("Yes");
+      $("#afterChangeLocationCategory option:selected").text("Town");
+      $("#afterChangeSenSchool option:selected").text("No");
+      $(".aaa").hide();
     }
   }
 });
@@ -11429,7 +12358,77 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {};
+  },
+  methods: {
+    /** method to reset forms */
+    reset: function reset() {
+      window.location.reload();
+    },
+
+    /** method to save data */
+    save: function save() {
+      Swal.fire('Success!', 'Your Data has been successfully saved.', 'success');
+      $(".editable_fields").val("");
+    },
+
+    /** method to get HQ and Dzongkhag Office based on code */
+    getOrgDetais: function getOrgDetais() {
+      if ($('#workingAgencyCode').val() == "") {
+        $('#workingAgencyCode_error').html('Please enter zest working agency code.');
+        $('#workingAgencyCode').focus();
+        $('#workingAgencyCode').removeClass('is-invalid');
+      } else {
+        $("#agencyCode").val(2222);
+        $("#workingAgencyCode").val(2222);
+        $("#agencyName").val("SEN Department");
+        $("#parentAgency").val("MOE");
+        $("#dzongkhag").val("Thimphu");
+        $("#gewog").val("Chang");
+      }
+    },
+    removeerror: function removeerror(fieldid, errid) {
+      if ($('#' + fieldid).val() != "") {
+        $('#' + fieldid).removeClass('is-invalid');
+        $('#' + errid).html('');
+      }
+    }
+  }
+});
 
 /***/ }),
 
@@ -73911,7 +74910,7 @@ var render = function() {
   return _c("div", [
     _vm._m(0),
     _vm._v(" "),
-    _c("div", { staticClass: "card card-primary card-outline card-tabs" }, [
+    _c("div", { staticClass: "card card-tabs" }, [
       _c("div", { staticClass: "card-header p-0 pt-1 border-bottom-0" }, [
         _c(
           "ul",
@@ -74217,7 +75216,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("form", [
-      _c("div", { staticClass: "card" }, [
+      _c("div", { staticClass: "card card-primary card-outline" }, [
         _vm._m(0),
         _vm._v(" "),
         _c("div", { staticClass: "card-body" }, [
@@ -74259,33 +75258,37 @@ var render = function() {
       _vm._m(4)
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
-      _c(
-        "div",
-        { staticClass: "col-md-1", staticStyle: { "margin-left": "800px" } },
-        [
-          _c("input", {
-            staticClass: "btn btn-flat btn-primary",
-            attrs: { type: "button", value: "Cancel", id: "reset" },
-            on: {
-              click: function($event) {
-                return _vm.reset()
+    _c("div", { staticClass: "card-footer" }, [
+      _c("div", { staticClass: "row form-group fa-pull-right" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-flat btn-warning",
+              attrs: { type: "button", id: "reset" },
+              on: {
+                click: function($event) {
+                  return _vm.reset()
+                }
               }
-            }
-          })
-        ]
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-1" }, [
-        _c("input", {
-          staticClass: "btn btn-flat btn-primary",
-          attrs: { type: "button", value: "Submit", id: "submit" },
-          on: {
-            click: function($event) {
-              return _vm.save()
-            }
-          }
-        })
+            },
+            [_c("i", { staticClass: "fa fa-ban" }), _vm._v(" Cancel")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-flat btn-primary",
+              attrs: { type: "button" },
+              on: {
+                click: function($event) {
+                  return _vm.save()
+                }
+              }
+            },
+            [_c("i", { staticClass: "fa fa-check" }), _vm._v(" Add")]
+          )
+        ])
       ])
     ])
   ])
@@ -74329,7 +75332,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card" }, [
       _c("div", { staticClass: "card-header" }, [
-        _c("h3", { staticClass: "card-title" }, [_vm._v("Basic Details")])
+        _c("h3", { staticClass: "card-title" }, [_vm._v("Current Details")])
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "card-body" }, [
@@ -74548,6 +75551,31 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-5" }, [
+            _c("label", { staticClass: "col-md-6 font-weight-normal" }, [
+              _vm._v("SEN School:")
+            ]),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                staticClass: "form-control font-weight-bolder editable_fields",
+                attrs: { name: "category", id: "senSchool" }
+              },
+              [
+                _c("option", { attrs: { value: "" } }, [
+                  _vm._v("--- Please Select ---")
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "1" } }, [_vm._v("Yes")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "2" } }, [_vm._v("No")])
+              ]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group row" }, [
+          _c("div", { staticClass: "col-md-5 hidden aaa" }, [
             _c("label", { staticClass: "col-md-5 font-weight-normal" }, [
               _vm._v("Parent School:")
             ]),
@@ -74566,11 +75594,9 @@ var staticRenderFns = [
                 _c("option", { attrs: { value: "1" } }, [_vm._v("Kabisa")])
               ]
             )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group row" }, [
-          _c("div", { staticClass: "col-md-5" }, [
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-5 hidden aaa" }, [
             _c("label", { staticClass: "col-md-8 font-weight-normal" }, [
               _vm._v("Co-located with Parent School:")
             ]),
@@ -74580,29 +75606,6 @@ var staticRenderFns = [
               {
                 staticClass: "form-control font-weight-bolder editable_fields",
                 attrs: { name: "category", id: "coLoParent" }
-              },
-              [
-                _c("option", { attrs: { value: "" } }, [
-                  _vm._v("--- Please Select ---")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "1" } }, [_vm._v("Yes")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "2" } }, [_vm._v("No")])
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-5" }, [
-            _c("label", { staticClass: "col-md-6 font-weight-normal" }, [
-              _vm._v("SEN School:")
-            ]),
-            _vm._v(" "),
-            _c(
-              "select",
-              {
-                staticClass: "form-control font-weight-bolder editable_fields",
-                attrs: { name: "category", id: "senSchool" }
               },
               [
                 _c("option", { attrs: { value: "" } }, [
@@ -74630,93 +75633,400 @@ var staticRenderFns = [
             _c("div", { staticClass: "card card-primary" }, [
               _c("div", { staticClass: "card-header" }, [
                 _c("h3", { staticClass: "card-title" }, [
-                  _vm._v("School/ECCD/ECR 1")
+                  _vm._v("School/ECR/ECCD 1")
                 ])
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "card-body" }, [
-                _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "code" } }, [_vm._v("Code:")]),
-                  _vm._v(" "),
-                  _c("input", {
-                    staticClass: "form-control",
-                    attrs: { type: "code", id: "code" }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "name" } }, [_vm._v("Name:")]),
-                  _vm._v(" "),
-                  _c("input", {
-                    staticClass: "form-control",
-                    attrs: { type: "name", id: "name" }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "category1" } }, [
-                    _vm._v("Category:")
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Code:")]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass:
+                          "form-control font-weight-bolder editable_fields currentDetails",
+                        attrs: { type: "text", id: "code" }
+                      })
+                    ])
                   ]),
                   _vm._v(" "),
-                  _c(
-                    "select",
-                    {
-                      staticClass:
-                        "form-control font-weight-bolder editable_fields",
-                      attrs: { name: "category1", id: "category1" }
-                    },
-                    [
-                      _c("option", { attrs: { value: "" } }, [
-                        _vm._v("--- Please Select ---")
-                      ]),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Name:")]
+                      ),
                       _vm._v(" "),
-                      _c("option", { attrs: { value: "1" } }, [
-                        _vm._v("Public")
-                      ]),
-                      _vm._v(" "),
-                      _c("option", { attrs: { value: "2" } }, [
-                        _vm._v("Private")
-                      ])
-                    ]
-                  )
+                      _c("input", {
+                        staticClass:
+                          "form-control font-weight-bolder editable_fields currentDetails",
+                        attrs: { type: "text", id: "name" }
+                      })
+                    ])
+                  ])
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "level1" } }, [_vm._v("Level:")]),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Category:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: { name: "category", id: "category" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Public")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("Private")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
                   _vm._v(" "),
-                  _c(
-                    "select",
-                    {
-                      staticClass:
-                        "form-control font-weight-bolder editable_fields",
-                      attrs: { name: "level1", id: "level1" }
-                    },
-                    [
-                      _c("option", { attrs: { value: "" } }, [
-                        _vm._v("--- Please Select ---")
-                      ]),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Level:")]
+                      ),
                       _vm._v(" "),
-                      _c("option", { attrs: { value: "1" } }, [
-                        _vm._v("Higher Secondary School")
-                      ]),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: { name: "category", id: "level" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Higher Secondary School")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("Middle Secondary School")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "3" } }, [
+                            _vm._v("Lower Secondary School")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "4" } }, [
+                            _vm._v("Primary School")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "5" } }, [
+                            _vm._v("ECR")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "6" } }, [
+                            _vm._v("ECCD")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-6 font-weight-normal" },
+                        [_vm._v("Dzongkhag:")]
+                      ),
                       _vm._v(" "),
-                      _c("option", { attrs: { value: "2" } }, [
-                        _vm._v("Middle Secondary School")
-                      ]),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: { name: "dzongkhag", id: "dzongkhag" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Thimphu")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("Paro")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "3" } }, [
+                            _vm._v("punakha")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "4" } }, [
+                            _vm._v("Lhuntse")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Gewog:")]
+                      ),
                       _vm._v(" "),
-                      _c("option", { attrs: { value: "3" } }, [
-                        _vm._v("Lower Secondary School")
-                      ]),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: { name: "category", id: "gewog" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Kabisa")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("Babesa")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "3" } }, [
+                            _vm._v("Motithang")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "4" } }, [
+                            _vm._v("Chubachu")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Chiwog:")]
+                      ),
                       _vm._v(" "),
-                      _c("option", { attrs: { value: "4" } }, [
-                        _vm._v("Primary School")
-                      ]),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: { name: "category", id: "chiwog" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("olakha")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("chngbandu")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-8 font-weight-normal" },
+                        [_vm._v("Location Category:")]
+                      ),
                       _vm._v(" "),
-                      _c("option", { attrs: { value: "5" } }, [_vm._v("ECR")]),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: { name: "category", id: "locationCategory" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Kabisa")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-10 font-weight-normal" },
+                        [_vm._v("Geopolitically Located:")]
+                      ),
                       _vm._v(" "),
-                      _c("option", { attrs: { value: "6" } }, [_vm._v("ECCD")])
-                    ]
-                  )
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "geopoliticallyLocated"
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Yes")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("No")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-6 font-weight-normal" },
+                        [_vm._v("SEN School:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: { name: "category", id: "senSchool" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Yes")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("No")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group hidden aaa" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-12 font-weight-normal" },
+                        [_vm._v("Co-located with Parent School:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: { name: "category", id: "coLoParent" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Yes")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("No")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group hidden aaa" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-10 font-weight-normal" },
+                        [_vm._v("Parent School:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: { name: "category", id: "parentSchool" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Kabisa")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
                 ])
               ])
             ])
@@ -74726,93 +76036,415 @@ var staticRenderFns = [
             _c("div", { staticClass: "card card-success" }, [
               _c("div", { staticClass: "card-header" }, [
                 _c("h3", { staticClass: "card-title" }, [
-                  _vm._v("School/ECCD/ECR 2")
+                  _vm._v("School/ECR/ECCD 2")
                 ])
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "card-body" }, [
-                _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "code" } }, [_vm._v("Code:")]),
-                  _vm._v(" "),
-                  _c("input", {
-                    staticClass: "form-control",
-                    attrs: { type: "code", id: "code2" }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "name" } }, [_vm._v("Name:")]),
-                  _vm._v(" "),
-                  _c("input", {
-                    staticClass: "form-control",
-                    attrs: { type: "name", id: "name2" }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "category2" } }, [
-                    _vm._v("Category:")
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Code:")]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass:
+                          "form-control font-weight-bolder editable_fields currentDetails",
+                        attrs: { type: "text", id: "afterChangeCode" }
+                      })
+                    ])
                   ]),
                   _vm._v(" "),
-                  _c(
-                    "select",
-                    {
-                      staticClass:
-                        "form-control font-weight-bolder editable_fields",
-                      attrs: { name: "category2", id: "category2" }
-                    },
-                    [
-                      _c("option", { attrs: { value: "" } }, [
-                        _vm._v("--- Please Select ---")
-                      ]),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Name:")]
+                      ),
                       _vm._v(" "),
-                      _c("option", { attrs: { value: "1" } }, [
-                        _vm._v("Public")
-                      ]),
-                      _vm._v(" "),
-                      _c("option", { attrs: { value: "2" } }, [
-                        _vm._v("Private")
-                      ])
-                    ]
-                  )
+                      _c("input", {
+                        staticClass:
+                          "form-control font-weight-bolder editable_fields currentDetails",
+                        attrs: { type: "text", id: "afterChangeName" }
+                      })
+                    ])
+                  ])
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "level2" } }, [_vm._v("Level:")]),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Category:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: { name: "category", id: "afterChangeCategory" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Public")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("Private")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
                   _vm._v(" "),
-                  _c(
-                    "select",
-                    {
-                      staticClass:
-                        "form-control font-weight-bolder editable_fields",
-                      attrs: { name: "level2", id: "level2" }
-                    },
-                    [
-                      _c("option", { attrs: { value: "" } }, [
-                        _vm._v("--- Please Select ---")
-                      ]),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Level:")]
+                      ),
                       _vm._v(" "),
-                      _c("option", { attrs: { value: "1" } }, [
-                        _vm._v("Higher Secondary School")
-                      ]),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: { name: "category", id: "afterChangeLevel" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Higher Secondary School")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("Middle Secondary School")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "3" } }, [
+                            _vm._v("Lower Secondary School")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "4" } }, [
+                            _vm._v("Primary School")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "5" } }, [
+                            _vm._v("ECR")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "6" } }, [
+                            _vm._v("ECCD")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-6 font-weight-normal" },
+                        [_vm._v("Dzongkhag:")]
+                      ),
                       _vm._v(" "),
-                      _c("option", { attrs: { value: "2" } }, [
-                        _vm._v("Middle Secondary School")
-                      ]),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "dzongkhag",
+                            id: "afterChangeDzongkhag"
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Thimphu")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("Paro")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "3" } }, [
+                            _vm._v("punakha")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "4" } }, [
+                            _vm._v("Lhuntse")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Gewog:")]
+                      ),
                       _vm._v(" "),
-                      _c("option", { attrs: { value: "3" } }, [
-                        _vm._v("Lower Secondary School")
-                      ]),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: { name: "category", id: "afterChangeGewog" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Kabisa")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("Babesa")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "3" } }, [
+                            _vm._v("Motithang")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "4" } }, [
+                            _vm._v("Chubachu")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Chiwog:")]
+                      ),
                       _vm._v(" "),
-                      _c("option", { attrs: { value: "4" } }, [
-                        _vm._v("Primary School")
-                      ]),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: { name: "category", id: "afterChangeChiwog" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("olakha")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("chngbandu")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-8 font-weight-normal" },
+                        [_vm._v("Location Category:")]
+                      ),
                       _vm._v(" "),
-                      _c("option", { attrs: { value: "5" } }, [_vm._v("ECR")]),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "afterChangeLocationCategory"
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Kabisa")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-10 font-weight-normal" },
+                        [_vm._v("Geopolitically Located:")]
+                      ),
                       _vm._v(" "),
-                      _c("option", { attrs: { value: "6" } }, [_vm._v("ECCD")])
-                    ]
-                  )
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "afterChangeGeopoliticallyLocated"
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Yes")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("No")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-6 font-weight-normal" },
+                        [_vm._v("SEN School:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "afterChangeSenSchool"
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Yes")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("No")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group hidden aaa" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-12 font-weight-normal" },
+                        [_vm._v("Co-located with Parent School:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "afterChangeCoLoParent"
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Yes")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("No")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group hidden aaa" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-10 font-weight-normal" },
+                        [_vm._v("Parent School:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "afterChangeParentSchool"
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Kabisa")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
                 ])
               ])
             ])
@@ -75269,7 +76901,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("form", [
-      _c("div", { staticClass: "card" }, [
+      _c("div", { staticClass: "card card-primary card-outline" }, [
         _vm._m(0),
         _vm._v(" "),
         _c("div", { staticClass: "card-body" }, [
@@ -75285,7 +76917,9 @@ var render = function() {
                   attrs: { name: "organization", id: "organization" },
                   on: {
                     change: function($event) {
-                      return _vm.getSchoolDetails()
+                      _vm.getSchoolDetails(),
+                        _vm.getClassAndStream("organization"),
+                        _vm.getClassAndStreamForAfterChange("organization")
                     }
                   }
                 },
@@ -75311,86 +76945,37 @@ var render = function() {
       _vm._m(4)
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
-      _c(
-        "div",
-        { staticClass: "col-md-1", staticStyle: { "margin-left": "800px" } },
-        [
-          _c("input", {
-            staticClass: "btn btn-flat btn-primary",
-            attrs: { type: "button", value: "Cancel", id: "reset" },
-            on: {
-              click: function($event) {
-                return _vm.reset()
+    _c("div", { staticClass: "card-footer" }, [
+      _c("div", { staticClass: "row form-group fa-pull-right" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-flat btn-warning",
+              attrs: { type: "button", id: "reset" },
+              on: {
+                click: function($event) {
+                  return _vm.reset()
+                }
               }
-            }
-          })
-        ]
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-1" }, [
-        _c("input", {
-          staticClass: "btn btn-flat btn-primary",
-          attrs: { type: "button", value: "Submit", id: "submit" },
-          on: {
-            click: function($event) {
-              return _vm.save()
-            }
-          }
-        })
-      ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "card" }, [
-      _vm._m(5),
-      _vm._v(" "),
-      _c("div", { staticClass: "card-body changeBasicDetaiList hidden" }, [
-        _c(
-          "table",
-          {
-            staticClass: "table table-bordered table-striped",
-            attrs: { id: "dynamic-table" }
-          },
-          [
-            _vm._m(6),
-            _vm._v(" "),
-            _c("tbody", [
-              _c("tr", { attrs: { id: "record1" } }, [
-                _c("td", [_vm._v("00020292")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("YangchenPhug HSS")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Public")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Pending")]),
-                _vm._v(" "),
-                _c("td", { attrs: { width: "3%" } }, [
-                  _c("input", {
-                    staticClass: "btn btn-flat btn-primary",
-                    attrs: { type: "button", value: "Approve", id: "verify" },
-                    on: {
-                      click: function($event) {
-                        return _vm.approve()
-                      }
-                    }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("td", { attrs: { width: "3%" } }, [
-                  _c("input", {
-                    staticClass: "btn btn-flat btn-primary",
-                    attrs: { type: "button", value: "Reject", id: "reject" },
-                    on: {
-                      click: function($event) {
-                        return _vm.reject()
-                      }
-                    }
-                  })
-                ])
-              ])
-            ])
-          ]
-        )
+            },
+            [_c("i", { staticClass: "fa fa-ban" }), _vm._v(" Cancel")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-flat btn-primary",
+              attrs: { type: "button" },
+              on: {
+                click: function($event) {
+                  return _vm.save()
+                }
+              }
+            },
+            [_c("i", { staticClass: "fa fa-check" }), _vm._v(" Add")]
+          )
+        ])
       ])
     ])
   ])
@@ -75401,7 +76986,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header" }, [
-      _c("h3", { staticClass: "card-title" }, [_vm._v("Change Basic Details")])
+      _c("h3", { staticClass: "card-title" }, [
+        _vm._v("Change of Basic Details")
+      ])
     ])
   },
   function() {
@@ -75419,7 +77006,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-md-5" }, [
       _c("label", { staticClass: "col-md-5 font-weight-normal" }, [
-        _vm._v("Year of Upgrade:")
+        _vm._v("Year of Change:")
       ]),
       _vm._v(" "),
       _c("input", {
@@ -75432,382 +77019,887 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card" }, [
-      _c("div", { staticClass: "card-header" }, [
-        _c("h3", { staticClass: "card-title" }, [_vm._v("Basic Details")])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "card-body" }, [
-        _c("div", { staticClass: "form-group row" }, [
-          _c("div", { staticClass: "col-md-5" }, [
-            _c("label", { staticClass: "col-md-5 font-weight-normal" }, [
-              _vm._v("Code:")
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control font-weight-bolder editable_fields",
-              attrs: { type: "text", id: "code" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-5" }, [
-            _c("label", { staticClass: "col-md-5 font-weight-normal" }, [
-              _vm._v("Name:")
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "form-control font-weight-bolder editable_fields",
-              attrs: { type: "text", id: "name" }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group row" }, [
-          _c("div", { staticClass: "col-md-5" }, [
-            _c("label", { staticClass: "col-md-5 font-weight-normal" }, [
-              _vm._v("Category:")
-            ]),
-            _vm._v(" "),
-            _c(
-              "select",
-              {
-                staticClass: "form-control font-weight-bolder editable_fields",
-                attrs: { name: "category", id: "category" }
-              },
-              [
-                _c("option", { attrs: { value: "" } }, [
-                  _vm._v("--- Please Select ---")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "1" } }, [_vm._v("Public")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "2" } }, [_vm._v("Private")])
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-5" }, [
-            _c("label", { staticClass: "col-md-5 font-weight-normal" }, [
-              _vm._v("Level:")
-            ]),
-            _vm._v(" "),
-            _c(
-              "select",
-              {
-                staticClass: "form-control font-weight-bolder editable_fields",
-                attrs: { name: "category", id: "level" }
-              },
-              [
-                _c("option", { attrs: { value: "" } }, [
-                  _vm._v("--- Please Select ---")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "1" } }, [
-                  _vm._v("Higher Secondary School")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "2" } }, [
-                  _vm._v("Middle Secondary School")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "3" } }, [
-                  _vm._v("Lower Secondary School")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "4" } }, [
-                  _vm._v("Primary School")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "5" } }, [_vm._v("ECR")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "6" } }, [_vm._v("ECCD")])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group row" }, [
-          _c("div", { staticClass: "col-md-5" }, [
-            _c("label", { staticClass: "col-md-5 font-weight-normal" }, [
-              _vm._v("Dzongkhag:")
-            ]),
-            _vm._v(" "),
-            _c(
-              "select",
-              {
-                staticClass: "form-control font-weight-bolder editable_fields",
-                attrs: { name: "dzongkhag", id: "dzongkhag" }
-              },
-              [
-                _c("option", { attrs: { value: "" } }, [
-                  _vm._v("--- Please Select ---")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "1" } }, [_vm._v("Thimphu")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "2" } }, [_vm._v("Paro")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "3" } }, [_vm._v("punakha")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "4" } }, [_vm._v("Lhuntse")])
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-5" }, [
-            _c("label", { staticClass: "col-md-5 font-weight-normal" }, [
-              _vm._v("Gewog:")
-            ]),
-            _vm._v(" "),
-            _c(
-              "select",
-              {
-                staticClass: "form-control font-weight-bolder editable_fields",
-                attrs: { name: "category", id: "gewog" }
-              },
-              [
-                _c("option", { attrs: { value: "" } }, [
-                  _vm._v("--- Please Select ---")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "1" } }, [_vm._v("Kabisa")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "2" } }, [_vm._v("Babesa")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "3" } }, [_vm._v("Motithang")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "4" } }, [_vm._v("Chubachu")])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group row" }, [
-          _c("div", { staticClass: "col-md-5" }, [
-            _c("label", { staticClass: "col-md-5 font-weight-normal" }, [
-              _vm._v("Chiwog:")
-            ]),
-            _vm._v(" "),
-            _c(
-              "select",
-              {
-                staticClass: "form-control font-weight-bolder editable_fields",
-                attrs: { name: "category", id: "chiwog" }
-              },
-              [
-                _c("option", { attrs: { value: "" } }, [
-                  _vm._v("--- Please Select ---")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "1" } }, [_vm._v("olakha")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "2" } }, [_vm._v("chngbandu")])
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-5" }, [
-            _c("label", { staticClass: "col-md-5 font-weight-normal" }, [
-              _vm._v("Location Category:")
-            ]),
-            _vm._v(" "),
-            _c(
-              "select",
-              {
-                staticClass: "form-control font-weight-bolder editable_fields",
-                attrs: { name: "category", id: "locationCategory" }
-              },
-              [
-                _c("option", { attrs: { value: "" } }, [
-                  _vm._v("--- Please Select ---")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "1" } }, [_vm._v("Kabisa")])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group row" }, [
-          _c("div", { staticClass: "col-md-5" }, [
-            _c("label", { staticClass: "col-md-5 font-weight-normal" }, [
-              _vm._v("Geopolitically Located:")
-            ]),
-            _vm._v(" "),
-            _c(
-              "select",
-              {
-                staticClass: "form-control font-weight-bolder editable_fields",
-                attrs: { name: "category", id: "geopoliticallyLocated" }
-              },
-              [
-                _c("option", { attrs: { value: "" } }, [
-                  _vm._v("--- Please Select ---")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "1" } }, [_vm._v("Yes")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "2" } }, [_vm._v("No")])
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-5" }, [
-            _c("label", { staticClass: "col-md-5 font-weight-normal" }, [
-              _vm._v("Parent School:")
-            ]),
-            _vm._v(" "),
-            _c(
-              "select",
-              {
-                staticClass: "form-control font-weight-bolder editable_fields",
-                attrs: { name: "category", id: "parentSchool" }
-              },
-              [
-                _c("option", { attrs: { value: "" } }, [
-                  _vm._v("--- Please Select ---")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "1" } }, [_vm._v("Kabisa")])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group row" }, [
-          _c("div", { staticClass: "col-md-5" }, [
-            _c("label", { staticClass: "col-md-8 font-weight-normal" }, [
-              _vm._v("Co-located with Parent School:")
-            ]),
-            _vm._v(" "),
-            _c(
-              "select",
-              {
-                staticClass: "form-control font-weight-bolder editable_fields",
-                attrs: { name: "category", id: "coLoParent" }
-              },
-              [
-                _c("option", { attrs: { value: "" } }, [
-                  _vm._v("--- Please Select ---")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "1" } }, [_vm._v("Yes")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "2" } }, [_vm._v("No")])
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-5" }, [
-            _c("label", { staticClass: "col-md-6 font-weight-normal" }, [
-              _vm._v("SEN School:")
-            ]),
-            _vm._v(" "),
-            _c(
-              "select",
-              {
-                staticClass: "form-control font-weight-bolder editable_fields",
-                attrs: { name: "category", id: "senSchool" }
-              },
-              [
-                _c("option", { attrs: { value: "" } }, [
-                  _vm._v("--- Please Select ---")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "1" } }, [_vm._v("Yes")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "2" } }, [_vm._v("No")])
-              ]
-            )
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card", staticStyle: { width: "500px" } }, [
-      _c("div", { staticClass: "card-header hidden classAndStream" }, [
-        _c("h3", { staticClass: "card-title" }, [_vm._v("Class and Stream")])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "card-body hidden classAndStream" }, [
-        _c(
-          "table",
-          {
-            staticClass: "table table-bordered table-striped",
-            attrs: { id: "dynamic-table" }
-          },
-          [
-            _c("thead", [
-              _c("tr", [
-                _c("th", [_vm._v("Class")]),
-                _vm._v(" "),
-                _c("th", [_vm._v("Stream")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("tbody", [
-              _c("tr", { attrs: { id: "record1" } }, [
-                _c("td", [
-                  _c("input", {
-                    staticClass: "form-control",
-                    attrs: { type: "text", value: "9" }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("input", { attrs: { type: "checkbox" } }),
-                  _c("label", { attrs: { for: "dd" } }, [_vm._v(" A ")])
+    return _c("section", { staticClass: "content" }, [
+      _c("div", { staticClass: "container-fluid" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-6" }, [
+            _c("div", { staticClass: "card card-primary" }, [
+              _c("div", { staticClass: "card-header" }, [
+                _c("h3", { staticClass: "card-title" }, [
+                  _vm._v("Current Details")
                 ])
               ]),
               _vm._v(" "),
-              _c("tr", { attrs: { id: "record2" } }, [
-                _c("td", [
-                  _c("input", {
-                    staticClass: "form-control",
-                    attrs: { type: "text", value: "10" }
-                  })
+              _c("div", { staticClass: "card-body" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Code:")]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass:
+                          "form-control font-weight-bolder editable_fields currentDetails",
+                        attrs: { type: "text", id: "code", readonly: "" }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Name:")]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass:
+                          "form-control font-weight-bolder editable_fields currentDetails",
+                        attrs: { type: "text", id: "name", readonly: "" }
+                      })
+                    ])
+                  ])
                 ]),
                 _vm._v(" "),
-                _c("td", [
-                  _c("input", { attrs: { type: "checkbox" } }),
-                  _c("label", { attrs: { for: "dd" } }, [_vm._v("  A ")])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", { attrs: { id: "record3" } }, [
-                _c("td", [
-                  _c("input", {
-                    staticClass: "form-control",
-                    attrs: { type: "text", value: "11" }
-                  })
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Category:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "category",
+                            readonly: ""
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Public")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("Private")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Level:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: { name: "category", id: "level", readonly: "" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Higher Secondary School")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("Middle Secondary School")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "3" } }, [
+                            _vm._v("Lower Secondary School")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "4" } }, [
+                            _vm._v("Primary School")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "5" } }, [
+                            _vm._v("ECR")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "6" } }, [
+                            _vm._v("ECCD")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
                 ]),
                 _vm._v(" "),
-                _c("td", [
-                  _c("input", { attrs: { type: "checkbox", id: "dd" } }),
-                  _c("label", { attrs: { for: "dd" } }, [_vm._v(" A ")])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", { attrs: { id: "record4" } }, [
-                _c("td", [
-                  _c("input", {
-                    staticClass: "form-control",
-                    attrs: { type: "text", value: "12" }
-                  })
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-6 font-weight-normal" },
+                        [_vm._v("Dzongkhag:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "dzongkhag",
+                            id: "dzongkhag",
+                            readonly: ""
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Thimphu")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("Paro")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "3" } }, [
+                            _vm._v("punakha")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "4" } }, [
+                            _vm._v("Lhuntse")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Gewog:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: { name: "category", id: "gewog", readonly: "" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Kabisa")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("Babesa")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "3" } }, [
+                            _vm._v("Motithang")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "4" } }, [
+                            _vm._v("Chubachu")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
                 ]),
                 _vm._v(" "),
-                _c("td", [
-                  _c("input", { attrs: { type: "checkbox" } }),
-                  _c("label", { attrs: { for: "dd" } }, [_vm._v(" A ")])
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Chiwog:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "chiwog",
+                            readonly: ""
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("olakha")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("chngbandu")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-8 font-weight-normal" },
+                        [_vm._v("Location Category:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "locationCategory",
+                            readonly: ""
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Kabisa")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-10 font-weight-normal" },
+                        [_vm._v("Geopolitically Located:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "geopoliticallyLocated",
+                            readonly: ""
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Yes")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("No")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-6 font-weight-normal" },
+                        [_vm._v("SEN School:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "senSchool",
+                            readonly: ""
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Yes")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("No")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "form-group hidden",
+                        attrs: { id: "coLocatedCurrent" }
+                      },
+                      [
+                        _c(
+                          "label",
+                          { staticClass: "col-md-12 font-weight-normal" },
+                          [_vm._v("Co-located with Parent School:")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            staticClass:
+                              "form-control font-weight-bolder editable_fields currentDetails",
+                            attrs: {
+                              name: "category",
+                              id: "coLoParent",
+                              readonly: ""
+                            }
+                          },
+                          [
+                            _c("option", { attrs: { value: "" } }, [
+                              _vm._v("--- Please Select ---")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "1" } }, [
+                              _vm._v("Yes")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "2" } }, [
+                              _vm._v("No")
+                            ])
+                          ]
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "form-group hidden",
+                        attrs: { id: "parentSchoolCurrent" }
+                      },
+                      [
+                        _c(
+                          "label",
+                          { staticClass: "col-md-10 font-weight-normal" },
+                          [_vm._v("Parent School:")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            staticClass:
+                              "form-control font-weight-bolder editable_fields currentDetails",
+                            attrs: {
+                              name: "category",
+                              id: "parentSchool",
+                              readonly: ""
+                            }
+                          },
+                          [
+                            _c("option", { attrs: { value: "" } }, [
+                              _vm._v("--- Please Select ---")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "1" } }, [
+                              _vm._v("Kabisa")
+                            ])
+                          ]
+                        )
+                      ]
+                    )
+                  ])
                 ])
               ])
             ])
-          ]
-        )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6" }, [
+            _c("div", { staticClass: "card card-success" }, [
+              _c("div", { staticClass: "card-header" }, [
+                _c("h3", { staticClass: "card-title" }, [
+                  _vm._v("After Change")
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Code:")]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass:
+                          "form-control font-weight-bolder editable_fields currentDetails",
+                        attrs: { type: "text", id: "afterChangeCode" }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Name:")]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass:
+                          "form-control font-weight-bolder editable_fields currentDetails",
+                        attrs: { type: "text", id: "afterChangeName" }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Category:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: { name: "category", id: "afterChangeCategory" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Public")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("Private")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Level:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: { name: "category", id: "afterChangeLevel" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Higher Secondary School")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("Middle Secondary School")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "3" } }, [
+                            _vm._v("Lower Secondary School")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "4" } }, [
+                            _vm._v("Primary School")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "5" } }, [
+                            _vm._v("ECR")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "6" } }, [
+                            _vm._v("ECCD")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-6 font-weight-normal" },
+                        [_vm._v("Dzongkhag:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "dzongkhag",
+                            id: "afterChangeDzongkhag"
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Thimphu")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("Paro")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "3" } }, [
+                            _vm._v("punakha")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "4" } }, [
+                            _vm._v("Lhuntse")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Gewog:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: { name: "category", id: "afterChangeGewog" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Kabisa")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("Babesa")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "3" } }, [
+                            _vm._v("Motithang")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "4" } }, [
+                            _vm._v("Chubachu")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Chiwog:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: { name: "category", id: "afterChangeChiwog" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("olakha")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("chngbandu")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-8 font-weight-normal" },
+                        [_vm._v("Location Category:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "afterChangeLocationCategory"
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Kabisa")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-10 font-weight-normal" },
+                        [_vm._v("Geopolitically Located:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "afterChangeGeopoliticallyLocated"
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Yes")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("No")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-6 font-weight-normal" },
+                        [_vm._v("SEN School:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "afterChangeSenSchool"
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Yes")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("No")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "form-group hidden",
+                        attrs: { id: "coLocatedChange" }
+                      },
+                      [
+                        _c(
+                          "label",
+                          { staticClass: "col-md-12 font-weight-normal" },
+                          [_vm._v("Co-located with Parent School:")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            staticClass:
+                              "form-control font-weight-bolder editable_fields afterChange",
+                            attrs: {
+                              name: "category",
+                              id: "afterChangeCoLoParent"
+                            }
+                          },
+                          [
+                            _c("option", { attrs: { value: "" } }, [
+                              _vm._v("--- Please Select ---")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "1" } }, [
+                              _vm._v("Yes")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "2" } }, [
+                              _vm._v("No")
+                            ])
+                          ]
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "form-group hidden",
+                        attrs: { id: "parentSchoolChange" }
+                      },
+                      [
+                        _c(
+                          "label",
+                          { staticClass: "col-md-10 font-weight-normal" },
+                          [_vm._v("Parent School:")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            staticClass:
+                              "form-control font-weight-bolder editable_fields afterChange",
+                            attrs: {
+                              name: "category",
+                              id: "afterChangeParentSchool"
+                            }
+                          },
+                          [
+                            _c("option", { attrs: { value: "" } }, [
+                              _vm._v("--- Please Select ---")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "1" } }, [
+                              _vm._v("Kabisa")
+                            ])
+                          ]
+                        )
+                      ]
+                    )
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
       ])
     ])
   },
@@ -75815,33 +77907,87 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "card-header changeBasicDetaiList hidden" },
-      [
-        _c("h3", { staticClass: "card-title" }, [
-          _vm._v("Change Basic Details List")
+    return _c("section", { staticClass: "content" }, [
+      _c("div", { staticClass: "container-fluid" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-6" }, [
+            _c("div", { staticClass: "card card-primary" }, [
+              _c("div", { staticClass: "card-body" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass: "table table-bordered table-striped",
+                    attrs: { id: "bbb" }
+                  },
+                  [
+                    _c("thead", [
+                      _c("tr", { attrs: { rowspan: "2" } }, [
+                        _c("th", [_vm._v("Class")]),
+                        _vm._v(" "),
+                        _c("th", { attrs: { colspan: "4" } }, [
+                          _vm._v("Stream")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("th"),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("General")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Science")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Commerce")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Arts")])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tbody", { attrs: { id: "table_data_populate" } })
+                  ]
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6" }, [
+            _c("div", { staticClass: "card card-success" }, [
+              _c("div", { staticClass: "card-body" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass: "table table-bordered table-striped",
+                    attrs: { id: "aaa" }
+                  },
+                  [
+                    _c("thead", [
+                      _c("tr", { attrs: { rowspan: "2" } }, [
+                        _c("th", [_vm._v("Class")]),
+                        _vm._v(" "),
+                        _c("th", { attrs: { colspan: "4" } }, [
+                          _vm._v("Stream")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("th"),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("General")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Science")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Commerce")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Arts")])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tbody", { attrs: { id: "table_data_populate1" } })
+                  ]
+                )
+              ])
+            ])
+          ])
         ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("thead", [
-      _c("tr", [
-        _c("th", [_vm._v("Code")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Name")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Category")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Status")]),
-        _vm._v(" "),
-        _c("th"),
-        _vm._v(" "),
-        _c("th")
       ])
     ])
   }
@@ -75869,7 +78015,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("form", [
-      _c("div", { staticClass: "card" }, [
+      _c("div", { staticClass: "card card-primary card-outline" }, [
         _vm._m(0),
         _vm._v(" "),
         _c("div", { staticClass: "card-body" }, [
@@ -75907,33 +78053,37 @@ var render = function() {
       _vm._m(3)
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
-      _c(
-        "div",
-        { staticClass: "col-md-1", staticStyle: { "margin-left": "800px" } },
-        [
-          _c("input", {
-            staticClass: "btn btn-flat btn-primary",
-            attrs: { type: "button", value: "Cancel", id: "reset" },
-            on: {
-              click: function($event) {
-                return _vm.reset()
+    _c("div", { staticClass: "card-footer" }, [
+      _c("div", { staticClass: "row form-group fa-pull-right" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-flat btn-warning",
+              attrs: { type: "button", id: "reset" },
+              on: {
+                click: function($event) {
+                  return _vm.reset()
+                }
               }
-            }
-          })
-        ]
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-1" }, [
-        _c("input", {
-          staticClass: "btn btn-flat btn-primary",
-          attrs: { type: "button", value: "Submit", id: "submit" },
-          on: {
-            click: function($event) {
-              return _vm.save()
-            }
-          }
-        })
+            },
+            [_c("i", { staticClass: "fa fa-ban" }), _vm._v(" Cancel")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-flat btn-primary",
+              attrs: { type: "button" },
+              on: {
+                click: function($event) {
+                  return _vm.save()
+                }
+              }
+            },
+            [_c("i", { staticClass: "fa fa-check" }), _vm._v(" Add")]
+          )
+        ])
       ])
     ])
   ])
@@ -76200,6 +78350,29 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-5" }, [
+            _c("label", { staticClass: "col-md-6 font-weight-normal" }, [
+              _vm._v("SEN School:")
+            ]),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                staticClass: "form-control editable_fields font-weight-bolder",
+                attrs: { name: "senSchool", id: "senSchool" }
+              },
+              [
+                _c("option", { attrs: { value: "" } }, [
+                  _vm._v("--- Please Select ---")
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "1" } }, [_vm._v("Kabisa")])
+              ]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group row" }, [
+          _c("div", { staticClass: "col-md-5 hidden aaa" }, [
             _c("label", { staticClass: "col-md-5 font-weight-normal" }, [
               _vm._v("Parent School:")
             ]),
@@ -76218,11 +78391,9 @@ var staticRenderFns = [
                 _c("option", { attrs: { value: "1" } }, [_vm._v("Kabisa")])
               ]
             )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group row" }, [
-          _c("div", { staticClass: "col-md-5" }, [
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-5 hidden aaa" }, [
             _c("label", { staticClass: "col-md-8 font-weight-normal" }, [
               _vm._v("Co-located with Parent School:")
             ]),
@@ -76241,27 +78412,6 @@ var staticRenderFns = [
                 _c("option", { attrs: { value: "1" } }, [_vm._v("Yes")]),
                 _vm._v(" "),
                 _c("option", { attrs: { value: "2" } }, [_vm._v("No")])
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-5" }, [
-            _c("label", { staticClass: "col-md-6 font-weight-normal" }, [
-              _vm._v("SEN School:")
-            ]),
-            _vm._v(" "),
-            _c(
-              "select",
-              {
-                staticClass: "form-control editable_fields font-weight-bolder",
-                attrs: { name: "senSchool", id: "senSchool" }
-              },
-              [
-                _c("option", { attrs: { value: "" } }, [
-                  _vm._v("--- Please Select ---")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "1" } }, [_vm._v("Kabisa")])
               ]
             )
           ])
@@ -76292,18 +78442,43 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "card" }, [
+    _c("div", { staticClass: "card card-primary card-outline" }, [
       _vm._m(0),
       _vm._v(" "),
       _c("form", [
-        _c("input", {
-          staticClass: "form-control",
-          attrs: { type: "hidden", id: "establishmentID" }
-        }),
-        _vm._v(" "),
         _c("div", { staticClass: "card-body" }, [
           _c("div", { staticClass: "form-group row" }, [
-            _vm._m(1),
+            _c("div", { staticClass: "col-md-5" }, [
+              _vm._m(1),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  staticClass:
+                    "form-control editable_fields font-weight-bolder",
+                  attrs: { name: "category", id: "category" },
+                  on: {
+                    change: function($event) {
+                      return _vm.removeerror("category", "category_error")
+                    }
+                  }
+                },
+                [
+                  _c("option", { attrs: { value: "" } }, [
+                    _vm._v("--- Please Select ---")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "1" } }, [_vm._v("Public")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "2" } }, [_vm._v("Private")])
+                ]
+              ),
+              _vm._v(" "),
+              _c("span", {
+                staticClass: "text-danger",
+                attrs: { id: "category_error" }
+              })
+            ]),
             _vm._v(" "),
             _c("div", { staticClass: "col-md-5" }, [
               _vm._m(2),
@@ -76316,7 +78491,7 @@ var render = function() {
                   attrs: { name: "level", id: "level" },
                   on: {
                     change: function($event) {
-                      return _vm.showDiv()
+                      _vm.showDiv(), _vm.removeerror("level", "level_error")
                     }
                   }
                 },
@@ -76345,50 +78520,323 @@ var render = function() {
                   _vm._v(" "),
                   _c("option", { attrs: { value: "6" } }, [_vm._v("ECCD")])
                 ]
-              )
+              ),
+              _vm._v(" "),
+              _c("span", {
+                staticClass: "text-danger",
+                attrs: { id: "level_error" }
+              })
             ])
           ]),
           _vm._v(" "),
-          _vm._m(3),
+          _c("div", { staticClass: "form-group row" }, [
+            _c("div", { staticClass: "col-md-5" }, [
+              _vm._m(3),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "form-control font-weight-bolder",
+                attrs: { type: "text", id: "proposedName" },
+                on: {
+                  change: function($event) {
+                    return _vm.removeerror("proposedName", "proposedName_error")
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c("span", {
+                staticClass: "text-danger",
+                attrs: { id: "proposedName_error" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-5" }, [
+              _vm._m(4),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.selectedDzongkhag,
+                      expression: "selectedDzongkhag"
+                    }
+                  ],
+                  staticClass:
+                    "form-control editable_fields font-weight-bolder",
+                  attrs: { name: "dzongkhag", id: "dzongkhag" },
+                  on: {
+                    change: [
+                      function($event) {
+                        var $$selectedVal = Array.prototype.filter
+                          .call($event.target.options, function(o) {
+                            return o.selected
+                          })
+                          .map(function(o) {
+                            var val = "_value" in o ? o._value : o.value
+                            return val
+                          })
+                        _vm.selectedDzongkhag = $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      },
+                      function($event) {
+                        return _vm.removeerror("dzongkhag", "dzongkhag_error")
+                      }
+                    ]
+                  }
+                },
+                [
+                  _c("option", { attrs: { value: "" } }, [
+                    _vm._v("--- Please Select ---")
+                  ]),
+                  _vm._v(" "),
+                  _vm._l(_vm.places, function(gewog_obj, gewog) {
+                    return _c(
+                      "option",
+                      { key: gewog_obj, domProps: { value: gewog } },
+                      [_vm._v(_vm._s(gewog))]
+                    )
+                  })
+                ],
+                2
+              ),
+              _vm._v(" "),
+              _c("span", {
+                staticClass: "text-danger",
+                attrs: { id: "dzongkhag_error" }
+              })
+            ])
+          ]),
           _vm._v(" "),
-          _vm._m(4),
+          _c("div", { staticClass: "form-group row" }, [
+            _c("div", { staticClass: "col-md-5" }, [
+              _vm._m(5),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.selectedGewog,
+                      expression: "selectedGewog"
+                    }
+                  ],
+                  staticClass:
+                    "form-control editable_fields font-weight-bolder",
+                  attrs: { name: "gewog", id: "gewog" },
+                  on: {
+                    change: [
+                      function($event) {
+                        var $$selectedVal = Array.prototype.filter
+                          .call($event.target.options, function(o) {
+                            return o.selected
+                          })
+                          .map(function(o) {
+                            var val = "_value" in o ? o._value : o.value
+                            return val
+                          })
+                        _vm.selectedGewog = $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      },
+                      function($event) {
+                        return _vm.removeerror("gewog", "gewog_error")
+                      }
+                    ]
+                  }
+                },
+                [
+                  _c("option", { attrs: { value: "" } }, [
+                    _vm._v("--- Please Select ---")
+                  ]),
+                  _vm._v(" "),
+                  _vm._l(_vm.gewogs, function(chiwog_obj, chiwog) {
+                    return _c(
+                      "option",
+                      { key: chiwog_obj, domProps: { value: chiwog } },
+                      [_vm._v(_vm._s(chiwog))]
+                    )
+                  })
+                ],
+                2
+              ),
+              _vm._v(" "),
+              _c("span", {
+                staticClass: "text-danger",
+                attrs: { id: "gewog_error" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-5" }, [
+              _vm._m(6),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.selectedChiwog,
+                      expression: "selectedChiwog"
+                    }
+                  ],
+                  staticClass:
+                    "form-control editable_fields font-weight-bolder",
+                  attrs: { name: "chiwog", id: "chiwog" },
+                  on: {
+                    change: [
+                      function($event) {
+                        var $$selectedVal = Array.prototype.filter
+                          .call($event.target.options, function(o) {
+                            return o.selected
+                          })
+                          .map(function(o) {
+                            var val = "_value" in o ? o._value : o.value
+                            return val
+                          })
+                        _vm.selectedChiwog = $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      },
+                      function($event) {
+                        return _vm.removeerror("chiwog", "chiwog_error")
+                      }
+                    ]
+                  }
+                },
+                [
+                  _c("option", { attrs: { value: "" } }, [
+                    _vm._v("--- Please Select ---")
+                  ]),
+                  _vm._v(" "),
+                  _vm._l(_vm.chiwogs, function(chiwog) {
+                    return _c("option", { key: chiwog }, [
+                      _vm._v(_vm._s(chiwog))
+                    ])
+                  })
+                ],
+                2
+              ),
+              _vm._v(" "),
+              _c("span", {
+                staticClass: "text-danger",
+                attrs: { id: "chiwog_error" }
+              })
+            ])
+          ]),
           _vm._v(" "),
-          _vm._m(5),
+          _c("div", { staticClass: "form-group row" }, [
+            _c("div", { staticClass: "col-md-5" }, [
+              _vm._m(7),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  staticClass:
+                    "form-control editable_fields font-weight-bolder",
+                  attrs: { name: "locationCategory", id: "locationCategory" },
+                  on: {
+                    change: function($event) {
+                      return _vm.removeerror(
+                        "locationCategory",
+                        "locationCategory_error"
+                      )
+                    }
+                  }
+                },
+                [
+                  _c("option", { attrs: { value: "" } }, [
+                    _vm._v("--- Please Select ---")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "1" } }, [_vm._v("olakha")])
+                ]
+              ),
+              _vm._v(" "),
+              _c("span", {
+                staticClass: "text-danger",
+                attrs: { id: "locationCategory_error" }
+              })
+            ]),
+            _vm._v(" "),
+            _vm._m(8)
+          ]),
           _vm._v(" "),
-          _vm._m(6),
+          _vm._m(9),
           _vm._v(" "),
-          _vm._m(7)
+          _c("div", { staticClass: "form-group row" }, [
+            _c("div", { staticClass: "col-md-5" }, [
+              _vm._m(10),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  staticClass:
+                    "form-control editable_fields font-weight-bolder",
+                  attrs: { name: "senSchool", id: "senSchool" },
+                  on: {
+                    change: function($event) {
+                      return _vm.removeerror("senSchool", "senSchool_error")
+                    }
+                  }
+                },
+                [
+                  _c("option", { attrs: { value: "" } }, [
+                    _vm._v("--- Please Select ---")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "1" } }, [_vm._v("Yes")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "2" } }, [_vm._v("No")])
+                ]
+              ),
+              _vm._v(" "),
+              _c("span", {
+                staticClass: "text-danger",
+                attrs: { id: "senSchool_error" }
+              })
+            ])
+          ])
         ])
-      ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
-      _c(
-        "div",
-        { staticClass: "col-md-1", staticStyle: { "margin-left": "800px" } },
-        [
-          _c("input", {
-            staticClass: "btn btn-flat btn-primary",
-            attrs: { type: "button", value: "Cancel", id: "reset" },
-            on: {
-              click: function($event) {
-                return _vm.reset()
-              }
-            }
-          })
-        ]
-      ),
+      ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-1" }, [
-        _c("input", {
-          staticClass: "btn btn-flat btn-primary",
-          attrs: { type: "button", value: "Submit", id: "submit" },
-          on: {
-            click: function($event) {
-              return _vm.save()
-            }
-          }
-        })
+      _c("div", { staticClass: "card-footer" }, [
+        _c("div", { staticClass: "row form-group fa-pull-right" }, [
+          _c("div", { staticClass: "col-md-12" }, [
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-flat btn-warning",
+                attrs: { type: "button", id: "reset" },
+                on: {
+                  click: function($event) {
+                    return _vm.reset()
+                  }
+                }
+              },
+              [_c("i", { staticClass: "fa fa-ban" }), _vm._v(" Cancel")]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-flat btn-primary",
+                attrs: { type: "button" },
+                on: {
+                  click: function($event) {
+                    return _vm.save()
+                  }
+                }
+              },
+              [_c("i", { staticClass: "fa fa-check" }), _vm._v(" Add")]
+            )
+          ])
+        ])
       ])
     ])
   ])
@@ -76406,28 +78854,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-5" }, [
-      _c("label", { staticClass: "col-md-5 font-weight-normal" }, [
-        _vm._v("Category:"),
-        _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
-      ]),
-      _vm._v(" "),
-      _c(
-        "select",
-        {
-          staticClass: "form-control editable_fields font-weight-bolder",
-          attrs: { name: "category", id: "category" }
-        },
-        [
-          _c("option", { attrs: { value: "" } }, [
-            _vm._v("--- Please Select ---")
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "1" } }, [_vm._v("Public")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "2" } }, [_vm._v("Private")])
-        ]
-      )
+    return _c("label", { staticClass: "col-md-5 font-weight-normal" }, [
+      _vm._v("Category:"),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
     ])
   },
   function() {
@@ -76443,147 +78872,72 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group row" }, [
-      _c("div", { staticClass: "col-md-5" }, [
-        _c("label", { staticClass: "col-md-6 font-weight-normal" }, [
-          _vm._v("Proposed Name:"),
-          _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
-        ]),
-        _vm._v(" "),
-        _c("input", {
-          staticClass: "form-control font-weight-bolder",
-          attrs: { type: "text", id: "proposedName" }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-5" }, [
-        _c("label", { staticClass: "col-md- font-weight-normal" }, [
-          _vm._v("Dzongkhag:"),
-          _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
-        ]),
-        _vm._v(" "),
-        _c(
-          "select",
-          {
-            staticClass: "form-control editable_fields font-weight-bolder",
-            attrs: { name: "dzongkhag", id: "dzongkhag" }
-          },
-          [
-            _c("option", { attrs: { value: "" } }, [
-              _vm._v("--- Please Select ---")
-            ]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "1" } }, [_vm._v("Thimphu")])
-          ]
-        )
-      ])
+    return _c("label", { staticClass: "col-md-6 font-weight-normal" }, [
+      _vm._v("Proposed Name:"),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group row" }, [
-      _c("div", { staticClass: "col-md-5" }, [
-        _c("label", { staticClass: "col-md- font-weight-normal" }, [
-          _vm._v("Gewog:"),
-          _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
-        ]),
-        _vm._v(" "),
-        _c(
-          "select",
-          {
-            staticClass: "form-control editable_fields font-weight-bolder",
-            attrs: { name: "gewog", id: "gewog" }
-          },
-          [
-            _c("option", { attrs: { value: "" } }, [
-              _vm._v("--- Please Select ---")
-            ]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "1" } }, [_vm._v("Babesa")]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "2" } }, [_vm._v("Motithang")]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "3" } }, [_vm._v("Chubachu")])
-          ]
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-5" }, [
-        _c("label", { staticClass: "col-md- font-weight-normal" }, [
-          _vm._v("Chiwog:"),
-          _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
-        ]),
-        _vm._v(" "),
-        _c(
-          "select",
-          {
-            staticClass: "form-control editable_fields font-weight-bolder",
-            attrs: { name: "chiwog", id: "chiwog" }
-          },
-          [
-            _c("option", { attrs: { value: "" } }, [
-              _vm._v("--- Please Select ---")
-            ]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "1" } }, [_vm._v("olakha")]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "2" } }, [_vm._v("changbandu")])
-          ]
-        )
-      ])
+    return _c("label", { staticClass: "col-md- font-weight-normal" }, [
+      _vm._v("Dzongkhag:"),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group row" }, [
-      _c("div", { staticClass: "col-md-5" }, [
-        _c("label", { staticClass: "col-md- font-weight-normal" }, [
-          _vm._v("Location Category:"),
-          _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
-        ]),
-        _vm._v(" "),
-        _c(
-          "select",
-          {
-            staticClass: "form-control editable_fields font-weight-bolder",
-            attrs: { name: "locationCategory", id: "locationCategory" }
-          },
-          [
-            _c("option", { attrs: { value: "" } }, [
-              _vm._v("--- Please Select ---")
-            ]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "1" } }, [_vm._v("olakha")])
-          ]
-        )
+    return _c("label", { staticClass: "col-md- font-weight-normal" }, [
+      _vm._v("Gewog:"),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "col-md- font-weight-normal" }, [
+      _vm._v("Chiwog:"),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "col-md- font-weight-normal" }, [
+      _vm._v("Location Category:"),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-5" }, [
+      _c("label", { staticClass: "col-md- font-weight-normal" }, [
+        _vm._v("Geopolitically Located:")
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-5" }, [
-        _c("label", { staticClass: "col-md- font-weight-normal" }, [
-          _vm._v("Geopolitically Located:")
-        ]),
-        _vm._v(" "),
-        _c(
-          "select",
-          {
-            staticClass: "form-control editable_fields font-weight-bolder",
-            attrs: { name: "geoLocated", id: "geoLocated" }
-          },
-          [
-            _c("option", { attrs: { value: "" } }, [
-              _vm._v("--- Please Select ---")
-            ]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "1" } }, [_vm._v("Yes")]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "2" } }, [_vm._v("No")])
-          ]
-        )
-      ])
+      _c(
+        "select",
+        {
+          staticClass: "form-control editable_fields font-weight-bolder",
+          attrs: { name: "geoLocated", id: "geoLocated" }
+        },
+        [
+          _c("option", { attrs: { value: "" } }, [
+            _vm._v("--- Please Select ---")
+          ]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "1" } }, [_vm._v("Yes")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "2" } }, [_vm._v("No")])
+        ]
+      )
     ])
   },
   function() {
@@ -76648,30 +79002,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group row" }, [
-      _c("div", { staticClass: "col-md-5" }, [
-        _c("label", { staticClass: "col-md- font-weight-normal" }, [
-          _vm._v("Sen School/ECCD:"),
-          _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
-        ]),
-        _vm._v(" "),
-        _c(
-          "select",
-          {
-            staticClass: "form-control editable_fields font-weight-bolder",
-            attrs: { name: "senSchool", id: "senSchool" }
-          },
-          [
-            _c("option", { attrs: { value: "" } }, [
-              _vm._v("--- Please Select ---")
-            ]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "1" } }, [_vm._v("Yes")]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "2" } }, [_vm._v("No")])
-          ]
-        )
-      ])
+    return _c("label", { staticClass: "col-md- font-weight-normal" }, [
+      _vm._v("Sen School/ECCD:"),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
     ])
   }
 ]
@@ -76698,7 +79031,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("form", [
-      _c("div", { staticClass: "card" }, [
+      _c("div", { staticClass: "card card-primary card-outline" }, [
         _vm._m(0),
         _vm._v(" "),
         _c("div", { staticClass: "card-body" }, [
@@ -76763,33 +79096,37 @@ var render = function() {
       _vm._m(5)
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
-      _c(
-        "div",
-        { staticClass: "col-md-1", staticStyle: { "margin-left": "800px" } },
-        [
-          _c("input", {
-            staticClass: "btn btn-flat btn-primary",
-            attrs: { type: "button", value: "Cancel", id: "reset" },
-            on: {
-              click: function($event) {
-                return _vm.reset()
+    _c("div", { staticClass: "card-footer" }, [
+      _c("div", { staticClass: "row form-group fa-pull-right" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-flat btn-warning",
+              attrs: { type: "button", id: "reset" },
+              on: {
+                click: function($event) {
+                  return _vm.reset()
+                }
               }
-            }
-          })
-        ]
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-1" }, [
-        _c("input", {
-          staticClass: "btn btn-flat btn-primary",
-          attrs: { type: "button", value: "Submit", id: "submit" },
-          on: {
-            click: function($event) {
-              return _vm.save()
-            }
-          }
-        })
+            },
+            [_c("i", { staticClass: "fa fa-ban" }), _vm._v(" Cancel")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-flat btn-primary",
+              attrs: { type: "button" },
+              on: {
+                click: function($event) {
+                  return _vm.save()
+                }
+              }
+            },
+            [_c("i", { staticClass: "fa fa-check" }), _vm._v(" Add")]
+          )
+        ])
       ])
     ])
   ])
@@ -76849,27 +79186,421 @@ var staticRenderFns = [
             _c("div", { staticClass: "card card-primary" }, [
               _c("div", { staticClass: "card-header" }, [
                 _c("h3", { staticClass: "card-title" }, [
-                  _vm._v("Detail of School 1")
+                  _vm._v("School/ECR/ECCD 1")
                 ])
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "card-body" }, [
-                _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "code" } }, [_vm._v("Code:")]),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Code:")]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass:
+                          "form-control font-weight-bolder editable_fields currentDetails",
+                        attrs: { type: "text", id: "code", readonly: "" }
+                      })
+                    ])
+                  ]),
                   _vm._v(" "),
-                  _c("input", {
-                    staticClass: "form-control",
-                    attrs: { type: "code", id: "code", readonly: "" }
-                  })
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Name:")]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass:
+                          "form-control font-weight-bolder editable_fields currentDetails",
+                        attrs: { type: "text", id: "name", readonly: "" }
+                      })
+                    ])
+                  ])
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "name" } }, [_vm._v("Name:")]),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Category:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "category",
+                            readonly: ""
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Public")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("Private")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
                   _vm._v(" "),
-                  _c("input", {
-                    staticClass: "form-control",
-                    attrs: { type: "name", id: "name", readonly: "" }
-                  })
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Level:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: { name: "category", id: "level", readonly: "" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Higher Secondary School")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("Middle Secondary School")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "3" } }, [
+                            _vm._v("Lower Secondary School")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "4" } }, [
+                            _vm._v("Primary School")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "5" } }, [
+                            _vm._v("ECR")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "6" } }, [
+                            _vm._v("ECCD")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-6 font-weight-normal" },
+                        [_vm._v("Dzongkhag:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "dzongkhag",
+                            id: "dzongkhag",
+                            readonly: ""
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Thimphu")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("Paro")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "3" } }, [
+                            _vm._v("punakha")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "4" } }, [
+                            _vm._v("Lhuntse")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Gewog:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: { name: "category", id: "gewog", readonly: "" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Kabisa")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("Babesa")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "3" } }, [
+                            _vm._v("Motithang")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "4" } }, [
+                            _vm._v("Chubachu")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Chiwog:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "chiwog",
+                            readonly: ""
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("olakha")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("chngbandu")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-8 font-weight-normal" },
+                        [_vm._v("Location Category:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "locationCategory",
+                            readonly: ""
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Kabisa")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-10 font-weight-normal" },
+                        [_vm._v("Geopolitically Located:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "geopoliticallyLocated",
+                            readonly: ""
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Yes")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("No")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-6 font-weight-normal" },
+                        [_vm._v("SEN School:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "senSchool",
+                            readonly: ""
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Yes")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("No")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group hidden aaa" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-12 font-weight-normal" },
+                        [_vm._v("Co-located with Parent School:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: { name: "category", id: "coLoParent" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Yes")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("No")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group hidden aaa" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-10 font-weight-normal" },
+                        [_vm._v("Parent School:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: { name: "category", id: "parentSchool" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Kabisa")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
                 ])
               ])
             ])
@@ -76879,27 +79610,443 @@ var staticRenderFns = [
             _c("div", { staticClass: "card card-success" }, [
               _c("div", { staticClass: "card-header" }, [
                 _c("h3", { staticClass: "card-title" }, [
-                  _vm._v("Detail of School 2")
+                  _vm._v("School/ECR/ECCD 2")
                 ])
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "card-body" }, [
-                _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "code" } }, [_vm._v("Code:")]),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Code:")]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass:
+                          "form-control font-weight-bolder editable_fields currentDetails",
+                        attrs: {
+                          type: "text",
+                          id: "afterChangeCode",
+                          readonly: ""
+                        }
+                      })
+                    ])
+                  ]),
                   _vm._v(" "),
-                  _c("input", {
-                    staticClass: "form-control",
-                    attrs: { type: "code", id: "code2", readonly: "" }
-                  })
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Name:")]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass:
+                          "form-control font-weight-bolder editable_fields currentDetails",
+                        attrs: {
+                          type: "text",
+                          id: "afterChangeName",
+                          readonly: ""
+                        }
+                      })
+                    ])
+                  ])
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "name" } }, [_vm._v("Name:")]),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Category:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "afterChangeCategory",
+                            readonly: ""
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Public")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("Private")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
                   _vm._v(" "),
-                  _c("input", {
-                    staticClass: "form-control",
-                    attrs: { type: "name", id: "name2", readonly: "" }
-                  })
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Level:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "afterChangeLevel",
+                            readonly: ""
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Higher Secondary School")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("Middle Secondary School")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "3" } }, [
+                            _vm._v("Lower Secondary School")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "4" } }, [
+                            _vm._v("Primary School")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "5" } }, [
+                            _vm._v("ECR")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "6" } }, [
+                            _vm._v("ECCD")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-6 font-weight-normal" },
+                        [_vm._v("Dzongkhag:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "dzongkhag",
+                            id: "afterChangeDzongkhag",
+                            readonly: ""
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Thimphu")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("Paro")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "3" } }, [
+                            _vm._v("punakha")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "4" } }, [
+                            _vm._v("Lhuntse")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Gewog:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "afterChangeGewog",
+                            readonly: ""
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Kabisa")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("Babesa")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "3" } }, [
+                            _vm._v("Motithang")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "4" } }, [
+                            _vm._v("Chubachu")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-5 font-weight-normal" },
+                        [_vm._v("Chiwog:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "afterChangeChiwog",
+                            readonly: ""
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("olakha")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("chngbandu")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-8 font-weight-normal" },
+                        [_vm._v("Location Category:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "afterChangeLocationCategory",
+                            readonly: ""
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Kabisa")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-10 font-weight-normal" },
+                        [_vm._v("Geopolitically Located:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "afterChangeGeopoliticallyLocated",
+                            readonly: ""
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Yes")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("No")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-6 font-weight-normal" },
+                        [_vm._v("SEN School:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "afterChangeSenSchool",
+                            readonly: ""
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Yes")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("No")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group hidden aaa" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-12 font-weight-normal" },
+                        [_vm._v("Co-located with Parent School:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "afterChangeCoLoParent"
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Yes")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("No")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("div", { staticClass: "form-group hidden aaa" }, [
+                      _c(
+                        "label",
+                        { staticClass: "col-md-10 font-weight-normal" },
+                        [_vm._v("Parent School:")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control font-weight-bolder editable_fields currentDetails",
+                          attrs: {
+                            name: "category",
+                            id: "afterChangeParentSchool"
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("--- Please Select ---")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Kabisa")
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
                 ])
               ])
             ])
@@ -76923,8 +80070,7 @@ var staticRenderFns = [
         _c("div", { staticClass: "form-group row" }, [
           _c("div", { staticClass: "col-md-5" }, [
             _c("label", { staticClass: "col-md-5 font-weight-normal" }, [
-              _vm._v("Code:"),
-              _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+              _vm._v("Code:")
             ]),
             _vm._v(" "),
             _c("input", {
@@ -76935,14 +80081,273 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("div", { staticClass: "col-md-5" }, [
             _c("label", { staticClass: "col-md-5 font-weight-normal" }, [
-              _vm._v("Name:"),
-              _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+              _vm._v("Name:")
             ]),
             _vm._v(" "),
             _c("input", {
               staticClass: "form-control font-weight-bolder editable_fields",
               attrs: { type: "text", id: "name" }
             })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group row" }, [
+          _c("div", { staticClass: "col-md-5" }, [
+            _c("label", { staticClass: "col-md-5 font-weight-normal" }, [
+              _vm._v("Category:")
+            ]),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                staticClass: "form-control font-weight-bolder editable_fields",
+                attrs: { name: "category", id: "category" }
+              },
+              [
+                _c("option", { attrs: { value: "" } }, [
+                  _vm._v("--- Please Select ---")
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "1" } }, [_vm._v("Public")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "2" } }, [_vm._v("Private")])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-5" }, [
+            _c("label", { staticClass: "col-md-5 font-weight-normal" }, [
+              _vm._v("Level:")
+            ]),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                staticClass: "form-control font-weight-bolder editable_fields",
+                attrs: { name: "category", id: "level" }
+              },
+              [
+                _c("option", { attrs: { value: "" } }, [
+                  _vm._v("--- Please Select ---")
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "1" } }, [
+                  _vm._v("Higher Secondary School")
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "2" } }, [
+                  _vm._v("Middle Secondary School")
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "3" } }, [
+                  _vm._v("Lower Secondary School")
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "4" } }, [
+                  _vm._v("Primary School")
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "5" } }, [_vm._v("ECR")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "6" } }, [_vm._v("ECCD")])
+              ]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group row" }, [
+          _c("div", { staticClass: "col-md-5" }, [
+            _c("label", { staticClass: "col-md-5 font-weight-normal" }, [
+              _vm._v("Dzongkhag:")
+            ]),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                staticClass: "form-control font-weight-bolder editable_fields",
+                attrs: { name: "dzongkhag", id: "dzongkhag" }
+              },
+              [
+                _c("option", { attrs: { value: "" } }, [
+                  _vm._v("--- Please Select ---")
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "1" } }, [_vm._v("Thimphu")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "2" } }, [_vm._v("Paro")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "3" } }, [_vm._v("punakha")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "4" } }, [_vm._v("Lhuntse")])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-5" }, [
+            _c("label", { staticClass: "col-md-5 font-weight-normal" }, [
+              _vm._v("Gewog:")
+            ]),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                staticClass: "form-control font-weight-bolder editable_fields",
+                attrs: { name: "category", id: "gewog" }
+              },
+              [
+                _c("option", { attrs: { value: "" } }, [
+                  _vm._v("--- Please Select ---")
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "1" } }, [_vm._v("Kabisa")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "2" } }, [_vm._v("Babesa")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "3" } }, [_vm._v("Motithang")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "4" } }, [_vm._v("Chubachu")])
+              ]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group row" }, [
+          _c("div", { staticClass: "col-md-5" }, [
+            _c("label", { staticClass: "col-md-5 font-weight-normal" }, [
+              _vm._v("Chiwog:")
+            ]),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                staticClass: "form-control font-weight-bolder editable_fields",
+                attrs: { name: "category", id: "chiwog" }
+              },
+              [
+                _c("option", { attrs: { value: "" } }, [
+                  _vm._v("--- Please Select ---")
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "1" } }, [_vm._v("olakha")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "2" } }, [_vm._v("chngbandu")])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-5" }, [
+            _c("label", { staticClass: "col-md-5 font-weight-normal" }, [
+              _vm._v("Location Category:")
+            ]),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                staticClass: "form-control font-weight-bolder editable_fields",
+                attrs: { name: "category", id: "locationCategory" }
+              },
+              [
+                _c("option", { attrs: { value: "" } }, [
+                  _vm._v("--- Please Select ---")
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "1" } }, [_vm._v("Kabisa")])
+              ]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group row" }, [
+          _c("div", { staticClass: "col-md-5" }, [
+            _c("label", { staticClass: "col-md-5 font-weight-normal" }, [
+              _vm._v("Geopolitically Located:")
+            ]),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                staticClass: "form-control font-weight-bolder editable_fields",
+                attrs: { name: "category", id: "geopoliticallyLocated" }
+              },
+              [
+                _c("option", { attrs: { value: "" } }, [
+                  _vm._v("--- Please Select ---")
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "1" } }, [_vm._v("Yes")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "2" } }, [_vm._v("No")])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-5" }, [
+            _c("label", { staticClass: "col-md-6 font-weight-normal" }, [
+              _vm._v("SEN School:")
+            ]),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                staticClass: "form-control font-weight-bolder editable_fields",
+                attrs: { name: "category", id: "senSchool" }
+              },
+              [
+                _c("option", { attrs: { value: "" } }, [
+                  _vm._v("--- Please Select ---")
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "1" } }, [_vm._v("Yes")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "2" } }, [_vm._v("No")])
+              ]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group row" }, [
+          _c("div", { staticClass: "col-md-5 hidden aaa" }, [
+            _c("label", { staticClass: "col-md-5 font-weight-normal" }, [
+              _vm._v("Parent School:")
+            ]),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                staticClass: "form-control font-weight-bolder editable_fields",
+                attrs: { name: "category", id: "parentSchool" }
+              },
+              [
+                _c("option", { attrs: { value: "" } }, [
+                  _vm._v("--- Please Select ---")
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "1" } }, [_vm._v("Kabisa")])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-5 hidden aaa" }, [
+            _c("label", { staticClass: "col-md-8 font-weight-normal" }, [
+              _vm._v("Co-located with Parent School:")
+            ]),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                staticClass: "form-control font-weight-bolder editable_fields",
+                attrs: { name: "category", id: "coLoParent" }
+              },
+              [
+                _c("option", { attrs: { value: "" } }, [
+                  _vm._v("--- Please Select ---")
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "1" } }, [_vm._v("Yes")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "2" } }, [_vm._v("No")])
+              ]
+            )
           ])
         ])
       ])
@@ -77674,38 +81079,127 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
     _c("form", [
-      _c("div", { staticClass: "card" }, [
-        _vm._m(0),
+      _c("div", { staticClass: "card card-primary card-outline" }, [
+        _vm._m(1),
         _vm._v(" "),
         _c("div", { staticClass: "card-body" }, [
           _c("div", { staticClass: "form-group row" }, [
-            _vm._m(1),
+            _c("div", { staticClass: "col-md-6" }, [
+              _vm._m(2),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "form-control editable_fields",
+                attrs: { type: "text", id: "workingAgencyCode" },
+                on: {
+                  change: function($event) {
+                    return _vm.removeerror(
+                      "workingAgencyCode",
+                      "workingAgencyCode_error"
+                    )
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c("span", {
+                staticClass: "text-danger",
+                attrs: { id: "workingAgencyCode_error" }
+              })
+            ]),
             _vm._v(" "),
             _c(
               "div",
-              { staticClass: "col-md-5", staticStyle: { padding: "28px" } },
+              { staticClass: "col-md-5", staticStyle: { padding: "30px" } },
               [
                 _c("input", {
                   staticClass: "col-md-3 btn btn-flat btn-primary",
                   attrs: { type: "button", value: "Search" },
-                  on: { click: _vm.getSchoolDeails }
+                  on: {
+                    click: function($event) {
+                      return _vm.getOrgDetais()
+                    }
+                  }
                 })
               ]
             )
           ]),
           _vm._v(" "),
-          _vm._m(2),
-          _vm._v(" "),
           _vm._m(3),
           _vm._v(" "),
-          _vm._m(4)
+          _vm._m(4),
+          _vm._v(" "),
+          _vm._m(5)
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(6)
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "card-footer" }, [
+      _c("div", { staticClass: "row form-group fa-pull-right" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-flat btn-warning",
+              attrs: { type: "button", id: "reset" },
+              on: {
+                click: function($event) {
+                  return _vm.reset()
+                }
+              }
+            },
+            [_c("i", { staticClass: "fa fa-ban" }), _vm._v(" Cancel")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-flat btn-primary",
+              attrs: { type: "button" },
+              on: {
+                click: function($event) {
+                  return _vm.save()
+                }
+              }
+            },
+            [_c("i", { staticClass: "fa fa-check" }), _vm._v(" Add")]
+          )
         ])
       ])
     ])
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "breadcrumbs ace-save-state",
+        attrs: { id: "breadcrumbs" }
+      },
+      [
+        _c("ol", { staticClass: "breadcrumb" }, [
+          _c("li", { staticClass: "breadcrumb-item" }, [
+            _c("a", { attrs: { href: "#" } }, [_vm._v("Home")])
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "breadcrumb-item" }, [
+            _vm._v("Organization")
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "breadcrumb-item active" }, [
+            _vm._v("HQ and Dzongkhag Office")
+          ])
+        ])
+      ]
+    )
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -77720,16 +81214,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-6" }, [
-      _c("label", { staticClass: "col-md-7 font-weight-normal" }, [
-        _vm._v("Zest Working Agency Code:"),
-        _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control",
-        attrs: { type: "text", id: "workingAgencyCode" }
-      })
+    return _c("label", { staticClass: "col-md-7 font-weight-normal" }, [
+      _vm._v("Zest Working Agency Code:"),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
     ])
   },
   function() {
@@ -77802,6 +81289,43 @@ var staticRenderFns = [
           staticClass: "form-control editable_fields",
           attrs: { type: "text", id: "gewog", readonly: "" }
         })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card" }, [
+      _c("div", { staticClass: "card-body" }, [
+        _c("div", { staticClass: "form-group" }, [
+          _c("div", { staticClass: "col-md-6" }, [
+            _c("label", { staticClass: "col-md-7 font-weight-normal" }, [
+              _vm._v("Agency Type:")
+            ]),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                staticClass: "form-control editable_fields font-weight-bolder",
+                attrs: { name: "agencyType", id: "agencyType" }
+              },
+              [
+                _c("option", { attrs: { value: "" } }, [
+                  _vm._v("--- Please Select ---")
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "1" } }, [
+                  _vm._v("Agency in HQ")
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "2" } }, [
+                  _vm._v("Dzongkhag Education Office")
+                ])
+              ]
+            )
+          ])
+        ])
       ])
     ])
   }
@@ -87253,11 +90777,6 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("form", [
-        _c("input", {
-          staticClass: "form-control",
-          attrs: { type: "hidden", id: "establishmentID" }
-        }),
-        _vm._v(" "),
         _c("div", { staticClass: "card-body" }, [
           _c("div", { staticClass: "form-group row" }, [
             _c("div", { staticClass: "col-md-5" }, [
@@ -87300,8 +90819,7 @@ var staticRenderFns = [
           _c("div", { staticClass: "form-group row" }, [
             _c("div", { staticClass: "col-md-5" }, [
               _c("label", { staticClass: "col-md-6 font-weight-normal" }, [
-                _vm._v("Proposed Name:"),
-                _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+                _vm._v("Proposed Name:")
               ]),
               _vm._v(" "),
               _c("input", {

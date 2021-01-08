@@ -2,7 +2,7 @@
     <div>
          <form>
              <!-- closure card -->
-            <div class="card">
+            <div class="card card-primary card-outline">
                 <div class="card-header">
                     <h3 class="card-title">Closure</h3>
                 </div>
@@ -125,18 +125,30 @@
                                     <option value="2">No</option>
                                 </select>
                             </div>
+
                             <div class="col-md-5">
+                            <label class="col-md-6 font-weight-normal">SEN School:</label>
+
+                                <select name="senSchool" id="senSchool" class="form-control editable_fields font-weight-bolder">
+                                    <option value="">--- Please Select ---</option>
+                                    <option value="1">Kabisa</option>
+                                </select>
+                            </div>
+                                                                          
+                        </div>
+
+                        <div class="form-group row">
+
+                            <div class="col-md-5 hidden aaa">
                             <label class="col-md-5 font-weight-normal">Parent School:</label>
 
                                 <select name="parentSchool" id="parentSchool" class="form-control editable_fields font-weight-bolder">
                                     <option value="">--- Please Select ---</option>
                                     <option value="1">Kabisa</option>
                                 </select>
-                            </div>                                              
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-5">
+                            </div>
+                            
+                            <div class="col-md-5 hidden aaa">
                             <label class="col-md-8 font-weight-normal">Co-located with Parent School:</label>
 
                                 <select name="coLoParent" id="coLoParent" class="form-control editable_fields font-weight-bolder">
@@ -145,28 +157,20 @@
                                     <option value="2">No</option>
                                 </select>
                             </div>
-                            <div class="col-md-5">
-                            <label class="col-md-6 font-weight-normal">SEN School:</label>
-
-                                <select name="senSchool" id="senSchool" class="form-control editable_fields font-weight-bolder">
-                                    <option value="">--- Please Select ---</option>
-                                    <option value="1">Kabisa</option>
-                                </select>
-                            </div>                                              
+                                                                          
                         </div>
                     </div>
             </div>
         </form>
 
         <!-- button -->
-        <div class="row">
-            <div class="col-md-1" style="margin-left: 800px;">
-                <input type="button" class="btn btn-flat btn-primary" value="Cancel" id="reset" @click="reset()"/>
-            </div>
-                               
-            <div class="col-md-1">
-                <input type="button" class="btn btn-flat btn-primary" value="Submit" id="submit" @click="save()"/>                                                  
-            </div>
+        <div class="card-footer">
+            <div class="row form-group fa-pull-right">
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-flat btn-warning" id="reset" @click="reset()"><i class="fa fa-ban"></i> Cancel</button>
+                    <button type="button" class="btn btn-flat btn-primary" @click="save()"> <i class="fa fa-check"></i> Add</button>                                                
+                </div>
+            </div> 
         </div>
     </div>
 </template>
@@ -177,7 +181,11 @@ export default {
 
         /** method to save data */
         save: function(){
-            alert("data save successfully.")
+            Swal.fire(
+                    'Success!',
+                    'Your Data has been successfully saved.',
+                    'success',
+                )
         },
         /** method to reset forms */
         reset: function(){
@@ -195,8 +203,6 @@ export default {
             $("#chiwog option:selected").text("Yhs");
             $("#geopoliticallyLocated option:selected").text("Yes");
             $("#locationCategory option:selected").text("Town");
-            $("#parentSchool").prop('disabled', true);
-            $("#coLoParent").prop('disabled', true);
             $("#senSchool option:selected").text("No");
         }
     }
