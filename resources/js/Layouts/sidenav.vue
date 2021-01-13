@@ -191,7 +191,7 @@
                                         </p>
                                     </router-link>
                                 </li>
-                                <!-- <li class="nav-item" id="location" @click="setclass('organizationlink','location')">
+                                <li class="nav-item" id="location" @click="setclass('organizationlink','location')">
                                     <router-link to="/location" class="nav-link">
                                         <p>
                                             <i class="fa fa-angle-double-right nav-icon"></i>
@@ -216,14 +216,27 @@
                                         </p>
                                     </router-link>
                                 </li>
-                                <li class="nav-item" id="structure" @click="setclass('organizationlink','structure')">
-                                    <router-link to="/structure" class="nav-link">
+                                
+                                <li class="nav-item has-treeview" id="organizationtransactionLink">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fas fa-cube"></i>
                                         <p>
-                                            <i class="fa fa-angle-double-right nav-icon"></i>
-                                            Structure
+                                            Structure 
+                                            <i class="fas fa-angle-left right"></i>
                                         </p>
-                                    </router-link>
+                                    </a>
+                                    <ul class="nav nav-treeview nav-pills flex-column">
+                                        <li class="nav-item" id="structure" @click="setclass('organizationlink','structure')">
+                                            <router-link to="/structure" class="nav-link">
+                                                <p>
+                                                    <i class="fa fa-angle-double-right nav-icon"></i>
+                                                    Structure List
+                                                </p>
+                                            </router-link>
+                                        </li>
+                                    </ul>   
                                 </li>
+
                                 <li class="nav-item" id="equipment" @click="setclass('organizationlink','equipment')">
                                     <router-link to="/equipment" class="nav-link">
                                         <p>
@@ -256,7 +269,7 @@
                                             Wash Facility
                                         </p>
                                     </router-link>
-                                </li> -->
+                                </li>
                             </ul>
                         </li>
 
@@ -285,6 +298,27 @@
                                             Staff
                                         </p>
                                     </router-link>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                    <i class="far fa-address-card nav-icon"></i>
+                                    <p>Inset Module</p>
+                                    <i class="fas fa-angle-left right"></i>
+                                    </a>
+                                    <ul class="nav nav-treeview">                                
+                                        <li class="nav-item" id="rolepriv" @click="setclass('','')">
+                                            <router-link to="/createTraining"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
+                                                <i class="fa fa-angle-double-right nav-icon"></i>
+                                                <p>Training Details</p>
+                                            </router-link>
+                                        </li>
+                                        <li class="nav-item" id="usermanagement" @click="setclass('','')">
+                                            <router-link to="/apply_training"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
+                                                <i class="fa fa-angle-double-right nav-icon"></i>
+                                                <p>Apply for Training</p>
+                                            </router-link>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
                         </li>
@@ -321,33 +355,7 @@
                         </li>
                         
                         <!-- Inset side menu -->
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                            <i class="far fa-address-card nav-icon"></i>
-                            <p>Inset Module</p>
-                             <i class="fas fa-angle-left right"></i>
-                            </a>
-                                <ul class="nav nav-treeview">                                
-                                <li class="nav-item" id="rolepriv" @click="setclass('','')">
-                                    <router-link to="/createTraining"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
-                                        <i class="fa fa-angle-double-right nav-icon"></i>
-                                        <p>Create Training</p>
-                                    </router-link>
-                                </li>
-                                <li class="nav-item" id="usermanagement" @click="setclass('','')">
-                                    <router-link to="/applyTraining"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
-                                        <i class="fa fa-angle-double-right nav-icon"></i>
-                                        <p>Apply for Training</p>
-                                    </router-link>
-                                </li>
-                                <li class="nav-item" id="verifyParticipants" @click="setclass('','')">
-                                    <router-link to="/verifyParticipants"   class="nav-link" data-toggle="awesome_tooltip" title="Administration">
-                                        <i class="fa fa-angle-double-right nav-icon"></i>
-                                        <p>Verify Participants</p>
-                                    </router-link>
-                                </li>
-                            </ul>
-                        </li>
+                        
                         <li class="nav-item" id="tasklistlink" @click="setclass('','tasklistlink')">
                             <router-link to="/taslistforall" class="nav-link">
                                 <p>

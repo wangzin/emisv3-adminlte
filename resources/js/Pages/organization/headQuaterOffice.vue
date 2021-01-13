@@ -27,42 +27,40 @@
                     </div>
 
                     <div class="form-group row">
-                        <div class="col-md-5">
-                            <label class="col-md-5 font-weight-normal">Working Agency Code:</label>
+                        <div class="col-md-4">
+                            <label class="col-md-8 font-weight-normal">Working Agency Code:</label>
                             <input type="text" class="form-control editable_fields" id="agencyCode" readonly/>
                         
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                             <label class="col-md-5 font-weight-normal">Agency Name:</label>
                             <input type="text" class="form-control editable_fields" id="agencyName" readonly/>
-                        </div>                   
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-md-5">
+                        </div> 
+                        <div class="col-md-4">
                             <label class="col-md-5 font-weight-normal">Parent Agency:</label>
                             <input type="text" class="form-control editable_fields" id="parentAgency" readonly/>
                         
-                        </div>
-                        <div class="col-md-5">
-                            <label class="col-md-5 font-weight-normal">Dzongkhag:</label>
-                            <input type="text" class="form-control editable_fields" id="dzongkhag" readonly/>
-                        </div>                   
+                        </div>                  
                     </div>
 
                     <div class="form-group row">
-                        <div class="col-md-5">
+                        <div class="col-md-4">
+                            <label class="col-md-5 font-weight-normal">Dzongkhag:</label>
+                            <input type="text" class="form-control editable_fields" id="dzongkhag" readonly/>
+                        </div>   
+                        <div class="col-md-4">
                             <label class="col-md-5 font-weight-normal">Gewog:</label>
                             <input type="text" class="form-control editable_fields" id="gewog" readonly/>
-                        </div>
+                        </div>                
                     </div>
+                    
                 </div>     
             </div>
 
             <div class="card">
                 <div class="card-body">
                     <div class="form-group" >    
-                        <div class="col-md-6" >
+                        <div class="col-md-5" >
                             <label class="col-md-7 font-weight-normal">Agency Type:</label>
                             <select name="agencyType" id="agencyType" class="form-control editable_fields font-weight-bolder">
                                     <option value="">--- Please Select ---</option>
